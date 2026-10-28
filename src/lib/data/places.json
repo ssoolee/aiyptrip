@@ -1,0 +1,2924 @@
+{
+ "generatedAt": "2026-09-28T05:48:49.838Z",
+ "places": [
+  {
+   "placeId": "tour_129647",
+   "name": "지평향교",
+   "category": "attraction",
+   "lat": 37.4809733641,
+   "lng": 127.6368719807,
+   "address": "경기도 양평군 지평면 지평로 333",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/24/3590424_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/24/3590424_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EC%A7%80%ED%8F%89%ED%96%A5%EA%B5%90",
+   "tags": [],
+   "reviewSummary": "조선시대 지방 교육기관이었던 지평향교는 현재 제사 기능을 이어가고 있다."
+  },
+  {
+   "placeId": "tour_2792940",
+   "name": "명달리계곡",
+   "category": "attraction",
+   "lat": 37.6198538314,
+   "lng": 127.4503182187,
+   "address": "경기도 양평군 서종면 명달리",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/62/3590362_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/62/3590362_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EB%AA%85%EB%8B%AC%EB%A6%AC%EA%B3%84%EA%B3%A1",
+   "tags": [
+    "nature",
+    "healing"
+   ],
+   "reviewSummary": "개발이 닿지 않은 오지인 명달리계곡은 태고의 자연 생태와 야생화를 간직하고 있다.",
+   "businessHoursRaw": "상시 개방 / 휴무: 연중무휴"
+  },
+  {
+   "placeId": "tour_129645",
+   "name": "석산계곡",
+   "category": "attraction",
+   "lat": 37.6394543588,
+   "lng": 127.6027176918,
+   "address": "경기도 양평군 단월면 석산리",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/38/3590338_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/38/3590338_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EC%84%9D%EC%82%B0%EA%B3%84%EA%B3%A1",
+   "tags": [
+    "nature",
+    "healing",
+    "kid_friendly"
+   ],
+   "reviewSummary": "소리산을 휘돌며 흐르는 석산계곡은 울창한 숲과 맑은 물로 가족 피서지로 제격이다.",
+   "businessHoursRaw": "상시 개방 / 휴무: 연중무휴"
+  },
+  {
+   "placeId": "tour_127688",
+   "name": "사나사(양평)",
+   "category": "attraction",
+   "lat": 37.5381421207,
+   "lng": 127.5065099242,
+   "address": "경기도 양평군 옥천면 사나사길 329",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/22/3590322_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/22/3590322_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EC%82%AC%EB%82%98%EC%82%AC(%EC%96%91%ED%8F%89)",
+   "tags": [],
+   "reviewSummary": "용문산 백운봉 기슭에 자리한 사나사는 신라시대 창건된 역사 깊은 사찰이다.",
+   "businessHoursRaw": "09:00~18:00 / 휴무: 연중무휴"
+  },
+  {
+   "placeId": "tour_2674763",
+   "name": "서후리숲",
+   "category": "attraction",
+   "lat": 37.5663707812,
+   "lng": 127.4301771507,
+   "address": "경기도 양평군 서종면 거북바위1길 200",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/95/3352495_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/95/3352495_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EC%84%9C%ED%9B%84%EB%A6%AC%EC%88%B2",
+   "tags": [
+    "nature",
+    "healing",
+    "photo_spot",
+    "aesthetic"
+   ],
+   "reviewSummary": "다양한 수종의 숲과 산책로가 조성된 서후리숲은 힐링하기 좋은 수목원이다.",
+   "businessHoursRaw": "09:00~18:00 / 휴무: 매주 수요일"
+  },
+  {
+   "placeId": "tour_2757536",
+   "name": "개군레포츠공원",
+   "category": "attraction",
+   "lat": 37.4341546367,
+   "lng": 127.531843961,
+   "address": "경기도 양평군 개군면 자진개1길 84",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/13/3584813_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/13/3584813_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EA%B0%9C%EA%B5%B0%EB%A0%88%ED%8F%AC%EC%B8%A0%EA%B3%B5%EC%9B%90",
+   "tags": [
+    "activity"
+   ],
+   "reviewSummary": "다양한 체육시설과 공원이 조성된 개군레포츠공원에서는 축제도 개최된다.",
+   "businessHoursRaw": "상시 개방 / 휴무: 연중무휴"
+  },
+  {
+   "placeId": "tour_1807162",
+   "name": "수미마을",
+   "category": "attraction",
+   "lat": 37.5153751443,
+   "lng": 127.6482810596,
+   "address": "경기도 양평군 단월면 곱다니길 55-2",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/78/3577778_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/78/3577778_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EC%88%98%EB%AF%B8%EB%A7%88%EC%9D%84",
+   "tags": [
+    "experience",
+    "kid_friendly"
+   ],
+   "reviewSummary": "계절별 축제가 열리는 수미마을은 다양한 농촌 문화를 경험할 수 있는 체험휴양마을이다.",
+   "businessHoursRaw": "상시 개방 / 휴무: 연중무휴"
+  },
+  {
+   "placeId": "tour_2754413",
+   "name": "파머스가든봄",
+   "category": "attraction",
+   "lat": 37.4949851661,
+   "lng": 127.4602237038,
+   "address": "경기도 양평군 강상면 강남로 729-12",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/23/3582623_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/23/3582623_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%ED%8C%8C%EB%A8%B8%EC%8A%A4%EA%B0%80%EB%93%A0%EB%B4%84",
+   "tags": [
+    "romantic",
+    "aesthetic",
+    "photo_spot"
+   ],
+   "reviewSummary": "남한강 변에 위치한 파머스가든봄은 정원, 레스토랑, 작은 미술관을 갖춘 복합 문화 공간이다."
+  },
+  {
+   "placeId": "tour_407051",
+   "name": "세미원",
+   "category": "attraction",
+   "lat": 37.5407412665,
+   "lng": 127.324190296,
+   "address": "경기도 양평군 양서면 양수로 93",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/90/3447890_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/90/3447890_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EC%84%B8%EB%AF%B8%EC%9B%90",
+   "tags": [
+    "nature",
+    "photo_spot",
+    "healing"
+   ],
+   "reviewSummary": "물과 꽃의 정원인 세미원은 팔당호 주변에서 다양한 수생식물과 역사 문화를 만날 수 있는 곳이다.",
+   "businessHoursRaw": "09:00~18:00 ※ 관람 종료 30분 전까지 입장권 발매 ※ 연꽃 축제 기간 이용시간은 홈페이지 참조 / 휴무: [4월~10월] 연중무휴 [11월~3월] 매주 월요일 (단, 월요일 공휴일 시 익일 대체 휴관)"
+  },
+  {
+   "placeId": "tour_1553085",
+   "name": "가루매마을",
+   "category": "attraction",
+   "lat": 37.4519513148,
+   "lng": 127.6145192906,
+   "address": "경기도 양평군 지평면 옥현리",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/49/3465849_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/49/3465849_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EA%B0%80%EB%A3%A8%EB%A7%A4%EB%A7%88%EC%9D%84",
+   "tags": [
+    "experience"
+   ],
+   "reviewSummary": "의향의 고장 양평에 위치한 가루매마을은 여러 골짜기 부락이 모여 단결을 이루는 체험마을이다.",
+   "businessHoursRaw": "상시 개방 / 휴무: 연중무휴"
+  },
+  {
+   "placeId": "tour_2683997",
+   "name": "카포레",
+   "category": "attraction",
+   "lat": 37.5057695729,
+   "lng": 127.4353895354,
+   "address": "경기도 양평군 강하면 강남로 458",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/82/3529982_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/82/3529982_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EC%B9%B4%ED%8F%AC%EB%A0%88",
+   "tags": [
+    "aesthetic",
+    "photo_spot",
+    "romantic"
+   ],
+   "reviewSummary": "모던한 건축물과 갤러리, 카페가 어우러진 카포레는 자연 속에서 전시와 음료를 즐길 수 있는 복합문화시설이다.",
+   "businessHoursRaw": "- 10:00~20:00 (마지막 주문 19:30)- 갤리리관 10:00~19:00 / 휴무: 연중무휴"
+  },
+  {
+   "placeId": "tour_2554274",
+   "name": "친환경농업박물관",
+   "category": "attraction",
+   "lat": 37.5476562793,
+   "lng": 127.5812695319,
+   "address": "경기도 양평군 용문면 용문산로 670",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/30/3078430_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/30/3078430_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EC%B9%9C%ED%99%98%EA%B2%BD%EB%86%8D%EC%97%85%EB%B0%95%EB%AC%BC%EA%B4%80",
+   "tags": [
+    "indoor",
+    "experience"
+   ],
+   "reviewSummary": "용문산 초입에 위치한 친환경 농업박물관은 양평의 역사와 친환경농업을 다루는 전시 및 교육 공간이다.",
+   "businessHoursRaw": "- 하절기(3월~10월) 09:30~17:30 - 동절기(11월~2월) 09:30~16:30 / 휴무: 매주 월요일 / 1월 1일 / 설·추석 연휴"
+  },
+  {
+   "placeId": "tour_2755846",
+   "name": "미리내리조트",
+   "category": "attraction",
+   "lat": 37.4810402612,
+   "lng": 127.6497819204,
+   "address": "경기도 양평군 지평면 월산저수지길 21",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/18/3504018_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/18/3504018_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EB%AF%B8%EB%A6%AC%EB%82%B4%EB%A6%AC%EC%A1%B0%ED%8A%B8",
+   "tags": [
+    "healing",
+    "nature",
+    "group"
+   ],
+   "reviewSummary": "다양한 숙박과 부대시설을 갖추고 있어 힐링과 단체 연수에 좋은 리조트입니다.",
+   "businessHoursRaw": "00:00~24:00"
+  },
+  {
+   "placeId": "tour_2846008",
+   "name": "벗고개",
+   "category": "attraction",
+   "lat": 37.5020254435,
+   "lng": 127.7311517178,
+   "address": "경기도 양평군 양동면 벗고갯길 121",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/91/2845991_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/91/2845991_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EB%B2%97%EA%B3%A0%EA%B0%9C",
+   "tags": [
+    "nature",
+    "photo_spot"
+   ],
+   "reviewSummary": "서울 근교 3대 별 조망 명소로 손꼽히는 아름다운 고개입니다.",
+   "businessHoursRaw": "상시 개방 / 휴무: 연중무휴"
+  },
+  {
+   "placeId": "tour_407259",
+   "name": "양평 백운봉자연휴양림",
+   "category": "attraction",
+   "lat": 37.5163754323,
+   "lng": 127.5191677381,
+   "address": "경기도 양평군 양평읍 약수사길 78-14",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/01/3040601_image2_1.jpeg",
+    "http://tong.visitkorea.or.kr/cms/resource/01/3040601_image3_1.jpeg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EC%96%91%ED%8F%89%20%EB%B0%B1%EC%9A%B4%EB%B4%89%EC%9E%90%EC%97%B0%ED%9C%B4%EC%96%91%EB%A6%BC",
+   "tags": [
+    "healing",
+    "nature",
+    "kid_friendly"
+   ],
+   "reviewSummary": "용문산줄기 백운봉 아래에 위치해 숲속에서 힐링과 휴식을 즐길 수 있는 휴양림입니다.",
+   "businessHoursRaw": "- 휴양림 09:00~18:00 - 야영데크 12:00~11:00 - 숙박 15:00~11:00 ※ 상세 사항은 홈페이지 참조 및 유선 문의 / 휴무: 매주 화요일"
+  },
+  {
+   "placeId": "tour_3014808",
+   "name": "큰삼촌농촌체험",
+   "category": "attraction",
+   "lat": 37.560863888,
+   "lng": 127.7752487823,
+   "address": "경기도 양평군 청운면 신론로 358",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/72/3014772_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/72/3014772_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%ED%81%B0%EC%82%BC%EC%B4%8C%EB%86%8D%EC%B4%8C%EC%B2%B4%ED%97%98",
+   "tags": [
+    "experience",
+    "kid_friendly"
+   ],
+   "reviewSummary": "계절별 다양한 농촌 체험과 전통음식 만들기를 즐길 수 있는 휴양마을입니다.",
+   "businessHoursRaw": "상시 개방 / 휴무: 연중무휴"
+  },
+  {
+   "placeId": "tour_612693",
+   "name": "용문산 토속음식마을",
+   "category": "attraction",
+   "lat": 37.5456426687,
+   "lng": 127.5837054804,
+   "address": "경기도 양평군 용문면 용문산로 640",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/78/3077178_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/78/3077178_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EC%9A%A9%EB%AC%B8%EC%82%B0%20%ED%86%A0%EC%86%8D%EC%9D%8C%EC%8B%9D%EB%A7%88%EC%9D%84",
+   "tags": [
+    "local_food"
+   ],
+   "reviewSummary": "용문산관광단지 초입에 위치해 산채나물과 더덕불고기 등 다양한 토속 한식을 맛볼 수 있습니다.",
+   "businessHoursRaw": "점포마다 상이함 / 휴무: 점포마다 상이함"
+  },
+  {
+   "placeId": "tour_2765225",
+   "name": "강하체육공원",
+   "category": "attraction",
+   "lat": 37.4966119139,
+   "lng": 127.4141833901,
+   "address": "경기도 양평군 강하면 운심길 70",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/12/3078412_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/12/3078412_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EA%B0%95%ED%95%98%EC%B2%B4%EC%9C%A1%EA%B3%B5%EC%9B%90",
+   "tags": [
+    "activity",
+    "kid_friendly"
+   ],
+   "reviewSummary": "축구장, 테니스장 등 다양한 체육시설과 어린이 모래놀이터가 있는 다목적 생활체육공원입니다.",
+   "businessHoursRaw": "상시 개방 / 휴무: 연중무휴"
+  },
+  {
+   "placeId": "tour_2765231",
+   "name": "강상체육공원",
+   "category": "attraction",
+   "lat": 37.4832897707,
+   "lng": 127.4859661494,
+   "address": "경기도 양평군 강상면 양평대교길 79",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/89/3020289_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/89/3020289_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EA%B0%95%EC%83%81%EC%B2%B4%EC%9C%A1%EA%B3%B5%EC%9B%90",
+   "tags": [
+    "activity",
+    "nature"
+   ],
+   "reviewSummary": "맑은 공기 속에서 축구장, 야구장 등의 체육시설과 카약을 즐길 수 있는 강변 공원입니다.",
+   "businessHoursRaw": "상시 개방"
+  },
+  {
+   "placeId": "tour_127692",
+   "name": "중미산자연휴양림",
+   "category": "attraction",
+   "lat": 37.5818000399,
+   "lng": 127.4571548101,
+   "address": "경기도 양평군 옥천면 중미산로 1152",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/86/607986_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/86/607986_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EC%A4%91%EB%AF%B8%EC%82%B0%EC%9E%90%EC%97%B0%ED%9C%B4%EC%96%91%EB%A6%BC",
+   "tags": [
+    "healing",
+    "nature"
+   ],
+   "reviewSummary": "울창한 숲과 남한강 조망을 즐기며 숲해설과 산림 체험을 할 수 있는 휴양림입니다.",
+   "businessHoursRaw": "15:00~익일 11:00 / 휴무: 매주 화요일"
+  },
+  {
+   "placeId": "tour_2757697",
+   "name": "양평 쉬자파크공원",
+   "category": "attraction",
+   "lat": 37.5112596163,
+   "lng": 127.5332110568,
+   "address": "경기도 양평군 양평읍 쉬자파크길 193",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/01/3444401_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/01/3444401_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EC%96%91%ED%8F%89%20%EC%89%AC%EC%9E%90%ED%8C%8C%ED%81%AC%EA%B3%B5%EC%9B%90",
+   "tags": [
+    "healing",
+    "nature"
+   ],
+   "reviewSummary": "기존 숲을 활용하여 조용하고 평화롭게 산책과 피크닉을 즐기기 좋은 공원입니다.",
+   "businessHoursRaw": "[하절기(3월~10월)]09:00~18:00[동절기(11월~2월)]09:00~17:00※ 종료 30분 전까지 입장 가능"
+  },
+  {
+   "placeId": "tour_2792937",
+   "name": "노산사지",
+   "category": "attraction",
+   "lat": 37.6399677501,
+   "lng": 127.4278002388,
+   "address": "경기도 양평군 서종면 화서1로 241",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/63/2796363_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/63/2796363_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EB%85%B8%EC%82%B0%EC%82%AC%EC%A7%80",
+   "tags": [],
+   "reviewSummary": "주자, 송시열, 화서 이항로의 영정과 위패를 모신 사당입니다.",
+   "businessHoursRaw": "상시 개방 / 휴무: 연중무휴"
+  },
+  {
+   "placeId": "tour_2397543",
+   "name": "모꼬지마을",
+   "category": "attraction",
+   "lat": 37.5173020371,
+   "lng": 127.6123842575,
+   "address": "경기도 양평군 용문면 중원산로 76",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/55/3392255_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/55/3392255_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EB%AA%A8%EA%BC%AC%EC%A7%80%EB%A7%88%EC%9D%84",
+   "tags": [
+    "experience",
+    "kid_friendly"
+   ],
+   "reviewSummary": "사계절 내내 딸기 따기, 물놀이, 얼음 썰매 등 다양한 농촌 체험을 즐길 수 있는 마을입니다.",
+   "businessHoursRaw": "09:00~17:00 / 휴무: 연중무휴"
+  },
+  {
+   "placeId": "tour_2765216",
+   "name": "대평지",
+   "category": "attraction",
+   "lat": 37.4223245313,
+   "lng": 127.6331434606,
+   "address": "경기도 양평군 지평면 대평로 148",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/34/3392234_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/34/3392234_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EB%8C%80%ED%8F%89%EC%A7%80",
+   "tags": [
+    "nature"
+   ],
+   "reviewSummary": "우두산과 매봉산 사이에 맑은 계곡물이 모이는 1964년 준공된 저수지입니다.",
+   "businessHoursRaw": "상시 개방 / 휴무: 연중무휴"
+  },
+  {
+   "placeId": "tour_1955902",
+   "name": "수곡서원",
+   "category": "attraction",
+   "lat": 37.4389608378,
+   "lng": 127.5974212144,
+   "address": "경기도 양평군 지평면 수곡안말길 41-1",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/62/3392262_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/62/3392262_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EC%88%98%EA%B3%A1%EC%84%9C%EC%9B%90",
+   "tags": [],
+   "reviewSummary": "조선 전기의 문신 권경우, 권경유 형제의 위패를 모신 사당입니다.",
+   "businessHoursRaw": "상시 개방 / 휴무: 연중무휴"
+  },
+  {
+   "placeId": "tour_1566740",
+   "name": "양평 맑은숲캠프",
+   "category": "attraction",
+   "lat": 37.5620407716,
+   "lng": 127.7343996722,
+   "address": "경기도 양평군 청운면 오목골길 33",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/83/3392283_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/83/3392283_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EC%96%91%ED%8F%89%20%EB%A7%91%EC%9D%80%EC%88%B2%EC%BA%A0%ED%94%84",
+   "tags": [
+    "healing",
+    "nature",
+    "kid_friendly",
+    "group"
+   ],
+   "reviewSummary": "자연이 잘 보존된 양평 청운면에서 찜질과 야외 물놀이를 즐길 수 있습니다.",
+   "businessHoursRaw": "시설별 상이하므로 홈페이지 참고 / 휴무: 연중무휴"
+  },
+  {
+   "placeId": "tour_2755489",
+   "name": "용문생활체육공원",
+   "category": "attraction",
+   "lat": 37.494357351,
+   "lng": 127.6056966402,
+   "address": "경기도 양평군 용문면 마천길 31-5",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/31/2755931_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/31/2755931_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EC%9A%A9%EB%AC%B8%EC%83%9D%ED%99%9C%EC%B2%B4%EC%9C%A1%EA%B3%B5%EC%9B%90",
+   "tags": [
+    "nature",
+    "kid_friendly"
+   ],
+   "reviewSummary": "흑천과 갈지산 사이에 위치해 조용히 산책과 운동을 즐기기 좋은 곳입니다.",
+   "businessHoursRaw": "상시 개방 / 휴무: 연중무휴"
+  },
+  {
+   "placeId": "tour_127365",
+   "name": "사나사 계곡",
+   "category": "attraction",
+   "lat": 37.5373866426,
+   "lng": 127.5059544409,
+   "address": "경기도 양평군 옥천면 용천로 1082-12",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/74/3382974_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/74/3382974_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EC%82%AC%EB%82%98%EC%82%AC%20%EA%B3%84%EA%B3%A1",
+   "tags": [
+    "nature",
+    "photo_spot"
+   ],
+   "reviewSummary": "수량이 풍부하고 물이 깨끗한 용문산 계곡으로 울창한 숲 절경을 자랑합니다.",
+   "businessHoursRaw": "상시 개방 / 휴무: 연중무휴"
+  },
+  {
+   "placeId": "tour_1104314",
+   "name": "지평지구전투전적비",
+   "category": "attraction",
+   "lat": 37.478687526,
+   "lng": 127.6373136737,
+   "address": "경기도 양평군 지평면 지평로 357",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/80/3382980_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/80/3382980_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EC%A7%80%ED%8F%89%EC%A7%80%EA%B5%AC%EC%A0%84%ED%88%AC%EC%A0%84%EC%A0%81%EB%B9%84",
+   "tags": [],
+   "reviewSummary": "한국전쟁 당시 지평리전투의 승리를 기념하고 전사한 장병들을 추모하는 곳입니다.",
+   "businessHoursRaw": "상시 개방 / 휴무: 연중무휴"
+  },
+  {
+   "placeId": "tour_129331",
+   "name": "양평 옹달샘꽃누름마을",
+   "category": "attraction",
+   "lat": 37.4618500455,
+   "lng": 127.6078473863,
+   "address": "경기도 양평군 용문면 궁촌길29번길 16",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/48/3366348_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/48/3366348_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EC%96%91%ED%8F%89%20%EC%98%B9%EB%8B%AC%EC%83%98%EA%BD%83%EB%88%84%EB%A6%84%EB%A7%88%EC%9D%84",
+   "tags": [
+    "nature",
+    "experience"
+   ],
+   "reviewSummary": "지하수로 농사를 지으며 친환경 오리 농법을 실천하는 청정 마을입니다.",
+   "businessHoursRaw": "휴무: 연중무휴"
+  },
+  {
+   "placeId": "tour_2755829",
+   "name": "갈산공원",
+   "category": "attraction",
+   "lat": 37.4836871538,
+   "lng": 127.4973262186,
+   "address": "경기도 양평군 양평읍 양평체육공원길 24",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/69/3445169_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/69/3445169_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EA%B0%88%EC%82%B0%EA%B3%B5%EC%9B%90",
+   "tags": [
+    "nature"
+   ],
+   "reviewSummary": "남한강변에 위치하며 벚꽃 명소이자 자전거 길과 산책로가 조성된 공원입니다.",
+   "businessHoursRaw": "상시 개방 / 휴무: 연중무휴"
+  },
+  {
+   "placeId": "tour_2755456",
+   "name": "양평양떼목장",
+   "category": "attraction",
+   "lat": 37.5154581101,
+   "lng": 127.6288717055,
+   "address": "경기도 양평군 용문면 은고갯길 112",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/67/3337867_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/67/3337867_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EC%96%91%ED%8F%89%EC%96%91%EB%96%BC%EB%AA%A9%EC%9E%A5",
+   "tags": [
+    "nature",
+    "experience",
+    "kid_friendly"
+   ],
+   "reviewSummary": "건초 먹이기와 아기 동물 교감 체험을 자유롭게 즐길 수 있는 양떼목장입니다.",
+   "businessHoursRaw": "- 평일 09:30~17:30 (입장 마감 16:30)- 주말 09:30~18:00 (입장 마감 17:00) / 휴무: 매주 화요일"
+  },
+  {
+   "placeId": "tour_2605339",
+   "name": "수풀로 양수리",
+   "category": "attraction",
+   "lat": 37.547023814,
+   "lng": 127.3210598445,
+   "address": "경기도 양평군 양서면 북한강로 33-2",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/45/3304345_image2_1.JPG",
+    "http://tong.visitkorea.or.kr/cms/resource/45/3304345_image3_1.JPG"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EC%88%98%ED%92%80%EB%A1%9C%20%EC%96%91%EC%88%98%EB%A6%AC",
+   "tags": [
+    "healing",
+    "nature",
+    "photo_spot"
+   ],
+   "reviewSummary": "북한강 경관과 생태연못을 감상하며 여유롭게 산책하기 좋은 생태공원입니다.",
+   "businessHoursRaw": "[관람시간] 09:00~18:00 [교육시간] 10:00 / 13:00 ※ 자세한 사항은 홈페이지 참조 / 휴무: 연중무휴"
+  },
+  {
+   "placeId": "tour_2789673",
+   "name": "소리산마을",
+   "category": "attraction",
+   "lat": 37.6415402493,
+   "lng": 127.6038758591,
+   "address": "경기도 양평군 단월면 물레골길 6",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/99/2794699_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/99/2794699_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EC%86%8C%EB%A6%AC%EC%82%B0%EB%A7%88%EC%9D%84",
+   "tags": [
+    "nature"
+   ],
+   "reviewSummary": "소리산과 석산계곡이 자리하고 매년 고로쇠 축제가 열리는 마을입니다.",
+   "businessHoursRaw": "상시 개방 / 휴무: 연중무휴"
+  },
+  {
+   "placeId": "tour_129398",
+   "name": "양평 마들가리마을",
+   "category": "attraction",
+   "lat": 37.4991974627,
+   "lng": 127.7024516218,
+   "address": "경기도 양평군 양동면 양동로 572",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/27/2627327_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/27/2627327_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EC%96%91%ED%8F%89%20%EB%A7%88%EB%93%A4%EA%B0%80%EB%A6%AC%EB%A7%88%EC%9D%84",
+   "tags": [
+    "nature",
+    "experience",
+    "kid_friendly"
+   ],
+   "reviewSummary": "청정 자연 속에서 전통 기구와 농산물 수확 등 다양한 체험을 할 수 있습니다.",
+   "businessHoursRaw": "상시 개방 / 휴무: 연중무휴"
+  },
+  {
+   "placeId": "tour_2755483",
+   "name": "지평레포츠공원",
+   "category": "attraction",
+   "lat": 37.4900000151,
+   "lng": 127.6324554526,
+   "address": "경기도 양평군 지평면 송정길 128",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/57/2755957_image2_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EC%A7%80%ED%8F%89%EB%A0%88%ED%8F%AC%EC%B8%A0%EA%B3%B5%EC%9B%90",
+   "tags": [
+    "kid_friendly"
+   ],
+   "reviewSummary": "갈지산 아래 다양한 체육 시설을 갖추어 쾌적하게 운동하고 걷기 좋은 곳입니다.",
+   "businessHoursRaw": "상시 개방 / 휴무: 시설별로 상이함"
+  },
+  {
+   "placeId": "tour_3448778",
+   "name": "양평 생활문화센터",
+   "category": "attraction",
+   "lat": 37.4996293776,
+   "lng": 127.476933165,
+   "address": "경기도 양평군 양평읍 물안개공원길 38",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/39/3452139_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/39/3452139_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EC%96%91%ED%8F%89%20%EC%83%9D%ED%99%9C%EB%AC%B8%ED%99%94%EC%84%BC%ED%84%B0",
+   "tags": [
+    "indoor"
+   ],
+   "reviewSummary": "다양한 문화 프로그램과 교육 활동, 전시를 즐길 수 있는 실내 문화 공간입니다.",
+   "businessHoursRaw": "화~금 10:00~21:00, 토 10:00~18:00 / 휴무: 매주 일요일, 월요일"
+  },
+  {
+   "placeId": "tour_127171",
+   "name": "국립 산음자연휴양림",
+   "category": "attraction",
+   "lat": 37.5961338783,
+   "lng": 127.5751825647,
+   "address": "경기도 양평군 단월면 고북길 347",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%EA%B5%AD%EB%A6%BD%20%EC%82%B0%EC%9D%8C%EC%9E%90%EC%97%B0%ED%9C%B4%EC%96%91%EB%A6%BC",
+   "tags": [
+    "healing",
+    "nature",
+    "experience"
+   ],
+   "reviewSummary": "맑은 계곡과 치유의 숲이 어우러져 숲속체험과 힐링을 즐길 수 있는 휴양림입니다.",
+   "businessHoursRaw": "[일일개장] 09:00~18:00 [숙박시설] 15:00~익일 11:00 [야영실] 14:00~익일 11:00 / 휴무: 매주 화요일"
+  },
+  {
+   "placeId": "tour_125474",
+   "name": "중원산",
+   "category": "attraction",
+   "lat": 37.5595525041,
+   "lng": 127.6020200818,
+   "address": "경기도 양평군 용문면 중원리",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%EC%A4%91%EC%9B%90%EC%82%B0",
+   "tags": [
+    "nature"
+   ],
+   "reviewSummary": "수려한 계곡과 폭포를 품고 있어 아름다운 자연경관을 자랑하는 바위산입니다.",
+   "businessHoursRaw": "상시 개방 / 휴무: 연중무휴"
+  },
+  {
+   "placeId": "tour_125470",
+   "name": "용문산 백운봉",
+   "category": "attraction",
+   "lat": 37.5333541692,
+   "lng": 127.527319286,
+   "address": "경기도 양평군 옥천면 용천리",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%EC%9A%A9%EB%AC%B8%EC%82%B0%20%EB%B0%B1%EC%9A%B4%EB%B4%89",
+   "tags": [
+    "nature"
+   ],
+   "reviewSummary": "정상에서 남한강과 양평읍내가 한눈에 내려다보이는 화려한 암봉입니다.",
+   "businessHoursRaw": "상시 개방 / 휴무: 연중무휴"
+  },
+  {
+   "placeId": "naver_1274817523_374970050",
+   "name": "스타벅스 더양평DT점",
+   "category": "cafe",
+   "categoryLabel": "카페,디저트>카페",
+   "lat": 37.497005,
+   "lng": 127.4817523,
+   "address": "경기도 양평군 양평읍 양근로 76",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%EC%8A%A4%ED%83%80%EB%B2%85%EC%8A%A4%20%EB%8D%94%EC%96%91%ED%8F%89DT%EC%A0%90%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%96%91%ED%8F%89%EC%9D%8D%20%EC%96%91%EA%B7%BC%EB%A1%9C%2076",
+   "tags": [],
+   "businessHoursRaw": "월~금 09:00~20:00, 토 일 08:30~21:00"
+  },
+  {
+   "placeId": "naver_1274912005_374345480",
+   "name": "로우드",
+   "category": "cafe",
+   "categoryLabel": "음식점>카페,디저트",
+   "lat": 37.434548,
+   "lng": 127.4912005,
+   "address": "경기도 양평군 강상면 강남로 1604 1층 로우드",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%EB%A1%9C%EC%9A%B0%EB%93%9C%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EA%B0%95%EC%83%81%EB%A9%B4%20%EA%B0%95%EB%82%A8%EB%A1%9C%201604%201%EC%B8%B5%20%EB%A1%9C%EC%9A%B0%EB%93%9C",
+   "tags": [],
+   "businessHoursRaw": "토 일 11:00~19:00 / 휴무: 매주 월요일, 화요일, 수요일, 목요일, 금요일"
+  },
+  {
+   "placeId": "naver_1273999723_374922473",
+   "name": "칸트의마을",
+   "category": "cafe",
+   "categoryLabel": "음식점>카페,디저트",
+   "lat": 37.4922473,
+   "lng": 127.3999723,
+   "address": "경기도 양평군 강하면 강남로 102-10 칸트의마을",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/04/2836504_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/04/2836504_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EC%B9%B8%ED%8A%B8%EC%9D%98%EB%A7%88%EC%9D%84%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EA%B0%95%ED%95%98%EB%A9%B4%20%EA%B0%95%EB%82%A8%EB%A1%9C%20102-10%20%EC%B9%B8%ED%8A%B8%EC%9D%98%EB%A7%88%EC%9D%84",
+   "tags": [
+    "healing",
+    "view_cafe",
+    "photo_spot",
+    "aesthetic"
+   ],
+   "reviewSummary": "초록빛 자연 속에서 여유를 즐길 수 있는 앤티크한 분위기의 대형 정원 카페입니다.",
+   "businessHoursRaw": "- 평일 10:00~21:00 - 주말 및 공휴일 10:00~22:00 / 휴무: 연중무휴"
+  },
+  {
+   "placeId": "naver_1273172732_375466530",
+   "name": "카페리노",
+   "category": "cafe",
+   "categoryLabel": "음식점>카페,디저트",
+   "lat": 37.546653,
+   "lng": 127.3172732,
+   "address": "경기도 양평군 양서면 양수로152번길 32-1",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%EC%B9%B4%ED%8E%98%EB%A6%AC%EB%85%B8%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%96%91%EC%84%9C%EB%A9%B4%20%EC%96%91%EC%88%98%EB%A1%9C152%EB%B2%88%EA%B8%B8%2032-1",
+   "tags": [],
+   "businessHoursRaw": "09:00~23:00, 22:30 라스트오더"
+  },
+  {
+   "placeId": "naver_1274249258_375088187",
+   "name": "구벼울",
+   "category": "cafe",
+   "categoryLabel": "음식점>카페,디저트",
+   "lat": 37.5088187,
+   "lng": 127.4249258,
+   "address": "경기도 양평군 옥천면 남한강변길 123-19",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%EA%B5%AC%EB%B2%BC%EC%9A%B8%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%98%A5%EC%B2%9C%EB%A9%B4%20%EB%82%A8%ED%95%9C%EA%B0%95%EB%B3%80%EA%B8%B8%20123-19",
+   "tags": [],
+   "businessHoursRaw": "10:00~21:00"
+  },
+  {
+   "placeId": "naver_1273529941_375984976",
+   "name": "하우스 베이커리",
+   "category": "cafe",
+   "categoryLabel": "카페,디저트>베이커리",
+   "lat": 37.5984976,
+   "lng": 127.3529941,
+   "address": "경기도 양평군 서종면 북한강로 684 하우스베이커리",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/24/2794724_image2_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%ED%95%98%EC%9A%B0%EC%8A%A4%20%EB%B2%A0%EC%9D%B4%EC%BB%A4%EB%A6%AC%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%84%9C%EC%A2%85%EB%A9%B4%20%EB%B6%81%ED%95%9C%EA%B0%95%EB%A1%9C%20684%20%ED%95%98%EC%9A%B0%EC%8A%A4%EB%B2%A0%EC%9D%B4%EC%BB%A4%EB%A6%AC",
+   "tags": [
+    "aesthetic",
+    "kid_friendly"
+   ],
+   "petFriendly": true,
+   "reviewSummary": "유기농 베이커리와 넓은 마당이 있어 아이와 함께 방문하기 좋은 한옥 감성 카페입니다.",
+   "businessHoursRaw": "월~금 10:30~20:00, 토 일 10:00~20:00"
+  },
+  {
+   "placeId": "naver_1276620122_375073093",
+   "name": "도토리골 양평정원카페",
+   "category": "cafe",
+   "categoryLabel": "음식점>카페,디저트",
+   "lat": 37.5073093,
+   "lng": 127.6620122,
+   "address": "경기도 양평군 단월면 곱다니길 151-1 도토리골 양평정원카페",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%EB%8F%84%ED%86%A0%EB%A6%AC%EA%B3%A8%20%EC%96%91%ED%8F%89%EC%A0%95%EC%9B%90%EC%B9%B4%ED%8E%98%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EB%8B%A8%EC%9B%94%EB%A9%B4%20%EA%B3%B1%EB%8B%A4%EB%8B%88%EA%B8%B8%20151-1%20%EB%8F%84%ED%86%A0%EB%A6%AC%EA%B3%A8%20%EC%96%91%ED%8F%89%EC%A0%95%EC%9B%90%EC%B9%B4%ED%8E%98",
+   "tags": [],
+   "businessHoursRaw": "10:00~20:00, 19:30 라스트오더"
+  },
+  {
+   "placeId": "naver_1276940227_375420645",
+   "name": "라 네베",
+   "category": "cafe",
+   "categoryLabel": "음식점>카페,디저트",
+   "lat": 37.5420645,
+   "lng": 127.6940227,
+   "address": "경기도 양평군 청운면 경강로 4069 Cafe La Neve",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%EB%9D%BC%20%EB%84%A4%EB%B2%A0%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%B2%AD%EC%9A%B4%EB%A9%B4%20%EA%B2%BD%EA%B0%95%EB%A1%9C%204069%20Cafe%20La%20Neve",
+   "tags": [],
+   "businessHoursRaw": "화~일 10:30~20:00, 19:30 라스트오더 / 휴무: 매주 월요일"
+  },
+  {
+   "placeId": "naver_1276010620_375177271",
+   "name": "용문산빵공장",
+   "category": "cafe",
+   "categoryLabel": "음식점>카페,디저트",
+   "lat": 37.5177271,
+   "lng": 127.601062,
+   "address": "경기도 양평군 용문면 용문산로 235",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%EC%9A%A9%EB%AC%B8%EC%82%B0%EB%B9%B5%EA%B3%B5%EC%9E%A5%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%9A%A9%EB%AC%B8%EB%A9%B4%20%EC%9A%A9%EB%AC%B8%EC%82%B0%EB%A1%9C%20235",
+   "tags": [],
+   "businessHoursRaw": "09:00~21:00"
+  },
+  {
+   "placeId": "naver_1275309985_374677896",
+   "name": "흑유재",
+   "category": "cafe",
+   "categoryLabel": "음식점>카페,디저트",
+   "lat": 37.4677896,
+   "lng": 127.5309985,
+   "address": "경기도 양평군 개군면 신내길7번길 36 흑유재",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%ED%9D%91%EC%9C%A0%EC%9E%AC%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EA%B0%9C%EA%B5%B0%EB%A9%B4%20%EC%8B%A0%EB%82%B4%EA%B8%B87%EB%B2%88%EA%B8%B8%2036%20%ED%9D%91%EC%9C%A0%EC%9E%AC",
+   "tags": [],
+   "businessHoursRaw": "10:00~23:00"
+  },
+  {
+   "placeId": "naver_1274999390_374910640",
+   "name": "스타벅스 경기양평점",
+   "category": "cafe",
+   "categoryLabel": "카페,디저트>카페",
+   "lat": 37.491064,
+   "lng": 127.499939,
+   "address": "경기도 양평군 양평읍 시민로 75",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%EC%8A%A4%ED%83%80%EB%B2%85%EC%8A%A4%20%EA%B2%BD%EA%B8%B0%EC%96%91%ED%8F%89%EC%A0%90%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%96%91%ED%8F%89%EC%9D%8D%20%EC%8B%9C%EB%AF%BC%EB%A1%9C%2075",
+   "tags": [],
+   "businessHoursRaw": "07:00~22:00"
+  },
+  {
+   "placeId": "naver_1274267948_375041384",
+   "name": "카페무르",
+   "category": "cafe",
+   "categoryLabel": "브런치카페",
+   "lat": 37.5041384,
+   "lng": 127.4267948,
+   "address": "경기도 양평군 강하면 강남로 379 1층 카페무르",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/48/2793848_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/48/2793848_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EC%B9%B4%ED%8E%98%EB%AC%B4%EB%A5%B4%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EA%B0%95%ED%95%98%EB%A9%B4%20%EA%B0%95%EB%82%A8%EB%A1%9C%20379%201%EC%B8%B5%20%EC%B9%B4%ED%8E%98%EB%AC%B4%EB%A5%B4",
+   "tags": [
+    "view_cafe",
+    "romantic",
+    "photo_spot",
+    "aesthetic"
+   ],
+   "reviewSummary": "탁 트인 리버뷰와 이국적인 정원이 아름다운 SNS 포토존 명소입니다.",
+   "businessHoursRaw": "- 평일 11:00~19:30 - 주말 11:00~20:30 / 휴무: 연중무휴"
+  },
+  {
+   "placeId": "naver_1273215655_375517883",
+   "name": "수수카페",
+   "category": "cafe",
+   "categoryLabel": "음식점>카페,디저트",
+   "lat": 37.5517883,
+   "lng": 127.3215655,
+   "address": "경기도 양평군 양서면 북한강로89번길 19",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%EC%88%98%EC%88%98%EC%B9%B4%ED%8E%98%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%96%91%EC%84%9C%EB%A9%B4%20%EB%B6%81%ED%95%9C%EA%B0%95%EB%A1%9C89%EB%B2%88%EA%B8%B8%2019",
+   "tags": [],
+   "businessHoursRaw": "월~금 10:00~22:00, 토 일 08:30~22:00"
+  },
+  {
+   "placeId": "naver_1273547638_376249287",
+   "name": "테라로사 서종점",
+   "category": "cafe",
+   "categoryLabel": "카페,디저트>카페",
+   "lat": 37.6249287,
+   "lng": 127.3547638,
+   "address": "경기도 양평군 서종면 북한강로 990",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%ED%85%8C%EB%9D%BC%EB%A1%9C%EC%82%AC%20%EC%84%9C%EC%A2%85%EC%A0%90%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%84%9C%EC%A2%85%EB%A9%B4%20%EB%B6%81%ED%95%9C%EA%B0%95%EB%A1%9C%20990",
+   "tags": [],
+   "businessHoursRaw": "09:00~21:00"
+  },
+  {
+   "placeId": "naver_1276739858_375553492",
+   "name": "월화수 디저트카페",
+   "category": "cafe",
+   "categoryLabel": "음식점>카페,디저트",
+   "lat": 37.5553492,
+   "lng": 127.6739858,
+   "address": "경기도 양평군 단월면 점골길 41",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%EC%9B%94%ED%99%94%EC%88%98%20%EB%94%94%EC%A0%80%ED%8A%B8%EC%B9%B4%ED%8E%98%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EB%8B%A8%EC%9B%94%EB%A9%B4%20%EC%A0%90%EA%B3%A8%EA%B8%B8%2041",
+   "tags": [],
+   "businessHoursRaw": "월~수 금~일 10:00~20:00 / 휴무: 매주 목요일"
+  },
+  {
+   "placeId": "naver_1277655086_375679343",
+   "name": "바람길카페",
+   "category": "cafe",
+   "categoryLabel": "음식점>카페,디저트",
+   "lat": 37.5679343,
+   "lng": 127.7655086,
+   "address": "경기도 양평군 청운면 신론로 231",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%EB%B0%94%EB%9E%8C%EA%B8%B8%EC%B9%B4%ED%8E%98%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%B2%AD%EC%9A%B4%EB%A9%B4%20%EC%8B%A0%EB%A1%A0%EB%A1%9C%20231",
+   "tags": [],
+   "businessHoursRaw": "월~금 10:00~19:00, 토 08:30~20:00, 일 08:30~19:00"
+  },
+  {
+   "placeId": "naver_1276318595_375011652",
+   "name": "지평로76카페",
+   "category": "cafe",
+   "categoryLabel": "카페,디저트>카페",
+   "lat": 37.5011652,
+   "lng": 127.6318595,
+   "address": "경기도 양평군 지평면 지평로 76",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%EC%A7%80%ED%8F%89%EB%A1%9C76%EC%B9%B4%ED%8E%98%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%A7%80%ED%8F%89%EB%A9%B4%20%EC%A7%80%ED%8F%89%EB%A1%9C%2076",
+   "tags": [],
+   "businessHoursRaw": "07:00~21:00"
+  },
+  {
+   "placeId": "naver_1275700064_374827673",
+   "name": "콘크리트정글",
+   "category": "cafe",
+   "categoryLabel": "음식점>카페,디저트",
+   "lat": 37.4827673,
+   "lng": 127.5700064,
+   "address": "경기도 양평군 용문면 용문로 116",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%EC%BD%98%ED%81%AC%EB%A6%AC%ED%8A%B8%EC%A0%95%EA%B8%80%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%9A%A9%EB%AC%B8%EB%A9%B4%20%EC%9A%A9%EB%AC%B8%EB%A1%9C%20116",
+   "tags": [],
+   "businessHoursRaw": "10:00~20:00"
+  },
+  {
+   "placeId": "naver_1275259770_374600959",
+   "name": "그린망고",
+   "category": "cafe",
+   "categoryLabel": "음식점>카페,디저트",
+   "lat": 37.4600959,
+   "lng": 127.525977,
+   "address": "경기도 양평군 개군면 개군산로 32",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%EA%B7%B8%EB%A6%B0%EB%A7%9D%EA%B3%A0%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EA%B0%9C%EA%B5%B0%EB%A9%B4%20%EA%B0%9C%EA%B5%B0%EC%82%B0%EB%A1%9C%2032",
+   "tags": [],
+   "businessHoursRaw": "월 화 목~일 09:00~18:00 / 휴무: 매주 수요일"
+  },
+  {
+   "placeId": "naver_1274796632_374981478",
+   "name": "양평빵공장",
+   "category": "cafe",
+   "categoryLabel": "음식점>카페,디저트",
+   "lat": 37.4981478,
+   "lng": 127.4796632,
+   "address": "경기도 양평군 양평읍 물안개공원길 5-1 양평빵공장",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%EC%96%91%ED%8F%89%EB%B9%B5%EA%B3%B5%EC%9E%A5%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%96%91%ED%8F%89%EC%9D%8D%20%EB%AC%BC%EC%95%88%EA%B0%9C%EA%B3%B5%EC%9B%90%EA%B8%B8%205-1%20%EC%96%91%ED%8F%89%EB%B9%B5%EA%B3%B5%EC%9E%A5",
+   "tags": [],
+   "businessHoursRaw": "08:00~01:00"
+  },
+  {
+   "placeId": "naver_1274860212_374777703",
+   "name": "마이리틀호주",
+   "category": "cafe",
+   "categoryLabel": "음식점>카페,디저트",
+   "lat": 37.4777703,
+   "lng": 127.4860212,
+   "address": "경기도 양평군 강상면 강남로 1052-2",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%EB%A7%88%EC%9D%B4%EB%A6%AC%ED%8B%80%ED%98%B8%EC%A3%BC%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EA%B0%95%EC%83%81%EB%A9%B4%20%EA%B0%95%EB%82%A8%EB%A1%9C%201052-2",
+   "tags": [],
+   "businessHoursRaw": "월~금 08:00~17:00, 토 일 09:00~18:00"
+  },
+  {
+   "placeId": "naver_1273896739_374924028",
+   "name": "헤리베르",
+   "category": "cafe",
+   "categoryLabel": "카페,디저트>베이커리",
+   "lat": 37.4924028,
+   "lng": 127.3896739,
+   "address": "경기도 양평군 강하면 산수로 3096",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/84/2852784_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/84/2852784_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%ED%97%A4%EB%A6%AC%EB%B2%A0%EB%A5%B4%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EA%B0%95%ED%95%98%EB%A9%B4%20%EC%82%B0%EC%88%98%EB%A1%9C%203096",
+   "tags": [
+    "view_cafe",
+    "nature"
+   ],
+   "reviewSummary": "한강 수변공원 옆 남한강 전망과 녹색 정원을 즐길 수 있는 대형 베이커리 카페입니다.",
+   "businessHoursRaw": "09:00~21:00 / 휴무: 연중무휴"
+  },
+  {
+   "placeId": "naver_1273282488_375571760",
+   "name": "소풍",
+   "category": "cafe",
+   "categoryLabel": "음식점>카페,디저트",
+   "lat": 37.557176,
+   "lng": 127.3282488,
+   "address": "경기도 양평군 양서면 골용진길 21 소풍",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%EC%86%8C%ED%92%8D%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%96%91%EC%84%9C%EB%A9%B4%20%EA%B3%A8%EC%9A%A9%EC%A7%84%EA%B8%B8%2021%20%EC%86%8C%ED%92%8D",
+   "tags": [],
+   "businessHoursRaw": "월~목 08:00~21:30, 금 07:00~23:00, 토 일 07:00~24:00"
+  },
+  {
+   "placeId": "naver_1274740894_375333890",
+   "name": "신복리709",
+   "category": "cafe",
+   "categoryLabel": "음식점>카페,디저트",
+   "lat": 37.533389,
+   "lng": 127.4740894,
+   "address": "경기도 양평군 옥천면 신복동촌길14번길 26-10 신복리709카페",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%EC%8B%A0%EB%B3%B5%EB%A6%AC709%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%98%A5%EC%B2%9C%EB%A9%B4%20%EC%8B%A0%EB%B3%B5%EB%8F%99%EC%B4%8C%EA%B8%B814%EB%B2%88%EA%B8%B8%2026-10%20%EC%8B%A0%EB%B3%B5%EB%A6%AC709%EC%B9%B4%ED%8E%98",
+   "tags": [],
+   "businessHoursRaw": "월~금 11:00~20:00, 토 일 10:00~21:00"
+  },
+  {
+   "placeId": "naver_1276842272_375817960",
+   "name": "쉬어간들어떠하리",
+   "category": "cafe",
+   "categoryLabel": "카페,디저트>차",
+   "lat": 37.581796,
+   "lng": 127.6842272,
+   "address": "경기도 양평군 단월면 대부록길 71 빨간지붕",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%EC%89%AC%EC%96%B4%EA%B0%84%EB%93%A4%EC%96%B4%EB%96%A0%ED%95%98%EB%A6%AC%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EB%8B%A8%EC%9B%94%EB%A9%B4%20%EB%8C%80%EB%B6%80%EB%A1%9D%EA%B8%B8%2071%20%EB%B9%A8%EA%B0%84%EC%A7%80%EB%B6%95",
+   "tags": [
+    "healing"
+   ],
+   "businessHoursRaw": "수~일 11:00~18:00 / 휴무: 매주 월요일, 화요일"
+  },
+  {
+   "placeId": "naver_1277699364_375414427",
+   "name": "카페룰루",
+   "category": "cafe",
+   "categoryLabel": "음식점>카페,디저트",
+   "lat": 37.5414427,
+   "lng": 127.7699364,
+   "address": "경기도 양평군 청운면 갈운양지마을1길 7",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%EC%B9%B4%ED%8E%98%EB%A3%B0%EB%A3%A8%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%B2%AD%EC%9A%B4%EB%A9%B4%20%EA%B0%88%EC%9A%B4%EC%96%91%EC%A7%80%EB%A7%88%EC%9D%841%EA%B8%B8%207",
+   "tags": [],
+   "businessHoursRaw": "화 09:00~15:00, 월 목~일 09:00~20:00"
+  },
+  {
+   "placeId": "naver_1276304617_374741538",
+   "name": "앵무타운",
+   "category": "cafe",
+   "categoryLabel": "동물카페",
+   "lat": 37.4741538,
+   "lng": 127.6304617,
+   "address": "경기도 양평군 지평면 지평1로 209-22 앵무타운",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%EC%95%B5%EB%AC%B4%ED%83%80%EC%9A%B4%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%A7%80%ED%8F%89%EB%A9%B4%20%EC%A7%80%ED%8F%891%EB%A1%9C%20209-22%20%EC%95%B5%EB%AC%B4%ED%83%80%EC%9A%B4",
+   "tags": [],
+   "businessHoursRaw": "11:00~22:00"
+  },
+  {
+   "placeId": "naver_1276042495_375094839",
+   "name": "플로라늘카페",
+   "category": "cafe",
+   "categoryLabel": "카페,디저트>카페",
+   "lat": 37.5094839,
+   "lng": 127.6042495,
+   "address": "경기도 양평군 용문면 용문산로 133",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/40/2837040_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/40/2837040_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%ED%94%8C%EB%A1%9C%EB%9D%BC%EB%8A%98%EC%B9%B4%ED%8E%98%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%9A%A9%EB%AC%B8%EB%A9%B4%20%EC%9A%A9%EB%AC%B8%EC%82%B0%EB%A1%9C%20133",
+   "tags": [
+    "view_cafe"
+   ],
+   "petFriendly": true,
+   "reviewSummary": "용문산 전망과 야외 정원을 갖춘 반려동물 동반 가능 대형 베이커리 카페입니다.",
+   "businessHoursRaw": "09:00~21:00 / 휴무: 매주 월요일"
+  },
+  {
+   "placeId": "naver_1275309263_374318844",
+   "name": "카페이연",
+   "category": "cafe",
+   "categoryLabel": "음식점>카페,디저트",
+   "lat": 37.4318844,
+   "lng": 127.5309263,
+   "address": "경기도 양평군 개군면 자진개1길 85-10",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%EC%B9%B4%ED%8E%98%EC%9D%B4%EC%97%B0%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EA%B0%9C%EA%B5%B0%EB%A9%B4%20%EC%9E%90%EC%A7%84%EA%B0%9C1%EA%B8%B8%2085-10",
+   "tags": [],
+   "businessHoursRaw": "10:00~20:00, 19:30 라스트오더"
+  },
+  {
+   "placeId": "naver_1274913228_375085245",
+   "name": "마루정원제빵소 양평본점",
+   "category": "cafe",
+   "categoryLabel": "카페,디저트>베이커리",
+   "lat": 37.5085245,
+   "lng": 127.4913228,
+   "address": "경기도 양평군 양평읍 마유산로 197 좋은아침페스츄리 양평점",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%EB%A7%88%EB%A3%A8%EC%A0%95%EC%9B%90%EC%A0%9C%EB%B9%B5%EC%86%8C%20%EC%96%91%ED%8F%89%EB%B3%B8%EC%A0%90%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%96%91%ED%8F%89%EC%9D%8D%20%EB%A7%88%EC%9C%A0%EC%82%B0%EB%A1%9C%20197%20%EC%A2%8B%EC%9D%80%EC%95%84%EC%B9%A8%ED%8E%98%EC%8A%A4%EC%B8%84%EB%A6%AC%20%EC%96%91%ED%8F%89%EC%A0%90",
+   "tags": [],
+   "businessHoursRaw": "08:30~21:00, 20:30 라스트오더"
+  },
+  {
+   "placeId": "naver_1274714717_374907347",
+   "name": "커피앤가든",
+   "category": "cafe",
+   "categoryLabel": "카페,디저트>테이크아웃커피",
+   "lat": 37.4907347,
+   "lng": 127.4714717,
+   "address": "경기도 양평군 강상면 강남로 841",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%EC%BB%A4%ED%94%BC%EC%95%A4%EA%B0%80%EB%93%A0%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EA%B0%95%EC%83%81%EB%A9%B4%20%EA%B0%95%EB%82%A8%EB%A1%9C%20841",
+   "tags": [],
+   "businessHoursRaw": "월~금 10:00~18:00, 토 일 09:00~19:00"
+  },
+  {
+   "placeId": "naver_1274098107_374971433",
+   "name": "비아베네또 수입가구&카페",
+   "category": "cafe",
+   "categoryLabel": "음식점>카페,디저트",
+   "lat": 37.4971433,
+   "lng": 127.4098107,
+   "address": "경기도 양평군 강하면 강남로 208 비아베네또",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%EB%B9%84%EC%95%84%EB%B2%A0%EB%84%A4%EB%98%90%20%EC%88%98%EC%9E%85%EA%B0%80%EA%B5%AC%26%EC%B9%B4%ED%8E%98%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EA%B0%95%ED%95%98%EB%A9%B4%20%EA%B0%95%EB%82%A8%EB%A1%9C%20208%20%EB%B9%84%EC%95%84%EB%B2%A0%EB%84%A4%EB%98%90",
+   "tags": [],
+   "businessHoursRaw": "10:00~19:00"
+  },
+  {
+   "placeId": "naver_1273227950_375432960",
+   "name": "양수리빵공장",
+   "category": "cafe",
+   "categoryLabel": "카페,디저트>베이커리",
+   "lat": 37.543296,
+   "lng": 127.322795,
+   "address": "경기도 양평군 양서면 양수로118번길 9",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%EC%96%91%EC%88%98%EB%A6%AC%EB%B9%B5%EA%B3%B5%EC%9E%A5%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%96%91%EC%84%9C%EB%A9%B4%20%EC%96%91%EC%88%98%EB%A1%9C118%EB%B2%88%EA%B8%B8%209",
+   "tags": [],
+   "businessHoursRaw": "08:00~24:00"
+  },
+  {
+   "placeId": "naver_1274960336_375421827",
+   "name": "하록수림",
+   "category": "cafe",
+   "categoryLabel": "카페,디저트>카페",
+   "lat": 37.5421827,
+   "lng": 127.4960336,
+   "address": "경기도 양평군 옥천면 용천로219번길 21 가동, 나동",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%ED%95%98%EB%A1%9D%EC%88%98%EB%A6%BC%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%98%A5%EC%B2%9C%EB%A9%B4%20%EC%9A%A9%EC%B2%9C%EB%A1%9C219%EB%B2%88%EA%B8%B8%2021%20%EA%B0%80%EB%8F%99%2C%20%EB%82%98%EB%8F%99",
+   "tags": [],
+   "businessHoursRaw": "월 화 목~일 11:00~19:00 / 휴무: 매주 수요일"
+  },
+  {
+   "placeId": "naver_1273593186_376320611",
+   "name": "서종제빵소",
+   "category": "cafe",
+   "categoryLabel": "음식점>카페,디저트",
+   "lat": 37.6320611,
+   "lng": 127.3593186,
+   "address": "경기도 양평군 서종면 북한강로 1079",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/09/2733609_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/09/2733609_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EC%84%9C%EC%A2%85%EC%A0%9C%EB%B9%B5%EC%86%8C%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%84%9C%EC%A2%85%EB%A9%B4%20%EB%B6%81%ED%95%9C%EA%B0%95%EB%A1%9C%201079",
+   "tags": [
+    "healing",
+    "view_cafe"
+   ],
+   "reviewSummary": "북한강 바로 앞 수려한 자연 속에서 맛있는 빵과 커피를 즐기며 휴식하기 좋은 베이커리 카페입니다.",
+   "businessHoursRaw": "10:00 ~ 21:00 / 휴무: 연중무휴"
+  },
+  {
+   "placeId": "naver_1276675294_375549647",
+   "name": "써니플",
+   "category": "cafe",
+   "categoryLabel": "음식점>카페,디저트",
+   "lat": 37.5549647,
+   "lng": 127.6675294,
+   "address": "경기도 양평군 단월면 석산로 12-1 1층",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%EC%8D%A8%EB%8B%88%ED%94%8C%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EB%8B%A8%EC%9B%94%EB%A9%B4%20%EC%84%9D%EC%82%B0%EB%A1%9C%2012-1%201%EC%B8%B5",
+   "tags": [],
+   "businessHoursRaw": "월~토 08:00~18:00 / 휴무: 매주 일요일"
+  },
+  {
+   "placeId": "naver_1277723035_375405995",
+   "name": "양평찐빵양평감자떡",
+   "category": "cafe",
+   "categoryLabel": "카페,디저트>찐빵",
+   "lat": 37.5405995,
+   "lng": 127.7723035,
+   "address": "경기도 양평군 청운면 경강로 4907",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%EC%96%91%ED%8F%89%EC%B0%90%EB%B9%B5%EC%96%91%ED%8F%89%EA%B0%90%EC%9E%90%EB%96%A1%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%B2%AD%EC%9A%B4%EB%A9%B4%20%EA%B2%BD%EA%B0%95%EB%A1%9C%204907",
+   "tags": []
+  },
+  {
+   "placeId": "naver_1275882734_375385157",
+   "name": "구름정원제빵소",
+   "category": "cafe",
+   "categoryLabel": "카페,디저트>베이커리",
+   "lat": 37.5385157,
+   "lng": 127.5882734,
+   "address": "경기도 양평군 용문면 용문산로 543",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%EA%B5%AC%EB%A6%84%EC%A0%95%EC%9B%90%EC%A0%9C%EB%B9%B5%EC%86%8C%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%9A%A9%EB%AC%B8%EB%A9%B4%20%EC%9A%A9%EB%AC%B8%EC%82%B0%EB%A1%9C%20543",
+   "tags": [],
+   "businessHoursRaw": "월 목 금 10:00~19:00, 토 일 10:00~20:00 / 휴무: 매주 화요일, 수요일"
+  },
+  {
+   "placeId": "naver_1275110468_374428633",
+   "name": "루루루",
+   "category": "cafe",
+   "categoryLabel": "음식점>카페,디저트",
+   "lat": 37.4428633,
+   "lng": 127.5110468,
+   "address": "경기도 양평군 개군면 앙덕길69번길 11 하얀건물",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%EB%A3%A8%EB%A3%A8%EB%A3%A8%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EA%B0%9C%EA%B5%B0%EB%A9%B4%20%EC%95%99%EB%8D%95%EA%B8%B869%EB%B2%88%EA%B8%B8%2011%20%ED%95%98%EC%96%80%EA%B1%B4%EB%AC%BC",
+   "tags": [],
+   "businessHoursRaw": "목~일 10:00~18:00 / 휴무: 매주 월요일, 화요일, 수요일"
+  },
+  {
+   "placeId": "naver_1275099358_374610457",
+   "name": "가소담",
+   "category": "cafe",
+   "categoryLabel": "음식점>카페,디저트",
+   "lat": 37.4610457,
+   "lng": 127.5099358,
+   "address": "경기도 양평군 양평읍 충신로 172",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%EA%B0%80%EC%86%8C%EB%8B%B4%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%96%91%ED%8F%89%EC%9D%8D%20%EC%B6%A9%EC%8B%A0%EB%A1%9C%20172",
+   "tags": [],
+   "businessHoursRaw": "10:00~21:00"
+  },
+  {
+   "placeId": "naver_1274796309_374872813",
+   "name": "정애가식빵",
+   "category": "cafe",
+   "categoryLabel": "카페,디저트>베이커리",
+   "lat": 37.4872813,
+   "lng": 127.4796309,
+   "address": "경기도 양평군 강상면 강남로 922",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%EC%A0%95%EC%95%A0%EA%B0%80%EC%8B%9D%EB%B9%B5%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EA%B0%95%EC%83%81%EB%A9%B4%20%EA%B0%95%EB%82%A8%EB%A1%9C%20922",
+   "tags": [],
+   "businessHoursRaw": "월~토 08:00~20:00 / 휴무: 매주 일요일"
+  },
+  {
+   "placeId": "naver_1273183136_375469053",
+   "name": "카페 그림정원",
+   "category": "cafe",
+   "categoryLabel": "음식점>카페,디저트",
+   "lat": 37.5469053,
+   "lng": 127.3183136,
+   "address": "경기도 양평군 양서면 양수로152번길 32-18 그림정원",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%EC%B9%B4%ED%8E%98%20%EA%B7%B8%EB%A6%BC%EC%A0%95%EC%9B%90%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%96%91%EC%84%9C%EB%A9%B4%20%EC%96%91%EC%88%98%EB%A1%9C152%EB%B2%88%EA%B8%B8%2032-18%20%EA%B7%B8%EB%A6%BC%EC%A0%95%EC%9B%90",
+   "tags": [],
+   "businessHoursRaw": "10:30~19:00"
+  },
+  {
+   "placeId": "naver_1274330368_375103107",
+   "name": "비.마이가든 양평",
+   "category": "cafe",
+   "categoryLabel": "음식점>카페,디저트",
+   "lat": 37.5103107,
+   "lng": 127.4330368,
+   "address": "경기도 양평군 옥천면 남한강변길 209 1층 비마이가든 양평본점",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%EB%B9%84.%EB%A7%88%EC%9D%B4%EA%B0%80%EB%93%A0%20%EC%96%91%ED%8F%89%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%98%A5%EC%B2%9C%EB%A9%B4%20%EB%82%A8%ED%95%9C%EA%B0%95%EB%B3%80%EA%B8%B8%20209%201%EC%B8%B5%20%EB%B9%84%EB%A7%88%EC%9D%B4%EA%B0%80%EB%93%A0%20%EC%96%91%ED%8F%89%EB%B3%B8%EC%A0%90",
+   "tags": [],
+   "businessHoursRaw": "10:00~18:00"
+  },
+  {
+   "placeId": "naver_1276374011_374748463",
+   "name": "돗꽈비본점",
+   "category": "cafe",
+   "categoryLabel": "음식점>카페,디저트",
+   "lat": 37.4748463,
+   "lng": 127.6374011,
+   "address": "경기도 양평군 지평면 지평의병로 104",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%EB%8F%97%EA%BD%88%EB%B9%84%EB%B3%B8%EC%A0%90%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%A7%80%ED%8F%89%EB%A9%B4%20%EC%A7%80%ED%8F%89%EC%9D%98%EB%B3%91%EB%A1%9C%20104",
+   "tags": [],
+   "businessHoursRaw": "09:30~20:00"
+  },
+  {
+   "placeId": "naver_1275393373_374131738",
+   "name": "여양로2111",
+   "category": "cafe",
+   "categoryLabel": "음식점>카페,디저트",
+   "lat": 37.4131738,
+   "lng": 127.5393373,
+   "address": "경기도 양평군 개군면 여양로 2111 상자포리 239-1",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%EC%97%AC%EC%96%91%EB%A1%9C2111%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EA%B0%9C%EA%B5%B0%EB%A9%B4%20%EC%97%AC%EC%96%91%EB%A1%9C%202111%20%EC%83%81%EC%9E%90%ED%8F%AC%EB%A6%AC%20239-1",
+   "tags": [],
+   "businessHoursRaw": "10:00~20:00"
+  },
+  {
+   "placeId": "tour_3445749",
+   "name": "007 양평점",
+   "category": "cafe",
+   "lat": 37.4982045927,
+   "lng": 127.4796801789,
+   "address": "경기도 양평군 양평읍 물안개공원길 5-1",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/54/3445454_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/54/3445454_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/007%20%EC%96%91%ED%8F%89%EC%A0%90",
+   "tags": [
+    "view_cafe",
+    "aesthetic"
+   ],
+   "reviewSummary": "전층 통유리창을 통해 풍경을 즐길 수 있는 넓고 아름다운 대형 카페입니다.",
+   "businessHoursRaw": "8:00-02:00 / 휴무: 연중무휴"
+  },
+  {
+   "placeId": "tour_2773710",
+   "name": "투스트록",
+   "category": "cafe",
+   "lat": 37.5081907431,
+   "lng": 127.3931433007,
+   "address": "경기도 양평군 양서면 광장옆길 2",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/34/2773734_image2_1.jpeg",
+    "http://tong.visitkorea.or.kr/cms/resource/34/2773734_image3_1.jpeg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%ED%88%AC%EC%8A%A4%ED%8A%B8%EB%A1%9D",
+   "tags": [
+    "aesthetic",
+    "group"
+   ],
+   "reviewSummary": "자동차와 오토바이 소품으로 꾸며진 세련된 분위기의 수제 버거 전문 카페입니다.",
+   "businessHoursRaw": "- 평일 15:00~03:00 - 주말 11:00~03:00 - 마지막 주문 02:45 / 휴무: 매주 화요일"
+  },
+  {
+   "placeId": "tour_2792660",
+   "name": "문릿",
+   "category": "cafe",
+   "lat": 37.5043949161,
+   "lng": 127.5969610304,
+   "address": "경기도 양평군 용문면 덕촌길 109",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/89/2797889_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/89/2797889_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EB%AC%B8%EB%A6%BF",
+   "tags": [
+    "nature",
+    "aesthetic",
+    "healing",
+    "romantic"
+   ],
+   "petFriendly": true,
+   "reviewSummary": "넓은 야외 정원과 계곡 뷰를 갖춘 이국적인 감성의 휴식 공간입니다.",
+   "businessHoursRaw": "[평일] - 11:00~20:00 - 마지막 주문 19:30 [주말] - 10:00~21:00 - 마지막 주문 20:30 / 휴무: 연중무휴"
+  },
+  {
+   "placeId": "tour_2788203",
+   "name": "더포레스트카페",
+   "category": "cafe",
+   "lat": 37.6433358364,
+   "lng": 127.3749716127,
+   "address": "경기도 양평군 서종면 북한강로 1284",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/13/2788313_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/13/2788313_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EB%8D%94%ED%8F%AC%EB%A0%88%EC%8A%A4%ED%8A%B8%EC%B9%B4%ED%8E%98",
+   "tags": [
+    "healing",
+    "nature",
+    "photo_spot",
+    "aesthetic"
+   ],
+   "reviewSummary": "아기자기한 꽃들이 만개한 정원에서 좋은 재료로 만든 빵과 음료를 즐길 수 있습니다.",
+   "businessHoursRaw": "- 평일 10:00~19:00 - 주말 09:30~20:00 / 휴무: 매주 월요일"
+  },
+  {
+   "placeId": "tour_2853598",
+   "name": "엔로제",
+   "category": "cafe",
+   "lat": 37.6451357748,
+   "lng": 127.3830486036,
+   "address": "경기도 양평군 서종면 화서로 32",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/90/2853590_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/90/2853590_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EC%97%94%EB%A1%9C%EC%A0%9C",
+   "tags": [
+    "healing",
+    "nature"
+   ],
+   "reviewSummary": "계곡과 산이 평화로운 분위기를 자아내며 핸드드립 커피를 맛볼 수 있는 대형 카페입니다.",
+   "businessHoursRaw": "10:30~20:00 / 휴무: 연중무휴"
+  },
+  {
+   "placeId": "tour_2853508",
+   "name": "카페 피트",
+   "category": "cafe",
+   "lat": 37.508893438,
+   "lng": 127.3930599549,
+   "address": "경기도 양평군 양서면 경강로 953",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/07/2853507_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/07/2853507_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EC%B9%B4%ED%8E%98%20%ED%94%BC%ED%8A%B8",
+   "tags": [
+    "view_cafe"
+   ],
+   "reviewSummary": "루프탑과 테라스를 갖추고 라이더들이 편하게 쉬어 갈 수 있는 쉼터입니다.",
+   "businessHoursRaw": "09:00~23:00 / 휴무: 연중무휴"
+  },
+  {
+   "placeId": "tour_2842754",
+   "name": "강이다",
+   "category": "cafe",
+   "lat": 37.5505122828,
+   "lng": 127.3202625949,
+   "address": "경기도 양평군 북한강로81번길 23",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/45/2842745_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/45/2842745_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EA%B0%95%EC%9D%B4%EB%8B%A4",
+   "tags": [
+    "view_cafe",
+    "photo_spot",
+    "aesthetic",
+    "romantic"
+   ],
+   "reviewSummary": "북한강을 바라보며 커피와 브런치를 즐길 수 있는 포토존 가득한 디저트 카페입니다.",
+   "businessHoursRaw": "10:00~21:00 / 휴무: 연중무휴"
+  },
+  {
+   "placeId": "tour_2831223",
+   "name": "리틀포레",
+   "category": "cafe",
+   "lat": 37.5338768966,
+   "lng": 127.5581720267,
+   "address": "경기도 양평군 용문면 상원사길 58",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/21/2831221_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/21/2831221_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EB%A6%AC%ED%8B%80%ED%8F%AC%EB%A0%88",
+   "tags": [
+    "healing",
+    "nature"
+   ],
+   "petFriendly": true,
+   "reviewSummary": "잔잔한 계곡물이 흐르는 우거진 숲속에서 휴식을 취할 수 있는 카페입니다.",
+   "businessHoursRaw": "- 10:00~19:00 - 마지막 주문 18:30 / 휴무: 매주 월요일"
+  },
+  {
+   "placeId": "tour_3355714",
+   "name": "백안리커피",
+   "category": "cafe",
+   "lat": 37.4986941507,
+   "lng": 127.5192765727,
+   "address": "경기도 양평군 양평읍 백안길 84",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/93/3427693_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/93/3427693_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EB%B0%B1%EC%95%88%EB%A6%AC%EC%BB%A4%ED%94%BC",
+   "tags": [
+    "kid_friendly"
+   ],
+   "reviewSummary": "직접 볶은 원두로 만든 커피와 수제 호두파이를 즐길 수 있는 디저트 카페입니다.",
+   "businessHoursRaw": "10:00-22:00 / 휴무: 연중무휴"
+  },
+  {
+   "placeId": "naver_1274670218_374913575",
+   "name": "핏제리아 루카네",
+   "category": "restaurant",
+   "categoryLabel": "음식점>이탈리아음식",
+   "lat": 37.4913575,
+   "lng": 127.4670218,
+   "address": "경기도 양평군 강상면 강남로 802 핏제리아 루카네",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%ED%95%8F%EC%A0%9C%EB%A6%AC%EC%95%84%20%EB%A3%A8%EC%B9%B4%EB%84%A4%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EA%B0%95%EC%83%81%EB%A9%B4%20%EA%B0%95%EB%82%A8%EB%A1%9C%20802%20%ED%95%8F%EC%A0%9C%EB%A6%AC%EC%95%84%20%EB%A3%A8%EC%B9%B4%EB%84%A4",
+   "tags": [],
+   "businessHoursRaw": "11:00~20:30"
+  },
+  {
+   "placeId": "naver_1273168078_375348077",
+   "name": "두물머리연핫도그",
+   "category": "restaurant",
+   "categoryLabel": "음식점>핫도그",
+   "lat": 37.5348077,
+   "lng": 127.3168078,
+   "address": "경기도 양평군 양서면 두물머리길 103-8",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%EB%91%90%EB%AC%BC%EB%A8%B8%EB%A6%AC%EC%97%B0%ED%95%AB%EB%8F%84%EA%B7%B8%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%96%91%EC%84%9C%EB%A9%B4%20%EB%91%90%EB%AC%BC%EB%A8%B8%EB%A6%AC%EA%B8%B8%20103-8",
+   "tags": [],
+   "businessHoursRaw": "월~금 10:00~17:50, 토 일 09:00~17:50"
+  },
+  {
+   "placeId": "naver_1273532640_376228372",
+   "name": "해물꾼조태산 양평본점",
+   "category": "restaurant",
+   "categoryLabel": "한식>칼국수,만두",
+   "lat": 37.6228372,
+   "lng": 127.353264,
+   "address": "경기도 양평군 서종면 북한강로 962",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%ED%95%B4%EB%AC%BC%EA%BE%BC%EC%A1%B0%ED%83%9C%EC%82%B0%20%EC%96%91%ED%8F%89%EB%B3%B8%EC%A0%90%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%84%9C%EC%A2%85%EB%A9%B4%20%EB%B6%81%ED%95%9C%EA%B0%95%EB%A1%9C%20962",
+   "tags": [],
+   "businessHoursRaw": "10:50~20:30, 19:50 라스트오더"
+  },
+  {
+   "placeId": "naver_1276712534_375703518",
+   "name": "메밀가막국수",
+   "category": "restaurant",
+   "categoryLabel": "음식점>한식",
+   "lat": 37.5703518,
+   "lng": 127.6712534,
+   "address": "경기도 양평군 단월면 단월로 408",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%EB%A9%94%EB%B0%80%EA%B0%80%EB%A7%89%EA%B5%AD%EC%88%98%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EB%8B%A8%EC%9B%94%EB%A9%B4%20%EB%8B%A8%EC%9B%94%EB%A1%9C%20408",
+   "tags": [],
+   "businessHoursRaw": "화~일 10:00~20:00, 19:45 라스트오더 / 휴무: 매주 월요일"
+  },
+  {
+   "placeId": "naver_1277096023_375548494",
+   "name": "용두리짬뽕전문점",
+   "category": "restaurant",
+   "categoryLabel": "중식>중식당",
+   "lat": 37.5548494,
+   "lng": 127.7096023,
+   "address": "경기도 양평군 청운면 용두로 148 용두리짬뽕전문점",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/17/2837017_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/17/2837017_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EC%9A%A9%EB%91%90%EB%A6%AC%EC%A7%AC%EB%BD%95%EC%A0%84%EB%AC%B8%EC%A0%90%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%B2%AD%EC%9A%B4%EB%A9%B4%20%EC%9A%A9%EB%91%90%EB%A1%9C%20148%20%EC%9A%A9%EB%91%90%EB%A6%AC%EC%A7%AC%EB%BD%95%EC%A0%84%EB%AC%B8%EC%A0%90",
+   "tags": [],
+   "reviewSummary": "신선한 해물과 채소가 푸짐하게 들어가며 매콤한 국물이 일품인 용두리의 짬뽕 전문점이다.",
+   "businessHoursRaw": "- 11:00~16:30 - 마지막 주문 16:00 / 휴무: 매주 화요일"
+  },
+  {
+   "placeId": "naver_1276296907_375072938",
+   "name": "고바우설렁탕",
+   "category": "restaurant",
+   "categoryLabel": "한식>곰탕,설렁탕",
+   "lat": 37.5072938,
+   "lng": 127.6296907,
+   "address": "경기도 양평군 용문면 은고갯길 3 고바우설렁탕",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%EA%B3%A0%EB%B0%94%EC%9A%B0%EC%84%A4%EB%A0%81%ED%83%95%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%9A%A9%EB%AC%B8%EB%A9%B4%20%EC%9D%80%EA%B3%A0%EA%B0%AF%EA%B8%B8%203%20%EA%B3%A0%EB%B0%94%EC%9A%B0%EC%84%A4%EB%A0%81%ED%83%95",
+   "tags": [],
+   "businessHoursRaw": "월 화 목~일 07:00~16:00, 15:30 라스트오더 / 휴무: 매주 수요일"
+  },
+  {
+   "placeId": "naver_1275509372_374778657",
+   "name": "호남묵은지",
+   "category": "restaurant",
+   "categoryLabel": "한식>육류,고기요리",
+   "lat": 37.4778657,
+   "lng": 127.5509372,
+   "address": "경기도 양평군 양평읍 대흥로 204 호남묵은지",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/99/2853499_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/99/2853499_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%ED%98%B8%EB%82%A8%EB%AC%B5%EC%9D%80%EC%A7%80%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%96%91%ED%8F%89%EC%9D%8D%20%EB%8C%80%ED%9D%A5%EB%A1%9C%20204%20%ED%98%B8%EB%82%A8%EB%AC%B5%EC%9D%80%EC%A7%80",
+   "tags": [],
+   "reviewSummary": "직접 담근 묵은지와 불향 가득한 초벌구이 삼겹살 및 묵은지 닭볶음탕을 즐길 수 있는 곳이다.",
+   "businessHoursRaw": "주중 17:00~21:00 (라스트오더 20:00) 주말 11:00~21:00 (라스트오더 20:00) / 휴무: 매주 수요일"
+  },
+  {
+   "placeId": "naver_1274711310_374908248",
+   "name": "본가양평해장국 양평지점",
+   "category": "restaurant",
+   "categoryLabel": "한식>해장국",
+   "lat": 37.4908248,
+   "lng": 127.471131,
+   "address": "경기도 양평군 강상면 강남로 837-1",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%EB%B3%B8%EA%B0%80%EC%96%91%ED%8F%89%ED%95%B4%EC%9E%A5%EA%B5%AD%20%EC%96%91%ED%8F%89%EC%A7%80%EC%A0%90%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EA%B0%95%EC%83%81%EB%A9%B4%20%EA%B0%95%EB%82%A8%EB%A1%9C%20837-1",
+   "tags": [],
+   "businessHoursRaw": "06:00~20:30"
+  },
+  {
+   "placeId": "naver_1274633019_375127462",
+   "name": "대디스바베큐",
+   "category": "restaurant",
+   "categoryLabel": "한식>육류,고기요리",
+   "lat": 37.5127462,
+   "lng": 127.4633019,
+   "address": "경기도 양평군 옥천면 옥천문화마을3길 15-24 대디스바베큐",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/05/2854205_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/05/2854205_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EB%8C%80%EB%94%94%EC%8A%A4%EB%B0%94%EB%B2%A0%ED%81%90%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%98%A5%EC%B2%9C%EB%A9%B4%20%EC%98%A5%EC%B2%9C%EB%AC%B8%ED%99%94%EB%A7%88%EC%9D%843%EA%B8%B8%2015-24%20%EB%8C%80%EB%94%94%EC%8A%A4%EB%B0%94%EB%B2%A0%ED%81%90",
+   "tags": [
+    "romantic",
+    "lively_food"
+   ],
+   "reviewSummary": "산비탈에서 참나무로 훈연한 항아리 바비큐를 캠핑 감성과 함께 즐길 수 있는 바비큐 전문점이다.",
+   "businessHoursRaw": "[평일] - 11:30~22:00 - 준비시간 14:45~16:00 - 마지막 주문 20:30 [주말] - 11:00~22:00 - 마지막 주문 20:30 / 휴무: 연중무휴"
+  },
+  {
+   "placeId": "naver_1276414885_375157826",
+   "name": "머무름",
+   "category": "restaurant",
+   "categoryLabel": "한식>막국수",
+   "lat": 37.5157826,
+   "lng": 127.6414885,
+   "address": "경기도 양평군 단월면 수미길 112",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%EB%A8%B8%EB%AC%B4%EB%A6%84%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EB%8B%A8%EC%9B%94%EB%A9%B4%20%EC%88%98%EB%AF%B8%EA%B8%B8%20112",
+   "tags": [],
+   "businessHoursRaw": "10:00~21:00"
+  },
+  {
+   "placeId": "naver_1276369553_374755983",
+   "name": "지평보리밥집",
+   "category": "restaurant",
+   "categoryLabel": "한식>보리밥",
+   "lat": 37.4755983,
+   "lng": 127.6369553,
+   "address": "경기도 양평군 지평면 지평로 396",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%EC%A7%80%ED%8F%89%EB%B3%B4%EB%A6%AC%EB%B0%A5%EC%A7%91%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%A7%80%ED%8F%89%EB%A9%B4%20%EC%A7%80%ED%8F%89%EB%A1%9C%20396",
+   "tags": [],
+   "businessHoursRaw": "월 화 목~일 10:30~16:00, 15시 이후 방문시 전화 후 방문 / 휴무: 매주 수요일"
+  },
+  {
+   "placeId": "naver_1275376247_374257530",
+   "name": "개군할머니토종순대국",
+   "category": "restaurant",
+   "categoryLabel": "한식>순대,순댓국",
+   "lat": 37.425753,
+   "lng": 127.5376247,
+   "address": "경기도 양평군 개군면 하자포길 27-2 1층",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%EA%B0%9C%EA%B5%B0%ED%95%A0%EB%A8%B8%EB%8B%88%ED%86%A0%EC%A2%85%EC%88%9C%EB%8C%80%EA%B5%AD%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EA%B0%9C%EA%B5%B0%EB%A9%B4%20%ED%95%98%EC%9E%90%ED%8F%AC%EA%B8%B8%2027-2%201%EC%B8%B5",
+   "tags": [],
+   "businessHoursRaw": "월 화 목~일 07:30~19:40, 19:10 라스트오더 / 휴무: 매주 수요일"
+  },
+  {
+   "placeId": "naver_1274855652_374826816",
+   "name": "김명자낙지마당 양평점",
+   "category": "restaurant",
+   "categoryLabel": "한식>낙지요리",
+   "lat": 37.4826816,
+   "lng": 127.4855652,
+   "address": "경기도 양평군 강상면 양평대교길 81 1층 김명자낙지마당",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%EA%B9%80%EB%AA%85%EC%9E%90%EB%82%99%EC%A7%80%EB%A7%88%EB%8B%B9%20%EC%96%91%ED%8F%89%EC%A0%90%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EA%B0%95%EC%83%81%EB%A9%B4%20%EC%96%91%ED%8F%89%EB%8C%80%EA%B5%90%EA%B8%B8%2081%201%EC%B8%B5%20%EA%B9%80%EB%AA%85%EC%9E%90%EB%82%99%EC%A7%80%EB%A7%88%EB%8B%B9",
+   "tags": [],
+   "businessHoursRaw": "11:00~22:00, 20:30 라스트오더"
+  },
+  {
+   "placeId": "naver_1274578813_375197847",
+   "name": "옥천냉면 황해식당 본점",
+   "category": "restaurant",
+   "categoryLabel": "한식>냉면",
+   "lat": 37.5197847,
+   "lng": 127.4578813,
+   "address": "경기도 양평군 옥천면 고읍로 140",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%EC%98%A5%EC%B2%9C%EB%83%89%EB%A9%B4%20%ED%99%A9%ED%95%B4%EC%8B%9D%EB%8B%B9%20%EB%B3%B8%EC%A0%90%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%98%A5%EC%B2%9C%EB%A9%B4%20%EA%B3%A0%EC%9D%8D%EB%A1%9C%20140",
+   "tags": [],
+   "businessHoursRaw": "화~일 11:00~19:50 / 휴무: 매주 월요일"
+  },
+  {
+   "placeId": "naver_1277322617_375627039",
+   "name": "양평솥뚜껑닭볶음탕",
+   "category": "restaurant",
+   "categoryLabel": "한식>닭볶음탕",
+   "lat": 37.5627039,
+   "lng": 127.7322617,
+   "address": "경기도 양평군 청운면 오목골길 33-1 1층",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%EC%96%91%ED%8F%89%EC%86%A5%EB%9A%9C%EA%BB%91%EB%8B%AD%EB%B3%B6%EC%9D%8C%ED%83%95%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%B2%AD%EC%9A%B4%EB%A9%B4%20%EC%98%A4%EB%AA%A9%EA%B3%A8%EA%B8%B8%2033-1%201%EC%B8%B5",
+   "tags": [],
+   "businessHoursRaw": "09:00~19:00, 18:00 라스트오더"
+  },
+  {
+   "placeId": "naver_1276369452_374744965",
+   "name": "호호분식",
+   "category": "restaurant",
+   "categoryLabel": "분식>종합분식",
+   "lat": 37.4744965,
+   "lng": 127.6369452,
+   "address": "경기도 양평군 지평면 지평시장2길 4-1 4,",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%ED%98%B8%ED%98%B8%EB%B6%84%EC%8B%9D%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%A7%80%ED%8F%89%EB%A9%B4%20%EC%A7%80%ED%8F%89%EC%8B%9C%EC%9E%A52%EA%B8%B8%204-1%204%2C",
+   "tags": [],
+   "businessHoursRaw": "월 수~일 10:30~19:00, 18:30 라스트오더 / 휴무: 매주 화요일"
+  },
+  {
+   "placeId": "naver_1276029970_375158121",
+   "name": "돗가비 불쭈꾸미 본점",
+   "category": "restaurant",
+   "categoryLabel": "한식>주꾸미요리",
+   "lat": 37.5158121,
+   "lng": 127.602997,
+   "address": "경기도 양평군 용문면 용문산로 207",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/71/2831371_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/71/2831371_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EB%8F%97%EA%B0%80%EB%B9%84%20%EB%B6%88%EC%AD%88%EA%BE%B8%EB%AF%B8%20%EB%B3%B8%EC%A0%90%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%9A%A9%EB%AC%B8%EB%A9%B4%20%EC%9A%A9%EB%AC%B8%EC%82%B0%EB%A1%9C%20207",
+   "tags": [
+    "group"
+   ],
+   "reviewSummary": "용문산 관광지 근처에서 화학조미료 없는 깔끔한 직화 불주꾸미와 들깨 요리를 즐길 수 있는 전문점이다.",
+   "businessHoursRaw": "11:00~21:00 (15:00~17:00 브레이크타임) 20:30 라스트오더 토요일 11:00~14:00 13:30 라스트오더 / 휴무: 매주 일요일"
+  },
+  {
+   "placeId": "naver_1275278849_374650707",
+   "name": "양평신내서울해장국 본점",
+   "category": "restaurant",
+   "categoryLabel": "한식>해장국",
+   "lat": 37.4650707,
+   "lng": 127.5278849,
+   "address": "경기도 양평군 개군면 신내길 16",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%EC%96%91%ED%8F%89%EC%8B%A0%EB%82%B4%EC%84%9C%EC%9A%B8%ED%95%B4%EC%9E%A5%EA%B5%AD%20%EB%B3%B8%EC%A0%90%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EA%B0%9C%EA%B5%B0%EB%A9%B4%20%EC%8B%A0%EB%82%B4%EA%B8%B8%2016",
+   "tags": [],
+   "businessHoursRaw": "07:00~20:00"
+  },
+  {
+   "placeId": "naver_1274946094_374911048",
+   "name": "예지현",
+   "category": "restaurant",
+   "categoryLabel": "중식>중식당",
+   "lat": 37.4911048,
+   "lng": 127.4946094,
+   "address": "경기도 양평군 양평읍 관문길8번길 7",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/82/2836982_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/82/2836982_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EC%98%88%EC%A7%80%ED%98%84%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%96%91%ED%8F%89%EC%9D%8D%20%EA%B4%80%EB%AC%B8%EA%B8%B88%EB%B2%88%EA%B8%B8%207",
+   "tags": [
+    "aesthetic"
+   ],
+   "reviewSummary": "카페 같은 인테리어 속에서 중화 비빔면과 얼큰한 짬뽕을 즐길 수 있는 양평읍 중식 맛집이다.",
+   "businessHoursRaw": "[평일] - 10:30~20:00 - 준비시간 14:40~16:30 - 마지막 주문 19:50 [주말] - 10:30~19:30 - 준비시간 14:40~16:30 - 마지막 주문 19:20 / 휴무: 연중무휴"
+  },
+  {
+   "placeId": "naver_1274724753_374905187",
+   "name": "양평축협한우프라자",
+   "category": "restaurant",
+   "categoryLabel": "한식>소고기구이",
+   "lat": 37.4905187,
+   "lng": 127.4724753,
+   "address": "경기도 양평군 강상면 강남로 851",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%EC%96%91%ED%8F%89%EC%B6%95%ED%98%91%ED%95%9C%EC%9A%B0%ED%94%84%EB%9D%BC%EC%9E%90%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EA%B0%95%EC%83%81%EB%A9%B4%20%EA%B0%95%EB%82%A8%EB%A1%9C%20851",
+   "tags": [],
+   "businessHoursRaw": "월 수~일 10:00~22:00 / 휴무: 매주 화요일"
+  },
+  {
+   "placeId": "naver_1274423732_375042162",
+   "name": "쏭바베큐 양평본점",
+   "category": "restaurant",
+   "categoryLabel": "한식>돼지고기구이",
+   "lat": 37.5042162,
+   "lng": 127.4423732,
+   "address": "경기도 양평군 강하면 강남로 520 쏭바베큐 양평본점",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%EC%8F%AD%EB%B0%94%EB%B2%A0%ED%81%90%20%EC%96%91%ED%8F%89%EB%B3%B8%EC%A0%90%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EA%B0%95%ED%95%98%EB%A9%B4%20%EA%B0%95%EB%82%A8%EB%A1%9C%20520%20%EC%8F%AD%EB%B0%94%EB%B2%A0%ED%81%90%20%EC%96%91%ED%8F%89%EB%B3%B8%EC%A0%90",
+   "tags": [],
+   "businessHoursRaw": "월 화 목~토 11:30~21:00, 일 12:30~21:00 / 휴무: 매주 수요일"
+  },
+  {
+   "placeId": "naver_1275005216_375485858",
+   "name": "예사랑",
+   "category": "restaurant",
+   "categoryLabel": "한식>백숙,삼계탕",
+   "lat": 37.5485858,
+   "lng": 127.5005216,
+   "address": "경기도 양평군 옥천면 용천로 333",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/57/2853557_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/57/2853557_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EC%98%88%EC%82%AC%EB%9E%91%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%98%A5%EC%B2%9C%EB%A9%B4%20%EC%9A%A9%EC%B2%9C%EB%A1%9C%20333",
+   "tags": [
+    "healing",
+    "nature",
+    "kid_friendly"
+   ],
+   "reviewSummary": "계곡 옆 산장 분위기에서 시원한 물소리를 들으며 누룽지 백숙과 물놀이를 즐길 수 있는 곳이다.",
+   "businessHoursRaw": "11:00~20:00 (라스트오더 18:00) / 휴무: 설·추석 연휴"
+  },
+  {
+   "placeId": "naver_1277746571_374689608",
+   "name": "계정횟집",
+   "category": "restaurant",
+   "categoryLabel": "한식>생선회",
+   "lat": 37.4689608,
+   "lng": 127.7746571,
+   "address": "경기도 양평군 양동면 양서북로 666-13 계정횟집",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/10/2757710_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/10/2757710_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EA%B3%84%EC%A0%95%ED%9A%9F%EC%A7%91%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%96%91%EB%8F%99%EB%A9%B4%20%EC%96%91%EC%84%9C%EB%B6%81%EB%A1%9C%20666-13%20%EA%B3%84%EC%A0%95%ED%9A%9F%EC%A7%91",
+   "tags": [],
+   "reviewSummary": "식당 옆 양어장에서 직접 키운 신선한 송어회와 얼큰한 매운탕을 맛볼 수 있는 오랜 전통의 횟집이다.",
+   "businessHoursRaw": "- 11:00~21:00 - 마지막 주문 20:00 / 휴무: 설·추석 연휴"
+  },
+  {
+   "placeId": "naver_1274930038_374902752",
+   "name": "몽실식당",
+   "category": "restaurant",
+   "categoryLabel": "한식>돼지고기구이",
+   "lat": 37.4902752,
+   "lng": 127.4930038,
+   "address": "경기도 양평군 양평읍 양평장터길 9-1 양평오일장 장터 몽실식당",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%EB%AA%BD%EC%8B%A4%EC%8B%9D%EB%8B%B9%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%96%91%ED%8F%89%EC%9D%8D%20%EC%96%91%ED%8F%89%EC%9E%A5%ED%84%B0%EA%B8%B8%209-1%20%EC%96%91%ED%8F%89%EC%98%A4%EC%9D%BC%EC%9E%A5%20%EC%9E%A5%ED%84%B0%20%EB%AA%BD%EC%8B%A4%EC%8B%9D%EB%8B%B9",
+   "tags": [],
+   "businessHoursRaw": "월 수~일 11:00~21:20 / 휴무: 매주 화요일"
+  },
+  {
+   "placeId": "naver_1274857339_374700839",
+   "name": "고등어사랑",
+   "category": "restaurant",
+   "categoryLabel": "음식점>한식",
+   "lat": 37.4700839,
+   "lng": 127.4857339,
+   "address": "경기도 양평군 강상면 강남로 1141",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%EA%B3%A0%EB%93%B1%EC%96%B4%EC%82%AC%EB%9E%91%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EA%B0%95%EC%83%81%EB%A9%B4%20%EA%B0%95%EB%82%A8%EB%A1%9C%201141",
+   "tags": [],
+   "businessHoursRaw": "월 화 목~일 11:00~21:00 / 휴무: 매주 수요일"
+  },
+  {
+   "placeId": "naver_1274304126_375038871",
+   "name": "문리버",
+   "category": "restaurant",
+   "categoryLabel": "한식>오리요리",
+   "lat": 37.5038871,
+   "lng": 127.4304126,
+   "address": "경기도 양평군 강하면 전의1길 8 문리버",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/26/2756426_image2_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EB%AC%B8%EB%A6%AC%EB%B2%84%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EA%B0%95%ED%95%98%EB%A9%B4%20%EC%A0%84%EC%9D%981%EA%B8%B8%208%20%EB%AC%B8%EB%A6%AC%EB%B2%84",
+   "tags": [
+    "healing",
+    "group"
+   ],
+   "reviewSummary": "100년 된 통나무집에서 조미료 없이 13가지 한방 약재로 끓여낸 건강한 한방 오리 백숙을 맛볼 수 있는 곳이다.",
+   "businessHoursRaw": "11:00~21:30 (브레이크타임 16:00~17:00 / 라스트오더 20:00) / 휴무: 매주 목요일"
+  },
+  {
+   "placeId": "naver_1273255953_375502790",
+   "name": "연꽃언덕",
+   "category": "restaurant",
+   "categoryLabel": "음식점>한식",
+   "lat": 37.550279,
+   "lng": 127.3255953,
+   "address": "경기도 양평군 양서면 용늪언덕길 57",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%EC%97%B0%EA%BD%83%EC%96%B8%EB%8D%95%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%96%91%EC%84%9C%EB%A9%B4%20%EC%9A%A9%EB%8A%AA%EC%96%B8%EB%8D%95%EA%B8%B8%2057",
+   "tags": [],
+   "businessHoursRaw": "월~금 11:00~21:00, 토 일 11:00~22:00"
+  },
+  {
+   "placeId": "naver_1274621799_375233520",
+   "name": "양평옥천냉면몽실면당",
+   "category": "restaurant",
+   "categoryLabel": "한식>냉면",
+   "lat": 37.523352,
+   "lng": 127.4621799,
+   "address": "경기도 양평군 옥천면 신복길 15 몽실면당",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%EC%96%91%ED%8F%89%EC%98%A5%EC%B2%9C%EB%83%89%EB%A9%B4%EB%AA%BD%EC%8B%A4%EB%A9%B4%EB%8B%B9%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%98%A5%EC%B2%9C%EB%A9%B4%20%EC%8B%A0%EB%B3%B5%EA%B8%B8%2015%20%EB%AA%BD%EC%8B%A4%EB%A9%B4%EB%8B%B9",
+   "tags": [
+    "local_food"
+   ],
+   "businessHoursRaw": "11:00~20:30, 19:30 라스트오더"
+  },
+  {
+   "placeId": "naver_1276245750_376378571",
+   "name": "소리산참숯굽는마을",
+   "category": "restaurant",
+   "categoryLabel": "한식>돼지고기구이",
+   "lat": 37.6378571,
+   "lng": 127.624575,
+   "address": "경기도 양평군 단월면 석산돌고갯길 12-29 소리산참숯굽는마을",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%EC%86%8C%EB%A6%AC%EC%82%B0%EC%B0%B8%EC%88%AF%EA%B5%BD%EB%8A%94%EB%A7%88%EC%9D%84%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EB%8B%A8%EC%9B%94%EB%A9%B4%20%EC%84%9D%EC%82%B0%EB%8F%8C%EA%B3%A0%EA%B0%AF%EA%B8%B8%2012-29%20%EC%86%8C%EB%A6%AC%EC%82%B0%EC%B0%B8%EC%88%AF%EA%B5%BD%EB%8A%94%EB%A7%88%EC%9D%84",
+   "tags": [
+    "lively_food"
+   ],
+   "businessHoursRaw": "09:00~21:00, 20:00 라스트오더"
+  },
+  {
+   "placeId": "naver_1276963285_375432453",
+   "name": "퇴촌 민물매운탕 어탕국수",
+   "category": "restaurant",
+   "categoryLabel": "음식점>한식",
+   "lat": 37.5432453,
+   "lng": 127.6963285,
+   "address": "경기도 양평군 청운면 경강로 4091",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%ED%87%B4%EC%B4%8C%20%EB%AF%BC%EB%AC%BC%EB%A7%A4%EC%9A%B4%ED%83%95%20%EC%96%B4%ED%83%95%EA%B5%AD%EC%88%98%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%B2%AD%EC%9A%B4%EB%A9%B4%20%EA%B2%BD%EA%B0%95%EB%A1%9C%204091",
+   "tags": [
+    "local_food"
+   ],
+   "businessHoursRaw": "월 수~일 10:00~20:00 / 휴무: 매주 화요일"
+  },
+  {
+   "placeId": "naver_1276139573_374161415",
+   "name": "한강정육점식당",
+   "category": "restaurant",
+   "categoryLabel": "한식>육류,고기요리",
+   "lat": 37.4161415,
+   "lng": 127.6139573,
+   "address": "경기도 양평군 지평면 곡수시장길 2 한강정육점식당",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%ED%95%9C%EA%B0%95%EC%A0%95%EC%9C%A1%EC%A0%90%EC%8B%9D%EB%8B%B9%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%A7%80%ED%8F%89%EB%A9%B4%20%EA%B3%A1%EC%88%98%EC%8B%9C%EC%9E%A5%EA%B8%B8%202%20%ED%95%9C%EA%B0%95%EC%A0%95%EC%9C%A1%EC%A0%90%EC%8B%9D%EB%8B%B9",
+   "tags": [
+    "lively_food"
+   ],
+   "businessHoursRaw": "월~금 11:30~20:30, 토 11:30~14:00 / 휴무: 매주 일요일"
+  },
+  {
+   "placeId": "tour_3458271",
+   "name": "돼지마을",
+   "category": "restaurant",
+   "lat": 37.4824120691,
+   "lng": 127.484563524,
+   "address": "경기도 양평군 강상면 양평대교길 90-1",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/33/3458233_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/33/3458233_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EB%8F%BC%EC%A7%80%EB%A7%88%EC%9D%84",
+   "tags": [
+    "local_food"
+   ],
+   "reviewSummary": "새벽부터 문을 열어 푸짐한 순대국과 뼈해장국 등을 즐길 수 있는 정겨운 현지인 맛집입니다.",
+   "businessHoursRaw": "매일 06:00 - 20:30 (20:00 라스트오더) / 휴무: 연중무휴"
+  },
+  {
+   "placeId": "tour_809302",
+   "name": "마당곤드레밥",
+   "category": "restaurant",
+   "lat": 37.5180045185,
+   "lng": 127.6006658553,
+   "address": "경기도 양평군 용문면 용문산로 239",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/58/2926758_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/58/2926758_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EB%A7%88%EB%8B%B9%EA%B3%A4%EB%93%9C%EB%A0%88%EB%B0%A5",
+   "tags": [
+    "local_food",
+    "healing"
+   ],
+   "reviewSummary": "직영농장 곤드레와 대나무통밥, 21가지 반찬을 맛보고 다양한 차를 즐길 수 있는 곤드레밥 전문점입니다.",
+   "businessHoursRaw": "- 11:00~17:00 - 마지막 주문 16:30 / 휴무: 매월 둘째 화요일"
+  },
+  {
+   "placeId": "tour_3358870",
+   "name": "지평돈가스솥밥",
+   "category": "restaurant",
+   "lat": 37.4776680904,
+   "lng": 127.631383685,
+   "address": "경기도 양평군 지평면 지평의병로 37-4",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/36/3427836_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/36/3427836_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EC%A7%80%ED%8F%89%EB%8F%88%EA%B0%80%EC%8A%A4%EC%86%A5%EB%B0%A5",
+   "tags": [],
+   "reviewSummary": "돈가스와 솥밥, 다양한 파스타 메뉴를 함께 즐길 수 있는 양평의 돈가스 전문점입니다.",
+   "businessHoursRaw": "10:30~20:00 (브레이크타임 14:30~17:00) / 휴무: 매주 월요일 휴무"
+  },
+  {
+   "placeId": "tour_3456270",
+   "name": "진선미가",
+   "category": "restaurant",
+   "lat": 37.4920173322,
+   "lng": 127.5294091792,
+   "address": "경기도 양평군 양평읍 중앙로 369",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/07/3456207_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/07/3456207_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EC%A7%84%EC%84%A0%EB%AF%B8%EA%B0%80",
+   "tags": [
+    "local_food"
+   ],
+   "reviewSummary": "해풍으로 말린 꾸덕꾸덕한 코다리를 사용하여 쫄깃하고 깊은 풍미의 코다리찜을 선보이는 맛집입니다.",
+   "businessHoursRaw": "매일 10:00 - 21:00(20:00 라스트오더) / 휴무: 연중무휴"
+  },
+  {
+   "placeId": "tour_2754402",
+   "name": "파육칼",
+   "category": "restaurant",
+   "lat": 37.5005875854,
+   "lng": 127.4761359867,
+   "address": "경기도 양평군 양평읍 물안개공원길 51",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/82/2754382_image2_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%ED%8C%8C%EC%9C%A1%EC%B9%BC",
+   "tags": [
+    "local_food"
+   ],
+   "reviewSummary": "남한강 명소 근처에 위치해 깊고 진한 육개장과 칼국수를 파육칼 메뉴로 맛볼 수 있는 곳입니다.",
+   "businessHoursRaw": "09:30~20:00 (마지막 주문 19:30) / 휴무: 매월 첫째, 셋째 월요일"
+  },
+  {
+   "placeId": "tour_3093991",
+   "name": "시월애",
+   "category": "restaurant",
+   "lat": 37.5213846688,
+   "lng": 127.5999547105,
+   "address": "경기도 양평군 용문면 용문산로 278",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/82/3093982_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/82/3093982_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EC%8B%9C%EC%9B%94%EC%95%A0",
+   "tags": [
+    "local_food",
+    "group"
+   ],
+   "reviewSummary": "용문사 가는 길에 위치하여 토종닭 능이버섯백숙과 깔끔한 한식, 돌솥밥을 즐기기 좋은 넓은 식당입니다."
+  },
+  {
+   "placeId": "tour_2757538",
+   "name": "국수리국수집",
+   "category": "restaurant",
+   "lat": 37.5132653503,
+   "lng": 127.4038949567,
+   "address": "경기도 양평군 양서면 경강로 1061",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/07/2757807_image2_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EA%B5%AD%EC%88%98%EB%A6%AC%EA%B5%AD%EC%88%98%EC%A7%91",
+   "tags": [
+    "local_food"
+   ],
+   "reviewSummary": "국수역 근처에서 자극적이지 않은 쫄깃한 칼국수와 수제비, 보리밥을 맛볼 수 있는 국숫집입니다.",
+   "businessHoursRaw": "- 11:00~20:30 - 준비시간 16:00~17:00 - 마지막 주문 20:00 / 휴무: 매주 수요일"
+  },
+  {
+   "placeId": "tour_2755793",
+   "name": "쏭바베큐",
+   "category": "restaurant",
+   "lat": 37.5041754367,
+   "lng": 127.4421473012,
+   "address": "경기도 양평군 강하면 강남로 520",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/79/2756479_image2_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EC%8F%AD%EB%B0%94%EB%B2%A0%ED%81%90",
+   "tags": [
+    "lively_food",
+    "local_food"
+   ],
+   "reviewSummary": "참나무 장작에 초벌하고 양평 표고 양념을 더한 등갈비 바비큐를 즐길 수 있는 곳이다.",
+   "businessHoursRaw": "11:30~21:30 / 휴무: 매주 수요일"
+  },
+  {
+   "placeId": "tour_2754412",
+   "name": "한강민물장어",
+   "category": "restaurant",
+   "lat": 37.5446324225,
+   "lng": 127.32094048,
+   "address": "경기도 양평군 양서면 양수로138번길 9",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/34/2754334_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/34/2754334_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%ED%95%9C%EA%B0%95%EB%AF%BC%EB%AC%BC%EC%9E%A5%EC%96%B4",
+   "tags": [
+    "local_food"
+   ],
+   "reviewSummary": "신선한 돌미나리와 도톰한 장어를 함께 곁들여 먹을 수 있는 장어 전문점이다.",
+   "businessHoursRaw": "11:00~20:00 / 휴무: 연중무휴"
+  },
+  {
+   "placeId": "tour_582936",
+   "name": "쏠비알",
+   "category": "restaurant",
+   "lat": 37.5543901531,
+   "lng": 127.50197931,
+   "address": "경기도 양평군 옥천면 용천로 391",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/56/3474556_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/56/3474556_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EC%8F%A0%EB%B9%84%EC%95%8C",
+   "tags": [
+    "nature",
+    "romantic"
+   ],
+   "reviewSummary": "풍광이 빼어난 용천계곡 끝 지점에 자연과 어우러져 자리 잡은 목조 건물 산장이다.",
+   "businessHoursRaw": "10:00~21:00 / 휴무: 매주 화요일 (단, 7~8월 무휴)"
+  },
+  {
+   "placeId": "tour_2836534",
+   "name": "토방",
+   "category": "restaurant",
+   "lat": 37.6367447546,
+   "lng": 127.3650727037,
+   "address": "경기도 양평군 서종면 북한강로 1167",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/23/2836523_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/23/2836523_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%ED%86%A0%EB%B0%A9",
+   "tags": [
+    "local_food",
+    "nature"
+   ],
+   "reviewSummary": "북한강 인근에서 20년 동안 전통의 맛을 지켜온 건강한 한정식 전문점이다.",
+   "businessHoursRaw": "- 08:30~20:30 - 마지막 주문 20:00 / 휴무: 설·추석 연휴"
+  },
+  {
+   "placeId": "tour_2854346",
+   "name": "보광정가든",
+   "category": "restaurant",
+   "lat": 37.5378501498,
+   "lng": 127.4880727173,
+   "address": "경기도 양평군 옥천면 용천로149번길 27",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/33/2854333_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/33/2854333_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EB%B3%B4%EA%B4%91%EC%A0%95%EA%B0%80%EB%93%A0",
+   "tags": [
+    "lively_food",
+    "local_food",
+    "kid_friendly"
+   ],
+   "reviewSummary": "주인이 직접 키운 암탉과 재료로 조리하는 토종닭 요리 전문점이다.",
+   "businessHoursRaw": "- 11:00~19:00 - 마지막 주문 19:00 / 휴무: 격주 화요일 / 설·추석 당일"
+  },
+  {
+   "placeId": "tour_2854246",
+   "name": "예마당",
+   "category": "restaurant",
+   "lat": 37.5028191659,
+   "lng": 127.3943516782,
+   "address": "경기도 양평군 양서면 대심길 83",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/29/2854229_image2_1.jpeg",
+    "http://tong.visitkorea.or.kr/cms/resource/29/2854229_image3_1.jpeg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EC%98%88%EB%A7%88%EB%8B%B9",
+   "tags": [
+    "nature",
+    "experience",
+    "aesthetic"
+   ],
+   "petFriendly": true,
+   "reviewSummary": "식사와 커피, 갤러리 감상과 산책을 한곳에서 즐길 수 있는 복합문화공간이다.",
+   "businessHoursRaw": "10:00~21:00 / 휴무: 매주 화요일"
+  },
+  {
+   "placeId": "tour_2854157",
+   "name": "다우리",
+   "category": "restaurant",
+   "lat": 37.5476156273,
+   "lng": 127.3329309711,
+   "address": "경기도 양평군 양서면 목왕로 129",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/48/2854148_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/48/2854148_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EB%8B%A4%EC%9A%B0%EB%A6%AC",
+   "tags": [
+    "local_food",
+    "kid_friendly"
+   ],
+   "reviewSummary": "국내산 알배기 암꽃게로 담근 명품 간장·양념게장 정식을 맛볼 수 있는 곳이다.",
+   "businessHoursRaw": "- 10:30~20:00 - 마지막 주문 19:00 / 휴무: 매주 수요일"
+  },
+  {
+   "placeId": "tour_2854120",
+   "name": "녹수청산식당",
+   "category": "restaurant",
+   "lat": 37.4232743391,
+   "lng": 127.628668838,
+   "address": "경기도 양평군 지평면 대평로 108",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/07/2854107_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/07/2854107_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EB%85%B9%EC%88%98%EC%B2%AD%EC%82%B0%EC%8B%9D%EB%8B%B9",
+   "tags": [],
+   "reviewSummary": "대평저수지 인근에 위치해 골퍼들이 아침 식사로 자주 찾는 한식당이다.",
+   "businessHoursRaw": "05:00~20:00 / 휴무: 연중무휴"
+  },
+  {
+   "placeId": "tour_2853622",
+   "name": "양수리한옥집",
+   "category": "restaurant",
+   "lat": 37.5474682212,
+   "lng": 127.3218708692,
+   "address": "경기도 양평군 양서면 양수로138번길 41",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/05/2853605_image2_1.jpeg",
+    "http://tong.visitkorea.or.kr/cms/resource/05/2853605_image3_1.jpeg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EC%96%91%EC%88%98%EB%A6%AC%ED%95%9C%EC%98%A5%EC%A7%91",
+   "tags": [
+    "group",
+    "local_food"
+   ],
+   "reviewSummary": "싱싱한 해물과 아귀를 푸짐하게 넣은 찜 요리와 들깨 칼국수를 맛볼 수 있는 한옥 식당이다.",
+   "businessHoursRaw": "- 11:00~20:30 - 준비시간 15:00~16:00 - 마지막 주문 19:30 / 휴무: 매주 월요일(단, 월요일이 공휴일인 경우 다음날 휴무)"
+  },
+  {
+   "placeId": "tour_2853532",
+   "name": "옥천함흥냉면",
+   "category": "restaurant",
+   "lat": 37.5200711669,
+   "lng": 127.4613506557,
+   "address": "경기도 양평군 옥천면 북부길 18",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/27/2853527_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/27/2853527_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EC%98%A5%EC%B2%9C%ED%95%A8%ED%9D%A5%EB%83%89%EB%A9%B4",
+   "tags": [
+    "local_food"
+   ],
+   "reviewSummary": "쫄깃한 회냉면과 수육, 완자를 맛볼 수 있는 규모 있는 함흥냉면 전문점이다.",
+   "businessHoursRaw": "- 10:30~20:00 - 마지막 주문 19:30 / 휴무: 매주 수요일"
+  },
+  {
+   "placeId": "tour_2853279",
+   "name": "소근리막국수",
+   "category": "restaurant",
+   "lat": 37.632897922,
+   "lng": 127.3619203232,
+   "address": "경기도 양평군 서종면 소구니2길 5",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/74/2853274_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/74/2853274_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EC%86%8C%EA%B7%BC%EB%A6%AC%EB%A7%89%EA%B5%AD%EC%88%98",
+   "tags": [
+    "local_food"
+   ],
+   "reviewSummary": "주문 즉시 반죽하여 뽑아낸 쫄깃한 면과 동치미 육수로 만든 막국수를 맛볼 수 있다.",
+   "businessHoursRaw": "11:00~20:00 / 휴무: 연중무휴"
+  },
+  {
+   "placeId": "tour_2852773",
+   "name": "양평한우마을",
+   "category": "restaurant",
+   "lat": 37.5006837576,
+   "lng": 127.4193161404,
+   "address": "경기도 양평군 강하면 강남로 304",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/63/2852763_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/63/2852763_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EC%96%91%ED%8F%89%ED%95%9C%EC%9A%B0%EB%A7%88%EC%9D%84",
+   "tags": [
+    "lively_food",
+    "group"
+   ],
+   "reviewSummary": "정육점에서 직접 고른 신선한 소고기를 합리적인 가격에 구워 먹을 수 있는 정육식당이다.",
+   "businessHoursRaw": "- 11:00~22:00 - 마지막 주문 21:30 / 휴무: 연중무휴"
+  },
+  {
+   "placeId": "tour_2842742",
+   "name": "블랙밤부",
+   "category": "restaurant",
+   "lat": 37.6242377618,
+   "lng": 127.3589458441,
+   "address": "경기도 양평군 서종면 꽃대울2길 39-2",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/26/2842726_image2_1.jpeg",
+    "http://tong.visitkorea.or.kr/cms/resource/26/2842726_image3_1.jpeg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EB%B8%94%EB%9E%99%EB%B0%A4%EB%B6%80",
+   "tags": [
+    "aesthetic",
+    "romantic"
+   ],
+   "reviewSummary": "북한강 경치를 바라보며 모던한 인테리어 속에서 아시안 푸드를 즐길 수 있는 음식점이다.",
+   "businessHoursRaw": "- 11:00~20:00 - 준비시간 15:00~17:00 - 마지막 주문 19:20 / 휴무: 연중무휴"
+  },
+  {
+   "placeId": "tour_2842724",
+   "name": "양수리 송어횟집",
+   "category": "restaurant",
+   "lat": 37.5459572019,
+   "lng": 127.3172602207,
+   "address": "경기도 양평군 양서면 양수로152번길 27-1",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/18/2842718_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/18/2842718_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EC%96%91%EC%88%98%EB%A6%AC%20%EC%86%A1%EC%96%B4%ED%9A%9F%EC%A7%91",
+   "tags": [
+    "nature",
+    "kid_friendly"
+   ],
+   "reviewSummary": "북한강이 보이는 쾌적한 정원에서 싱싱한 송어회와 다양한 메뉴를 즐길 수 있는 횟집이다.",
+   "businessHoursRaw": "- 11:00~20:30 - 마지막 주문 19:30 / 휴무: 매주 월요일"
+  },
+  {
+   "placeId": "tour_2836977",
+   "name": "어무이맛양평해장국",
+   "category": "restaurant",
+   "lat": 37.4940554168,
+   "lng": 127.4984063772,
+   "address": "경기도 양평군 양평읍 중앙로 88",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/72/2836972_image2_1.jpeg",
+    "http://tong.visitkorea.or.kr/cms/resource/72/2836972_image3_1.jpeg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EC%96%B4%EB%AC%B4%EC%9D%B4%EB%A7%9B%EC%96%91%ED%8F%89%ED%95%B4%EC%9E%A5%EA%B5%AD",
+   "tags": [
+    "local_food"
+   ],
+   "reviewSummary": "푸짐한 고기와 쫄깃한 식감의 양이 들어간 진한국물의 해장국을 맛볼 수 있는 전문점이다.",
+   "businessHoursRaw": "- 06:00~21:00 - 준비시간 15:00~16:00"
+  },
+  {
+   "placeId": "tour_2836963",
+   "name": "양수리오리학교",
+   "category": "restaurant",
+   "lat": 37.5822065168,
+   "lng": 127.3581554614,
+   "address": "경기도 양평군 서종면 수대울길 176",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/56/2836956_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/56/2836956_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EC%96%91%EC%88%98%EB%A6%AC%EC%98%A4%EB%A6%AC%ED%95%99%EA%B5%90",
+   "tags": [
+    "nature",
+    "activity",
+    "lively_food"
+   ],
+   "reviewSummary": "계곡을 끼고 있어 물놀이와 캠핑 분위기를 함께 즐길 수 있는 가성비 좋은 오리 요리 전문점이다.",
+   "businessHoursRaw": "- 11:00~21:00 - 마지막 주문 19:30 / 휴무: 매주 화요일"
+  },
+  {
+   "placeId": "tour_2836946",
+   "name": "문호리쌀국수",
+   "category": "restaurant",
+   "lat": 37.6089699254,
+   "lng": 127.3498887751,
+   "address": "경기도 양평군 서종면 북한강로 806",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/32/2836932_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/32/2836932_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EB%AC%B8%ED%98%B8%EB%A6%AC%EC%8C%80%EA%B5%AD%EC%88%98",
+   "tags": [
+    "local_food"
+   ],
+   "reviewSummary": "북한강 강가에 위치하여 남녀노소 편하게 즐길 수 있는 베트남 쌀국수를 판매하는 곳이다.",
+   "businessHoursRaw": "- 11:05~21:00 - 마지막 주문 20:30 / 휴무: 연중무휴"
+  },
+  {
+   "placeId": "tour_2831170",
+   "name": "알로하오에",
+   "category": "restaurant",
+   "lat": 37.548093157,
+   "lng": 127.3223291434,
+   "address": "경기도 양평군 양서면 양수로138번길 51",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/67/2831167_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/67/2831167_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EC%95%8C%EB%A1%9C%ED%95%98%EC%98%A4%EC%97%90",
+   "tags": [
+    "romantic",
+    "aesthetic"
+   ],
+   "reviewSummary": "유유히 흐르는 강 전망의 테라스에서 건강한 이탈리아 요리를 즐길 수 있는 이국적인 음식점이다.",
+   "businessHoursRaw": "- 11:00~21:00 - 준비시간 15:00~16:00 - 마지막 주문 20:15 / 휴무: 매주 수요일"
+  },
+  {
+   "placeId": "tour_2754403",
+   "name": "참좋은생각",
+   "category": "restaurant",
+   "lat": 37.4837216936,
+   "lng": 127.411542334,
+   "address": "경기도 양평군 강하면 수대골길 45",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/56/2932256_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/56/2932256_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EC%B0%B8%EC%A2%8B%EC%9D%80%EC%83%9D%EA%B0%81",
+   "tags": [
+    "healing",
+    "romantic",
+    "aesthetic"
+   ],
+   "reviewSummary": "고즈넉한 산자락에서 분수를 바라보며 맛있는 퓨전 한정식 코스요리와 정원 산책을 즐길 수 있다.",
+   "businessHoursRaw": "- 11:30~20:30 - 준비시간 15:30~17:00 - 마지막 주문 19:00 / 휴무: 연중무휴"
+  },
+  {
+   "placeId": "tour_133214",
+   "name": "한마당식당",
+   "category": "restaurant",
+   "lat": 37.5450372036,
+   "lng": 127.5848109534,
+   "address": "경기도 양평군 용문면 용문산로628번길 2",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/80/3474580_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/80/3474580_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%ED%95%9C%EB%A7%88%EB%8B%B9%EC%8B%9D%EB%8B%B9",
+   "tags": [
+    "lively_food",
+    "local_food"
+   ],
+   "reviewSummary": "전통 기와집 분위기 속에서 용문산 경치를 감상하며 참숯 화로구이와 산나물 요리를 맛볼 수 있다.",
+   "businessHoursRaw": "- 10:00~19:30- 마지막 주문 18:30 / 휴무: 매주 월요일"
+  },
+  {
+   "placeId": "tour_1660508",
+   "name": "소나무집",
+   "category": "restaurant",
+   "lat": 37.5217681906,
+   "lng": 127.461261726,
+   "address": "경기도 양평군 옥천면 고읍로 180",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/62/3474562_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/62/3474562_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EC%86%8C%EB%82%98%EB%AC%B4%EC%A7%91",
+   "tags": [
+    "nature",
+    "kid_friendly"
+   ],
+   "reviewSummary": "돼지왕갈비와 직접 뽑은 냉면을 맛보고 맑은 개울가에서 물놀이를 즐길 수 있는 고깃집이다.",
+   "businessHoursRaw": "10:00~22:00 / 휴무: 연중무휴"
+  },
+  {
+   "placeId": "tour_133171",
+   "name": "나루께",
+   "category": "restaurant",
+   "lat": 37.505725185,
+   "lng": 127.4381976153,
+   "address": "경기도 양평군 강하면 강남로 489",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/99/3474599_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/99/3474599_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EB%82%98%EB%A3%A8%EA%BB%98",
+   "tags": [
+    "group"
+   ],
+   "reviewSummary": "참숯 향이 가득한 암소 한우를 맛볼 수 있으며 별도 룸이 있어 단체 모임이나 가족 행사에 적합하다.",
+   "businessHoursRaw": "11:00~21:00 (주말 08:00 ~ 21:00) / 휴무: 매주 월요일 / 월요일이 공휴일인 경우 정상 영업"
+  },
+  {
+   "placeId": "tour_133215",
+   "name": "비원매운탕",
+   "category": "restaurant",
+   "lat": 37.4890086097,
+   "lng": 127.4891268087,
+   "address": "경기도 양평군 양평읍 양근강변길 58",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/86/3474586_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/86/3474586_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EB%B9%84%EC%9B%90%EB%A7%A4%EC%9A%B4%ED%83%95",
+   "tags": [
+    "local_food"
+   ],
+   "reviewSummary": "3대째 이어져 온 전통적인 비법으로 깊은 맛의 민물매운탕을 끓여내는 유서 깊은 식당이다.",
+   "businessHoursRaw": "11:00~20:30 (15:00~17:00 브레이크타임) (20:00 마지막 주문) / 휴무: 연중무휴"
+  },
+  {
+   "placeId": "tour_3355615",
+   "name": "대박직접뽑은막국수",
+   "category": "restaurant",
+   "lat": 37.5455517554,
+   "lng": 127.3207071415,
+   "address": "경기도 양평군 양서면 북한강로 18",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/70/3427670_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/70/3427670_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EB%8C%80%EB%B0%95%EC%A7%81%EC%A0%91%EB%BD%91%EC%9D%80%EB%A7%89%EA%B5%AD%EC%88%98",
+   "tags": [
+    "local_food"
+   ],
+   "reviewSummary": "주문 즉시 면을 뽑아 신선하고 쫄깃한 막국수를 맛볼 수 있는 전문점이다.",
+   "businessHoursRaw": "06:00~재료 소진시까지 / 휴무: 연중무휴"
+  },
+  {
+   "placeId": "tour_134461",
+   "name": "길조",
+   "category": "restaurant",
+   "lat": 37.4937133364,
+   "lng": 127.4736280793,
+   "address": "경기도 양평군 강상면 독배길 32-25",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%EA%B8%B8%EC%A1%B0",
+   "tags": [
+    "romantic"
+   ],
+   "reviewSummary": "남한강 전망을 바라보며 신선한 회와 초밥을 즐길 수 있는 일본 료칸풍의 일식당이다.",
+   "businessHoursRaw": "- 12:00~21:00 - 준비시간 15:00~17:00 - 마지막 주문 19:30 / 휴무: 매주 월요일"
+  },
+  {
+   "placeId": "tour_943362",
+   "name": "로그캠프펜션",
+   "category": "lodging",
+   "lat": 37.5034445514,
+   "lng": 127.571130066,
+   "address": "경기도 양평군 용문면 연수로 293",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/45/3556745_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/45/3556745_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EB%A1%9C%EA%B7%B8%EC%BA%A0%ED%94%84%ED%8E%9C%EC%85%98",
+   "tags": [
+    "healing",
+    "nature"
+   ],
+   "reviewSummary": "용문산 계곡과 소나무 숲에 둘러싸인 수공식 통나무집에서 자연을 만끽하며 휴식할 수 있는 펜션이다."
+  },
+  {
+   "placeId": "tour_990201",
+   "name": "토브의 강가",
+   "category": "lodging",
+   "lat": 37.4673153025,
+   "lng": 127.5655621712,
+   "address": "경기도 양평군 용문면 용문삼성로20번길 73-10",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/22/3556122_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/22/3556122_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%ED%86%A0%EB%B8%8C%EC%9D%98%20%EA%B0%95%EA%B0%80",
+   "tags": [
+    "group"
+   ],
+   "reviewSummary": "칠읍산 기슭에 위치하며 단체동과 커플동을 갖추고 다양한 부대시설을 제공하는 펜션이다."
+  },
+  {
+   "placeId": "tour_700278",
+   "name": "물소리새소리",
+   "category": "lodging",
+   "lat": 37.6475103781,
+   "lng": 127.3764519134,
+   "address": "경기도 양평군 서종면 무드리2길 57-1",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/42/3556142_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/42/3556142_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EB%AC%BC%EC%86%8C%EB%A6%AC%EC%83%88%EC%86%8C%EB%A6%AC",
+   "tags": [
+    "nature",
+    "experience"
+   ],
+   "reviewSummary": "북한강과 벽계천이 보이는 곳에서 족구와 계곡 물고기 잡기 체험을 즐길 수 있는 펜션이다."
+  },
+  {
+   "placeId": "tour_700255",
+   "name": "물소리펜션",
+   "category": "lodging",
+   "lat": 37.5823375684,
+   "lng": 127.5378002481,
+   "address": "경기도 양평군 옥천면 용천로 1038",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/27/3556627_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/27/3556627_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EB%AC%BC%EC%86%8C%EB%A6%AC%ED%8E%9C%EC%85%98",
+   "tags": [
+    "healing",
+    "nature"
+   ],
+   "reviewSummary": "어비계곡 상류에 위치해 물놀이와 텃밭 채취, 캠프파이어를 즐길 수 있는 펜션이다."
+  },
+  {
+   "placeId": "tour_397867",
+   "name": "햇살좋은날",
+   "category": "lodging",
+   "lat": 37.4398448792,
+   "lng": 127.49006425,
+   "address": "경기도 양평군 강상면 강남로 1544",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/65/3556165_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/65/3556165_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%ED%96%87%EC%82%B4%EC%A2%8B%EC%9D%80%EB%82%A0",
+   "tags": [
+    "group",
+    "romantic"
+   ],
+   "reviewSummary": "넓은 정원과 다양한 부대시설을 갖추고 있어 워크숍이나 가족 행사 등에 이용하기 좋은 독채 펜션이다."
+  },
+  {
+   "placeId": "tour_945085",
+   "name": "에델바이스",
+   "category": "lodging",
+   "lat": 37.5147216049,
+   "lng": 127.6027963126,
+   "address": "경기도 양평군 용문면 용문산로192번길 10-9",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/43/2627343_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/43/2627343_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EC%97%90%EB%8D%B8%EB%B0%94%EC%9D%B4%EC%8A%A4",
+   "tags": [
+    "healing",
+    "nature"
+   ],
+   "reviewSummary": "용문산과 중원산의 맑은 물과 공기를 즐기며 편안한 휴식을 취할 수 있는 펜션이다."
+  },
+  {
+   "placeId": "tour_397692",
+   "name": "펜션뷰",
+   "category": "lodging",
+   "lat": 37.5144966431,
+   "lng": 127.6034740356,
+   "address": "경기도 양평군 용문면 용문산로192번길 10-8",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/32/2627332_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/32/2627332_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%ED%8E%9C%EC%85%98%EB%B7%B0",
+   "tags": [
+    "healing",
+    "nature"
+   ],
+   "reviewSummary": "뛰어난 자연 경관 속에서 여유를 즐길 수 있으며 계곡 낚시와 다슬기 채집이 가능한 펜션이다."
+  },
+  {
+   "placeId": "tour_697068",
+   "name": "자연향기펜션",
+   "category": "lodging",
+   "lat": 37.6341203684,
+   "lng": 127.3819934626,
+   "address": "경기도 양평군 서종면 바치울길 151-12",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/18/2613518_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/18/2613518_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EC%9E%90%EC%97%B0%ED%96%A5%EA%B8%B0%ED%8E%9C%EC%85%98",
+   "tags": [
+    "healing",
+    "nature",
+    "group"
+   ],
+   "reviewSummary": "자연 속에 위치해 방해받지 않고 모임을 가지며 잔디 정원에서 뛰어놀 수 있는 독채 펜션이다."
+  },
+  {
+   "placeId": "tour_2814153",
+   "name": "레몬그라스",
+   "category": "lodging",
+   "lat": 37.6180045949,
+   "lng": 127.6311685121,
+   "address": "경기도 양평군 명성길 230",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/63/2812763_image2_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EB%A0%88%EB%AA%AC%EA%B7%B8%EB%9D%BC%EC%8A%A4",
+   "tags": [
+    "nature"
+   ],
+   "reviewSummary": "소리산 계곡에 위치하며 전면 창으로 산자락 풍경을 감상할 수 있는 복층 구조의 독채 펜션이다."
+  },
+  {
+   "placeId": "tour_3532665",
+   "name": "헤윰, 소",
+   "category": "lodging",
+   "lat": 37.5136427388,
+   "lng": 127.6877136479,
+   "address": "경기도 양평군 단월면 양동로 313",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%ED%97%A4%EC%9C%B0%2C%20%EC%86%8C",
+   "tags": [
+    "healing",
+    "nature",
+    "aesthetic",
+    "kid_friendly"
+   ],
+   "reviewSummary": "하루 두 팀만을 위한 프라이빗한 공간에서 계곡 체험과 감성적인 휴식을 즐길 수 있는 펜션이다."
+  },
+  {
+   "placeId": "tour_3532732",
+   "name": "온유랑",
+   "category": "lodging",
+   "lat": 37.5166242399,
+   "lng": 127.7574683527,
+   "address": "경기도 양평군 청운면 몰운고갯길 306-11",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%EC%98%A8%EC%9C%A0%EB%9E%91",
+   "tags": [
+    "healing"
+   ],
+   "petFriendly": true,
+   "reviewSummary": "넓은 잔디밭과 대형 자쿠지를 갖추고 온전한 쉼을 누릴 수 있는 애견 동반 가능 독채 펜션이다."
+  },
+  {
+   "placeId": "tour_3532734",
+   "name": "메리도그하우스",
+   "category": "lodging",
+   "lat": 37.5207260307,
+   "lng": 127.7298401806,
+   "address": "경기도 양평군 청운면 가현길 440-1",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%EB%A9%94%EB%A6%AC%EB%8F%84%EA%B7%B8%ED%95%98%EC%9A%B0%EC%8A%A4",
+   "tags": [
+    "healing",
+    "nature"
+   ],
+   "petFriendly": true,
+   "reviewSummary": "넓은 애견 플레이그라운드와 수영장, 사우나를 갖춘 진정한 애견 전문 펜션입니다."
+  },
+  {
+   "placeId": "tour_3532756",
+   "name": "어싱사계",
+   "category": "lodging",
+   "lat": 37.4619293357,
+   "lng": 127.5394008088,
+   "address": "경기도 양평군 개군면 공서울길88번길 63-5",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%EC%96%B4%EC%8B%B1%EC%82%AC%EA%B3%84",
+   "tags": [
+    "healing",
+    "nature",
+    "romantic"
+   ],
+   "reviewSummary": "자연과 예술이 머무는 프라이빗 독채 스테이로 사계절 정원과 야외 갤러리가 있습니다."
+  },
+  {
+   "placeId": "tour_3532772",
+   "name": "산온잔등",
+   "category": "lodging",
+   "lat": 37.4582020328,
+   "lng": 127.3897589312,
+   "address": "경기도 양평군 강하면 동문3길 22-13",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%EC%82%B0%EC%98%A8%EC%9E%94%EB%93%B1",
+   "tags": [
+    "healing",
+    "nature",
+    "group"
+   ],
+   "reviewSummary": "포근한 산으로 둘러싸인 고요한 공간에서 가족이나 친구들과 편안한 시간을 보낼 수 있습니다."
+  },
+  {
+   "placeId": "tour_3533005",
+   "name": "슬로우인풀빌라",
+   "category": "lodging",
+   "lat": 37.6274164384,
+   "lng": 127.5794784866,
+   "address": "경기도 양평군 단월면 섬이길 329-11",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%EC%8A%AC%EB%A1%9C%EC%9A%B0%EC%9D%B8%ED%92%80%EB%B9%8C%EB%9D%BC",
+   "tags": [
+    "healing",
+    "nature"
+   ],
+   "petFriendly": true,
+   "reviewSummary": "잣나무 숲 인근 조용한 산속에 위치해 개별 수영장과 반려견과 함께 휴식을 즐길 수 있는 독채 풀빌라입니다."
+  },
+  {
+   "placeId": "tour_3533129",
+   "name": "감성보다 양평서종점",
+   "category": "lodging",
+   "lat": 37.6160902467,
+   "lng": 127.4430550985,
+   "address": "경기도 양평군 서종면 당산공원길 21-52",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%EA%B0%90%EC%84%B1%EB%B3%B4%EB%8B%A4%20%EC%96%91%ED%8F%89%EC%84%9C%EC%A2%85%EC%A0%90",
+   "tags": [
+    "healing",
+    "romantic"
+   ],
+   "reviewSummary": "자쿠지, 레트로 포장마차, 바비큐 공간을 단독으로 이용하는 하루 한 팀 전용 한옥 숙소입니다."
+  },
+  {
+   "placeId": "tour_2918674",
+   "name": "휴빌리지",
+   "category": "lodging",
+   "lat": 37.4842742022,
+   "lng": 127.7030408911,
+   "address": "경기도 양평군 양동면 양동로 756",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%ED%9C%B4%EB%B9%8C%EB%A6%AC%EC%A7%80",
+   "tags": [
+    "healing",
+    "nature"
+   ],
+   "reviewSummary": "탁 트인 조망과 야외수영장, 휴가든을 갖춘 리조트 내 빌리지에서 편안한 휴식을 즐길 수 있습니다."
+  },
+  {
+   "placeId": "tour_2853502",
+   "name": "소르호텔",
+   "category": "lodging",
+   "lat": 37.5040418281,
+   "lng": 127.426229305,
+   "address": "경기도 양평군 강하면 강남로 375",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%EC%86%8C%EB%A5%B4%ED%98%B8%ED%85%94",
+   "tags": [
+    "healing",
+    "romantic"
+   ],
+   "reviewSummary": "전 객실 통창과 발코니를 통해 남한강 조망을 즐길 수 있는 드라이브인 무인텔입니다."
+  },
+  {
+   "placeId": "tour_3438041",
+   "name": "유선재",
+   "category": "lodging",
+   "lat": 37.4905124838,
+   "lng": 127.7092929219,
+   "address": "경기도 양평군 양동면 장만대길 89-11",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%EC%9C%A0%EC%84%A0%EC%9E%AC",
+   "tags": [
+    "healing"
+   ],
+   "reviewSummary": "하루 한 가족만 예약받는 100년 전통의 고즈넉하고 평화로운 고택 한옥 독채입니다."
+  },
+  {
+   "placeId": "tour_3438560",
+   "name": "잔원유림 풀빌라",
+   "category": "lodging",
+   "lat": 37.6252835176,
+   "lng": 127.5884305134,
+   "address": "경기도 양평군 단월면 섬이길 216",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%EC%9E%94%EC%9B%90%EC%9C%A0%EB%A6%BC%20%ED%92%80%EB%B9%8C%EB%9D%BC",
+   "tags": [
+    "healing",
+    "nature"
+   ],
+   "reviewSummary": "뒷편의 작은 산과 정면의 봉미산 봉우리를 바라보며 고요한 여유를 즐길 수 있는 풀빌라입니다."
+  }
+ ]
+}

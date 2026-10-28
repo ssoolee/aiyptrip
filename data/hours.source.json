@@ -1,0 +1,482 @@
+{
+ "note": "손으로 확인한 영업시간. hours를 채우고 npm run build:hours를 다시 실행하면 src/lib/data/places.json에 반영된다 (TourAPI 값보다 우선). 비어 있는 항목은 스크립트가 자동으로 적어 둔 '확인 필요' 목록이다.",
+ "format": "\"09:00~18:00 / 휴무: 매주 수요일\" — 해석 규칙은 src/lib/businessHours.ts",
+ "places": [
+  {
+   "name": "미리내리조트",
+   "category": "attraction",
+   "hours": "00:00~24:00",
+   "source": "카카오맵 https://place.map.kakao.com/27447772",
+   "checkedAt": "2026-10-21"
+  },
+  {
+   "name": "양평 생활문화센터",
+   "category": "attraction",
+   "hours": "화~금 10:00~21:00, 토 10:00~18:00 / 휴무: 매주 일요일, 월요일",
+   "source": "카카오맵 https://place.map.kakao.com/1450522167",
+   "checkedAt": "2026-10-21"
+  },
+  {
+   "name": "지평향교",
+   "category": "attraction",
+   "hours": "",
+   "source": "",
+   "checkedAt": ""
+  },
+  {
+   "name": "파머스가든봄",
+   "category": "attraction",
+   "hours": "",
+   "source": "",
+   "checkedAt": ""
+  },
+  {
+   "name": "가소담",
+   "category": "cafe",
+   "hours": "10:00~21:00",
+   "source": "카카오맵 https://place.map.kakao.com/1781738969",
+   "checkedAt": "2026-10-21"
+  },
+  {
+   "name": "구름정원제빵소",
+   "category": "cafe",
+   "hours": "월 목 금 10:00~19:00, 토 일 10:00~20:00 / 휴무: 매주 화요일, 수요일",
+   "source": "카카오맵 https://place.map.kakao.com/1288125279",
+   "checkedAt": "2026-10-21"
+  },
+  {
+   "name": "구벼울",
+   "category": "cafe",
+   "hours": "10:00~21:00",
+   "source": "카카오맵 https://place.map.kakao.com/925543105",
+   "checkedAt": "2026-10-21"
+  },
+  {
+   "name": "그린망고",
+   "category": "cafe",
+   "hours": "월 화 목~일 09:00~18:00 / 휴무: 매주 수요일",
+   "source": "카카오맵 https://place.map.kakao.com/27325640",
+   "checkedAt": "2026-10-21"
+  },
+  {
+   "name": "도토리골 양평정원카페",
+   "category": "cafe",
+   "hours": "10:00~20:00, 19:30 라스트오더",
+   "source": "카카오맵 https://place.map.kakao.com/65323719",
+   "checkedAt": "2026-10-21"
+  },
+  {
+   "name": "돗꽈비본점",
+   "category": "cafe",
+   "hours": "09:30~20:00",
+   "source": "카카오맵 https://place.map.kakao.com/999055280",
+   "checkedAt": "2026-10-21"
+  },
+  {
+   "name": "라 네베",
+   "category": "cafe",
+   "hours": "화~일 10:30~20:00, 19:30 라스트오더 / 휴무: 매주 월요일",
+   "source": "카카오맵 https://place.map.kakao.com/425703654",
+   "checkedAt": "2026-10-21"
+  },
+  {
+   "name": "로우드",
+   "category": "cafe",
+   "hours": "토 일 11:00~19:00 / 휴무: 매주 월요일, 화요일, 수요일, 목요일, 금요일",
+   "source": "카카오맵 https://place.map.kakao.com/1984170654",
+   "checkedAt": "2026-10-21"
+  },
+  {
+   "name": "루루루",
+   "category": "cafe",
+   "hours": "목~일 10:00~18:00 / 휴무: 매주 월요일, 화요일, 수요일",
+   "source": "카카오맵 https://place.map.kakao.com/2077300056",
+   "checkedAt": "2026-10-21"
+  },
+  {
+   "name": "마루정원제빵소 양평본점",
+   "category": "cafe",
+   "hours": "08:30~21:00, 20:30 라스트오더",
+   "source": "카카오맵 https://place.map.kakao.com/681214884",
+   "checkedAt": "2026-10-21"
+  },
+  {
+   "name": "마이리틀호주",
+   "category": "cafe",
+   "hours": "월~금 08:00~17:00, 토 일 09:00~18:00",
+   "source": "카카오맵 https://place.map.kakao.com/2133115172",
+   "checkedAt": "2026-10-21"
+  },
+  {
+   "name": "바람길카페",
+   "category": "cafe",
+   "hours": "월~금 10:00~19:00, 토 08:30~20:00, 일 08:30~19:00",
+   "source": "카카오맵 https://place.map.kakao.com/175979148",
+   "checkedAt": "2026-10-21"
+  },
+  {
+   "name": "비.마이가든 양평",
+   "category": "cafe",
+   "hours": "10:00~18:00",
+   "source": "카카오맵 https://place.map.kakao.com/1828834999",
+   "checkedAt": "2026-10-21"
+  },
+  {
+   "name": "비아베네또 수입가구&카페",
+   "category": "cafe",
+   "hours": "10:00~19:00",
+   "source": "카카오맵 https://place.map.kakao.com/1251977589",
+   "checkedAt": "2026-10-21"
+  },
+  {
+   "name": "소풍",
+   "category": "cafe",
+   "hours": "월~목 08:00~21:30, 금 07:00~23:00, 토 일 07:00~24:00",
+   "source": "카카오맵 https://place.map.kakao.com/1548627169",
+   "checkedAt": "2026-10-21"
+  },
+  {
+   "name": "수수카페",
+   "category": "cafe",
+   "hours": "월~금 10:00~22:00, 토 일 08:30~22:00",
+   "source": "카카오맵 https://place.map.kakao.com/1651030568",
+   "checkedAt": "2026-10-21"
+  },
+  {
+   "name": "쉬어간들어떠하리",
+   "category": "cafe",
+   "hours": "수~일 11:00~18:00 / 휴무: 매주 월요일, 화요일",
+   "source": "카카오맵 https://place.map.kakao.com/2089911263",
+   "checkedAt": "2026-10-21"
+  },
+  {
+   "name": "스타벅스 경기양평점",
+   "category": "cafe",
+   "hours": "07:00~22:00",
+   "source": "카카오맵 https://place.map.kakao.com/934797745",
+   "checkedAt": "2026-10-21"
+  },
+  {
+   "name": "스타벅스 더양평DT점",
+   "category": "cafe",
+   "hours": "월~금 09:00~20:00, 토 일 08:30~21:00",
+   "source": "카카오맵 https://place.map.kakao.com/1976943632",
+   "checkedAt": "2026-10-21"
+  },
+  {
+   "name": "신복리709",
+   "category": "cafe",
+   "hours": "월~금 11:00~20:00, 토 일 10:00~21:00",
+   "source": "카카오맵 https://place.map.kakao.com/1847067602",
+   "checkedAt": "2026-10-21"
+  },
+  {
+   "name": "써니플",
+   "category": "cafe",
+   "hours": "월~토 08:00~18:00 / 휴무: 매주 일요일",
+   "source": "카카오맵 https://place.map.kakao.com/2108996033",
+   "checkedAt": "2026-10-21"
+  },
+  {
+   "name": "앵무타운",
+   "category": "cafe",
+   "hours": "11:00~22:00",
+   "source": "카카오맵 https://place.map.kakao.com/531588809",
+   "checkedAt": "2026-10-21"
+  },
+  {
+   "name": "양수리빵공장",
+   "category": "cafe",
+   "hours": "08:00~24:00",
+   "source": "카카오맵 https://place.map.kakao.com/1522924709",
+   "checkedAt": "2026-10-21"
+  },
+  {
+   "name": "양평빵공장",
+   "category": "cafe",
+   "hours": "08:00~01:00",
+   "source": "카카오맵 https://place.map.kakao.com/56137725",
+   "checkedAt": "2026-10-21"
+  },
+  {
+   "name": "양평찐빵양평감자떡",
+   "category": "cafe",
+   "hours": "",
+   "source": "",
+   "checkedAt": ""
+  },
+  {
+   "name": "여양로2111",
+   "category": "cafe",
+   "hours": "10:00~20:00",
+   "source": "카카오맵 https://place.map.kakao.com/618155133",
+   "checkedAt": "2026-10-21"
+  },
+  {
+   "name": "용문산빵공장",
+   "category": "cafe",
+   "hours": "09:00~21:00",
+   "source": "카카오맵 https://place.map.kakao.com/2063068079",
+   "checkedAt": "2026-10-21"
+  },
+  {
+   "name": "월화수 디저트카페",
+   "category": "cafe",
+   "hours": "월~수 금~일 10:00~20:00 / 휴무: 매주 목요일",
+   "source": "카카오맵 https://place.map.kakao.com/1921097466",
+   "checkedAt": "2026-10-21"
+  },
+  {
+   "name": "정애가식빵",
+   "category": "cafe",
+   "hours": "월~토 08:00~20:00 / 휴무: 매주 일요일",
+   "source": "카카오맵 https://place.map.kakao.com/764831237",
+   "checkedAt": "2026-10-21"
+  },
+  {
+   "name": "지평로76카페",
+   "category": "cafe",
+   "hours": "07:00~21:00",
+   "source": "카카오맵 https://place.map.kakao.com/1512464179",
+   "checkedAt": "2026-10-21"
+  },
+  {
+   "name": "카페 그림정원",
+   "category": "cafe",
+   "hours": "10:30~19:00",
+   "source": "카카오맵 https://place.map.kakao.com/952942845",
+   "checkedAt": "2026-10-21"
+  },
+  {
+   "name": "카페룰루",
+   "category": "cafe",
+   "hours": "화 09:00~15:00, 월 목~일 09:00~20:00",
+   "source": "카카오맵 https://place.map.kakao.com/400544693",
+   "checkedAt": "2026-10-21"
+  },
+  {
+   "name": "카페리노",
+   "category": "cafe",
+   "hours": "09:00~23:00, 22:30 라스트오더",
+   "source": "카카오맵 https://place.map.kakao.com/1002593535",
+   "checkedAt": "2026-10-21"
+  },
+  {
+   "name": "카페이연",
+   "category": "cafe",
+   "hours": "10:00~20:00, 19:30 라스트오더",
+   "source": "카카오맵 https://place.map.kakao.com/2017566915",
+   "checkedAt": "2026-10-21"
+  },
+  {
+   "name": "커피앤가든",
+   "category": "cafe",
+   "hours": "월~금 10:00~18:00, 토 일 09:00~19:00",
+   "source": "카카오맵 https://place.map.kakao.com/22218879",
+   "checkedAt": "2026-10-21"
+  },
+  {
+   "name": "콘크리트정글",
+   "category": "cafe",
+   "hours": "10:00~20:00",
+   "source": "카카오맵 https://place.map.kakao.com/2143481109",
+   "checkedAt": "2026-10-21"
+  },
+  {
+   "name": "테라로사 서종점",
+   "category": "cafe",
+   "hours": "09:00~21:00",
+   "source": "카카오맵 https://place.map.kakao.com/21604864",
+   "checkedAt": "2026-10-21"
+  },
+  {
+   "name": "하록수림",
+   "category": "cafe",
+   "hours": "월 화 목~일 11:00~19:00 / 휴무: 매주 수요일",
+   "source": "카카오맵 https://place.map.kakao.com/1675297968",
+   "checkedAt": "2026-10-21"
+  },
+  {
+   "name": "하우스 베이커리",
+   "category": "cafe",
+   "hours": "월~금 10:30~20:00, 토 일 10:00~20:00",
+   "source": "카카오맵 https://place.map.kakao.com/2043650820",
+   "checkedAt": "2026-10-21"
+  },
+  {
+   "name": "흑유재",
+   "category": "cafe",
+   "hours": "10:00~23:00",
+   "source": "카카오맵 https://place.map.kakao.com/85411389",
+   "checkedAt": "2026-10-21"
+  },
+  {
+   "name": "개군할머니토종순대국",
+   "category": "restaurant",
+   "hours": "월 화 목~일 07:30~19:40, 19:10 라스트오더 / 휴무: 매주 수요일",
+   "source": "카카오맵 https://place.map.kakao.com/21352356",
+   "checkedAt": "2026-10-21"
+  },
+  {
+   "name": "고등어사랑",
+   "category": "restaurant",
+   "hours": "월 화 목~일 11:00~21:00 / 휴무: 매주 수요일",
+   "source": "카카오맵 https://place.map.kakao.com/981051426",
+   "checkedAt": "2026-10-21"
+  },
+  {
+   "name": "고바우설렁탕",
+   "category": "restaurant",
+   "hours": "월 화 목~일 07:00~16:00, 15:30 라스트오더 / 휴무: 매주 수요일",
+   "source": "카카오맵 https://place.map.kakao.com/9658853",
+   "checkedAt": "2026-10-21"
+  },
+  {
+   "name": "김명자낙지마당 양평점",
+   "category": "restaurant",
+   "hours": "11:00~22:00, 20:30 라스트오더",
+   "source": "카카오맵 https://place.map.kakao.com/1746901365",
+   "checkedAt": "2026-10-21"
+  },
+  {
+   "name": "두물머리연핫도그",
+   "category": "restaurant",
+   "hours": "월~금 10:00~17:50, 토 일 09:00~17:50",
+   "source": "카카오맵 https://place.map.kakao.com/535163769",
+   "checkedAt": "2026-10-21"
+  },
+  {
+   "name": "머무름",
+   "category": "restaurant",
+   "hours": "10:00~21:00",
+   "source": "카카오맵 https://place.map.kakao.com/11423012",
+   "checkedAt": "2026-10-21"
+  },
+  {
+   "name": "메밀가막국수",
+   "category": "restaurant",
+   "hours": "화~일 10:00~20:00, 19:45 라스트오더 / 휴무: 매주 월요일",
+   "source": "카카오맵 https://place.map.kakao.com/24944086",
+   "checkedAt": "2026-10-21"
+  },
+  {
+   "name": "몽실식당",
+   "category": "restaurant",
+   "hours": "월 수~일 11:00~21:20 / 휴무: 매주 화요일",
+   "source": "카카오맵 https://place.map.kakao.com/10950148",
+   "checkedAt": "2026-10-21"
+  },
+  {
+   "name": "본가양평해장국 양평지점",
+   "category": "restaurant",
+   "hours": "06:00~20:30",
+   "source": "카카오맵 https://place.map.kakao.com/15867425",
+   "checkedAt": "2026-10-21"
+  },
+  {
+   "name": "소리산참숯굽는마을",
+   "category": "restaurant",
+   "hours": "09:00~21:00, 20:00 라스트오더",
+   "source": "카카오맵 https://place.map.kakao.com/7953260",
+   "checkedAt": "2026-10-21"
+  },
+  {
+   "name": "시월애",
+   "category": "restaurant",
+   "hours": "",
+   "source": "",
+   "checkedAt": ""
+  },
+  {
+   "name": "쏭바베큐 양평본점",
+   "category": "restaurant",
+   "hours": "월 화 목~토 11:30~21:00, 일 12:30~21:00 / 휴무: 매주 수요일",
+   "source": "카카오맵 https://place.map.kakao.com/1913593276",
+   "checkedAt": "2026-10-21"
+  },
+  {
+   "name": "양평솥뚜껑닭볶음탕",
+   "category": "restaurant",
+   "hours": "09:00~19:00, 18:00 라스트오더",
+   "source": "카카오맵 https://place.map.kakao.com/288702753",
+   "checkedAt": "2026-10-21"
+  },
+  {
+   "name": "양평신내서울해장국 본점",
+   "category": "restaurant",
+   "hours": "07:00~20:00",
+   "source": "카카오맵 https://place.map.kakao.com/1368874258",
+   "checkedAt": "2026-10-21"
+  },
+  {
+   "name": "양평옥천냉면몽실면당",
+   "category": "restaurant",
+   "hours": "11:00~20:30, 19:30 라스트오더",
+   "source": "카카오맵 https://place.map.kakao.com/1942130415",
+   "checkedAt": "2026-10-21"
+  },
+  {
+   "name": "양평축협한우프라자",
+   "category": "restaurant",
+   "hours": "월 수~일 10:00~22:00 / 휴무: 매주 화요일",
+   "source": "카카오맵 https://place.map.kakao.com/15408863",
+   "checkedAt": "2026-10-21"
+  },
+  {
+   "name": "연꽃언덕",
+   "category": "restaurant",
+   "hours": "월~금 11:00~21:00, 토 일 11:00~22:00",
+   "source": "카카오맵 https://place.map.kakao.com/15225494",
+   "checkedAt": "2026-10-21"
+  },
+  {
+   "name": "옥천냉면 황해식당 본점",
+   "category": "restaurant",
+   "hours": "화~일 11:00~19:50 / 휴무: 매주 월요일",
+   "source": "카카오맵 https://place.map.kakao.com/8017072",
+   "checkedAt": "2026-10-21"
+  },
+  {
+   "name": "지평보리밥집",
+   "category": "restaurant",
+   "hours": "월 화 목~일 10:30~16:00, 15시 이후 방문시 전화 후 방문 / 휴무: 매주 수요일",
+   "source": "카카오맵 https://place.map.kakao.com/15442363",
+   "checkedAt": "2026-10-21"
+  },
+  {
+   "name": "퇴촌 민물매운탕 어탕국수",
+   "category": "restaurant",
+   "hours": "월 수~일 10:00~20:00 / 휴무: 매주 화요일",
+   "source": "카카오맵 https://place.map.kakao.com/272297725",
+   "checkedAt": "2026-10-21"
+  },
+  {
+   "name": "핏제리아 루카네",
+   "category": "restaurant",
+   "hours": "11:00~20:30",
+   "source": "카카오맵 https://place.map.kakao.com/956660667",
+   "checkedAt": "2026-10-21"
+  },
+  {
+   "name": "한강정육점식당",
+   "category": "restaurant",
+   "hours": "월~금 11:30~20:30, 토 11:30~14:00 / 휴무: 매주 일요일",
+   "source": "카카오맵 https://place.map.kakao.com/1383986572",
+   "checkedAt": "2026-10-21"
+  },
+  {
+   "name": "해물꾼조태산 양평본점",
+   "category": "restaurant",
+   "hours": "10:50~20:30, 19:50 라스트오더",
+   "source": "카카오맵 https://place.map.kakao.com/391219825",
+   "checkedAt": "2026-10-21"
+  },
+  {
+   "name": "호호분식",
+   "category": "restaurant",
+   "hours": "월 수~일 10:30~19:00, 18:30 라스트오더 / 휴무: 매주 화요일",
+   "source": "카카오맵 https://place.map.kakao.com/8684628",
+   "checkedAt": "2026-10-21"
+  }
+ ]
+}

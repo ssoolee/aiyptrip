@@ -1,0 +1,185 @@
+@import "tailwindcss";
+
+/* docs/agents/06-web-design-trend-agent.md 디자인 토큰 초안 반영 */
+:root {
+  --background: #fafaf7;
+  --foreground: #14181a;
+  --color-primary: #2f6f4f;
+  --color-accent: #f2a65a;
+  --color-card: #ffffff;
+  --color-border: #e5e3dd;
+  --color-muted: #6b7280;
+  --radius-card: 16px;
+  --radius-button: 999px;
+
+  /* 양평 마스코트 '평안이' 팔레트 (그림: public/character/). 버튼·링크는 기존
+     primary/accent를 그대로 쓰고, 이 색은 캐릭터 주변 장식에만 쓴다.
+     연꽃 핑크는 아직 쓰는 곳이 없지만 팔레트 기록용으로 함께 둔다. */
+  --color-character-blue: #8fd3f2; /* 하늘물 블루 */
+  --color-character-mint: #9fdcd2; /* 평온 민트 */
+  --color-character-ivory: #fdf3e4; /* 따스한 아이보리 */
+  --color-character-pink: #f9b5b8; /* 연꽃 핑크 */
+
+  /* 히어로 틴트는 --background에 캐릭터 색을 섞어 만든다 — 다크모드에서 배경만
+     바뀌면 틴트도 같이 어두워지므로 아래 dark 블록에 따로 적을 필요가 없다. */
+  --color-hero-bg: color-mix(in srgb, var(--color-character-blue) 14%, var(--background));
+  --color-hero-border: color-mix(in srgb, var(--color-character-blue) 32%, var(--background));
+  /* 틴트 위에서는 --color-muted(#6b7280)가 4.4:1로 WCAG AA에 못 미쳐 따로 둔다. */
+  --color-hero-text: color-mix(in srgb, var(--foreground) 72%, var(--color-hero-bg));
+  --color-hero-eyebrow: var(--color-primary);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--color-primary);
+  --color-accent: var(--color-accent);
+  --color-card: var(--color-card);
+  --color-border: var(--color-border);
+  --color-muted: var(--color-muted);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #14181a;
+    --foreground: #ededed;
+    --color-card: #1c2124;
+    --color-border: #2a3033;
+    --color-muted: #9aa4ab;
+    /* primary(#2f6f4f)는 라이트/다크 공통이지만 어두운 히어로 틴트 위에서는 2.3:1까지
+       떨어진다. 히어로의 작은 글씨에만 밝게 섞은 값을 쓴다. */
+    --color-hero-eyebrow: color-mix(in srgb, var(--color-primary) 45%, var(--foreground));
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+/* 홈 히어로(HomeHero) 배경. 캐릭터 색을 투명도로 얹기 때문에 라이트(#fafaf7)와
+   다크(#14181a) 배경 모두에서 과하지 않게 깔린다. */
+.home-hero {
+  background-color: var(--color-hero-bg);
+  background-image:
+    radial-gradient(
+      120% 110% at 88% 0%,
+      color-mix(in srgb, var(--color-character-blue) 22%, transparent),
+      transparent 70%
+    ),
+    linear-gradient(
+      160deg,
+      color-mix(in srgb, var(--color-character-mint) 16%, transparent),
+      color-mix(in srgb, var(--color-character-ivory) 10%, transparent)
+    );
+}
+
+/* 평안이를 올려 두는 연한 원형 배경(MascotSpot). .home-hero와 같은 방식으로
+   캐릭터 색을 --background에 섞기 때문에 다크모드 값을 따로 적지 않는다. */
+.mascot-spot {
+  background-color: color-mix(in srgb, var(--color-character-blue) 16%, var(--background));
+  background-image: radial-gradient(
+    85% 85% at 50% 100%,
+    color-mix(in srgb, var(--color-character-ivory) 22%, transparent),
+    transparent 70%
+  );
+}
+
+/* 평안이가 둥실 떠 있는 움직임 — 기다리는 화면에서만 쓴다. */
+@keyframes mascot-bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+.mascot-bob {
+  animation: mascot-bob 2.4s ease-in-out infinite;
+}
+
+/* 내용이 들어올 자리를 미리 보여주는 막대. Tailwind의 animate-pulse를 쓰지 않는
+   이유는 아래 prefers-reduced-motion 블록에서 함께 끄기 위해서다. */
+@keyframes skeleton-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.45;
+  }
+}
+
+/* 모서리는 쓰는 쪽의 rounded-* 로 정한다 — 여기에 적으면 레이어 밖 규칙이라
+   같은 요소의 Tailwind 유틸리티를 이겨 버린다. */
+.skeleton-line {
+  background-color: var(--color-border);
+  animation: skeleton-pulse 1.4s ease-in-out infinite;
+}
+
+/* 기다리는 화면은 부드럽게 떠오른다. 늦게 띄우는 안을 재봤지만 그동안 보이는 건
+   이전 화면이 아니라 빈 화면이라(Next가 내용을 바로 비운다) 더 나빴다 —
+   빠른 길에서 깜빡이는 건 이 180ms 페이드가 눌러 준다. */
+@keyframes loading-fade-in {
+  to {
+    opacity: 1;
+  }
+}
+
+.loading-appear {
+  opacity: 0;
+  animation: loading-fade-in 180ms ease-out forwards;
+}
+
+/* 장소 상세 시트(PlaceDetailSheet)의 등장 효과. 모바일은 아래에서 올라오고,
+   sm(40rem) 이상에서는 오른쪽 패널로 밀려 들어온다. */
+@keyframes sheet-slide-up {
+  from {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes sheet-slide-in {
+  from {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes sheet-backdrop-in {
+  from {
+    opacity: 0;
+  }
+}
+
+.sheet-panel {
+  animation: sheet-slide-up 200ms ease-out;
+}
+
+.sheet-backdrop {
+  animation: sheet-backdrop-in 200ms ease-out;
+}
+
+@media (min-width: 40rem) {
+  .sheet-panel {
+    animation-name: sheet-slide-in;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sheet-panel,
+  .sheet-backdrop,
+  .mascot-bob,
+  .skeleton-line {
+    animation: none;
+  }
+
+  /* opacity까지 되돌리지 않으면 기다리는 화면이 영영 투명하게 남는다. */
+  .loading-appear {
+    animation: none;
+    opacity: 1;
+  }
+}

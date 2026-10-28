@@ -1,0 +1,27 @@
+rules_version = '2';
+
+// docs/prd/06-infra-deployment-prd.md §4 보안 규칙 요구사항 반영
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /users/{uid} {
+      allow read, write: if request.auth != null && request.auth.uid == uid;
+
+      match /favoriteCourses/{courseId} {
+        allow read, write: if request.auth != null && request.auth.uid == uid;
+      }
+      match /favoritePlaces/{placeId} {
+        allow read, write: if request.auth != null && request.auth.uid == uid;
+      }
+    }
+
+    // 공용 참조 데이터: 모든 로그인 사용자에게 읽기 전용, 쓰기는 서버(Cloud Functions)만
+    match /precomputedCourses/{courseId} {
+      allow read: if true;
+      allow write: if false;
+    }
+    match /festivalCalendar/{eventId} {
+      allow read: if true;
+      allow write: if false;
+    }
+  }
+}

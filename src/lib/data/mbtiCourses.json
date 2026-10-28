@@ -1,0 +1,1344 @@
+{
+ "generatedAt": "2026-09-28T07:04:06.225Z",
+ "types": {
+  "ISTJ": {
+   "summary": "현실성·책임감·질서를 중시하고, 세부 조건을 확인하는 성향이에요.",
+   "courses": [
+    {
+     "courseId": "mbti_ISTJ_curated_1",
+     "title": "전통과 전문성, 예측 가능한 선택",
+     "presetType": "mbti",
+     "days": [
+      {
+       "day": 1,
+       "stops": [
+        {
+         "placeId": "naver_1274578813_375197847",
+         "name": "옥천냉면 황해식당 본점",
+         "category": "restaurant",
+         "categoryLabel": "한식>냉면",
+         "lat": 37.5197847,
+         "lng": 127.4578813,
+         "address": "경기도 양평군 옥천면 고읍로 140",
+         "photos": [],
+         "mapUrl": "https://map.naver.com/p/search/%EC%98%A5%EC%B2%9C%EB%83%89%EB%A9%B4%20%ED%99%A9%ED%95%B4%EC%8B%9D%EB%8B%B9%20%EB%B3%B8%EC%A0%90%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%98%A5%EC%B2%9C%EB%A9%B4%20%EA%B3%A0%EC%9D%8D%EB%A1%9C%20140",
+         "tags": [],
+         "timeSlot": "12:00-13:30",
+         "reason": "냉면·완자·편육으로 대표 음식이 분명해 주문할 메뉴를 미리 정하기 좋아요."
+        },
+        {
+         "placeId": "naver_1273547638_376249287",
+         "name": "테라로사 서종점",
+         "category": "cafe",
+         "categoryLabel": "카페,디저트>카페",
+         "lat": 37.6249287,
+         "lng": 127.3547638,
+         "address": "경기도 양평군 서종면 북한강로 990",
+         "photos": [],
+         "mapUrl": "https://map.naver.com/p/search/%ED%85%8C%EB%9D%BC%EB%A1%9C%EC%82%AC%20%EC%84%9C%EC%A2%85%EC%A0%90%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%84%9C%EC%A2%85%EB%A9%B4%20%EB%B6%81%ED%95%9C%EA%B0%95%EB%A1%9C%20990",
+         "tags": [],
+         "timeSlot": "14:00-15:00",
+         "reason": "원두와 커피 품질을 기준으로 고르는 스페셜티 커피 매장이에요."
+        },
+        {
+         "placeId": "naver_1275485971_375621496",
+         "name": "용문산관광지·용문사",
+         "category": "attraction",
+         "categoryLabel": "여행,명소>산",
+         "lat": 37.5621496,
+         "lng": 127.5485971,
+         "address": "경기도 양평군 용문면 용문산로 782 용문사",
+         "photos": [],
+         "mapUrl": "https://map.naver.com/p/search/%EC%9A%A9%EB%AC%B8%EC%82%B0%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%9A%A9%EB%AC%B8%EB%A9%B4%20%EC%9A%A9%EB%AC%B8%EC%82%B0%EB%A1%9C%20782%20%EC%9A%A9%EB%AC%B8%EC%82%AC",
+         "tags": [],
+         "timeSlot": "15:30-17:30",
+         "reason": "사찰·은행나무·문화유산을 미리 알아보고 계획적으로 관람하기 좋아요."
+        }
+       ]
+      }
+     ],
+     "source": "curated"
+    }
+   ],
+   "lodging": [
+    {
+     "placeId": "naver_1275326070_374691847",
+     "name": "소노벨 양평",
+     "category": "lodging",
+     "categoryLabel": "숙박>콘도,리조트",
+     "lat": 37.4691847,
+     "lng": 127.532607,
+     "address": "경기도 양평군 개군면 신내길7번길 55",
+     "photos": [],
+     "mapUrl": "https://map.naver.com/p/search/%EC%86%8C%EB%85%B8%EB%B2%A8%20%EC%96%91%ED%8F%89%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EA%B0%9C%EA%B5%B0%EB%A9%B4%20%EC%8B%A0%EB%82%B4%EA%B8%B87%EB%B2%88%EA%B8%B8%2055",
+     "tags": [],
+     "lodgingType": "리조트 · 패밀리 가든뷰",
+     "reason": "취사 여부·침구·객실 구조를 미리 비교해 정할 수 있어 계획대로 쉬고 싶은 여행에 맞아요.",
+     "notice": "원룸형 구성이라 독립 침실이 필요하면 다른 객실과 비교하세요. 취사·침구 형태는 예약 상품에서 구분돼요."
+    }
+   ]
+  },
+  "ISFJ": {
+   "summary": "세심한 배려와 책임감으로 가까운 사람의 필요를 살피는 성향이에요.",
+   "courses": [
+    {
+     "courseId": "mbti_ISFJ_curated_1",
+     "title": "익숙한 음식과 함께 간 사람의 편안함",
+     "presetType": "mbti",
+     "days": [
+      {
+       "day": 1,
+       "stops": [
+        {
+         "placeId": "naver_1273502173_375955238",
+         "name": "문호리팥죽",
+         "category": "restaurant",
+         "categoryLabel": "한식>죽",
+         "lat": 37.5955238,
+         "lng": 127.3502173,
+         "address": "경기도 양평군 서종면 북한강로 641",
+         "photos": [],
+         "mapUrl": "https://map.naver.com/p/search/%EB%AC%B8%ED%98%B8%EB%A6%AC%ED%8C%A5%EC%A3%BD%20%EB%B3%B8%EC%A0%90%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%84%9C%EC%A2%85%EB%A9%B4%20%EB%B6%81%ED%95%9C%EA%B0%95%EB%A1%9C%20641",
+         "tags": [],
+         "timeSlot": "12:00-13:30",
+         "reason": "국산 팥 팥죽 전문점으로, 동행자의 입맛에 맞춰 간을 조절할 수 있어요."
+        },
+        {
+         "placeId": "naver_1273529941_375984976",
+         "name": "하우스베이커리",
+         "category": "cafe",
+         "categoryLabel": "카페,디저트>베이커리",
+         "lat": 37.5984976,
+         "lng": 127.3529941,
+         "address": "경기도 양평군 서종면 북한강로 684 하우스베이커리",
+         "photos": [
+          "http://tong.visitkorea.or.kr/cms/resource/24/2794724_image2_1.jpg"
+         ],
+         "mapUrl": "https://map.naver.com/p/search/%ED%95%98%EC%9A%B0%EC%8A%A4%20%EB%B2%A0%EC%9D%B4%EC%BB%A4%EB%A6%AC%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%84%9C%EC%A2%85%EB%A9%B4%20%EB%B6%81%ED%95%9C%EA%B0%95%EB%A1%9C%20684%20%ED%95%98%EC%9A%B0%EC%8A%A4%EB%B2%A0%EC%9D%B4%EC%BB%A4%EB%A6%AC",
+         "tags": [
+          "aesthetic",
+          "kid_friendly"
+         ],
+         "petFriendly": true,
+         "reviewSummary": "유기농 베이커리와 넓은 마당이 있어 아이와 함께 방문하기 좋은 한옥 감성 카페입니다.",
+         "timeSlot": "14:00-15:00",
+         "reason": "한옥과 마당에서 가까운 사람과 빵을 나누며 시간을 보내기 좋아요."
+        },
+        {
+         "placeId": "tour_2674763",
+         "name": "서후리숲",
+         "category": "attraction",
+         "lat": 37.5663707812,
+         "lng": 127.4301771507,
+         "address": "경기도 양평군 서종면 거북바위1길 200",
+         "photos": [
+          "http://tong.visitkorea.or.kr/cms/resource/95/3352495_image2_1.jpg",
+          "http://tong.visitkorea.or.kr/cms/resource/95/3352495_image3_1.jpg"
+         ],
+         "mapUrl": "https://map.naver.com/p/search/%EC%84%9C%ED%9B%84%EB%A6%AC%EC%88%B2",
+         "tags": [
+          "nature",
+          "healing",
+          "photo_spot",
+          "aesthetic"
+         ],
+         "reviewSummary": "다양한 수종의 숲과 산책로가 조성된 서후리숲은 힐링하기 좋은 수목원이다.",
+         "timeSlot": "15:30-17:30",
+         "reason": "숲길과 작은 폭포를 따라 동행자의 속도에 맞춰 산책할 수 있어요. 세 곳 모두 서종면이에요."
+        }
+       ]
+      }
+     ],
+     "source": "curated"
+    }
+   ],
+   "lodging": [
+    {
+     "placeId": "naver_1275309286_374682941",
+     "name": "쉐르빌온천관광호텔",
+     "category": "lodging",
+     "categoryLabel": "숙박>호텔",
+     "lat": 37.4682941,
+     "lng": 127.5309286,
+     "address": "경기도 양평군 개군면 신내길7번길 37 쉐르빌온천관광호텔",
+     "photos": [],
+     "mapUrl": "https://map.naver.com/p/search/%EC%89%90%EB%A5%B4%EB%B9%8C%EC%98%A8%EC%B2%9C%EA%B4%80%EA%B4%91%ED%98%B8%ED%85%94%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EA%B0%9C%EA%B5%B0%EB%A9%B4%20%EC%8B%A0%EB%82%B4%EA%B8%B87%EB%B2%88%EA%B8%B8%2037%20%EC%89%90%EB%A5%B4%EB%B9%8C%EC%98%A8%EC%B2%9C%EA%B4%80%EA%B4%91%ED%98%B8%ED%85%94",
+     "tags": [],
+     "lodgingType": "온천호텔",
+     "reason": "이동을 줄이고 온천·산책로 중심으로 함께 쉬는 시간을 확보할 수 있어요.",
+     "notice": "온천 이용권 포함 여부·운영시간, 객실 욕실과 공용 온천의 차이, 계단·이동 동선을 확인하세요."
+    }
+   ]
+  },
+  "INFJ": {
+   "summary": "관계와 경험의 의미를 찾고, 자신의 가치에 따라 계획하는 성향이에요.",
+   "courses": [
+    {
+     "courseId": "mbti_INFJ_curated_1",
+     "title": "음식과 공간에 담긴 의미를 발견하는 여행",
+     "presetType": "mbti",
+     "days": [
+      {
+       "day": 1,
+       "stops": [
+        {
+         "placeId": "naver_1276055423_375074390",
+         "name": "광이원",
+         "category": "restaurant",
+         "categoryLabel": "음식점>한식",
+         "lat": 37.507439,
+         "lng": 127.6055423,
+         "address": "경기도 양평군 용문면 용문산로 120-11 1층",
+         "photos": [],
+         "mapUrl": "https://map.naver.com/p/search/%EA%B4%91%EC%9D%B4%EC%9B%90%20%EB%86%8D%EA%B0%80%EB%A7%9B%EC%A7%91%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%9A%A9%EB%AC%B8%EB%A9%B4%20%EC%9A%A9%EB%AC%B8%EC%82%B0%EB%A1%9C%20120-11%201%EC%B8%B5",
+         "tags": [],
+         "timeSlot": "12:00-13:30",
+         "reason": "양평 식재료와 전통장·발효액으로 차린 농가맛집이라 음식의 배경을 생각해 볼 수 있어요."
+        },
+        {
+         "placeId": "naver_1273725180_375975600",
+         "name": "쉐즈롤",
+         "category": "cafe",
+         "categoryLabel": "카페,디저트>베이커리",
+         "lat": 37.59756,
+         "lng": 127.372518,
+         "address": "경기도 양평군 서종면 낙촌길 7-7 쉐즈롤",
+         "photos": [],
+         "mapUrl": "https://map.naver.com/p/search/%EC%89%90%EC%A6%88%EB%A1%A4%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%84%9C%EC%A2%85%EB%A9%B4%20%EB%82%99%EC%B4%8C%EA%B8%B8%207-7%20%EC%89%90%EC%A6%88%EB%A1%A4",
+         "tags": [],
+         "timeSlot": "14:00-15:00",
+         "reason": "저온 발효·장작 화덕으로 굽는 과정을 소개하는 베이커리 카페예요."
+        },
+        {
+         "placeId": "naver_1273776844_375939128",
+         "name": "황순원문학촌 소나기마을",
+         "category": "attraction",
+         "categoryLabel": "여행,명소>박물관",
+         "lat": 37.5939128,
+         "lng": 127.3776844,
+         "address": "경기도 양평군 서종면 소나기마을길 24",
+         "photos": [],
+         "mapUrl": "https://map.naver.com/p/search/%ED%99%A9%EC%88%9C%EC%9B%90%EB%AC%B8%ED%95%99%EC%B4%8C%EC%86%8C%EB%82%98%EA%B8%B0%EB%A7%88%EC%9D%84%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%84%9C%EC%A2%85%EB%A9%B4%20%EC%86%8C%EB%82%98%EA%B8%B0%EB%A7%88%EC%9D%84%EA%B8%B8%2024",
+         "tags": [],
+         "timeSlot": "15:30-17:30",
+         "reason": "작가의 삶과 작품 속 감정·관계를 떠올리며 공간을 경험할 수 있어요."
+        }
+       ]
+      }
+     ],
+     "source": "curated"
+    }
+   ],
+   "lodging": [
+    {
+     "placeId": "tour_127171",
+     "name": "국립산음자연휴양림",
+     "category": "lodging",
+     "lat": 37.5961338783,
+     "lng": 127.5751825647,
+     "address": "경기도 양평군 단월면 고북길 347",
+     "photos": [],
+     "mapUrl": "https://map.naver.com/p/search/%EA%B5%AD%EB%A6%BD%20%EC%82%B0%EC%9D%8C%EC%9E%90%EC%97%B0%ED%9C%B4%EC%96%91%EB%A6%BC",
+     "tags": [
+      "healing",
+      "nature",
+      "experience"
+     ],
+     "reviewSummary": "맑은 계곡과 치유의 숲이 어우러져 숲속체험과 힐링을 즐길 수 있는 휴양림입니다.",
+     "lodgingType": "휴양림 · 숲속의집",
+     "reason": "관광지를 잇기보다 숲에 머물며 산책·독서·기록에 시간을 쓰는 여행에 맞아요.",
+     "notice": "숯·장작 사용은 연중 금지예요. 일반지구와 반려견 동반 지구가 나뉘어 있어요."
+    }
+   ]
+  },
+  "INTJ": {
+   "summary": "독립적으로 판단하며, 목적과 실행 방식을 체계적으로 구성하는 성향이에요.",
+   "courses": [
+    {
+     "courseId": "mbti_INTJ_curated_1",
+     "title": "기획 의도와 완성도를 살펴보는 여행",
+     "presetType": "mbti",
+     "days": [
+      {
+       "day": 1,
+       "stops": [
+        {
+         "placeId": "naver_1274562671_375250244",
+         "name": "다 안토니오",
+         "category": "restaurant",
+         "categoryLabel": "음식점>이탈리아음식",
+         "lat": 37.5250244,
+         "lng": 127.4562671,
+         "address": "경기도 양평군 옥천면 향교길45번길 13 다 안토니오 이탈리아 컨템포러리",
+         "photos": [],
+         "mapUrl": "https://map.naver.com/p/search/%EB%8B%A4%20%EC%95%88%ED%86%A0%EB%8B%88%EC%98%A4%20%EC%9D%B4%ED%83%88%EB%A6%AC%EC%95%88%20%EC%BB%A8%ED%85%9C%ED%8F%AC%EB%9F%AC%EB%A6%AC%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%98%A5%EC%B2%9C%EB%A9%B4%20%ED%96%A5%EA%B5%90%EA%B8%B845%EB%B2%88%EA%B8%B8%2013%20%EB%8B%A4%20%EC%95%88%ED%86%A0%EB%8B%88%EC%98%A4%20%EC%9D%B4%ED%83%88%EB%A6%AC%EC%95%84%20%EC%BB%A8%ED%85%9C%ED%8F%AC%EB%9F%AC%EB%A6%AC",
+         "tags": [],
+         "timeSlot": "12:00-13:30",
+         "reason": "셰프의 철학을 담은 이탈리안 코스요리예요. 사전 예약 필수라 계획을 세워 방문하세요."
+        },
+        {
+         "placeId": "tour_2683997",
+         "name": "카포레",
+         "category": "cafe",
+         "lat": 37.5057695729,
+         "lng": 127.4353895354,
+         "address": "경기도 양평군 강하면 강남로 458",
+         "photos": [
+          "http://tong.visitkorea.or.kr/cms/resource/82/3529982_image2_1.jpg",
+          "http://tong.visitkorea.or.kr/cms/resource/82/3529982_image3_1.jpg"
+         ],
+         "mapUrl": "https://map.naver.com/p/search/%EC%B9%B4%ED%8F%AC%EB%A0%88",
+         "tags": [
+          "aesthetic",
+          "photo_spot",
+          "romantic"
+         ],
+         "reviewSummary": "모던한 건축물과 갤러리, 카페가 어우러진 카포레는 자연 속에서 전시와 음료를 즐길 수 있는 복합문화시설이다.",
+         "timeSlot": "14:00-15:00",
+         "reason": "건축 콘셉트의 갤러리·카페·정원이라 공간의 설계 의도를 관찰할 수 있어요."
+        },
+        {
+         "placeId": "tour_1926610",
+         "name": "양평군립미술관",
+         "category": "attraction",
+         "lat": 37.4971520171,
+         "lng": 127.4840159266,
+         "address": "경기도 양평군 양평읍 문화복지길 2",
+         "photos": [
+          "http://tong.visitkorea.or.kr/cms/resource/07/3038307_image2_1.jpg",
+          "http://tong.visitkorea.or.kr/cms/resource/07/3038307_image3_1.jpg"
+         ],
+         "mapUrl": "https://map.naver.com/p/search/%EC%96%91%ED%8F%89%EA%B5%B0%EB%A6%BD%EB%AF%B8%EC%88%A0%EA%B4%80",
+         "tags": [],
+         "timeSlot": "15:30-17:30",
+         "reason": "기획전 주제를 먼저 확인하고 전시 구성을 집중해서 살펴보기 좋아요."
+        }
+       ]
+      }
+     ],
+     "source": "curated"
+    }
+   ],
+   "lodging": [
+    {
+     "placeId": "naver_1276814533_375805759",
+     "name": "생각속의집",
+     "category": "lodging",
+     "categoryLabel": "숙박>펜션",
+     "lat": 37.5805759,
+     "lng": 127.6814533,
+     "address": "경기도 양평군 단월면 대부록길 37",
+     "photos": [],
+     "mapUrl": "https://map.naver.com/p/search/%EC%83%9D%EA%B0%81%EC%86%8D%EC%9D%98%EC%A7%91%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EB%8B%A8%EC%9B%94%EB%A9%B4%20%EB%8C%80%EB%B6%80%EB%A1%9D%EA%B8%B8%2037",
+     "tags": [],
+     "lodgingType": "펜션 · 히노끼 독채",
+     "reason": "복층 독채·히노끼 욕조·개별 바비큐로 휴식과 개인 시간을 스스로 배치할 수 있어요.",
+     "notice": "복층 계단과 객실별 시설을 확인하세요. 벽난로는 모든 객실에 있지 않아요."
+    }
+   ]
+  },
+  "ISTP": {
+   "summary": "실용적인 문제 해결과 직접 관찰을 즐기며, 상황에 유연하게 대응하는 성향이에요.",
+   "courses": [
+    {
+     "courseId": "mbti_ISTP_curated_1",
+     "title": "직접 관찰하고 움직여 보는 경험",
+     "presetType": "mbti",
+     "days": [
+      {
+       "day": 1,
+       "stops": [
+        {
+         "placeId": "naver_1276326294_375086393",
+         "name": "회령손만두국",
+         "category": "restaurant",
+         "categoryLabel": "한식>이북음식",
+         "lat": 37.5086393,
+         "lng": 127.6326294,
+         "address": "경기도 양평군 용문면 용문로 827",
+         "photos": [],
+         "mapUrl": "https://map.naver.com/p/search/%ED%9A%8C%EB%A0%B9%EC%86%90%EB%A7%8C%EB%91%90%EA%B5%AD%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%9A%A9%EB%AC%B8%EB%A9%B4%20%EC%9A%A9%EB%AC%B8%EB%A1%9C%20827",
+         "tags": [],
+         "timeSlot": "12:00-13:30",
+         "reason": "만두의 속·피·국물을 직접 비교하며 자기 기준으로 맛을 판단해 볼 수 있어요."
+        },
+        {
+         "placeId": "naver_1276213739_375367567",
+         "name": "꿈꾸는 사진기",
+         "category": "cafe",
+         "categoryLabel": "카페,디저트>카페",
+         "lat": 37.5367567,
+         "lng": 127.6213739,
+         "address": "경기도 양평군 용문면 한솔길 35",
+         "photos": [],
+         "mapUrl": "https://map.naver.com/p/search/%EA%BF%88%EA%BE%B8%EB%8A%94%20%EC%82%AC%EC%A7%84%EA%B8%B0%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%9A%A9%EB%AC%B8%EB%A9%B4%20%ED%95%9C%EC%86%94%EA%B8%B8%2035",
+         "tags": [],
+         "timeSlot": "14:00-15:00",
+         "reason": "카메라 모양 건물이라 사물의 형태를 공간으로 구현한 구조를 살펴보는 재미가 있어요."
+        }
+       ]
+      }
+     ],
+     "source": "curated"
+    }
+   ],
+   "lodging": [
+    {
+     "placeId": "naver_1274556589_375831399",
+     "name": "국립중미산자연휴양림",
+     "category": "lodging",
+     "categoryLabel": "자연명소>휴양림,산림욕장",
+     "lat": 37.5831399,
+     "lng": 127.4556589,
+     "address": "경기도 양평군 옥천면 중미산로 1152",
+     "photos": [],
+     "mapUrl": "https://map.naver.com/p/search/%EC%A4%91%EB%AF%B8%EC%82%B0%EC%9E%90%EC%97%B0%ED%9C%B4%EC%96%91%EB%A6%BC%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%98%A5%EC%B2%9C%EB%A9%B4%20%EC%A4%91%EB%AF%B8%EC%82%B0%EB%A1%9C%201152",
+     "tags": [],
+     "lodgingType": "휴양림 · 캐빈/숲속의집",
+     "reason": "필요한 장비를 직접 준비하고 다루는 과정까지 즐긴다면 캐빈이, 편의를 원하면 숲속의집이 맞아요.",
+     "notice": "캐빈은 침구·취사도구를 직접 준비해야 해요. 매점이 없고 숯불 바비큐는 금지예요."
+    }
+   ]
+  },
+  "ISFP": {
+   "summary": "현재의 감각적 경험과 개인 공간을 소중히 하며, 자기 속도를 중시하는 성향이에요.",
+   "courses": [
+    {
+     "courseId": "mbti_ISFP_curated_1",
+     "title": "맛과 빛, 강 풍경을 느긋하게 즐기기",
+     "presetType": "mbti",
+     "days": [
+      {
+       "day": 1,
+       "stops": [
+        {
+         "placeId": "naver_1273255953_375502790",
+         "name": "연꽃언덕",
+         "category": "restaurant",
+         "categoryLabel": "음식점>한식",
+         "lat": 37.550279,
+         "lng": 127.3255953,
+         "address": "경기도 양평군 양서면 용늪언덕길 57",
+         "photos": [],
+         "mapUrl": "https://map.naver.com/p/search/%EC%97%B0%EA%BD%83%EC%96%B8%EB%8D%95%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%96%91%EC%84%9C%EB%A9%B4%20%EC%9A%A9%EB%8A%AA%EC%96%B8%EB%8D%95%EA%B8%B8%2057",
+         "tags": [],
+         "timeSlot": "12:00-13:30",
+         "reason": "직접 만든 손두부정식을 천천히 맛보며 그날의 감각대로 식사하기 좋아요."
+        },
+        {
+         "placeId": "naver_1273215655_375517883",
+         "name": "수수카페",
+         "category": "cafe",
+         "categoryLabel": "음식점>카페,디저트",
+         "lat": 37.5517883,
+         "lng": 127.3215655,
+         "address": "경기도 양평군 양서면 북한강로89번길 19",
+         "photos": [],
+         "mapUrl": "https://map.naver.com/p/search/%EC%88%98%EC%88%98%EC%B9%B4%ED%8E%98%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%96%91%EC%84%9C%EB%A9%B4%20%EB%B6%81%ED%95%9C%EA%B0%95%EB%A1%9C89%EB%B2%88%EA%B8%B8%2019",
+         "tags": [],
+         "timeSlot": "14:00-15:00",
+         "reason": "북한강 테라스에서 물결·빛·바람을 느끼며 머물 수 있어요."
+        },
+        {
+         "placeId": "naver_1273158958_375334334",
+         "name": "두물머리",
+         "category": "attraction",
+         "categoryLabel": "여행,명소>자연명소",
+         "lat": 37.5334334,
+         "lng": 127.3158958,
+         "address": "경기도 양평군 양서면 양수리",
+         "photos": [],
+         "mapUrl": "https://map.naver.com/p/search/%EB%91%90%EB%AC%BC%EB%A8%B8%EB%A6%AC%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%96%91%EC%84%9C%EB%A9%B4%20%EC%96%91%EC%88%98%EB%A6%AC",
+         "tags": [],
+         "timeSlot": "15:30-17:30",
+         "reason": "마음에 드는 장면에서 멈추며 걷는 풍경 여행이에요. 세 곳 모두 양서면이에요."
+        }
+       ]
+      }
+     ],
+     "source": "curated"
+    }
+   ],
+   "lodging": [
+    {
+     "placeId": "naver_1276139388_375086425",
+     "name": "델라고 풀빌라",
+     "category": "lodging",
+     "categoryLabel": "숙박>펜션",
+     "lat": 37.5086425,
+     "lng": 127.6139388,
+     "address": "경기도 양평군 용문면 금곡길 62-9",
+     "photos": [],
+     "mapUrl": "https://map.naver.com/p/search/%EB%8D%B8%EB%9D%BC%EA%B3%A0%ED%8E%9C%EC%85%98%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%9A%A9%EB%AC%B8%EB%A9%B4%20%EA%B8%88%EA%B3%A1%EA%B8%B8%2062-9",
+     "tags": [],
+     "lodgingType": "풀빌라 · 스파 객실",
+     "reason": "호수 전경과 스파·개별 테라스에서 그때의 기분에 맞춰 머물기 좋아요.",
+     "notice": "전망 위치, 복층 계단, 수영장 운영 시기·온수 여부·추가요금을 객실 기준으로 확인하세요."
+    }
+   ]
+  },
+  "INFP": {
+   "summary": "자신의 가치와 의미를 중시하며, 상상과 가능성에 열려 있는 성향이에요.",
+   "courses": [
+    {
+     "courseId": "mbti_INFP_curated_1",
+     "title": "개인적인 이야기와 기억을 만드는 여행",
+     "presetType": "mbti",
+     "days": [
+      {
+       "day": 1,
+       "stops": [
+        {
+         "placeId": "naver_1273502173_375955238",
+         "name": "문호리팥죽",
+         "category": "restaurant",
+         "categoryLabel": "한식>죽",
+         "lat": 37.5955238,
+         "lng": 127.3502173,
+         "address": "경기도 양평군 서종면 북한강로 641",
+         "photos": [],
+         "mapUrl": "https://map.naver.com/p/search/%EB%AC%B8%ED%98%B8%EB%A6%AC%ED%8C%A5%EC%A3%BD%20%EB%B3%B8%EC%A0%90%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%84%9C%EC%A2%85%EB%A9%B4%20%EB%B6%81%ED%95%9C%EA%B0%95%EB%A1%9C%20641",
+         "tags": [],
+         "timeSlot": "12:00-13:30",
+         "reason": "팥죽이 가족·계절·어린 시절의 기억과 이어진다면 더 의미 있는 식사가 돼요."
+        },
+        {
+         "placeId": "naver_1276213739_375367567",
+         "name": "꿈꾸는 사진기",
+         "category": "cafe",
+         "categoryLabel": "카페,디저트>카페",
+         "lat": 37.5367567,
+         "lng": 127.6213739,
+         "address": "경기도 양평군 용문면 한솔길 35",
+         "photos": [],
+         "mapUrl": "https://map.naver.com/p/search/%EA%BF%88%EA%BE%B8%EB%8A%94%20%EC%82%AC%EC%A7%84%EA%B8%B0%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%9A%A9%EB%AC%B8%EB%A9%B4%20%ED%95%9C%EC%86%94%EA%B8%B8%2035",
+         "tags": [],
+         "timeSlot": "14:00-15:00",
+         "reason": "사진을 찍고 기록하며 방문의 의미를 남기기 좋은 카메라 모양 카페예요."
+        },
+        {
+         "placeId": "naver_1273776844_375939128",
+         "name": "황순원문학촌 소나기마을",
+         "category": "attraction",
+         "categoryLabel": "여행,명소>박물관",
+         "lat": 37.5939128,
+         "lng": 127.3776844,
+         "address": "경기도 양평군 서종면 소나기마을길 24",
+         "photos": [],
+         "mapUrl": "https://map.naver.com/p/search/%ED%99%A9%EC%88%9C%EC%9B%90%EB%AC%B8%ED%95%99%EC%B4%8C%EC%86%8C%EB%82%98%EA%B8%B0%EB%A7%88%EC%9D%84%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%84%9C%EC%A2%85%EB%A9%B4%20%EC%86%8C%EB%82%98%EA%B8%B0%EB%A7%88%EC%9D%84%EA%B8%B8%2024",
+         "tags": [],
+         "timeSlot": "15:30-17:30",
+         "reason": "읽었던 작품의 장면을 실제 공간과 연결하며 개인적인 감상을 남길 수 있어요."
+        }
+       ]
+      }
+     ],
+     "source": "curated"
+    }
+   ],
+   "lodging": [
+    {
+     "placeId": "tour_3532772",
+     "name": "산온:잔등",
+     "category": "lodging",
+     "lat": 37.4582020328,
+     "lng": 127.3897589312,
+     "address": "경기도 양평군 강하면 동문3길 22-13",
+     "photos": [],
+     "mapUrl": "https://map.naver.com/p/search/%EC%82%B0%EC%98%A8%EC%9E%94%EB%93%B1",
+     "tags": [
+      "healing",
+      "nature",
+      "group"
+     ],
+     "reviewSummary": "포근한 산으로 둘러싸인 고요한 공간에서 가족이나 친구들과 편안한 시간을 보낼 수 있습니다.",
+     "lodgingType": "독채 스테이 · 아래 객실",
+     "reason": "책상에 앉아 문장·기억·감정을 정리할 수 있는 공간이라 기록하는 여행에 맞아요.",
+     "notice": "아래와 너머 객실의 사진·시설을 구분해서 보세요. 당일 소음·빛 환경은 소개와 다를 수 있어요."
+    }
+   ]
+  },
+  "INTP": {
+   "summary": "관심 있는 대상의 원리를 분석하고, 자율적으로 깊이 탐구하는 성향이에요.",
+   "courses": [
+    {
+     "courseId": "mbti_INTP_curated_1",
+     "title": "음식과 자연의 원리를 알아가는 여행",
+     "presetType": "mbti",
+     "days": [
+      {
+       "day": 1,
+       "stops": [
+        {
+         "placeId": "naver_1276055423_375074390",
+         "name": "광이원",
+         "category": "restaurant",
+         "categoryLabel": "음식점>한식",
+         "lat": 37.507439,
+         "lng": 127.6055423,
+         "address": "경기도 양평군 용문면 용문산로 120-11 1층",
+         "photos": [],
+         "mapUrl": "https://map.naver.com/p/search/%EA%B4%91%EC%9D%B4%EC%9B%90%20%EB%86%8D%EA%B0%80%EB%A7%9B%EC%A7%91%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%9A%A9%EB%AC%B8%EB%A9%B4%20%EC%9A%A9%EB%AC%B8%EC%82%B0%EB%A1%9C%20120-11%201%EC%B8%B5",
+         "tags": [],
+         "timeSlot": "12:00-13:30",
+         "reason": "발효 방식과 재료에 따라 맛이 달라지는 이유를 생각하며 식사할 수 있어요."
+        },
+        {
+         "placeId": "naver_1273547638_376249287",
+         "name": "테라로사 서종점",
+         "category": "cafe",
+         "categoryLabel": "카페,디저트>카페",
+         "lat": 37.6249287,
+         "lng": 127.3547638,
+         "address": "경기도 양평군 서종면 북한강로 990",
+         "photos": [],
+         "mapUrl": "https://map.naver.com/p/search/%ED%85%8C%EB%9D%BC%EB%A1%9C%EC%82%AC%20%EC%84%9C%EC%A2%85%EC%A0%90%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%84%9C%EC%A2%85%EB%A9%B4%20%EB%B6%81%ED%95%9C%EA%B0%95%EB%A1%9C%20990",
+         "tags": [],
+         "timeSlot": "14:00-15:00",
+         "reason": "원두별 향미 차이를 탐구할 수 있는 스페셜티 커피 매장이에요."
+        },
+        {
+         "placeId": "naver_1274593925_375817882",
+         "name": "중미산천문대",
+         "category": "attraction",
+         "categoryLabel": "여행,명소>천문대",
+         "lat": 37.5817882,
+         "lng": 127.4593925,
+         "address": "경기도 양평군 옥천면 중미산로 1268 중미산천문대",
+         "photos": [],
+         "mapUrl": "https://map.naver.com/p/search/%EC%A4%91%EB%AF%B8%EC%82%B0%EC%B2%9C%EB%AC%B8%EB%8C%80%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%98%A5%EC%B2%9C%EB%A9%B4%20%EC%A4%91%EB%AF%B8%EC%82%B0%EB%A1%9C%201268%20%EC%A4%91%EB%AF%B8%EC%82%B0%EC%B2%9C%EB%AC%B8%EB%8C%80",
+         "tags": [],
+         "timeSlot": "15:30-17:30",
+         "reason": "관측과 설명으로 우주에 대한 궁금증을 넓혀요. 프로그램·예약은 미리 확인하세요."
+        }
+       ]
+      }
+     ],
+     "source": "curated"
+    }
+   ],
+   "lodging": [
+    {
+     "placeId": "naver_1276814533_375805759",
+     "name": "생각속의집",
+     "category": "lodging",
+     "categoryLabel": "숙박>펜션",
+     "lat": 37.5805759,
+     "lng": 127.6814533,
+     "address": "경기도 양평군 단월면 대부록길 37",
+     "photos": [],
+     "mapUrl": "https://map.naver.com/p/search/%EC%83%9D%EA%B0%81%EC%86%8D%EC%9D%98%EC%A7%91%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EB%8B%A8%EC%9B%94%EB%A9%B4%20%EB%8C%80%EB%B6%80%EB%A1%9D%EA%B8%B8%2037",
+     "tags": [],
+     "lodgingType": "펜션 · 건축형 독채",
+     "reason": "건축가가 설계한 독채마다 구조가 달라 복층·창·테라스의 연결을 비교해 볼 수 있어요.",
+     "notice": "외형만 보지 말고 책상 유무·조명·인터넷 등 머무는 데 필요한 조건도 확인하세요."
+    }
+   ]
+  },
+  "ESTP": {
+   "summary": "현장의 경험과 행동을 중시하고, 함께 직접 해 보는 활동을 즐기는 성향이에요.",
+   "courses": [
+    {
+     "courseId": "mbti_ESTP_curated_1",
+     "title": "현장에서 느끼는 생동감과 활동",
+     "presetType": "mbti",
+     "days": [
+      {
+       "day": 1,
+       "stops": [
+        {
+         "placeId": "naver_1274633019_375127462",
+         "name": "대디스바베큐",
+         "category": "restaurant",
+         "categoryLabel": "한식>육류,고기요리",
+         "lat": 37.5127462,
+         "lng": 127.4633019,
+         "address": "경기도 양평군 옥천면 옥천문화마을3길 15-24 대디스바베큐",
+         "photos": [
+          "http://tong.visitkorea.or.kr/cms/resource/05/2854205_image2_1.jpg",
+          "http://tong.visitkorea.or.kr/cms/resource/05/2854205_image3_1.jpg"
+         ],
+         "mapUrl": "https://map.naver.com/p/search/%EB%8C%80%EB%94%94%EC%8A%A4%EB%B0%94%EB%B2%A0%ED%81%90%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%98%A5%EC%B2%9C%EB%A9%B4%20%EC%98%A5%EC%B2%9C%EB%AC%B8%ED%99%94%EB%A7%88%EC%9D%843%EA%B8%B8%2015-24%20%EB%8C%80%EB%94%94%EC%8A%A4%EB%B0%94%EB%B2%A0%ED%81%90",
+         "tags": [
+          "romantic",
+          "lively_food"
+         ],
+         "reviewSummary": "산비탈에서 참나무로 훈연한 항아리 바비큐를 캠핑 감성과 함께 즐길 수 있는 바비큐 전문점이다.",
+         "timeSlot": "12:00-13:30",
+         "reason": "항아리 바비큐의 향과 조리 방식을 현장에서 바로 느낄 수 있어요."
+        },
+        {
+         "placeId": "naver_1274249258_375088187",
+         "name": "구벼울",
+         "category": "cafe",
+         "categoryLabel": "음식점>카페,디저트",
+         "lat": 37.5088187,
+         "lng": 127.4249258,
+         "address": "경기도 양평군 옥천면 남한강변길 123-19",
+         "photos": [],
+         "mapUrl": "https://map.naver.com/p/search/%EA%B5%AC%EB%B2%BC%EC%9A%B8%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%98%A5%EC%B2%9C%EB%A9%B4%20%EB%82%A8%ED%95%9C%EA%B0%95%EB%B3%80%EA%B8%B8%20123-19",
+         "tags": [],
+         "timeSlot": "14:00-15:00",
+         "reason": "활동 전후로 남한강과 노을 풍경을 보며 쉴 수 있어요."
+        },
+        {
+         "placeId": "naver_1274628927_375585882",
+         "name": "양평패러글라이딩파크",
+         "category": "attraction",
+         "categoryLabel": "스포츠,오락>행글라이딩,패러글라이딩",
+         "lat": 37.5585882,
+         "lng": 127.4628927,
+         "address": "경기도 양평군 옥천면 동막길 49",
+         "photos": [],
+         "mapUrl": "https://map.naver.com/p/search/%EC%96%91%ED%8F%89%ED%8C%A8%EB%9F%AC%EA%B8%80%EB%9D%BC%EC%9D%B4%EB%94%A9%ED%8C%8C%ED%81%AC%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%98%A5%EC%B2%9C%EB%A9%B4%20%EB%8F%99%EB%A7%89%EA%B8%B8%2049",
+         "tags": [],
+         "timeSlot": "15:30-17:30",
+         "reason": "체험비행으로 공간을 다른 시점에서 경험해요. 기상과 참가 조건은 확인이 필요해요."
+        }
+       ]
+      }
+     ],
+     "source": "curated"
+    }
+   ],
+   "lodging": [
+    {
+     "placeId": "tour_397867",
+     "name": "햇살좋은날",
+     "category": "lodging",
+     "lat": 37.4398448792,
+     "lng": 127.49006425,
+     "address": "경기도 양평군 강상면 강남로 1544",
+     "photos": [
+      "http://tong.visitkorea.or.kr/cms/resource/65/3556165_image2_1.jpg",
+      "http://tong.visitkorea.or.kr/cms/resource/65/3556165_image3_1.jpg"
+     ],
+     "mapUrl": "https://map.naver.com/p/search/%ED%96%87%EC%82%B4%EC%A2%8B%EC%9D%80%EB%82%A0",
+     "tags": [
+      "group",
+      "romantic"
+     ],
+     "reviewSummary": "넓은 정원과 다양한 부대시설을 갖추고 있어 워크숍이나 가족 행사 등에 이용하기 좋은 독채 펜션이다.",
+     "lodgingType": "펜션 · 단체 독채",
+     "reason": "잔디마당·족구장·농구장·야외수영장이 있어 숙소에서도 활동을 이어갈 수 있어요.",
+     "notice": "구장 사용 방식·이용 시간, 장비 대여, 수영장 계절 운영을 확인하세요. 1~2인에게는 규모·비용이 부담될 수 있어요."
+    }
+   ]
+  },
+  "ESFP": {
+   "summary": "사람들과 현재의 즐거움을 나누고, 현장 분위기에 유연하게 반응하는 성향이에요.",
+   "courses": [
+    {
+     "courseId": "mbti_ESFP_curated_1",
+     "title": "함께 먹고 체험하며 즐거움을 나누기",
+     "presetType": "mbti",
+     "days": [
+      {
+       "day": 1,
+       "stops": [
+        {
+         "placeId": "naver_1274633019_375127462",
+         "name": "대디스바베큐",
+         "category": "restaurant",
+         "categoryLabel": "한식>육류,고기요리",
+         "lat": 37.5127462,
+         "lng": 127.4633019,
+         "address": "경기도 양평군 옥천면 옥천문화마을3길 15-24 대디스바베큐",
+         "photos": [
+          "http://tong.visitkorea.or.kr/cms/resource/05/2854205_image2_1.jpg",
+          "http://tong.visitkorea.or.kr/cms/resource/05/2854205_image3_1.jpg"
+         ],
+         "mapUrl": "https://map.naver.com/p/search/%EB%8C%80%EB%94%94%EC%8A%A4%EB%B0%94%EB%B2%A0%ED%81%90%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%98%A5%EC%B2%9C%EB%A9%B4%20%EC%98%A5%EC%B2%9C%EB%AC%B8%ED%99%94%EB%A7%88%EC%9D%843%EA%B8%B8%2015-24%20%EB%8C%80%EB%94%94%EC%8A%A4%EB%B0%94%EB%B2%A0%ED%81%90",
+         "tags": [
+          "romantic",
+          "lively_food"
+         ],
+         "reviewSummary": "산비탈에서 참나무로 훈연한 항아리 바비큐를 캠핑 감성과 함께 즐길 수 있는 바비큐 전문점이다.",
+         "timeSlot": "12:00-13:30",
+         "reason": "특징 있는 바비큐를 함께 먹으며 반응을 나누는 식사예요."
+        },
+        {
+         "placeId": "naver_1273529941_375984976",
+         "name": "하우스베이커리",
+         "category": "cafe",
+         "categoryLabel": "카페,디저트>베이커리",
+         "lat": 37.5984976,
+         "lng": 127.3529941,
+         "address": "경기도 양평군 서종면 북한강로 684 하우스베이커리",
+         "photos": [
+          "http://tong.visitkorea.or.kr/cms/resource/24/2794724_image2_1.jpg"
+         ],
+         "mapUrl": "https://map.naver.com/p/search/%ED%95%98%EC%9A%B0%EC%8A%A4%20%EB%B2%A0%EC%9D%B4%EC%BB%A4%EB%A6%AC%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%84%9C%EC%A2%85%EB%A9%B4%20%EB%B6%81%ED%95%9C%EA%B0%95%EB%A1%9C%20684%20%ED%95%98%EC%9A%B0%EC%8A%A4%EB%B2%A0%EC%9D%B4%EC%BB%A4%EB%A6%AC",
+         "tags": [
+          "aesthetic",
+          "kid_friendly"
+         ],
+         "petFriendly": true,
+         "reviewSummary": "유기농 베이커리와 넓은 마당이 있어 아이와 함께 방문하기 좋은 한옥 감성 카페입니다.",
+         "timeSlot": "14:00-15:00",
+         "reason": "빵을 고르고 나누며 한옥과 마당을 둘러보는, 함께 즐길 거리가 많은 카페예요."
+        },
+        {
+         "placeId": "tour_2755456",
+         "name": "양평 양떼목장",
+         "category": "attraction",
+         "lat": 37.5154581101,
+         "lng": 127.6288717055,
+         "address": "경기도 양평군 용문면 은고갯길 112",
+         "photos": [
+          "http://tong.visitkorea.or.kr/cms/resource/67/3337867_image2_1.jpg",
+          "http://tong.visitkorea.or.kr/cms/resource/67/3337867_image3_1.jpg"
+         ],
+         "mapUrl": "https://map.naver.com/p/search/%EC%96%91%ED%8F%89%EC%96%91%EB%96%BC%EB%AA%A9%EC%9E%A5",
+         "tags": [
+          "nature",
+          "experience",
+          "kid_friendly"
+         ],
+         "reviewSummary": "건초 먹이기와 아기 동물 교감 체험을 자유롭게 즐길 수 있는 양떼목장입니다.",
+         "timeSlot": "15:30-17:30",
+         "reason": "목장 산책과 먹이주기로 함께 참여하는 순간을 만들기 좋아요."
+        }
+       ]
+      }
+     ],
+     "source": "curated"
+    }
+   ],
+   "lodging": [
+    {
+     "placeId": "tour_397867",
+     "name": "햇살좋은날",
+     "category": "lodging",
+     "lat": 37.4398448792,
+     "lng": 127.49006425,
+     "address": "경기도 양평군 강상면 강남로 1544",
+     "photos": [
+      "http://tong.visitkorea.or.kr/cms/resource/65/3556165_image2_1.jpg",
+      "http://tong.visitkorea.or.kr/cms/resource/65/3556165_image3_1.jpg"
+     ],
+     "mapUrl": "https://map.naver.com/p/search/%ED%96%87%EC%82%B4%EC%A2%8B%EC%9D%80%EB%82%A0",
+     "tags": [
+      "group",
+      "romantic"
+     ],
+     "reviewSummary": "넓은 정원과 다양한 부대시설을 갖추고 있어 워크숍이나 가족 행사 등에 이용하기 좋은 독채 펜션이다.",
+     "lodgingType": "펜션 · 모임형 독채",
+     "reason": "개별 노래방·바비큐·잔디마당이 있어 함께 먹고 노는 모임 여행에 맞아요.",
+     "notice": "예약 객실에 노래방이 포함되는지, 사용 시간과 바비큐 비용, 인원 조건을 확인하세요."
+    }
+   ]
+  },
+  "ENFP": {
+   "summary": "새로운 가능성을 발견하고, 상상과 즉흥적인 연결을 즐기는 성향이에요.",
+   "courses": [
+    {
+     "courseId": "mbti_ENFP_curated_1",
+     "title": "새롭게 해석한 음식과 뜻밖의 발견",
+     "presetType": "mbti",
+     "days": [
+      {
+       "day": 1,
+       "stops": [
+        {
+         "placeId": "naver_1276055217_375073139",
+         "name": "광이원 보배밥",
+         "category": "restaurant",
+         "categoryLabel": "음식점>한식",
+         "lat": 37.5073139,
+         "lng": 127.6055217,
+         "address": "경기도 양평군 용문면 용문산로 120-13 1층",
+         "photos": [],
+         "mapUrl": "https://map.naver.com/p/search/%EA%B4%91%EC%9D%B4%EC%9B%90%EB%B3%B4%EB%B0%B0%EB%B0%A5%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%9A%A9%EB%AC%B8%EB%A9%B4%20%EC%9A%A9%EB%AC%B8%EC%82%B0%EB%A1%9C%20120-13%201%EC%B8%B5",
+         "tags": [],
+         "timeSlot": "12:00-13:30",
+         "reason": "비빔밥을 비빔덮밥정식으로 재해석한 곳이라 익숙한 음식의 새로운 모습을 발견해요."
+        },
+        {
+         "placeId": "naver_1276213739_375367567",
+         "name": "꿈꾸는 사진기",
+         "category": "cafe",
+         "categoryLabel": "카페,디저트>카페",
+         "lat": 37.5367567,
+         "lng": 127.6213739,
+         "address": "경기도 양평군 용문면 한솔길 35",
+         "photos": [],
+         "mapUrl": "https://map.naver.com/p/search/%EA%BF%88%EA%BE%B8%EB%8A%94%20%EC%82%AC%EC%A7%84%EA%B8%B0%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%9A%A9%EB%AC%B8%EB%A9%B4%20%ED%95%9C%EC%86%94%EA%B8%B8%2035",
+         "tags": [],
+         "timeSlot": "14:00-15:00",
+         "reason": "카메라 모양의 독특한 콘셉트라 방문 자체가 이야기와 사진의 소재가 돼요."
+        },
+        {
+         "placeId": "tour_131987",
+         "name": "용문천년시장",
+         "category": "attraction",
+         "lat": 37.4840166812,
+         "lng": 127.5947757068,
+         "address": "경기도 양평군 용문면 용문시장2길 11",
+         "photos": [
+          "http://tong.visitkorea.or.kr/cms/resource/73/3077173_image2_1.jpg",
+          "http://tong.visitkorea.or.kr/cms/resource/73/3077173_image3_1.jpg"
+         ],
+         "mapUrl": "https://map.naver.com/p/search/%EC%9A%A9%EB%AC%B8%EC%B2%9C%EB%85%84%EC%8B%9C%EC%9E%A5(5%2C10%EC%9D%BC)",
+         "tags": [],
+         "timeSlot": "15:30-17:30",
+         "reason": "마음 가는 먹거리·볼거리를 따라 움직이는 여행이에요. 오일장은 장날을 확인하세요."
+        }
+       ]
+      }
+     ],
+     "source": "curated"
+    }
+   ],
+   "lodging": [
+    {
+     "placeId": "tour_2744530",
+     "name": "마인드글램퍼스",
+     "category": "lodging",
+     "lat": 37.5803987789,
+     "lng": 127.6816455854,
+     "address": "경기도 양평군 단월면 대부록길 37",
+     "photos": [
+      "http://tong.visitkorea.or.kr/cms/resource/95/2744795_image2_1.jpg"
+     ],
+     "mapUrl": "https://map.naver.com/p/search/%EB%A7%88%EC%9D%B8%EB%93%9C%EA%B8%80%EB%9E%A8%ED%8D%BC%EC%8A%A4",
+     "tags": [],
+     "lodgingType": "글램핑 · 디자인 글램핑",
+     "reason": "평소와 다른 공간에서 자고 먹는 경험이 새 이야기의 출발점이 돼요. 개별 주방·화장실이 있어 준비 부담이 적어요.",
+     "notice": "텐트형 숙소의 계절별 체감 환경, 객실별 인원·침구, 바비큐 포함 범위를 확인하세요."
+    }
+   ]
+  },
+  "ENTP": {
+   "summary": "새로운 발상과 대안을 찾으며, 다양한 관점으로 아이디어를 검토하는 성향이에요.",
+   "courses": [
+    {
+     "courseId": "mbti_ENTP_curated_1",
+     "title": "새로운 발상과 해석할 거리가 많은 장소",
+     "presetType": "mbti",
+     "days": [
+      {
+       "day": 1,
+       "stops": [
+        {
+         "placeId": "naver_1276055217_375073139",
+         "name": "광이원 보배밥",
+         "category": "restaurant",
+         "categoryLabel": "음식점>한식",
+         "lat": 37.5073139,
+         "lng": 127.6055217,
+         "address": "경기도 양평군 용문면 용문산로 120-13 1층",
+         "photos": [],
+         "mapUrl": "https://map.naver.com/p/search/%EA%B4%91%EC%9D%B4%EC%9B%90%EB%B3%B4%EB%B0%B0%EB%B0%A5%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%9A%A9%EB%AC%B8%EB%A9%B4%20%EC%9A%A9%EB%AC%B8%EC%82%B0%EB%A1%9C%20120-13%201%EC%B8%B5",
+         "tags": [],
+         "timeSlot": "12:00-13:30",
+         "reason": "익숙한 형식을 바꾼 아이디어를 경험하고 이야기할 소재가 생겨요."
+        },
+        {
+         "placeId": "tour_2683997",
+         "name": "카포레",
+         "category": "cafe",
+         "lat": 37.5057695729,
+         "lng": 127.4353895354,
+         "address": "경기도 양평군 강하면 강남로 458",
+         "photos": [
+          "http://tong.visitkorea.or.kr/cms/resource/82/3529982_image2_1.jpg",
+          "http://tong.visitkorea.or.kr/cms/resource/82/3529982_image3_1.jpg"
+         ],
+         "mapUrl": "https://map.naver.com/p/search/%EC%B9%B4%ED%8F%AC%EB%A0%88",
+         "tags": [
+          "aesthetic",
+          "photo_spot",
+          "romantic"
+         ],
+         "reviewSummary": "모던한 건축물과 갤러리, 카페가 어우러진 카포레는 자연 속에서 전시와 음료를 즐길 수 있는 복합문화시설이다.",
+         "timeSlot": "14:00-15:00",
+         "reason": "건축·전시·정원이 결합돼 공간을 여러 관점에서 살펴볼 수 있어요."
+        },
+        {
+         "placeId": "naver_1273511444_376030516",
+         "name": "구하우스 미술관",
+         "category": "attraction",
+         "categoryLabel": "문화,예술>미술관",
+         "lat": 37.6030516,
+         "lng": 127.3511444,
+         "address": "경기도 양평군 서종면 무내미길 49-12",
+         "photos": [],
+         "mapUrl": "https://map.naver.com/p/search/%EA%B5%AC%ED%95%98%EC%9A%B0%EC%8A%A4%20%EB%AF%B8%EC%88%A0%EA%B4%80%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%84%9C%EC%A2%85%EB%A9%B4%20%EB%AC%B4%EB%82%B4%EB%AF%B8%EA%B8%B8%2049-12",
+         "tags": [],
+         "timeSlot": "15:30-17:30",
+         "reason": "'집 같은 미술관'에서 생활공간과 예술의 관계에 대한 해석을 나눠요."
+        }
+       ]
+      }
+     ],
+     "source": "curated"
+    }
+   ],
+   "lodging": [
+    {
+     "placeId": "naver_1273866935_375799212",
+     "name": "사계돔 글램핑",
+     "category": "lodging",
+     "categoryLabel": "숙박>캠핑,야영장",
+     "lat": 37.5799212,
+     "lng": 127.3866935,
+     "address": "경기도 양평군 서종면 황순원로 414-47",
+     "photos": [],
+     "mapUrl": "https://map.naver.com/p/search/%EC%82%AC%EA%B3%84%EB%8F%94%EA%B8%80%EB%9E%A8%ED%95%91%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%84%9C%EC%A2%85%EB%A9%B4%20%ED%99%A9%EC%88%9C%EC%9B%90%EB%A1%9C%20414-47",
+     "tags": [],
+     "lodgingType": "글램핑 · 독채형 돔",
+     "reason": "호텔과 다른 공간 구성을 경험하며 일행과 장단점을 이야기할 소재가 있어요.",
+     "notice": "개인 화기 반입은 금지예요. 불멍 운영·비용과 밤 10시부터의 매너타임을 확인하세요."
+    }
+   ]
+  },
+  "ESTJ": {
+   "summary": "실행과 효율을 중시하고, 사람과 자원을 조직해 계획을 추진하는 성향이에요.",
+   "courses": [
+    {
+     "courseId": "mbti_ESTJ_curated_1",
+     "title": "대표 메뉴와 방문 목적이 분명한 구성",
+     "presetType": "mbti",
+     "days": [
+      {
+       "day": 1,
+       "stops": [
+        {
+         "placeId": "naver_1275376247_374257530",
+         "name": "개군할머니토종순대국",
+         "category": "restaurant",
+         "categoryLabel": "한식>순대,순댓국",
+         "lat": 37.425753,
+         "lng": 127.5376247,
+         "address": "경기도 양평군 개군면 하자포길 27-2 1층",
+         "photos": [],
+         "mapUrl": "https://map.naver.com/p/search/%EA%B0%9C%EA%B5%B0%ED%95%A0%EB%A8%B8%EB%8B%88%ED%86%A0%EC%A2%85%EC%88%9C%EB%8C%80%EA%B5%AD%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EA%B0%9C%EA%B5%B0%EB%A9%B4%20%ED%95%98%EC%9E%90%ED%8F%AC%EA%B8%B8%2027-2%201%EC%B8%B5",
+         "tags": [],
+         "timeSlot": "12:00-13:30",
+         "reason": "시래기토종순대국이라는 대표 메뉴가 분명해 식사 계획을 세우기 쉬워요."
+        },
+        {
+         "placeId": "naver_1273547638_376249287",
+         "name": "테라로사 서종점",
+         "category": "cafe",
+         "categoryLabel": "카페,디저트>카페",
+         "lat": 37.6249287,
+         "lng": 127.3547638,
+         "address": "경기도 양평군 서종면 북한강로 990",
+         "photos": [],
+         "mapUrl": "https://map.naver.com/p/search/%ED%85%8C%EB%9D%BC%EB%A1%9C%EC%82%AC%20%EC%84%9C%EC%A2%85%EC%A0%90%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%84%9C%EC%A2%85%EB%A9%B4%20%EB%B6%81%ED%95%9C%EA%B0%95%EB%A1%9C%20990",
+         "tags": [],
+         "timeSlot": "14:00-15:00",
+         "reason": "커피 중심으로 방문 목적을 세우기 좋아요. 인원에 맞는 자리는 현장에서 확인하세요."
+        },
+        {
+         "placeId": "naver_1275485971_375621496",
+         "name": "용문산관광지",
+         "category": "attraction",
+         "categoryLabel": "여행,명소>산",
+         "lat": 37.5621496,
+         "lng": 127.5485971,
+         "address": "경기도 양평군 용문면 용문산로 782 용문사",
+         "photos": [],
+         "mapUrl": "https://map.naver.com/p/search/%EC%9A%A9%EB%AC%B8%EC%82%B0%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%9A%A9%EB%AC%B8%EB%A9%B4%20%EC%9A%A9%EB%AC%B8%EC%82%B0%EB%A1%9C%20782%20%EC%9A%A9%EB%AC%B8%EC%82%AC",
+         "tags": [],
+         "timeSlot": "15:30-17:30",
+         "reason": "용문사와 문화유산 중 볼 곳을 미리 고르고 순서를 정해 둘러보기 좋아요."
+        }
+       ]
+      }
+     ],
+     "source": "curated"
+    }
+   ],
+   "lodging": [
+    {
+     "placeId": "naver_1275326070_374691847",
+     "name": "소노벨 양평",
+     "category": "lodging",
+     "categoryLabel": "숙박>콘도,리조트",
+     "lat": 37.4691847,
+     "lng": 127.532607,
+     "address": "경기도 양평군 개군면 신내길7번길 55",
+     "photos": [],
+     "mapUrl": "https://map.naver.com/p/search/%EC%86%8C%EB%85%B8%EB%B2%A8%20%EC%96%91%ED%8F%89%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EA%B0%9C%EA%B5%B0%EB%A9%B4%20%EC%8B%A0%EB%82%B4%EA%B8%B87%EB%B2%88%EA%B8%B8%2055",
+     "tags": [],
+     "lodgingType": "리조트 · 패밀리 취사/미취사",
+     "reason": "누가 어디서 자고 무엇을 먹을지 미리 정하기 쉬워 일행 전체를 운영하기 편해요.",
+     "notice": "여러 객실의 인접 배정은 보장되지 않아요. 추가 인원·침구 요금을 따로 확인하세요."
+    }
+   ]
+  },
+  "ESFJ": {
+   "summary": "협력과 조화를 중시하고, 일상적인 필요를 살펴 다른 사람을 돕는 성향이에요.",
+   "courses": [
+    {
+     "courseId": "mbti_ESFJ_curated_1",
+     "title": "함께 간 사람들의 만족을 챙기는 나들이",
+     "presetType": "mbti",
+     "days": [
+      {
+       "day": 1,
+       "stops": [
+        {
+         "placeId": "tour_2754403",
+         "name": "참좋은생각",
+         "category": "restaurant",
+         "lat": 37.4837216936,
+         "lng": 127.411542334,
+         "address": "경기도 양평군 강하면 수대골길 45",
+         "photos": [
+          "http://tong.visitkorea.or.kr/cms/resource/56/2932256_image2_1.jpg",
+          "http://tong.visitkorea.or.kr/cms/resource/56/2932256_image3_1.jpg"
+         ],
+         "mapUrl": "https://map.naver.com/p/search/%EC%B0%B8%EC%A2%8B%EC%9D%80%EC%83%9D%EA%B0%81",
+         "tags": [
+          "healing",
+          "romantic",
+          "aesthetic"
+         ],
+         "reviewSummary": "고즈넉한 산자락에서 분수를 바라보며 맛있는 퓨전 한정식 코스요리와 정원 산책을 즐길 수 있다.",
+         "timeSlot": "12:00-13:30",
+         "reason": "퓨전 한정식 코스로 여러 음식을 함께 즐기는 가족·친구 모임에 좋아요."
+        },
+        {
+         "placeId": "naver_1273529941_375984976",
+         "name": "하우스베이커리",
+         "category": "cafe",
+         "categoryLabel": "카페,디저트>베이커리",
+         "lat": 37.5984976,
+         "lng": 127.3529941,
+         "address": "경기도 양평군 서종면 북한강로 684 하우스베이커리",
+         "photos": [
+          "http://tong.visitkorea.or.kr/cms/resource/24/2794724_image2_1.jpg"
+         ],
+         "mapUrl": "https://map.naver.com/p/search/%ED%95%98%EC%9A%B0%EC%8A%A4%20%EB%B2%A0%EC%9D%B4%EC%BB%A4%EB%A6%AC%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%84%9C%EC%A2%85%EB%A9%B4%20%EB%B6%81%ED%95%9C%EA%B0%95%EB%A1%9C%20684%20%ED%95%98%EC%9A%B0%EC%8A%A4%EB%B2%A0%EC%9D%B4%EC%BB%A4%EB%A6%AC",
+         "tags": [
+          "aesthetic",
+          "kid_friendly"
+         ],
+         "petFriendly": true,
+         "reviewSummary": "유기농 베이커리와 넓은 마당이 있어 아이와 함께 방문하기 좋은 한옥 감성 카페입니다.",
+         "timeSlot": "14:00-15:00",
+         "reason": "각자 원하는 빵을 골라 나눠 먹으며 일행의 취향을 두루 챙길 수 있어요."
+        },
+        {
+         "placeId": "tour_407051",
+         "name": "세미원",
+         "category": "attraction",
+         "lat": 37.5407412665,
+         "lng": 127.324190296,
+         "address": "경기도 양평군 양서면 양수로 93",
+         "photos": [
+          "http://tong.visitkorea.or.kr/cms/resource/90/3447890_image2_1.jpg",
+          "http://tong.visitkorea.or.kr/cms/resource/90/3447890_image3_1.jpg"
+         ],
+         "mapUrl": "https://map.naver.com/p/search/%EC%84%B8%EB%AF%B8%EC%9B%90",
+         "tags": [
+          "nature",
+          "photo_spot",
+          "healing"
+         ],
+         "reviewSummary": "물과 꽃의 정원인 세미원은 팔당호 주변에서 다양한 수생식물과 역사 문화를 만날 수 있는 곳이다.",
+         "timeSlot": "15:30-17:30",
+         "reason": "물과 꽃의 정원을 함께 걸으며 사진을 남기는 나들이예요. 볼거리는 계절마다 달라요."
+        }
+       ]
+      }
+     ],
+     "source": "curated"
+    }
+   ],
+   "lodging": [
+    {
+     "placeId": "naver_1274226241_375000855",
+     "name": "블룸비스타 호텔앤컨퍼런스",
+     "category": "lodging",
+     "categoryLabel": "숙박>호텔",
+     "lat": 37.5000855,
+     "lng": 127.4226241,
+     "address": "경기도 양평군 강하면 강남로 316",
+     "photos": [],
+     "mapUrl": "https://map.naver.com/p/search/%EB%B8%94%EB%A3%B8%EB%B9%84%EC%8A%A4%ED%83%80%ED%98%B8%ED%85%94%EC%95%A4%EC%BB%A8%ED%8D%BC%EB%9F%B0%EC%8A%A4%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EA%B0%95%ED%95%98%EB%A9%B4%20%EA%B0%95%EB%82%A8%EB%A1%9C%20316",
+     "tags": [],
+     "lodgingType": "호텔 · 캐릭터룸/패밀리",
+     "reason": "아이 동반이면 좋아하는 캐릭터룸을, 아니면 패밀리 객실을 골라 동행자의 취향을 반영할 수 있어요.",
+     "notice": "테마·객실 등급, 실제 침구 구성과 아동 인원 기준, 부대시설 포함 여부를 확인하세요."
+    }
+   ]
+  },
+  "ENFJ": {
+   "summary": "사람의 감정과 가능성에 관심을 기울이며, 함께하는 경험을 이끄는 성향이에요.",
+   "courses": [
+    {
+     "courseId": "mbti_ENFJ_curated_1",
+     "title": "대화와 공감이 깊어지는 만남",
+     "presetType": "mbti",
+     "days": [
+      {
+       "day": 1,
+       "stops": [
+        {
+         "placeId": "tour_2754403",
+         "name": "참좋은생각",
+         "category": "restaurant",
+         "lat": 37.4837216936,
+         "lng": 127.411542334,
+         "address": "경기도 양평군 강하면 수대골길 45",
+         "photos": [
+          "http://tong.visitkorea.or.kr/cms/resource/56/2932256_image2_1.jpg",
+          "http://tong.visitkorea.or.kr/cms/resource/56/2932256_image3_1.jpg"
+         ],
+         "mapUrl": "https://map.naver.com/p/search/%EC%B0%B8%EC%A2%8B%EC%9D%80%EC%83%9D%EA%B0%81",
+         "tags": [
+          "healing",
+          "romantic",
+          "aesthetic"
+         ],
+         "reviewSummary": "고즈넉한 산자락에서 분수를 바라보며 맛있는 퓨전 한정식 코스요리와 정원 산책을 즐길 수 있다.",
+         "timeSlot": "12:00-13:30",
+         "reason": "한정식 코스로 중요한 사람과 의미 있는 식사를 준비하기 좋아요."
+        },
+        {
+         "placeId": "naver_1273215655_375517883",
+         "name": "수수카페",
+         "category": "cafe",
+         "categoryLabel": "음식점>카페,디저트",
+         "lat": 37.5517883,
+         "lng": 127.3215655,
+         "address": "경기도 양평군 양서면 북한강로89번길 19",
+         "photos": [],
+         "mapUrl": "https://map.naver.com/p/search/%EC%88%98%EC%88%98%EC%B9%B4%ED%8E%98%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%96%91%EC%84%9C%EB%A9%B4%20%EB%B6%81%ED%95%9C%EA%B0%95%EB%A1%9C89%EB%B2%88%EA%B8%B8%2019",
+         "tags": [],
+         "timeSlot": "14:00-15:00",
+         "reason": "북한강 테라스와 산책 공간에서 풍경을 소재로 대화를 이어 가요."
+        },
+        {
+         "placeId": "naver_1273776844_375939128",
+         "name": "황순원문학촌 소나기마을",
+         "category": "attraction",
+         "categoryLabel": "여행,명소>박물관",
+         "lat": 37.5939128,
+         "lng": 127.3776844,
+         "address": "경기도 양평군 서종면 소나기마을길 24",
+         "photos": [],
+         "mapUrl": "https://map.naver.com/p/search/%ED%99%A9%EC%88%9C%EC%9B%90%EB%AC%B8%ED%95%99%EC%B4%8C%EC%86%8C%EB%82%98%EA%B8%B0%EB%A7%88%EC%9D%84%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%84%9C%EC%A2%85%EB%A9%B4%20%EC%86%8C%EB%82%98%EA%B8%B0%EB%A7%88%EC%9D%84%EA%B8%B8%2024",
+         "tags": [],
+         "timeSlot": "15:30-17:30",
+         "reason": "관람 후 인상 깊었던 장면과 감정을 나누며 서로를 더 이해할 수 있어요."
+        }
+       ]
+      }
+     ],
+     "source": "curated"
+    }
+   ],
+   "lodging": [
+    {
+     "placeId": "tour_3532772",
+     "name": "산온:잔등",
+     "category": "lodging",
+     "lat": 37.4582020328,
+     "lng": 127.3897589312,
+     "address": "경기도 양평군 강하면 동문3길 22-13",
+     "photos": [],
+     "mapUrl": "https://map.naver.com/p/search/%EC%82%B0%EC%98%A8%EC%9E%94%EB%93%B1",
+     "tags": [
+      "healing",
+      "nature",
+      "group"
+     ],
+     "reviewSummary": "포근한 산으로 둘러싸인 고요한 공간에서 가족이나 친구들과 편안한 시간을 보낼 수 있습니다.",
+     "lodgingType": "독채 스테이 · 소규모 동행",
+     "reason": "주방과 큰 테이블이 있는 거실에서 함께 요리하고 오래 이야기하는 숙박에 맞아요.",
+     "notice": "아래 객실의 침실·침대 공유 구성이 일행에게 맞는지, 정원과 방문객 조건을 확인하세요."
+    }
+   ]
+  },
+  "ENTJ": {
+   "summary": "목표와 장기 계획을 세우고, 전체 구조와 실행 효율을 중시하는 성향이에요.",
+   "courses": [
+    {
+     "courseId": "mbti_ENTJ_curated_1",
+     "title": "원하는 경험을 정하고 전체 일정을 구성",
+     "presetType": "mbti",
+     "days": [
+      {
+       "day": 1,
+       "stops": [
+        {
+         "placeId": "naver_1274562671_375250244",
+         "name": "다 안토니오",
+         "category": "restaurant",
+         "categoryLabel": "음식점>이탈리아음식",
+         "lat": 37.5250244,
+         "lng": 127.4562671,
+         "address": "경기도 양평군 옥천면 향교길45번길 13 다 안토니오 이탈리아 컨템포러리",
+         "photos": [],
+         "mapUrl": "https://map.naver.com/p/search/%EB%8B%A4%20%EC%95%88%ED%86%A0%EB%8B%88%EC%98%A4%20%EC%9D%B4%ED%83%88%EB%A6%AC%EC%95%88%20%EC%BB%A8%ED%85%9C%ED%8F%AC%EB%9F%AC%EB%A6%AC%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%98%A5%EC%B2%9C%EB%A9%B4%20%ED%96%A5%EA%B5%90%EA%B8%B845%EB%B2%88%EA%B8%B8%2013%20%EB%8B%A4%20%EC%95%88%ED%86%A0%EB%8B%88%EC%98%A4%20%EC%9D%B4%ED%83%88%EB%A6%AC%EC%95%84%20%EC%BB%A8%ED%85%9C%ED%8F%AC%EB%9F%AC%EB%A6%AC",
+         "tags": [],
+         "timeSlot": "12:00-13:30",
+         "reason": "코스요리를 여행의 주요 경험으로 정하고 미리 예약해 시간을 배정하기 좋아요."
+        },
+        {
+         "placeId": "tour_2683997",
+         "name": "카포레",
+         "category": "cafe",
+         "lat": 37.5057695729,
+         "lng": 127.4353895354,
+         "address": "경기도 양평군 강하면 강남로 458",
+         "photos": [
+          "http://tong.visitkorea.or.kr/cms/resource/82/3529982_image2_1.jpg",
+          "http://tong.visitkorea.or.kr/cms/resource/82/3529982_image3_1.jpg"
+         ],
+         "mapUrl": "https://map.naver.com/p/search/%EC%B9%B4%ED%8F%AC%EB%A0%88",
+         "tags": [
+          "aesthetic",
+          "photo_spot",
+          "romantic"
+         ],
+         "reviewSummary": "모던한 건축물과 갤러리, 카페가 어우러진 카포레는 자연 속에서 전시와 음료를 즐길 수 있는 복합문화시설이다.",
+         "timeSlot": "14:00-15:00",
+         "reason": "커피·건축·전시 중 원하는 요소를 조합해 방문 목적을 구체화할 수 있어요."
+        },
+        {
+         "placeId": "naver_1273511444_376030516",
+         "name": "구하우스 미술관",
+         "category": "attraction",
+         "categoryLabel": "문화,예술>미술관",
+         "lat": 37.6030516,
+         "lng": 127.3511444,
+         "address": "경기도 양평군 서종면 무내미길 49-12",
+         "photos": [],
+         "mapUrl": "https://map.naver.com/p/search/%EA%B5%AC%ED%95%98%EC%9A%B0%EC%8A%A4%20%EB%AF%B8%EC%88%A0%EA%B4%80%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%84%9C%EC%A2%85%EB%A9%B4%20%EB%AC%B4%EB%82%B4%EB%AF%B8%EA%B8%B8%2049-12",
+         "tags": [],
+         "timeSlot": "15:30-17:30",
+         "reason": "예술·디자인을 주제로 정한 여행에 넣기 좋아요. 전시 내용을 미리 확인하세요."
+        }
+       ]
+      }
+     ],
+     "source": "curated"
+    }
+   ],
+   "lodging": [
+    {
+     "placeId": "naver_1274226241_375000855",
+     "name": "블룸비스타 호텔앤컨퍼런스",
+     "category": "lodging",
+     "categoryLabel": "숙박>호텔",
+     "lat": 37.5000855,
+     "lng": 127.4226241,
+     "address": "경기도 양평군 강하면 강남로 316",
+     "photos": [],
+     "mapUrl": "https://map.naver.com/p/search/%EB%B8%94%EB%A3%B8%EB%B9%84%EC%8A%A4%ED%83%80%ED%98%B8%ED%85%94%EC%95%A4%EC%BB%A8%ED%8D%BC%EB%9F%B0%EC%8A%A4%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EA%B0%95%ED%95%98%EB%A9%B4%20%EA%B0%95%EB%82%A8%EB%A1%9C%20316",
+     "tags": [],
+     "lodgingType": "호텔 · 비즈니스 스위트",
+     "reason": "업무공간과 휴식공간이 나뉘어 짧게 계획을 정리하고 쉬는 체류에 맞아요.",
+     "notice": "침구가 다다미 형태로 안내돼 있어요. 회의실 이용은 객실 예약과 별도로 확인하세요."
+    }
+   ]
+  }
+ }
+}
