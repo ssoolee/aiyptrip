@@ -1,7 +1,8 @@
 {
   "firestore": {
     "rules": "firestore.rules",
-    "indexes": "firestore.indexes.json"
+    "indexes": "firestore.indexes.json",
+    "location": "asia-northeast3"
   },
   "apphosting": {
     "backendId": "aiyptrip",
@@ -10,7 +11,7 @@
       "node_modules",
       ".git",
       ".next",
-      ".env.local",
+      ".env*",
       ".playwright-mcp",
       "firebase-debug.log",
       "firebase-debug.*.log",
