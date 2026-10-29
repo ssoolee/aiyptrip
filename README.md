@@ -243,12 +243,17 @@ Firebase App Hosting에 배포한다. 런타임 설정과 환경 변수 매핑�
 
 | 주소 | 역할 |
 |---|---|
-| https://aiyptrip--aiyptrip.asia-east1.hosted.app | 앱이 도는 곳 |
+| https://aiyptrip.web.app | **서비스 주소** — 이쪽을 쓴다 |
+| https://aiyptrip--aiyptrip.asia-east1.hosted.app | 출처(origin) — App Hosting 백엔드가 실제로 도는 곳 |
 
-App Hosting은 `*.hosted.app` 주소만 준다 — `web.app`은 다른 제품인 Firebase Hosting이
-주는 주소라 거기서 이 앱을 직접 돌릴 수는 없다. 외우기 쉬운 입구가 필요하면 Hosting
-사이트를 따로 두고 모든 경로를 302로 넘기거나, 도메인을 사서 App Hosting에 직접 붙인다.
-도메인을 붙이면 **네이버 지도 콘솔의 Web 서비스 URL에 새 도메인을 등록해야 지도가 뜬다.**
+`web.app`은 **Firebase Hosting**이 주는 주소이고 이 앱이 올라간 **App Hosting**은
+`*.hosted.app`만 준다 — 서로 다른 제품이다. 그래서 Hosting 사이트 `aiyptrip`을 앞에 두고
+모든 경로를 App Hosting의 Cloud Run 서비스로 **리라이트**한다(`firebase.json`의 `hosting`
+블록). 리다이렉트가 아니라 리라이트라서 주소창이 `aiyptrip.web.app`으로 유지된다.
+Hosting 리라이트는 백엔드 리전 `asia-east1`을 지원한다(콜로케이션 권장 리전이기도 하다).
+
+**네이버 지도 콘솔(NCP)의 Web 서비스 URL에 두 주소를 모두 등록해야 지도가 뜬다.**
+등록하지 않은 도메인에서는 지도 SDK 인증이 실패해 지도 영역만 빈 화면이 된다.
 
 ### 배포 방법
 
