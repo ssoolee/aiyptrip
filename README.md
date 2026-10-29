@@ -243,16 +243,25 @@ Firebase App Hosting에 배포한다. 런타임 설정과 환경 변수 매핑�
 
 | 주소 | 역할 |
 |---|---|
-| https://aiyptrip.web.app | **서비스 주소** — 이쪽을 쓴다 |
-| https://aiyptrip--aiyptrip.asia-east1.hosted.app | 출처(origin) — App Hosting 백엔드가 실제로 도는 곳 |
+| https://aiyptrip.web.app | 외우기 쉬운 입구 — 아래 주소로 넘긴다(302) |
+| https://aiyptrip--aiyptrip.asia-east1.hosted.app | 앱이 실제로 도는 곳 |
 
 `web.app`은 **Firebase Hosting**이 주는 주소이고 이 앱이 올라간 **App Hosting**은
 `*.hosted.app`만 준다 — 서로 다른 제품이다. 그래서 Hosting 사이트 `aiyptrip`을 앞에 두고
-모든 경로를 App Hosting의 Cloud Run 서비스로 **리라이트**한다(`firebase.json`의 `hosting`
-블록). 리다이렉트가 아니라 리라이트라서 주소창이 `aiyptrip.web.app`으로 유지된다.
-Hosting 리라이트는 백엔드 리전 `asia-east1`을 지원한다(콜로케이션 권장 리전이기도 하다).
+모든 경로를 넘긴다(`firebase.json`의 `hosting.redirects`).
 
-**네이버 지도 콘솔(NCP)의 Web 서비스 URL에 두 주소를 모두 등록해야 지도가 뜬다.**
+주소창까지 `aiyptrip.web.app`으로 유지하려면 리다이렉트가 아니라 **리라이트**가 필요한데,
+Hosting→Cloud Run 리라이트는 **403으로 막힌다**(2026-10 실측). App Hosting은 자체
+로드밸런서·CDN만 통과시키도록 Cloud Run 서비스의 ingress를 잠가 두기 때문이다. Hosting
+리라이트 타깃에는 App Hosting 백엔드를 직접 가리키는 항목이 없고(`run`/`function`/
+`destination`/`dynamicLinks`뿐), `web.app`은 구글 소유 도메인이라 App Hosting 커스텀
+도메인으로도 붙일 수 없다(DNS 레코드를 등록할 수 없다). 주소창까지 바꾸려면 도메인을 사서
+App Hosting에 직접 붙이는 길뿐이다.
+
+**301이 아니라 302를 쓴다** — 301은 브라우저가 오래 캐시해서 나중에 방식을 바꿀 때
+되돌리기 어렵다.
+
+**네이버 지도 콘솔(NCP)의 Web 서비스 URL에 `hosted.app` 주소를 등록해야 지도가 뜬다.**
 등록하지 않은 도메인에서는 지도 SDK 인증이 실패해 지도 영역만 빈 화면이 된다.
 
 ### 배포 방법

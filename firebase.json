@@ -4,6 +4,21 @@
     "indexes": "firestore.indexes.json",
     "location": "asia-northeast3"
   },
+  "hosting": {
+    "site": "aiyptrip",
+    "redirects": [
+      {
+        "source": "/",
+        "destination": "https://aiyptrip--aiyptrip.asia-east1.hosted.app/",
+        "type": 302
+      },
+      {
+        "source": "/:path*",
+        "destination": "https://aiyptrip--aiyptrip.asia-east1.hosted.app/:path*",
+        "type": 302
+      }
+    ]
+  },
   "apphosting": {
     "backendId": "aiyptrip",
     "rootDir": "/",
