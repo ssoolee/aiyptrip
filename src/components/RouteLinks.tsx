@@ -50,7 +50,7 @@ export function RouteButtons({ dest, origin }: { dest: RouteTarget; origin?: Lat
         href={isMobile ? naverAppRouteUrl(dest, "car", origin) : naverWebRouteUrl(dest, "car", origin)}
         target={isMobile ? undefined : "_blank"}
         rel="noreferrer"
-        className="flex min-h-11 flex-1 items-center justify-center rounded-[var(--radius-button)] bg-[var(--color-primary)] text-white"
+        className="flex min-h-11 flex-1 items-center justify-center rounded-[var(--radius-button)] bg-[var(--color-primary)] text-[var(--color-on-primary)]"
       >
         네이버 지도로 길찾기
       </a>

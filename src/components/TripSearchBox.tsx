@@ -15,22 +15,22 @@ export default function TripSearchBox({ defaultValue, showExamples }: { defaultV
           maxLength={MAX_QUERY_LENGTH}
           placeholder="예: 비 오는 날 아이랑 갈 만한 곳"
           aria-label="원하는 여행 설명"
-          className="min-w-0 flex-1 rounded-[var(--radius-button)] border border-[var(--color-border)] bg-[var(--color-card)] px-3 py-2.5 text-sm"
+          className="surface-card min-w-0 flex-1 rounded-[var(--radius-button)] px-4 py-3 text-sm outline-none placeholder:text-[var(--color-subtle)] focus:border-[var(--color-primary)]"
         />
         <button
           type="submit"
-          className="shrink-0 rounded-[var(--radius-button)] bg-[var(--color-primary)] px-4 py-2.5 text-sm font-semibold text-white"
+          className="shrink-0 rounded-[var(--radius-button)] bg-[var(--color-primary)] px-5 py-3 text-sm font-bold text-[var(--color-on-primary)]"
         >
           코스 찾기
         </button>
       </form>
       {showExamples && (
-        <div className="mt-2 flex flex-wrap gap-2">
+        <div className="mt-2.5 flex flex-wrap gap-2">
           {EXAMPLES.map((example) => (
             <Link
               key={example}
               href={`/course/search?q=${encodeURIComponent(example)}`}
-              className="rounded-full border border-[var(--color-border)] px-3 py-1 text-xs text-[var(--color-muted)] hover:border-[var(--color-primary)]"
+              className="rounded-[var(--radius-button)] border border-[var(--color-border)] bg-[var(--color-card)] px-3 py-1.5 text-xs text-[var(--color-muted)] hover:border-[var(--color-primary)] hover:text-[var(--color-primary)]"
             >
               {example}
             </Link>

@@ -16,7 +16,7 @@ export default function BottomNav() {
   const pathname = usePathname();
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 z-20 border-t border-[var(--color-border)] bg-[var(--color-card)] pb-[env(safe-area-inset-bottom)]">
+    <nav className="fixed bottom-0 left-0 right-0 z-30 border-t border-[var(--color-border)] bg-[var(--color-card)] pb-[env(safe-area-inset-bottom)]">
       <ul className="mx-auto flex max-w-2xl">
         {TABS.map((tab) => {
           const active = tab.href === "/" ? pathname === "/" : pathname.startsWith(tab.href);
@@ -24,10 +24,20 @@ export default function BottomNav() {
             <li key={tab.href} className="flex-1">
               <Link
                 href={tab.href}
-                className={`flex min-h-[56px] flex-col items-center justify-center gap-0.5 text-xs ${
-                  active ? "text-[var(--color-primary)] font-semibold" : "text-[var(--color-muted)]"
+                aria-current={active ? "page" : undefined}
+                className={`relative flex min-h-[58px] flex-col items-center justify-center gap-0.5 text-xs ${
+                  active
+                    ? "font-bold text-[var(--color-primary)]"
+                    : "text-[var(--color-subtle)]"
                 }`}
               >
+                {/* 고른 칸 위에 깔리는 짧은 막대 — 포털 카드의 윗선과 같은 표시다. */}
+                {active && (
+                  <span
+                    aria-hidden
+                    className="absolute inset-x-5 top-0 h-[3px] rounded-b-[3px] bg-[var(--color-primary)]"
+                  />
+                )}
                 <span className="text-lg leading-none" aria-hidden>
                   {tab.emoji}
                 </span>

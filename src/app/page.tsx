@@ -1,7 +1,8 @@
 import HomeHero from "@/components/HomeHero";
-import Mascot from "@/components/Mascot";
 import HomeSteps from "@/components/HomeSteps";
 import PresetGrid from "@/components/PresetGrid";
+import PyeonganiCard from "@/components/PyeonganiCard";
+import SectionHead from "@/components/SectionHead";
 import TripSearchBox from "@/components/TripSearchBox";
 import PetPlacesLink from "@/components/PetPlacesLink";
 
@@ -9,24 +10,45 @@ import PetPlacesLink from "@/components/PetPlacesLink";
 // 끝까지 흐르도록 각 섹션이 자기 여백을 직접 갖는 기존 규칙을 따른다.
 export default function Home() {
   return (
-    <div className="mx-auto max-w-2xl pb-6 pt-6">
-      <div className="mb-5">
-        <HomeHero />
-      </div>
-      <div className="mb-6">
+    <div className="mx-auto max-w-2xl pb-2 pt-6">
+      <HomeHero />
+
+      <div className="mt-8">
+        <SectionHead
+          className="mb-3 px-4"
+          expression="wow"
+          title="어떤 여행을 떠나볼까요?"
+          description="하고 싶은 여행을 그대로 적어 보세요."
+        />
         <TripSearchBox showExamples />
       </div>
-      <PresetGrid />
-      <div className="mt-4 px-4">
-        <PetPlacesLink />
+
+      <div className="mt-9">
+        <SectionHead
+          className="mb-3 px-4"
+          expression="smile"
+          title="유형으로 골라보기"
+          description="고르면 바로 코스를 만들어요."
+        />
+        <PresetGrid />
+        <div className="mt-3 px-4">
+          <PetPlacesLink />
+        </div>
       </div>
-      <div className="mt-6">
+
+      <div className="mt-9">
+        <SectionHead
+          className="mb-3 px-4"
+          expression="happy"
+          title="평안이가 코스를 짜는 방법"
+          description="세 걸음이면 끝나요."
+        />
         <HomeSteps />
       </div>
-      <p className="mt-6 flex items-center justify-center gap-2 text-xs text-[var(--color-muted)]">
-        <Mascot expression="heart" size={32} />
-        오늘도, 마음이 평안한 양평 💙
-      </p>
+
+      <div className="mt-10">
+        <PyeonganiCard />
+      </div>
     </div>
   );
 }

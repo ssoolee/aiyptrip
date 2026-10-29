@@ -108,7 +108,7 @@ export default function LoginForm() {
         />
 
         {error && (
-          <p role="alert" className="text-sm text-[#c0392b]">
+          <p role="alert" className="text-sm text-[var(--color-danger)]">
             {error}
           </p>
         )}
@@ -116,7 +116,7 @@ export default function LoginForm() {
         <button
           type="submit"
           disabled={pending}
-          className="min-h-[48px] w-full rounded-[var(--radius-button)] bg-[var(--color-primary)] px-4 text-sm font-semibold text-white disabled:opacity-50"
+          className="min-h-[48px] w-full rounded-[var(--radius-button)] bg-[var(--color-primary)] px-4 text-sm font-semibold text-[var(--color-on-primary)] disabled:opacity-50"
         >
           {pending ? "처리 중…" : mode === "signin" ? "로그인" : "회원가입"}
         </button>

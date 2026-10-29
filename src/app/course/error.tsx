@@ -23,7 +23,7 @@ export default function CourseError({
         <button
           type="button"
           onClick={() => retry()}
-          className="inline-flex min-h-11 items-center justify-center rounded-[var(--radius-button)] bg-[var(--color-primary)] px-6 text-sm font-semibold text-white"
+          className="inline-flex min-h-11 items-center justify-center rounded-[var(--radius-button)] bg-[var(--color-primary)] px-6 text-sm font-semibold text-[var(--color-on-primary)]"
         >
           다시 시도
         </button>

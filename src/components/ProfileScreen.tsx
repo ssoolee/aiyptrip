@@ -58,7 +58,7 @@ export default function ProfileScreen() {
         </p>
         <Link
           href="/login"
-          className="inline-flex min-h-[48px] items-center justify-center rounded-[var(--radius-button)] bg-[var(--color-primary)] px-6 text-sm font-semibold text-white"
+          className="inline-flex min-h-[48px] items-center justify-center rounded-[var(--radius-button)] bg-[var(--color-primary)] px-6 text-sm font-semibold text-[var(--color-on-primary)]"
         >
           로그인 / 회원가입
         </Link>
@@ -72,7 +72,7 @@ export default function ProfileScreen() {
     <div className="mx-auto max-w-2xl px-4 pb-6 pt-8">
       <PageHeader className="mb-4" title="내정보" expression="happy" />
 
-      <div className="mb-4 flex items-center gap-3 rounded-[var(--radius-card)] border border-[var(--color-border)] bg-[var(--color-card)] p-4">
+      <div className="mb-4 flex items-center gap-3 surface-card p-4">
         {user.photoURL ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img src={user.photoURL} alt="" className="h-12 w-12 rounded-full object-cover" />
@@ -89,7 +89,7 @@ export default function ProfileScreen() {
 
       <Link
         href="/favorites"
-        className="mb-4 flex items-center justify-between rounded-[var(--radius-card)] border border-[var(--color-border)] bg-[var(--color-card)] p-4 text-sm"
+        className="mb-4 flex items-center justify-between surface-card p-4 text-sm"
       >
         <span className="font-medium">찜 목록</span>
         <span className="text-[var(--color-muted)]">

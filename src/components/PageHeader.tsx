@@ -29,14 +29,19 @@ export default function PageHeader({
   return (
     <div className={className}>
       {backHref && (
-        <Link href={backHref} className="text-sm text-[var(--color-muted)]">
+        <Link
+          href={backHref}
+          className="inline-flex items-center gap-1 text-sm text-[var(--color-subtle)] hover:text-[var(--color-primary)]"
+        >
           ← {backLabel}
         </Link>
       )}
       <div className="flex items-start gap-3">
         <div className="min-w-0 flex-1">
-          <h1 className={`text-xl font-bold${backHref ? " mt-2" : ""}`}>{title}</h1>
-          {description && <p className="mt-1 text-sm text-[var(--color-muted)]">{description}</p>}
+          <h1 className={`display text-2xl leading-snug${backHref ? " mt-2" : ""}`}>{title}</h1>
+          {description && (
+            <p className="mt-1.5 text-sm leading-relaxed text-[var(--color-muted)]">{description}</p>
+          )}
         </div>
         {expression && (
           <Mascot expression={expression} size={44} className={backHref ? "mt-2" : undefined} />

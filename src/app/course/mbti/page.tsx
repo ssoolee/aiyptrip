@@ -25,7 +25,7 @@ export default function MbtiSelectPage() {
                 <Link
                   key={type}
                   href={`/course/mbti/${type}`}
-                  className="flex min-h-14 items-center justify-center rounded-[var(--radius-card)] border border-[var(--color-border)] bg-[var(--color-card)] text-base font-bold tracking-wide transition hover:border-[var(--color-primary)] hover:text-[var(--color-primary)]"
+                  className="flex min-h-14 items-center justify-center surface-card text-base font-bold tracking-wide transition hover:border-[var(--color-primary)] hover:text-[var(--color-primary)]"
                 >
                   {type}
                 </Link>

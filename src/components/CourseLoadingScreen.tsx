@@ -39,7 +39,7 @@ export default function CourseLoadingScreen({
 // 자리가 튀지 않게 한다.
 function CourseCardSkeleton() {
   return (
-    <div className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-border)] bg-[var(--color-card)]">
+    <div className="overflow-hidden surface-card">
       <div className="skeleton-line h-40" />
       <div className="p-4">
         <div className="skeleton-line h-4 w-24 rounded-full" />

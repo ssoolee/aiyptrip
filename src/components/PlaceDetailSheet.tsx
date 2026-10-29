@@ -98,7 +98,7 @@ export default function PlaceDetailSheet({ place, onClose }: { place: DetailPlac
               )}
               {place.rating != null && <span className="font-medium">⭐ {place.rating.toFixed(1)}</span>}
               {place.petFriendly && (
-                <span className="rounded-full bg-[var(--color-accent)]/20 px-2 py-0.5 font-medium">
+                <span className="rounded-full bg-[var(--color-accent)]/15 px-2 py-0.5 font-medium text-[var(--color-accent)]">
                   🐾 반려동물 동반
                 </span>
               )}

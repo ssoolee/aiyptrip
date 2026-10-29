@@ -18,7 +18,7 @@ export default function LodgingPicks({ title, picks }: { title: string; picks: L
         {picks.map((pick) => (
           <li
             key={pick.placeId}
-            className="overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-border)] bg-[var(--color-card)]"
+            className="overflow-hidden surface-card"
           >
             {pick.photos[0] ? (
               // eslint-disable-next-line @next/next/no-img-element

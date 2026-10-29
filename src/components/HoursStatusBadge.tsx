@@ -6,7 +6,7 @@ export default function HoursStatusBadge({ status }: { status: HoursStatus }) {
   switch (status.kind) {
     case "open":
       return (
-        <span className={`${base} bg-[var(--color-primary)] text-white`}>
+        <span className={`${base} bg-[var(--color-primary)] text-[var(--color-on-primary)]`}>
           영업 중{status.closesAt ? ` · ${status.closesAt} 마감` : " · 24시간"}
         </span>
       );
@@ -19,7 +19,7 @@ export default function HoursStatusBadge({ status }: { status: HoursStatus }) {
         </span>
       );
     case "dayoff":
-      return <span className={`${base} bg-[var(--color-accent)]/25`}>오늘 정기휴무</span>;
+      return <span className={`${base} bg-[var(--color-character-pink)]/35`}>오늘 정기휴무</span>;
     default:
       return (
         <span className={`${base} border border-[var(--color-border)] text-[var(--color-muted)]`}>

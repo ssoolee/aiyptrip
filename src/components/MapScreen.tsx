@@ -92,13 +92,13 @@ export default function MapScreen({ overviewPlaces }: { overviewPlaces: Place[] 
       </button>
 
       {error && (
-        <p role="status" className="mt-2 rounded-lg bg-amber-50 px-3 py-2 text-xs text-amber-900">
+        <p role="status" className="mt-2 notice rounded-xl px-3 py-2 text-xs">
           {error} 위치 없이도 코스와 동선은 그대로 볼 수 있어요.
         </p>
       )}
 
       {closest && (
-        <div className="mt-3 rounded-[var(--radius-card)] border border-[var(--color-border)] bg-[var(--color-card)] p-4">
+        <div className="mt-3 surface-card p-4">
           <p className="text-xs text-[var(--color-muted)]">현재 위치에서 가장 가까운 곳</p>
           <p className="mt-0.5 font-semibold">{closest.item.name}</p>
           <p className="mt-0.5 text-xs text-[var(--color-muted)]">
@@ -119,7 +119,7 @@ export default function MapScreen({ overviewPlaces }: { overviewPlaces: Place[] 
         {stops.map((stop) => (
           <li
             key={`${stop.order}-${stop.name}`}
-            className="flex items-center justify-between gap-2 rounded-[var(--radius-card)] border border-[var(--color-border)] bg-[var(--color-card)] px-4 py-2.5 text-sm"
+            className="flex items-center justify-between gap-2 surface-card px-4 py-2.5 text-sm"
           >
             {stop.place ? (
               <button

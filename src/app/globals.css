@@ -1,31 +1,84 @@
 @import "tailwindcss";
 
-/* docs/agents/06-web-design-trend-agent.md 디자인 토큰 초안 반영 */
+/* 평안이 팔레트 — welflows.com(AI행정앱제작소)과 같은 토큰을 쓴다.
+   하늘물 블루 #8fd3f2 · 평온 민트 #9fdcd2 · 따스한 아이보리 #fdf3e4 · 연꽃 핑크 #f9b5b8
+   이 네 색은 캐릭터 색이라 글자 대비가 안 나온다 — 본문·버튼은 아래 ink/brand 계열을 쓴다. */
 :root {
-  --background: #fafaf7;
-  --foreground: #14181a;
-  --color-primary: #2f6f4f;
-  --color-accent: #f2a65a;
-  --color-card: #ffffff;
-  --color-border: #e5e3dd;
-  --color-muted: #6b7280;
-  --radius-card: 16px;
-  --radius-button: 999px;
+  --color-character-blue: #8fd3f2;
+  --color-character-mint: #9fdcd2;
+  --color-character-ivory: #fdf3e4;
+  --color-character-pink: #f9b5b8;
 
-  /* 양평 마스코트 '평안이' 팔레트 (그림: public/character/). 버튼·링크는 기존
-     primary/accent를 그대로 쓰고, 이 색은 캐릭터 주변 장식에만 쓴다.
-     연꽃 핑크는 아직 쓰는 곳이 없지만 팔레트 기록용으로 함께 둔다. */
-  --color-character-blue: #8fd3f2; /* 하늘물 블루 */
-  --color-character-mint: #9fdcd2; /* 평온 민트 */
-  --color-character-ivory: #fdf3e4; /* 따스한 아이보리 */
-  --color-character-pink: #f9b5b8; /* 연꽃 핑크 */
+  /* 종이(배경)와 글자. welflows의 bg/bg-elev/ink 3단계를 그대로 옮긴 것이다. */
+  --background: #fbf7ef;
+  --foreground: #1b2e2a;
+  --color-card: #ffffff;
+  --color-border: #e7ded0;
+  --color-muted: #4b5f59; /* 본문 보조 글자 (welflows ink-2) */
+  --color-subtle: #7a8c86; /* 더 약한 설명·메타 글자 (welflows ink-3) */
+
+  /* 브랜드 초록과, 포털에서 '지역 관광'에 배정된 청록. 이 앱의 두 축이다. */
+  --color-primary: #145c45;
+  --color-accent: #2a8c81;
+  /* primary를 바탕으로 깐 위의 글자색. 다크에서는 흰색이 눈부셔 카드색을 쓴다. */
+  --color-on-primary: #ffffff;
+
+  /* 주의 문구(영업시간 미확인 등). 아이보리 계열이라 카드 위에서 튀지 않는다. */
+  --color-notice-bg: #fdf3e4;
+  --color-notice-text: #845420;
+  /* 오류 문구. 포털이 생활 편의 카드에 쓰는 연꽃 계열 붉은색을 진하게 쓴 값이다. */
+  --color-danger: #b03a46;
+
+  --radius-card: 20px;
+  --radius-button: 999px;
+  --shadow-card: 0 1px 2px rgba(27, 46, 42, 0.05), 0 10px 28px rgba(27, 46, 42, 0.07);
 
   /* 히어로 틴트는 --background에 캐릭터 색을 섞어 만든다 — 다크모드에서 배경만
      바뀌면 틴트도 같이 어두워지므로 아래 dark 블록에 따로 적을 필요가 없다. */
-  --color-hero-bg: color-mix(in srgb, var(--color-character-blue) 14%, var(--background));
-  --color-hero-border: color-mix(in srgb, var(--color-character-blue) 32%, var(--background));
-  /* 틴트 위에서는 --color-muted(#6b7280)가 4.4:1로 WCAG AA에 못 미쳐 따로 둔다. */
-  --color-hero-text: color-mix(in srgb, var(--foreground) 72%, var(--color-hero-bg));
+  --color-hero-bg: color-mix(in srgb, var(--color-character-blue) 12%, var(--background));
+  --color-hero-border: color-mix(in srgb, var(--color-character-blue) 30%, var(--background));
+  /* 틴트 위에서는 --color-muted가 대비를 조금 잃어 따로 둔다. */
+  --color-hero-text: color-mix(in srgb, var(--foreground) 76%, var(--color-hero-bg));
+  --color-hero-eyebrow: var(--color-primary);
+}
+
+/* 다크 값은 한 곳에만 적고 두 선택자가 나눠 쓴다 — 시스템 설정을 따를 때와
+   상단바의 '화면 밝기'로 직접 고른 때가 같은 색이어야 한다. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --background: #0f1a1d;
+    --foreground: #eaf4f2;
+    --color-card: #15252a;
+    --color-border: #22383d;
+    --color-muted: #aec4c1;
+    --color-subtle: #7f9693;
+    --color-primary: #8fd3f2;
+    --color-accent: #79d2c4;
+    --color-on-primary: #10222a;
+    --color-character-ivory: #1d2f34;
+    --color-notice-bg: #2a2a21;
+    --color-notice-text: #f0cf9e;
+    --color-danger: #f0a8ad;
+    --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.3), 0 12px 32px rgba(0, 0, 0, 0.4);
+    --color-hero-eyebrow: var(--color-primary);
+  }
+}
+
+:root[data-theme="dark"] {
+  --background: #0f1a1d;
+  --foreground: #eaf4f2;
+  --color-card: #15252a;
+  --color-border: #22383d;
+  --color-muted: #aec4c1;
+  --color-subtle: #7f9693;
+  --color-primary: #8fd3f2;
+  --color-accent: #79d2c4;
+  --color-on-primary: #10222a;
+  --color-character-ivory: #1d2f34;
+  --color-notice-bg: #2a2a21;
+  --color-notice-text: #f0cf9e;
+  --color-danger: #f0a8ad;
+  --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.3), 0 12px 32px rgba(0, 0, 0, 0.4);
   --color-hero-eyebrow: var(--color-primary);
 }
 
@@ -37,43 +90,92 @@
   --color-card: var(--color-card);
   --color-border: var(--color-border);
   --color-muted: var(--color-muted);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #14181a;
-    --foreground: #ededed;
-    --color-card: #1c2124;
-    --color-border: #2a3033;
-    --color-muted: #9aa4ab;
-    /* primary(#2f6f4f)는 라이트/다크 공통이지만 어두운 히어로 틴트 위에서는 2.3:1까지
-       떨어진다. 히어로의 작은 글씨에만 밝게 섞은 값을 쓴다. */
-    --color-hero-eyebrow: color-mix(in srgb, var(--color-primary) 45%, var(--foreground));
-  }
+  --font-sans: var(--font-noto-sans-kr);
+  --font-display: var(--font-jua);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
+  line-height: 1.65;
+  /* 한글은 단어 중간에서 끊기면 읽기 나쁘다 — welflows와 같은 규칙. */
+  word-break: keep-all;
 }
 
-/* 홈 히어로(HomeHero) 배경. 캐릭터 색을 투명도로 얹기 때문에 라이트(#fafaf7)와
-   다크(#14181a) 배경 모두에서 과하지 않게 깔린다. */
+/* 제목용 글꼴(Jua). 본문 한글과 섞어 쓰므로 Noto Sans KR을 뒤에 받쳐 둔다. */
+.display {
+  font-family: var(--font-jua), var(--font-noto-sans-kr), sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+/* 제목에 형광펜처럼 깔리는 민트 밑줄. 글자 아래 38%만 칠해 글씨를 가리지 않는다. */
+.hl {
+  background: linear-gradient(transparent 62%, var(--color-character-mint) 62%);
+  padding: 0 0.06em;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .hl {
+    background: linear-gradient(transparent 62%, rgba(159, 220, 210, 0.35) 62%);
+  }
+}
+
+:root[data-theme="dark"] .hl {
+  background: linear-gradient(transparent 62%, rgba(159, 220, 210, 0.35) 62%);
+}
+
+/* 카드 한 장의 기본 모양. 테두리만 있던 전과 달리 옅은 그림자로 종이처럼 떠 있다. */
+.surface-card {
+  background-color: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+}
+
+/* 누를 수 있는 카드가 손끝을 따라 살짝 떠오른다. */
+.lift {
+  transition: transform 0.18s ease, border-color 0.18s ease;
+}
+
+.lift:hover {
+  transform: translateY(-3px);
+}
+
+/* 주의 문구 상자 — 코스 알림, 지도·영업시간 안내가 함께 쓴다. */
+.notice {
+  background-color: var(--color-notice-bg);
+  color: var(--color-notice-text);
+}
+
+/* 홈 히어로(HomeHero). 캐릭터 색을 투명도로 얹기 때문에 라이트·다크 배경 모두에서
+   과하지 않게 깔린다. 둥근 빛 두 덩이는 welflows 히어로의 ::before/::after와 같다. */
 .home-hero {
+  position: relative;
+  overflow: hidden;
   background-color: var(--color-hero-bg);
-  background-image:
-    radial-gradient(
-      120% 110% at 88% 0%,
-      color-mix(in srgb, var(--color-character-blue) 22%, transparent),
-      transparent 70%
-    ),
-    linear-gradient(
-      160deg,
-      color-mix(in srgb, var(--color-character-mint) 16%, transparent),
-      color-mix(in srgb, var(--color-character-ivory) 10%, transparent)
-    );
+}
+
+.home-hero::before,
+.home-hero::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+
+.home-hero::before {
+  inset: -60% 45% 40% -30%;
+  background: radial-gradient(closest-side, var(--color-character-blue), transparent);
+  opacity: 0.3;
+}
+
+.home-hero::after {
+  right: -14%;
+  top: -28%;
+  width: 60%;
+  aspect-ratio: 1;
+  background: radial-gradient(closest-side, var(--color-character-mint), transparent);
+  opacity: 0.32;
 }
 
 /* 평안이를 올려 두는 연한 원형 배경(MascotSpot). .home-hero와 같은 방식으로
@@ -85,6 +187,11 @@ body {
     color-mix(in srgb, var(--color-character-ivory) 22%, transparent),
     transparent 70%
   );
+}
+
+/* 히어로의 평안이는 바닥에 그림자를 떨군다 — welflows .heropic과 같은 값. */
+.mascot-drop {
+  filter: drop-shadow(0 14px 26px rgba(27, 46, 42, 0.16));
 }
 
 /* 평안이가 둥실 떠 있는 움직임 — 기다리는 화면에서만 쓴다. */
@@ -175,6 +282,12 @@ body {
   .mascot-bob,
   .skeleton-line {
     animation: none;
+  }
+
+  .lift,
+  .lift:hover {
+    transition: none;
+    transform: none;
   }
 
   /* opacity까지 되돌리지 않으면 기다리는 화면이 영영 투명하게 남는다. */

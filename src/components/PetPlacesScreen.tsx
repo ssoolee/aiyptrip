@@ -52,7 +52,7 @@ export default function PetPlacesScreen({ places }: { places: Place[] }) {
               aria-pressed={active}
               className={`min-h-11 shrink-0 rounded-full border px-4 text-sm font-semibold ${
                 active
-                  ? "border-[var(--color-primary)] bg-[var(--color-primary)] text-white"
+                  ? "border-[var(--color-primary)] bg-[var(--color-primary)] text-[var(--color-on-primary)]"
                   : "border-[var(--color-border)] bg-[var(--color-card)] text-[var(--color-muted)]"
               }`}
             >
@@ -68,10 +68,10 @@ export default function PetPlacesScreen({ places }: { places: Place[] }) {
         {visible.map((place, i) => (
           <li
             key={place.placeId}
-            className="rounded-[var(--radius-card)] border border-[var(--color-border)] bg-[var(--color-card)] p-4"
+            className="surface-card p-4"
           >
             <div className="flex items-start gap-3">
-              <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[var(--color-primary)] text-xs font-bold text-white">
+              <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[var(--color-primary)] text-xs font-bold text-[var(--color-on-primary)]">
                 {i + 1}
               </span>
               <div className="min-w-0 flex-1">
