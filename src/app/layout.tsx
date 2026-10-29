@@ -19,7 +19,7 @@ const DESCRIPTION =
 
 export const metadata: Metadata = {
   // 상대 경로로 적은 공유 이미지 주소를 절대 주소로 바꿀 때 쓴다 — 없으면 빌드가 막힌다.
-  metadataBase: new URL("https://aiyptrip--aiyptrip.asia-east1.hosted.app"),
+  metadataBase: new URL("https://aiyptrip.web.app"),
   title: "양평 여행 코스 추천",
   description: DESCRIPTION,
   openGraph: {

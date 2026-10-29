@@ -18,7 +18,7 @@
 | 인증 | Firebase Authentication (Google, 이메일/비밀번호) — **현재 보류, 화면에서 내려둠** |
 | DB | Cloud Firestore (찜 목록 동기화) |
 | 지도·검색 | Naver Cloud Platform Maps / API HUB 지역·블로그 검색, 공공데이터포털 TourAPI |
-| 배포 | Firebase App Hosting (백엔드 ID `aiyptrip`) — main 푸시 시 자동 배포 |
+| 배포 | Firebase Hosting + Cloud Functions 2세대 SSR — main 푸시 시 GitHub Actions가 배포 |
 
 ## 시작하기
 
@@ -226,7 +226,7 @@ roadAddress, mapx, mapy뿐이고(공식 문서와 2026-10 실측 일치) 평점�
 남겨 `/course/detail/[courseId]`를 나중에 다시 열 수 있게 한다
 (`src/lib/courseStore.ts`, 응답을 늦추지 않도록 `after()`로 미뤄 쓴다).
 
-쓰기는 Admin SDK만 한다 — App Hosting에서는 서비스 계정이 자동으로 붙어 설정이 없고,
+쓰기는 Admin SDK만 한다 — 함수 런타임에서는 서비스 계정이 자동으로 붙어 설정이 없고,
 로컬에서 저장까지 보려면 `FIREBASE_SERVICE_ACCOUNT_KEY`에 서비스 계정 키의 경로나 JSON을
 넣는다. 자격증명이 없으면 저장만 건너뛰고, 상세 화면은 찜 목록과 세션 저장소
 (`src/lib/courseCache.ts`)에 남은 코스로 열린다.
@@ -236,49 +236,54 @@ TTL 정책을 걸면 지난 코스가 자동으로 지워진다 (걸지 않으�
 
 ## 배포
 
-Firebase App Hosting에 배포한다. 런타임 설정과 환경 변수 매핑은 `apphosting.yaml`,
-백엔드 지정은 `firebase.json`에 있다. 비공개 키는 파일에 적지 않고 Cloud Secret Manager를 참조한다.
+Firebase Hosting에 올린다. SSR이 필요해 정적 배포는 안 되므로, Next.js를 2세대 함수
+(`functions/index.js`의 `nextServer`)로 감싸고 Hosting이 모든 경로를 그 함수로 리라이트한다
+(`firebase.json`). 해시가 붙은 `/_next/static`과 `public/`만 Hosting이 CDN에서 바로 준다.
+비공개 키는 파일에 적지 않고 Cloud Secret Manager를 참조한다.
 
 ### 접속 주소
 
 | 주소 | 역할 |
 |---|---|
-| https://aiyptrip.web.app | 외우기 쉬운 입구 — 아래 주소로 넘긴다(302) |
-| https://aiyptrip--aiyptrip.asia-east1.hosted.app | 앱이 실제로 도는 곳 |
+| https://aiyptrip.web.app | 서비스 주소 — 앱이 여기서 돈다 |
 
-`web.app`은 **Firebase Hosting**이 주는 주소이고 이 앱이 올라간 **App Hosting**은
-`*.hosted.app`만 준다 — 서로 다른 제품이다. 그래서 Hosting 사이트 `aiyptrip`을 앞에 두고
-모든 경로를 넘긴다(`firebase.json`의 `hosting.redirects`).
+처음에는 App Hosting(`aiyptrip--aiyptrip.asia-east1.hosted.app`)에 올리고 Hosting 사이트가
+302로 넘기는 구조였다. 주소창에 `hosted.app`이 남는 것을 없애려고 App Hosting을 떠났다 —
+둘을 리라이트로 이을 길이 없기 때문이다. Hosting 리라이트 타깃에는 App Hosting 백엔드를
+가리키는 항목이 없고(`run`/`function`/`destination`/`dynamicLinks`뿐), App Hosting은 자기
+로드밸런서만 통과시키도록 Cloud Run ingress를 잠가 둬서 `run` 리라이트는 **403으로 막힌다**
+(2026-10 실측). `web.app`은 구글 소유 도메인이라 App Hosting 커스텀 도메인으로도 붙일 수
+없다(DNS 레코드를 등록할 수 없다). Hosting의 Next.js 자동 배포(webframeworks)는 신규 참여가
+영구히 닫혀 선택지가 아니다.
 
-주소창까지 `aiyptrip.web.app`으로 유지하려면 리다이렉트가 아니라 **리라이트**가 필요한데,
-Hosting→Cloud Run 리라이트는 **403으로 막힌다**(2026-10 실측). App Hosting은 자체
-로드밸런서·CDN만 통과시키도록 Cloud Run 서비스의 ingress를 잠가 두기 때문이다. Hosting
-리라이트 타깃에는 App Hosting 백엔드를 직접 가리키는 항목이 없고(`run`/`function`/
-`destination`/`dynamicLinks`뿐), `web.app`은 구글 소유 도메인이라 App Hosting 커스텀
-도메인으로도 붙일 수 없다(DNS 레코드를 등록할 수 없다). 주소창까지 바꾸려면 도메인을 사서
-App Hosting에 직접 붙이는 길뿐이다.
+Hosting이 앞에 서면서 생긴 제약 세 가지를 알고 있어야 한다.
 
-**301이 아니라 302를 쓴다** — 301은 브라우저가 오래 캐시해서 나중에 방식을 바꿀 때
-되돌리기 어렵다.
+- **응답 60초 제한** — 넘기면 Hosting이 504를 돌려준다. LLM 호출 타임아웃이 4~8초라 지금은 여유가 있다.
+- **스트리밍이 모아져 나간다** — `loading.tsx`·Suspense가 점진적으로 흐르지 않는다(기능은 그대로다).
+- **`__session` 외 쿠키가 벗겨진다** — 지금은 서버에서 쿠키를 읽지 않아 무해하지만, 서버 세션을 도입하면 걸린다.
 
-**네이버 지도 콘솔(NCP)의 Web 서비스 URL에 `hosted.app` 주소를 등록해야 지도가 뜬다.**
+**네이버 지도 콘솔(NCP)의 Web 서비스 URL에 `https://aiyptrip.web.app`을 등록해야 지도가 뜬다.**
 등록하지 않은 도메인에서는 지도 SDK 인증이 실패해 지도 영역만 빈 화면이 된다.
 
 ### 배포 방법
 
-GitHub 저장소가 백엔드에 연결돼 있어 **main에 푸시하면 자동으로 빌드·롤아웃된다.**
-코드 변경 없이 다시 구울 때만 직접 롤아웃을 만든다.
+**main에 푸시하면 GitHub Actions(`.github/workflows/deploy.yml`)가 빌드해서 올린다.**
+손으로 올릴 때는 빌드 산출물을 Hosting 몫과 함수 몫으로 나눈 뒤 배포한다.
 
 ```bash
-npx firebase-tools apphosting:rollouts:create aiyptrip --git-branch main
-npx firebase-tools apphosting:rollouts:list aiyptrip        # 진행 상황
-npx firebase-tools apphosting:backends:get aiyptrip         # 백엔드·URL 확인
+npm run build
+npm run pack:deploy                                   # hosting/, functions/.next, functions/public
+npx firebase-tools deploy --only hosting,functions
 ```
 
-키 등록과 Firestore 규칙 배포는 따로 한다.
+`functions/package.json`의 Next·React 버전은 **루트와 같이 올린다** — 빌드한 것과 런타임이
+달라지면 조용히 깨진다.
+
+키 등록과 Firestore 규칙 배포는 따로 한다. Secret Manager의 시크릿 이름이 곧 함수의
+환경변수 이름이 된다(`functions/index.js`의 `SECRETS`).
 
 ```bash
-npx firebase-tools apphosting:secrets:set <시크릿-이름>   # 키 등록
+npx firebase-tools functions:secrets:set GEMINI_API_KEY   # 키 등록
 npx firebase-tools deploy --only firestore                # 규칙·인덱스 배포
 ```
 

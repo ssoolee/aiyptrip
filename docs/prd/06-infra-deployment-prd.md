@@ -13,7 +13,7 @@ Functions)를 조합해 빠르게 배포하고, 사용자별 조회가 필요한
 
 | 영역 | Firebase 서비스 | 용도 |
 |---|---|---|
-| 배포/호스팅 | **Firebase Hosting** 또는 **Firebase App Hosting** | 반응형 웹(정적/SSR) 배포. 프론트엔드가 SPA(정적 빌드)면 Hosting, Next.js 등 SSR 프레임워크면 App Hosting 사용 (§7 오픈 이슈에서 확정) |
+| 배포/호스팅 | **Firebase Hosting** + **Cloud Functions(2세대) SSR** | Next.js(App Router) SSR을 함수 `nextServer`로 감싸고 Hosting이 전 경로를 리라이트한다. 서비스 주소는 https://aiyptrip.web.app (§7에서 확정 — App Hosting에서 전환) |
 | 사용자 인증 | **Firebase Authentication** (이메일/구글 로그인 + **카카오 로그인**) | 로그인 여부 판별 → 찜 데이터를 "사용자별"로 구분·동기화하는 데 필수. **카카오는 이 서비스에서 로그인 용도로만 사용**하며, 장소 검색/지도 API로는 사용하지 않는다 |
 | 데이터베이스 | **Cloud Firestore** | 사용자별 즐겨찾기(코스 찜/장소 찜), 사전 생성 코스 캐시(`precomputed_courses`), MBTI 매핑·축제 캘린더 등 저장 |
 | 서버 로직 | **Cloud Functions for Firebase** | `docs/agents/`의 에이전트 파이프라인 실행(오케스트레이터~콘텐츠보강), 사전 생성 코스 배치 작업(스케줄 트리거), 외부 API(네이버/TourAPI) 호출을 서버 사이드에서 안전하게 처리(API 키 보호) |
@@ -72,15 +72,19 @@ users/{uid}/favoritePlaces/{placeId}     // 장소 찜 (1문서 = 장소 1개)
 
 - 네이버/TourAPI 키 등 민감정보는 클라이언트에 노출하지 않고
   Cloud Functions 환경변수(Secret Manager 연동)로 관리
-- Firebase Hosting/App Hosting 배포는 GitHub 연동 CI/CD로 구성해
+- 배포는 GitHub Actions(`.github/workflows/deploy.yml`)로 구성해
   main 브랜치 반영 시 자동 배포
 - 비용 관리: Firestore 읽기/쓰기 횟수, Cloud Functions 실행 횟수에
   대한 예산 알림(Budget Alert) 설정
 
 ## 7. 오픈 이슈
 
-- 프론트엔드 프레임워크 확정 필요 (SPA vs Next.js 등 SSR) → Hosting과
-  App Hosting 중 배포 방식 결정에 직접 영향
+- **확정(2026-10): Next.js(App Router) + Firebase Hosting + Cloud Functions
+  2세대 SSR.** 처음에는 App Hosting에 올렸지만 주소창을 `aiyptrip.web.app`으로
+  유지할 수 없어 전환했다 — Hosting 리라이트로 App Hosting 백엔드를 가리킬 수 없고
+  (ingress가 잠겨 `run` 리라이트는 403), `web.app`은 구글 소유 도메인이라 App Hosting
+  커스텀 도메인으로도 붙지 않는다. 대가로 Hosting의 60초 응답 제한·스트리밍 버퍼링·
+  `__session` 외 쿠키 제거를 받아들였다(README 「배포」 참조).
 - Firebase 요금제(Blaze 필요 — Cloud Functions 외부 API 호출 시 필수)
   전환 및 예산 승인 필요
 - **소셜 로그인 제공자는 이메일/구글 + 카카오 로그인으로 확정** (카카오는

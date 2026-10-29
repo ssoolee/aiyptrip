@@ -33,6 +33,10 @@ yarn-error.log*
 # env files (can opt-in for committing if needed)
 .env*
 !.env.example
+# 공개 전제 값(NEXT_PUBLIC_FIREBASE_*)과 비밀이 아닌 런타임 값은 커밋한다 —
+# GitHub Actions 빌드가 이 값들을 필요로 한다.
+!.env.production
+!functions/.env
 
 # vercel
 .vercel
@@ -50,3 +54,12 @@ firestore-debug.log
 
 # firebase 배포 캐시 (hosting deploy가 만든다)
 .firebase/
+
+# 배포 산출물 (npm run pack:deploy가 만든다)
+/hosting/
+/functions/.next/
+/functions/public/
+/functions/node_modules/
+
+# 에뮬레이터용 시크릿 (functions 에뮬레이터가 읽는다)
+/functions/.secret.local

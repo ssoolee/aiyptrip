@@ -11,7 +11,8 @@
     "build:mbti": "tsx scripts/build-mbti-courses.ts",
     "build:pet": "tsx scripts/build-pet-places.ts",
     "test": "tsx --test \"src/**/*.test.ts\"",
-    "build:hours": "tsx scripts/build-hours.ts"
+    "build:hours": "tsx scripts/build-hours.ts",
+    "pack:deploy": "tsx scripts/pack-deploy.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.128.0",

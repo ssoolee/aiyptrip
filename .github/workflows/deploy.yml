@@ -1,0 +1,57 @@
+# main에 푸시하면 빌드해서 Firebase Hosting(aiyptrip.web.app)과 SSR 함수를 함께 올린다.
+#
+# App Hosting을 쓸 때는 구글이 이 일을 대신했지만, 지금은 Hosting이 서비스 주체라
+# 빌드·배포를 여기서 돌린다. Hosting 몫과 함수 몫으로 산출물을 나누는 일은
+# scripts/pack-deploy.ts가 한다.
+#
+# 필요한 저장소 시크릿
+#   GCP_SA_KEY                     배포용 서비스 계정 키(JSON 전체)
+#   NEXT_PUBLIC_NCP_MAP_CLIENT_ID  브라우저 지도 SDK용 Client ID (빌드 때 번들에 박힌다)
+# 비밀 키(GEMINI_API_KEY 등)는 여기 두지 않는다 — 런타임에 Secret Manager에서 함수로 들어간다.
+name: 배포
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-main
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - run: npm ci
+
+      - name: 빌드
+        run: npm run build
+        env:
+          NEXT_PUBLIC_NCP_MAP_CLIENT_ID: ${{ secrets.NEXT_PUBLIC_NCP_MAP_CLIENT_ID }}
+
+      - name: 산출물 나누기
+        run: npm run pack:deploy
+
+      # 배포 때 firebase CLI가 functions/index.js를 읽어 함수 목록을 뽑으므로
+      # 함수 쪽 의존성도 러너에 깔려 있어야 한다.
+      - name: 함수 의존성 설치
+        run: npm ci
+        working-directory: functions
+
+      - name: 배포 자격증명 준비
+        env:
+          GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
+        run: |
+          printf '%s' "$GCP_SA_KEY" > "$RUNNER_TEMP/gcp-key.json"
+          echo "GOOGLE_APPLICATION_CREDENTIALS=$RUNNER_TEMP/gcp-key.json" >> "$GITHUB_ENV"
+
+      - name: 배포
+        run: npx --yes firebase-tools@15.34.1 deploy --only hosting,functions --project aiyptrip --non-interactive
