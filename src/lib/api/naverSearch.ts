@@ -5,7 +5,7 @@ import { stripHtml } from "@/lib/api/naverSearchText";
 // docs/prd/07-external-api-integration.md "장소 검색", docs/agents/02-place-retrieval-agent.md 참조.
 // 네이버 지역 검색 — 개발자센터가 2026-07-31부로 신규 발급을 종료해 NCP의
 // NAVER API HUB로 이관된 버전을 쓴다. 인증은 API HUB를 구독한 NCP 애플리케이션 키
-// (NCP_MAP_CLIENT_ID/SECRET → X-NCP-APIGW-API-KEY-ID/KEY 헤더, src/lib/api/ncpMap.ts).
+// (NCP_SEARCH_KEY_ID/NCP_SEARCH_KEY → X-NCP-APIGW-API-KEY-ID/KEY 헤더, src/lib/api/ncpMap.ts).
 // https://api.ncloud-docs.com/docs/naver-api-hub-search-local
 const LOCAL_SEARCH_URL = "https://naverapihub.apigw.ntruss.com/search/v1/local";
 

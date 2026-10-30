@@ -19,10 +19,10 @@ const { defineSecret } = require("firebase-functions/params");
 const SECRETS = [
   "GEMINI_API_KEY",
   "TOUR_API_KEY",
-  "NCP_MAP_CLIENT_ID",
-  "NCP_MAP_CLIENT_SECRET",
-  "NCP_MAPS_API_KEY_ID",
-  "NCP_MAPS_API_KEY",
+  "NCP_SEARCH_KEY_ID",
+  "NCP_SEARCH_KEY",
+  "NCP_MAPS_KEY_ID",
+  "NCP_MAPS_KEY",
 ].map((name) => defineSecret(name));
 
 // 배포할 때 firebase CLI가 이 파일을 읽어 함수 목록만 뽑아 간다. 그때 Next까지 깨우면

@@ -83,8 +83,8 @@ function withFetch(handler: (url: string) => { status: number; body: unknown }) 
 }
 
 test("성공 응답을 리뷰 목록으로 조립한다", async () => {
-  process.env.NCP_MAP_CLIENT_ID = "test-id";
-  process.env.NCP_MAP_CLIENT_SECRET = "test-secret";
+  process.env.NCP_SEARCH_KEY_ID = "test-id";
+  process.env.NCP_SEARCH_KEY = "test-secret";
   let requested = "";
   const restore = withFetch((url) => {
     requested = url;
@@ -128,8 +128,8 @@ test("성공 응답을 리뷰 목록으로 조립한다", async () => {
 });
 
 test("블로그 검색이 활성화되지 않은 401이면 null — 화면에서 영역을 접는다", async () => {
-  process.env.NCP_MAP_CLIENT_ID = "test-id";
-  process.env.NCP_MAP_CLIENT_SECRET = "test-secret";
+  process.env.NCP_SEARCH_KEY_ID = "test-id";
+  process.env.NCP_SEARCH_KEY = "test-secret";
   const restore = withFetch(() => ({
     status: 401,
     body: { error: { errorCode: 401, message: "요청한 API는 이 Application에서 활성화되어 있지 않습니다." } },
@@ -143,8 +143,8 @@ test("블로그 검색이 활성화되지 않은 401이면 null — 화면에서
 });
 
 test("결과가 없으면 null — 0건 제목을 띄우지 않는다", async () => {
-  process.env.NCP_MAP_CLIENT_ID = "test-id";
-  process.env.NCP_MAP_CLIENT_SECRET = "test-secret";
+  process.env.NCP_SEARCH_KEY_ID = "test-id";
+  process.env.NCP_SEARCH_KEY = "test-secret";
   const restore = withFetch(() => ({ status: 200, body: { total: 0, items: [] } }));
   try {
     const { searchBlogReviews } = await import("@/lib/api/naverBlogSearch");
@@ -155,8 +155,8 @@ test("결과가 없으면 null — 0건 제목을 띄우지 않는다", async ()
 });
 
 test("키가 없으면 호출조차 하지 않는다", async () => {
-  delete process.env.NCP_MAP_CLIENT_ID;
-  delete process.env.NCP_MAP_CLIENT_SECRET;
+  delete process.env.NCP_SEARCH_KEY_ID;
+  delete process.env.NCP_SEARCH_KEY;
   let called = false;
   const restore = withFetch(() => {
     called = true;

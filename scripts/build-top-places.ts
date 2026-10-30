@@ -45,7 +45,7 @@ async function main() {
 
     const candidates = await searchNaverRecommended(category);
     if (candidates.length === 0) {
-      console.log("  ✗ 후보가 없습니다 — NCP_MAP_CLIENT_ID/SECRET(지역 검색)을 확인하세요.");
+      console.log("  ✗ 후보가 없습니다 — NCP_SEARCH_KEY_ID/NCP_SEARCH_KEY(지역 검색)을 확인하세요.");
       result[category] = [];
       continue;
     }

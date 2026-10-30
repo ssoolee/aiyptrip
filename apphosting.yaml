@@ -18,16 +18,16 @@ env:
   - variable: TOUR_API_KEY
     secret: tour-api-key
   # NAVER API HUB 지역 검색용 키
-  - variable: NCP_MAP_CLIENT_ID
+  - variable: NCP_SEARCH_KEY_ID
     secret: ncp-map-client-id
-  - variable: NCP_MAP_CLIENT_SECRET
+  - variable: NCP_SEARCH_KEY
     secret: ncp-map-client-secret
-  - variable: NCP_MAPS_API_KEY_ID
+  - variable: NCP_MAPS_KEY_ID
     secret: ncp-maps-api-key-id
-  - variable: NCP_MAPS_API_KEY
+  - variable: NCP_MAPS_KEY
     secret: ncp-maps-api-key
   # 브라우저 지도 SDK용 — 빌드 때 번들에 들어가므로 BUILD에도 필요. Maps 키의 Client ID와 같은 값.
-  - variable: NEXT_PUBLIC_NCP_MAP_CLIENT_ID
+  - variable: NEXT_PUBLIC_NCP_MAPS_KEY_ID
     secret: ncp-maps-api-key-id
     availability:
       - BUILD

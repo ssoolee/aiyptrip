@@ -80,7 +80,7 @@ export default function NaverMapView({
 }) {
   const mapElRef = useRef<HTMLDivElement>(null);
   const [sdkReady, setSdkReady] = useState(false);
-  const clientId = process.env.NEXT_PUBLIC_NCP_MAP_CLIENT_ID;
+  const keyId = process.env.NEXT_PUBLIC_NCP_MAPS_KEY_ID;
 
   useEffect(() => {
     // 인증 실패(키·도메인 설정, 네이버 서버 오류) 시 SDK가 naver.maps를 null로 비운다.
@@ -168,7 +168,7 @@ export default function NaverMapView({
     };
   }, [sdkReady, stops, showRoute, userPosition, onSelectPlace, interactive]);
 
-  if (!clientId) {
+  if (!keyId) {
     // 키가 없을 때. 코스 카드의 작은 지도까지 설정 안내로 채우면 목록이 경고판이 되므로,
     // 작은 지도는 자리만 비워 둔다.
     return (
@@ -178,7 +178,7 @@ export default function NaverMapView({
         }`}
       >
         {interactive
-          ? "NEXT_PUBLIC_NCP_MAP_CLIENT_ID가 설정되지 않았습니다. .env.local을 확인하세요."
+          ? "NEXT_PUBLIC_NCP_MAPS_KEY_ID가 설정되지 않았습니다. .env.local을 확인하세요."
           : "지도를 불러올 수 없어요"}
       </div>
     );
@@ -187,7 +187,7 @@ export default function NaverMapView({
   return (
     <>
       <Script
-        src={`https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=${clientId}`}
+        src={`https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=${keyId}`}
         strategy="afterInteractive"
         onReady={() => setSdkReady(true)}
       />

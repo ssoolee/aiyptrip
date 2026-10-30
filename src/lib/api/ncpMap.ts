@@ -2,9 +2,13 @@
 // Naver Cloud Platform Geocoding / Directions 5 API (서버 전용 — Secret 키 필요).
 //
 // NCP 애플리케이션 키가 두 개다 (2026-09-28 실측):
-// - Maps 키(NCP_MAPS_API_KEY_ID/KEY): Geocoding·Directions 구독, 지역 검색은 미구독
-// - 기존 키(NCP_MAP_CLIENT_ID/SECRET): NAVER API HUB 지역 검색만 구독, Maps는 미구독
+// - Maps 키(NCP_MAPS_KEY_ID/NCP_MAPS_KEY): Geocoding·Directions 구독, 지역 검색은 미구독
+// - 검색 키(NCP_SEARCH_KEY_ID/NCP_SEARCH_KEY): NAVER API HUB 지역·블로그 검색만 구독, Maps는 미구독
 // 구독 안 된 API는 "Permission Denied(210)"를 돌려주므로 용도별로 키를 나눠 쓴다.
+//
+// 네 값 모두 API Gateway의 (API Key ID, API Key) 쌍이다 — 네이버 개발자센터의
+// X-Naver-Client-Id/Secret이 아니다. 예전 이름(NCP_MAP_CLIENT_ID 등)이 그렇게 읽혀
+// 혼동을 불러서, 용도와 정체가 드러나는 이름으로 바꿨다.
 // 아래 함수들은 실패하면 null을 반환해 호출부가 직선거리(haversine) 등으로 fallback한다.
 const NCP_MAPS_API_BASE = "https://maps.apigw.ntruss.com";
 
@@ -18,12 +22,12 @@ function apiGatewayHeaders(keyId: string | undefined, key: string | undefined): 
 
 // NAVER API HUB(지역 검색, src/lib/api/naverSearch.ts)용 인증 헤더.
 export function getNcpApiHeaders(): Record<string, string> | null {
-  return apiGatewayHeaders(process.env.NCP_MAP_CLIENT_ID, process.env.NCP_MAP_CLIENT_SECRET);
+  return apiGatewayHeaders(process.env.NCP_SEARCH_KEY_ID, process.env.NCP_SEARCH_KEY);
 }
 
 // Maps(Geocoding·Directions)용 인증 헤더.
 function getMapsApiHeaders(): Record<string, string> | null {
-  return apiGatewayHeaders(process.env.NCP_MAPS_API_KEY_ID, process.env.NCP_MAPS_API_KEY);
+  return apiGatewayHeaders(process.env.NCP_MAPS_KEY_ID, process.env.NCP_MAPS_KEY);
 }
 
 export interface LatLng {

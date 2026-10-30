@@ -110,9 +110,9 @@ TourAPI 항목이 있으면 함께 채운다(89곳). 어느 API에도 없는
 
 - **LLM** — `LLM_PROVIDER`(gemini|anthropic), `GEMINI_API_KEY`, `GEMINI_MODEL`,
   `ANTHROPIC_API_KEY`, `ANTHROPIC_MODEL`
-- **지도/장소** — `NCP_MAP_CLIENT_ID`·`NCP_MAP_CLIENT_SECRET`(API HUB 지역·블로그 검색),
-  `NCP_MAPS_API_KEY_ID`·`NCP_MAPS_API_KEY`(Geocoding·Directions),
-  `NEXT_PUBLIC_NCP_MAP_CLIENT_ID`(브라우저 지도 SDK)
+- **지도/장소** — `NCP_SEARCH_KEY_ID`·`NCP_SEARCH_KEY`(API HUB 지역·블로그 검색),
+  `NCP_MAPS_KEY_ID`·`NCP_MAPS_KEY`(Geocoding·Directions),
+  `NEXT_PUBLIC_NCP_MAPS_KEY_ID`(브라우저 지도 SDK)
 - **공공 데이터** — `TOUR_API_KEY`(필수), `ODSAY_API_KEY`·`WEATHER_API_KEY`(선택)
 - **Firebase** — `NEXT_PUBLIC_FIREBASE_API_KEY`, `..._AUTH_DOMAIN`, `..._PROJECT_ID`, `..._APP_ID`,
   `FIREBASE_SERVICE_ACCOUNT_KEY`(선택 — 아래 "코스 저장" 참조)
