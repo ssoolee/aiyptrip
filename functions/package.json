@@ -10,6 +10,7 @@
     "@anthropic-ai/sdk": "^0.128.0",
     "firebase": "^12.19.0",
     "firebase-admin": "^14.5.0",
+    "firebase-admin-a14c8a5423a75469": "npm:firebase-admin@^14.5.0",
     "firebase-functions": "^7.4.0",
     "next": "16.3.5",
     "react": "19.2.8",
