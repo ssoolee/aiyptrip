@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import Script from "next/script";
 import { CATEGORY_LABEL } from "@/lib/categories";
 import type { LatLng } from "@/lib/geo";
@@ -55,7 +55,30 @@ interface NaverMapsNamespace {
 declare global {
   interface Window {
     naver?: NaverMapsNamespace;
+    /** SDK가 인증에 실패하면 부르는 전역 콜백 (네이버 지도 API v3 문서). */
+    navermap_authFailure?: () => void;
   }
+}
+
+// 인증에 실패하면 SDK가 지도 자리에 자기 오류판("네이버 지도 Open API 인증이
+// 실패했습니다.")을 그려 넣는다. 좁은 화면에서는 그 글자가 좌우로 잘려 더 알아보기
+// 어렵고, 보는 사람이 할 수 있는 일도 아니다. 전역 콜백으로 실패를 받아 우리 안내로
+// 바꿔 그린다 — 키·도메인 설정은 NCP 콘솔의 일이라 화면은 조용히 접는 편이 낫다.
+//
+// 한 화면에 지도가 여럿일 수 있어(코스 카드) 구독자 전부에게 알린다. 나중에 붙는
+// 지도는 이미 실패한 뒤일 수 있으므로 모듈 변수로 상태를 남긴다.
+let sdkAuthFailed = false;
+const authFailureSubscribers = new Set<() => void>();
+
+function subscribeAuthFailure(notify: () => void): () => void {
+  authFailureSubscribers.add(notify);
+  window.navermap_authFailure = () => {
+    sdkAuthFailed = true;
+    for (const subscriber of authFailureSubscribers) subscriber();
+  };
+  return () => {
+    authFailureSubscribers.delete(notify);
+  };
 }
 
 export default function NaverMapView({
@@ -81,6 +104,13 @@ export default function NaverMapView({
   const mapElRef = useRef<HTMLDivElement>(null);
   const [sdkReady, setSdkReady] = useState(false);
   const keyId = process.env.NEXT_PUBLIC_NCP_MAPS_KEY_ID;
+  // SDK는 React 바깥의 시스템이라 구독으로 읽는다 — 나중에 붙는 지도도 이미 난 실패를
+  // 그대로 받는다(스냅샷이 모듈 변수라서). 서버에서는 아직 실패할 일이 없다.
+  const authFailed = useSyncExternalStore(
+    subscribeAuthFailure,
+    () => sdkAuthFailed,
+    () => false,
+  );
 
   useEffect(() => {
     // 인증 실패(키·도메인 설정, 네이버 서버 오류) 시 SDK가 naver.maps를 null로 비운다.
@@ -168,18 +198,23 @@ export default function NaverMapView({
     };
   }, [sdkReady, stops, showRoute, userPosition, onSelectPlace, interactive]);
 
-  if (!keyId) {
-    // 키가 없을 때. 코스 카드의 작은 지도까지 설정 안내로 채우면 목록이 경고판이 되므로,
-    // 작은 지도는 자리만 비워 둔다.
+  if (!keyId || authFailed) {
+    // 키가 없거나(개발) 인증이 거절됐을 때(운영). 코스 카드의 작은 지도까지 안내로 채우면
+    // 목록이 경고판이 되므로, 작은 지도는 자리만 비워 둔다.
+    //
+    // 인증 거절은 보는 사람이 손쓸 수 없는 일이라 까닭을 늘어놓지 않는다 — 아래 장소
+    // 목록과 '길찾기' 링크는 그대로 살아 있으니 그쪽으로 넘긴다.
     return (
       <div
         className={`flex items-center justify-center rounded-[var(--radius-card)] border border-dashed border-[var(--color-border)] p-4 text-center text-[var(--color-subtle)] ${heightClass} ${
           interactive ? "text-sm" : "text-xs"
         }`}
       >
-        {interactive
-          ? "NEXT_PUBLIC_NCP_MAPS_KEY_ID가 설정되지 않았습니다. .env.local을 확인하세요."
-          : "지도를 불러올 수 없어요"}
+        {!interactive
+          ? "지도를 불러올 수 없어요"
+          : authFailed
+            ? "지도를 불러올 수 없어요. 아래 목록과 길찾기 링크를 이용해 주세요."
+            : "NEXT_PUBLIC_NCP_MAPS_KEY_ID가 설정되지 않았습니다. .env.local을 확인하세요."}
       </div>
     );
   }
