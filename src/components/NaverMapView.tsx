@@ -64,11 +64,15 @@ export default function NaverMapView({
   userPosition,
   onSelectPlace,
   heightClass = "h-64 sm:h-96",
+  interactive = true,
 }: {
   stops: MapStop[];
   showRoute?: boolean;
   // 화면마다 지도 높이가 다르다 (코스 상세는 모바일에서 화면의 45%).
   heightClass?: string;
+  // false면 동선만 보여주는 그림이 된다 — 코스 카드처럼 목록 안에 놓이는 작은 지도용.
+  // 끄지 않으면 목록을 세로로 넘기다 지도 위에서 손가락이 걸려 지도가 움직인다.
+  interactive?: boolean;
   // 현재 위치 — 권한을 받은 뒤에만 들어온다 (PRD-02 §3 Must).
   userPosition?: LatLng | null;
   // 마커 정보창의 "상세보기"에서 호출된다. 지도를 다시 그리지 않도록 호출자가 메모해 넘긴다.
@@ -88,20 +92,37 @@ export default function NaverMapView({
     const map = new maps.Map(mapElRef.current, {
       center: positions[0],
       zoom: 13,
+      ...(interactive
+        ? {}
+        : {
+            draggable: false,
+            scrollWheel: false,
+            pinchZoom: false,
+            keyboardShortcuts: false,
+            disableDoubleClickZoom: true,
+            disableDoubleTapZoom: true,
+            disableTwoFingerTapZoom: true,
+            zoomControl: false,
+            mapDataControl: false,
+            scaleControl: false,
+          }),
     });
     // 정보창은 하나만 두고 내용을 갈아 끼운다 — 마커를 차례로 누르면 이전 창이 닫힌다.
     const infoWindow = new maps.InfoWindow({ content: "", borderWidth: 0, disableAnchor: false });
 
+    // 작은 지도에서는 번호 마커도 함께 줄인다 — 26px짜리가 겹치면 동선이 가려진다.
+    const markerSize = interactive ? 26 : 18;
     stops.forEach((stop, i) => {
       const marker = new maps.Marker({
         position: positions[i],
         map,
         title: stop.name,
         icon: {
-          content: `<div style="background:#2f6f4f;color:#fff;border-radius:9999px;width:26px;height:26px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;box-shadow:0 1px 4px rgba(0,0,0,.35)">${stop.order}</div>`,
-          anchor: new maps.Point(13, 13),
+          content: `<div style="background:#145c45;color:#fff;border-radius:9999px;width:${markerSize}px;height:${markerSize}px;display:flex;align-items:center;justify-content:center;font-size:${interactive ? 12 : 10}px;font-weight:700;box-shadow:0 1px 4px rgba(0,0,0,.35)">${stop.order}</div>`,
+          anchor: new maps.Point(markerSize / 2, markerSize / 2),
         },
       });
+      if (!interactive) return;
       maps.Event.addListener(marker, "click", () => {
         infoWindow.setContent(previewContent(stop, onSelectPlace));
         infoWindow.open(map, marker);
@@ -112,7 +133,7 @@ export default function NaverMapView({
       new maps.Polyline({
         map,
         path: positions,
-        strokeColor: "#2f6f4f",
+        strokeColor: "#145c45",
         strokeWeight: 3,
         strokeOpacity: 0.8,
       });
@@ -145,12 +166,20 @@ export default function NaverMapView({
       infoWindow.close();
       map.destroy();
     };
-  }, [sdkReady, stops, showRoute, userPosition, onSelectPlace]);
+  }, [sdkReady, stops, showRoute, userPosition, onSelectPlace, interactive]);
 
   if (!clientId) {
+    // 키가 없을 때. 코스 카드의 작은 지도까지 설정 안내로 채우면 목록이 경고판이 되므로,
+    // 작은 지도는 자리만 비워 둔다.
     return (
-      <div className="flex h-64 items-center justify-center rounded-[var(--radius-card)] border border-dashed border-[var(--color-border)] p-4 text-center text-sm text-[var(--color-muted)]">
-        NEXT_PUBLIC_NCP_MAP_CLIENT_ID가 설정되지 않았습니다. .env.local을 확인하세요.
+      <div
+        className={`flex items-center justify-center rounded-[var(--radius-card)] border border-dashed border-[var(--color-border)] p-4 text-center text-[var(--color-subtle)] ${heightClass} ${
+          interactive ? "text-sm" : "text-xs"
+        }`}
+      >
+        {interactive
+          ? "NEXT_PUBLIC_NCP_MAP_CLIENT_ID가 설정되지 않았습니다. .env.local을 확인하세요."
+          : "지도를 불러올 수 없어요"}
       </div>
     );
   }
@@ -162,7 +191,13 @@ export default function NaverMapView({
         strategy="afterInteractive"
         onReady={() => setSdkReady(true)}
       />
-      <div ref={mapElRef} className={`w-full overflow-hidden rounded-[var(--radius-card)] ${heightClass}`} />
+      <div
+        ref={mapElRef}
+        aria-hidden={!interactive}
+        className={`w-full overflow-hidden rounded-[var(--radius-card)] ${heightClass} ${
+          interactive ? "" : "pointer-events-none"
+        }`}
+      />
     </>
   );
 }
@@ -183,7 +218,7 @@ function previewContent(stop: MapStop, onSelectPlace?: (place: DetailPlace) => v
   if (stop.place) {
     const category = document.createElement("div");
     category.textContent = stop.place.categoryLabel ?? CATEGORY_LABEL[stop.place.category];
-    category.style.cssText = "color:#6b7280;margin-top:1px";
+    category.style.cssText = "color:#4b5f59;margin-top:1px";
     box.append(category);
   }
 
@@ -194,7 +229,7 @@ function previewContent(stop: MapStop, onSelectPlace?: (place: DetailPlace) => v
     button.textContent = "상세보기 →";
     button.setAttribute("aria-haspopup", "dialog");
     button.style.cssText =
-      "margin-top:6px;color:#2f6f4f;font-weight:700;background:none;border:0;padding:0;cursor:pointer;font-size:12px";
+      "margin-top:6px;color:#145c45;font-weight:700;background:none;border:0;padding:0;cursor:pointer;font-size:12px";
     button.addEventListener("click", () => onSelectPlace(place));
     box.append(button);
   } else if (stop.url) {
@@ -203,7 +238,7 @@ function previewContent(stop: MapStop, onSelectPlace?: (place: DetailPlace) => v
     link.target = "_blank";
     link.rel = "noreferrer";
     link.textContent = "네이버 지도 →";
-    link.style.cssText = "display:inline-block;margin-top:6px;color:#2f6f4f;font-weight:700";
+    link.style.cssText = "display:inline-block;margin-top:6px;color:#145c45;font-weight:700";
     box.append(link);
   }
 

@@ -23,10 +23,16 @@ test("값이 없는 필드는 스냅샷에서 뺀다 — Firestore가 undefined�
   assert.deepEqual(snapshot.tags, ["healing"]);
 });
 
-test("코스 스팟으로 찜해도 시간대·추천 이유는 남기지 않는다", () => {
-  const stop: ItineraryStop = { ...place, timeSlot: "14:00-15:00", reason: "뷰가 좋아서" };
+test("코스 스팟으로 찜해도 시간대·이동시간·추천 이유는 남기지 않는다", () => {
+  const stop: ItineraryStop = {
+    ...place,
+    timeSlot: "14:00-15:00",
+    travelMinutes: 25,
+    reason: "뷰가 좋아서",
+  };
   const snapshot = toPlaceSnapshot(stop) as Partial<ItineraryStop>;
   assert.equal(snapshot.timeSlot, undefined);
+  assert.equal(snapshot.travelMinutes, undefined);
   assert.equal(snapshot.reason, undefined);
 });
 

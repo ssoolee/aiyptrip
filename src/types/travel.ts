@@ -28,13 +28,27 @@ export interface Place {
 
 export interface ItineraryStop extends Place {
   timeSlot: string;
+  // 직전 지점(그날 출발지 또는 앞 스팟)에서 여기까지 오는 데 걸리는 어림 시간(분).
+  // src/lib/agents/schedule.ts가 붙인다 — 실측 경로가 아니라 직선거리 기준이다.
+  travelMinutes?: number;
   // 큐레이션 코스(src/lib/data/mbtiCourses.json)에서 이 장소를 넣은 이유
   reason?: string;
+}
+
+/** 하루의 출발 또는 복귀 — "서울에서 09:00 출발, 65분" 같은 안내. */
+export interface ItineraryTransfer {
+  place: string;
+  at: string;
+  minutes: number;
 }
 
 export interface ItineraryDay {
   day: number;
   stops: ItineraryStop[];
+  // 그날 어디서 몇 시에 나서는지 (1일차는 서울, 그 뒤는 전날 묵은 숙소).
+  departure?: ItineraryTransfer;
+  // 마지막 날 서울로 돌아오는 시각. 숙소에서 하루를 마치는 날에는 없다.
+  arrival?: ItineraryTransfer;
 }
 
 export interface Course {
@@ -44,6 +58,9 @@ export interface Course {
   days: ItineraryDay[];
   // curated: 미리 만들어 둔 코스, generated: 에이전트 파이프라인이 만든 코스
   source?: "curated" | "generated";
+  // 왜 이 코스를 추천했는지 — 200자 안팎의 설명. 미리 만들어 둔 코스는 빌드 때
+  // (scripts/build-solo-courses.ts), 파이프라인 코스는 enrichment가 붙인다.
+  reason?: string;
   // 검증에서 걸러내지 못한 주의사항 (영업시간이 일정과 맞지 않을 수 있는 장소 등).
   // Firestore에 코스 전체가 저장되므로(src/lib/favorites.ts) 없을 때는 필드를 넣지 않는다.
   notice?: string;

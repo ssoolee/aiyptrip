@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { getPreset } from "@/lib/presets";
 import { generateCourses } from "@/lib/agents/orchestrator";
+import { getSoloCourses } from "@/lib/soloCourses";
 import { PresetType } from "@/types/travel";
 import CourseResults from "@/components/CourseResults";
 import PageHeader from "@/components/PageHeader";
@@ -28,7 +29,11 @@ export default async function CoursePresetPage({
   const durationDays = (Array.isArray(rawDays) ? rawDays[0] : rawDays) === "2" ? 2 : 1;
 
   const presetType = presetDef.type as PresetType;
-  const initialCourses = await generateCourses({ presetType, count: 3, durationDays });
+  // 혼자 여행은 테마별 코스를 미리 만들어 뒀다(src/lib/data/soloCourses.json) —
+  // 생성 대기 없이 바로 띄우고, "더 보기"는 파이프라인이 이어서 만든다.
+  const curated = presetType === "solo" ? getSoloCourses(durationDays) : [];
+  const initialCourses =
+    curated.length > 0 ? curated : await generateCourses({ presetType, count: 3, durationDays });
 
   return (
     <div className="mx-auto max-w-2xl pb-6 pt-6">
@@ -57,7 +62,7 @@ export default async function CoursePresetPage({
                 replace
                 className={`flex min-h-11 flex-1 items-center justify-center rounded-[var(--radius-button)] border text-sm font-semibold ${
                   active
-                    ? "border-[var(--color-primary)] bg-[var(--color-primary)] text-white"
+                    ? "border-[var(--color-primary)] bg-[var(--color-primary)] text-[var(--color-on-primary)]"
                     : "border-[var(--color-border)] bg-[var(--color-card)] text-[var(--color-muted)]"
                 }`}
               >

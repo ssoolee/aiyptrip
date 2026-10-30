@@ -17,8 +17,9 @@ import {
 import { getHoursStatus, parseBusinessHours, seoulNow } from "@/lib/businessHours";
 import { CATEGORY_LABEL } from "@/lib/categories";
 import { distanceKm, estimateMinutes, formatDistance, LatLng, nearest } from "@/lib/geo";
+import { formatDuration } from "@/lib/agents/schedule";
 import { useCurrentPosition } from "@/lib/useCurrentPosition";
-import { Course, ItineraryStop } from "@/types/travel";
+import { Course, ItineraryStop, ItineraryTransfer } from "@/types/travel";
 
 // docs/prd/02-map-realtime-location-prd.md §4 — 모바일은 지도/일정 탭 전환,
 // 데스크톱(sm↑)은 좌측 일정·우측 지도 2단.
@@ -78,6 +79,12 @@ function CourseDetail({ course }: { course: Course }) {
   );
   const closest = useMemo(() => (position ? nearest(position, stops) : null), [position, stops]);
 
+  // 코스 전체의 출발·복귀. 1일차 출발이 서울, 마지막 날 복귀가 서울이다.
+  // 찜해 둔 옛 코스에는 아직 없을 수 있어 있을 때만 보여준다.
+  const departure = course.days[0]?.departure;
+  const arrival = course.days[course.days.length - 1]?.arrival;
+  const trip = departure ? { departure, arrival } : null;
+
   return (
     <div className="mx-auto max-w-5xl px-4 pb-10 pt-6">
       <Link href="/" className="text-sm text-[var(--color-muted)]">
@@ -92,8 +99,22 @@ function CourseDetail({ course }: { course: Course }) {
         {course.days.length}일 코스 · {stops.length}곳
         {totalKm > 0 && ` · 전체 ${formatDistance(totalKm)}(직선거리)`}
       </p>
+      {/* 시각은 모두 서울에서 출발하는 사람 기준이다 (src/lib/agents/schedule.ts). */}
+      {trip && (
+        <p className="mt-1 text-sm font-semibold text-[var(--color-accent)]">
+          🚗 {trip.departure.place} {trip.departure.at} 출발
+          {trip.arrival && ` → ${trip.arrival.at} 복귀`}
+        </p>
+      )}
+      {/* 왜 이 코스인지 — 200자 안팎 (src/lib/agents/courseReason.ts) */}
+      {course.reason && (
+        <p className="mt-3 rounded-[var(--radius-card)] bg-[var(--color-character-ivory)] px-4 py-3 text-sm leading-relaxed text-[var(--color-muted)]">
+          <span aria-hidden className="mr-1">💧</span>
+          {course.reason}
+        </p>
+      )}
       {course.notice && (
-        <p className="mt-3 rounded-lg bg-amber-50 px-3 py-2 text-sm text-amber-900">⚠️ {course.notice}</p>
+        <p className="mt-3 notice rounded-xl px-3 py-2 text-sm">⚠️ {course.notice}</p>
       )}
 
       {/* 모바일에서만 보이는 전환 토글. 데스크톱은 두 단을 함께 보여준다. */}
@@ -107,7 +128,7 @@ function CourseDetail({ course }: { course: Course }) {
             onClick={() => setView(tab)}
             className={`min-h-11 flex-1 rounded-[var(--radius-button)] border text-sm font-semibold ${
               view === tab
-                ? "border-[var(--color-primary)] bg-[var(--color-primary)] text-white"
+                ? "border-[var(--color-primary)] bg-[var(--color-primary)] text-[var(--color-on-primary)]"
                 : "border-[var(--color-border)] bg-[var(--color-card)] text-[var(--color-muted)]"
             }`}
           >
@@ -123,21 +144,23 @@ function CourseDetail({ course }: { course: Course }) {
               {course.days.length > 1 && (
                 <h2 className="mb-2 text-sm font-bold text-[var(--color-primary)]">{day.day}일차</h2>
               )}
+              {day.departure && <TransferRow transfer={day.departure} kind="depart" />}
               <ol className="space-y-3">
-                {day.stops.map((stop) => {
+                {day.stops.map((stop, i) => {
                   const index = stops.indexOf(stop);
                   return (
                     <StopRow
                       key={stop.placeId}
                       stop={stop}
                       order={index + 1}
-                      nextStop={stops[index + 1]}
+                      nextStop={day.stops[i + 1]}
                       origin={position}
                       onOpen={() => setOpenPlace(stop)}
                     />
                   );
                 })}
               </ol>
+              {day.arrival && <TransferRow transfer={day.arrival} kind="arrive" />}
             </div>
           ))}
         </section>
@@ -165,13 +188,13 @@ function CourseDetail({ course }: { course: Course }) {
           </button>
 
           {error && (
-            <p role="status" className="mt-2 rounded-lg bg-amber-50 px-3 py-2 text-xs text-amber-900">
+            <p role="status" className="mt-2 notice rounded-xl px-3 py-2 text-xs">
               {error} 위치 없이도 코스와 동선은 그대로 볼 수 있어요.
             </p>
           )}
 
           {closest && (
-            <div className="mt-3 rounded-[var(--radius-card)] border border-[var(--color-border)] bg-[var(--color-card)] p-4">
+            <div className="mt-3 surface-card p-4">
               <p className="text-xs text-[var(--color-muted)]">현재 위치에서 가장 가까운 스팟</p>
               <p className="mt-0.5 font-semibold">{closest.item.name}</p>
               <p className="mt-0.5 text-xs text-[var(--color-muted)]">
@@ -212,9 +235,9 @@ function StopRow({
   const toNextKm = nextStop ? distanceKm(stop, nextStop) : null;
 
   return (
-    <li className="rounded-[var(--radius-card)] border border-[var(--color-border)] bg-[var(--color-card)] p-4">
+    <li className="surface-card p-4">
       <div className="flex items-start gap-3">
-        <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[var(--color-primary)] text-xs font-bold text-white">
+        <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[var(--color-primary)] text-xs font-bold text-[var(--color-on-primary)]">
           {order}
         </span>
         <div className="min-w-0 flex-1">
@@ -251,10 +274,31 @@ function StopRow({
 
       {toNextKm != null && (
         <p className="mt-2 text-center text-xs text-[var(--color-muted)]">
-          ↓ 다음 장소까지 {formatDistance(toNextKm)} · 차로 약 {estimateMinutes(toNextKm, "car")}분 (직선거리 어림값)
+          ↓ 다음 장소까지 {formatDistance(toNextKm)} · 차로 약{" "}
+          {/* 일정표의 시각을 만든 값과 같은 이동시간을 쓴다. 옛 코스에는 없어 그때만
+              화면에서 직접 어림한다. */}
+          {nextStop?.travelMinutes ?? estimateMinutes(toNextKm, "car")}분 (직선거리 어림값)
         </p>
       )}
     </li>
+  );
+}
+
+// 하루의 처음(서울·숙소 출발)과 끝(서울 복귀)에 붙는 줄.
+function TransferRow({ transfer, kind }: { transfer: ItineraryTransfer; kind: "depart" | "arrive" }) {
+  return (
+    <p
+      className={`flex items-center gap-2 rounded-[var(--radius-button)] border border-dashed border-[var(--color-border)] px-3 py-2 text-xs text-[var(--color-muted)] ${
+        kind === "depart" ? "mb-3" : "mt-3"
+      }`}
+    >
+      <span aria-hidden>{kind === "depart" ? "🚗" : "🏠"}</span>
+      <span>
+        <strong className="font-semibold text-[var(--foreground)]">{transfer.at}</strong>{" "}
+        {transfer.place} {kind === "depart" ? "출발" : "도착"} · 약 {formatDuration(transfer.minutes)}{" "}
+        이동 (어림값)
+      </span>
+    </p>
   );
 }
 
@@ -270,7 +314,7 @@ function NotFound() {
       </p>
       <Link
         href="/"
-        className="mt-5 inline-flex min-h-11 items-center justify-center rounded-[var(--radius-button)] bg-[var(--color-primary)] px-6 text-sm font-semibold text-white"
+        className="mt-5 inline-flex min-h-11 items-center justify-center rounded-[var(--radius-button)] bg-[var(--color-primary)] px-6 text-sm font-semibold text-[var(--color-on-primary)]"
       >
         코스 추천받기
       </Link>

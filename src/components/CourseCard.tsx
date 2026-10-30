@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import CourseRouteMap from "@/components/CourseRouteMap";
 import FavoriteButton from "@/components/FavoriteButton";
 import { cacheCourse } from "@/lib/courseCache";
 import PlaceDetailSheet, { DetailPlace } from "@/components/PlaceDetailSheet";
@@ -14,6 +15,8 @@ export default function CourseCard({ course }: { course: Course }) {
   // 열린 상세 시트의 스팟. null이면 닫힌 상태.
   const [openStop, setOpenStop] = useState<DetailPlace | null>(null);
   const [expanded, setExpanded] = useState(false);
+  // 추천 이유는 200자라 카드에서는 세 줄만 보여주고 눌러서 펼친다.
+  const [reasonOpen, setReasonOpen] = useState(false);
 
   const allStops = course.days.flatMap((day) => day.stops.map((stop) => ({ stop, day: day.day })));
   const visibleStops = expanded ? allStops : allStops.slice(0, PREVIEW_STOPS);
@@ -21,9 +24,11 @@ export default function CourseCard({ course }: { course: Course }) {
   // 첫 장소에 사진이 없으면(네이버 검색 장소) 사진이 있는 다음 장소를 표지로 쓴다.
   const coverPhoto = allStops.find(({ stop }) => stop.photos.length > 0)?.stop.photos[0];
   const multiDay = course.days.length > 1;
+  const departure = course.days[0]?.departure;
+  const arrival = course.days[course.days.length - 1]?.arrival;
 
   return (
-    <div className="relative overflow-hidden rounded-[var(--radius-card)] border border-[var(--color-border)] bg-[var(--color-card)]">
+    <div className="surface-card lift relative overflow-hidden">
       {coverPhoto && (
         // eslint-disable-next-line @next/next/no-img-element
         <img src={coverPhoto} alt={course.title} loading="lazy" className="h-40 w-full object-cover" />
@@ -36,24 +41,46 @@ export default function CourseCard({ course }: { course: Course }) {
           <span
             className={`mb-2 inline-block rounded-full px-2 py-0.5 text-xs font-medium ${
               course.source === "curated"
-                ? "bg-[var(--color-primary)] text-white"
+                ? "bg-[var(--color-primary)] text-[var(--color-on-primary)]"
                 : "bg-[var(--color-primary)]/10 text-[var(--color-primary)]"
             }`}
           >
             {course.source === "curated" ? "추천 코스" : "AI 추천"}
           </span>
         )}
-        <h3 className="mb-1 font-semibold leading-snug">
+        <h3 className="display mb-1 text-[17px] leading-snug">
           {/* 코스는 서버에 저장되지 않으므로, 상세 화면이 읽을 수 있게 담아 두고 이동한다. */}
           <Link href={`/course/detail/${course.courseId}`} onClick={() => cacheCourse(course)}>
             {course.title}
           </Link>
         </h3>
-        <p className="mb-3 text-xs text-[var(--color-muted)]">{course.days.length}일 코스</p>
+        <p className="mb-2 text-xs text-[var(--color-muted)]">{course.days.length}일 코스</p>
+        {/* 서울에서 출발하는 사람 기준 (src/lib/agents/schedule.ts). 찜해 둔 옛 코스에는
+            아직 없을 수 있어 있을 때만 보여준다. */}
+        {departure && (
+          <p className="mb-3 text-xs font-semibold text-[var(--color-accent)]">
+            🚗 {departure.at} {departure.place} 출발{arrival && ` · ${arrival.at} 복귀`}
+          </p>
+        )}
+        {/* 왜 이 코스인지 (src/lib/agents/courseReason.ts) */}
+        {course.reason && (
+          <button
+            type="button"
+            onClick={() => setReasonOpen((open) => !open)}
+            aria-expanded={reasonOpen}
+            className="mb-3 block w-full rounded-xl bg-[var(--color-character-ivory)] px-2.5 py-2 text-left text-xs leading-relaxed text-[var(--color-muted)]"
+          >
+            <span aria-hidden className="mr-1">💧</span>
+            <span className={reasonOpen ? "" : "line-clamp-2"}>{course.reason}</span>
+            <span className="mt-1 block font-semibold text-[var(--color-primary)]">
+              {reasonOpen ? "접기" : "추천 이유 보기"}
+            </span>
+          </button>
+        )}
         {course.notice && (
           // 검증 에이전트가 대체 후보를 찾지 못해 남긴 주의사항
           // (docs/agents/04-validation-agent.md "실패/재시도 처리")
-          <p className="mb-3 rounded-lg bg-amber-50 px-2.5 py-2 text-xs text-amber-900">⚠️ {course.notice}</p>
+          <p className="notice mb-3 rounded-xl px-2.5 py-2 text-xs">⚠️ {course.notice}</p>
         )}
         <ul className="space-y-1 text-sm">
           {visibleStops.map(({ stop, day }) => (
@@ -72,10 +99,13 @@ export default function CourseCard({ course }: { course: Course }) {
           </button>
         )}
 
+        {/* 코스 전체 동선을 작은 지도에 선으로 이어 보여준다 */}
+        <CourseRouteMap course={course} />
+
         <Link
           href={`/course/detail/${course.courseId}`}
           onClick={() => cacheCourse(course)}
-          className="mt-3 flex min-h-11 items-center justify-center rounded-[var(--radius-button)] border border-[var(--color-primary)] text-sm font-semibold text-[var(--color-primary)]"
+          className="mt-3 flex min-h-11 items-center justify-center rounded-[var(--radius-button)] border border-[var(--color-primary)] text-sm font-bold text-[var(--color-primary)] hover:bg-[var(--color-primary)]/10"
         >
           지도로 코스 보기 →
         </Link>

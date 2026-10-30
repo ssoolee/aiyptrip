@@ -231,12 +231,13 @@ export function isFavoritePlace(placeId: string): boolean {
   return placeStore.has(placeId);
 }
 
-// 코스 스팟(ItineraryStop)이 들어오면 시간대·추천 이유가 붙어 있다 — 장소 찜은
+// 코스 스팟(ItineraryStop)이 들어오면 시간대·이동시간·추천 이유가 붙어 있다 — 장소 찜은
 // 코스와 무관하므로(04 §3) 떼어 낸다. Firestore는 값이 undefined인 필드를 거부하므로
 // (전화번호·평점이 없는 장소가 많다) 빈 필드도 함께 지운다.
 export function toPlaceSnapshot(place: Place): Place {
   const snapshot: Record<string, unknown> = { ...place };
   delete snapshot["timeSlot"];
+  delete snapshot["travelMinutes"];
   delete snapshot["reason"];
   for (const key of Object.keys(snapshot)) {
     if (snapshot[key] === undefined) delete snapshot[key];

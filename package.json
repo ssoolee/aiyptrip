@@ -10,6 +10,7 @@
     "build:places": "tsx scripts/build-places.ts",
     "build:mbti": "tsx scripts/build-mbti-courses.ts",
     "build:pet": "tsx scripts/build-pet-places.ts",
+    "build:solo": "tsx scripts/build-solo-courses.ts",
     "test": "tsx --test \"src/**/*.test.ts\"",
     "build:hours": "tsx scripts/build-hours.ts",
     "pack:deploy": "tsx scripts/pack-deploy.ts"

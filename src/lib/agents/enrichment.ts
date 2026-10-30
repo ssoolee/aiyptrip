@@ -2,6 +2,7 @@ import { Course, ItineraryDay, PresetType } from "@/types/travel";
 import { getTourApiOverview } from "@/lib/api/tourApi";
 import { generateJson } from "@/lib/llm";
 import { courseSignature } from "@/lib/courseSignature";
+import { fallbackReason } from "@/lib/agents/courseReason";
 
 // docs/agents/05-enrichment-presentation-agent.md 참조.
 // 트립 타이틀과 TourAPI 장소 소개 요약을 LLM(src/lib/llm) 한 번의 호출로 생성한다
@@ -73,6 +74,11 @@ export async function enrichCourse(params: {
     presetType,
     days,
     source: "generated",
+    // 추천 이유는 코스에서 바로 계산한다 — LLM 호출에 실어 보내면 출력이 길어져
+    // 짧은 타임아웃(src/lib/llm/gemini.ts)에 걸리고, 그러면 제목까지 같이 잃는다.
+    // 미리 만들어 두는 혼자 여행 테마 코스는 응답 시간에 매이지 않아
+    // scripts/build-solo-courses.ts에서 LLM이 쓴 문장을 쓴다.
+    reason: fallbackReason(params.days),
     // undefined를 넣으면 Firestore 저장이 거부된다 — 값이 있을 때만 필드를 만든다.
     ...(notice ? { notice } : {}),
   };
