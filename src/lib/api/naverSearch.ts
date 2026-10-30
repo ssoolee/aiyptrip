@@ -115,6 +115,27 @@ export async function searchNaverPlaces(category: Category): Promise<Place[]> {
   return [...places.values()];
 }
 
+// "양평 추천 맛집"처럼 사람이 실제로 치는 검색어 그대로 조회한다. 지역 검색은
+// sort=comment(블로그·카페 리뷰가 많은 순)로 부르므로, 돌아오는 순서가 곧 리뷰 많은
+// 순이다 — 개수는 응답에 없어 블로그 검색으로 따로 센다(naverBlogSearch.ts).
+// 한 질의당 5건이 최대라, "추천 ○○"과 "○○" 두 가지로 후보를 넓힌다.
+export async function searchNaverRecommended(category: Category): Promise<Place[]> {
+  const keyword = QUERY_KEYWORD[category];
+  if (!keyword) return [];
+
+  const results = await Promise.all(
+    [`양평 추천 ${keyword}`, `양평 ${keyword}`].map((query) => searchLocal(query)),
+  );
+  const places = new Map<string, Place>();
+  for (const item of results.flat()) {
+    if (categoryOf(item) !== category || EXCLUDED_NAME.test(stripHtml(item.title ?? ""))) continue;
+    if (!`${item.roadAddress} ${item.address}`.includes("양평군")) continue;
+    const place = toPlace(item, category);
+    if (place && !places.has(place.placeId)) places.set(place.placeId, place);
+  }
+  return [...places.values()];
+}
+
 // 큐레이션 코스(scripts/build-mbti-courses.ts)의 장소 이름으로 양평군 업체 후보를 찾는다.
 // 카테고리는 원천 자료를 따르므로 업종 판별은 하지 않는다. 이름이 다른 업체가 섞여
 // 나오므로(실측: "두물머리" 검색 1위가 다른 카페) 어느 후보를 쓸지는 호출부가 이름으로 고른다.

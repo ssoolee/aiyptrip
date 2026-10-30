@@ -66,6 +66,17 @@ export interface Course {
   notice?: string;
 }
 
+/** 네이버 블로그 리뷰가 많은 순으로 뽑은 맛집·카페 (src/lib/data/topPlaces.json) */
+export interface TopPlace extends Place {
+  /** 네이버 블로그 검색 결과 수 — 평점·방문자 리뷰는 공개 API로 받을 수 없다. */
+  blogReviewCount: number;
+  /** 대표 블로그 글 한 건 (제목·주소) */
+  reviewTitle?: string;
+  reviewLink?: string;
+  /** 블로그 검색 전체 결과로 나가는 링크 */
+  reviewSearchUrl?: string;
+}
+
 // MBTI 유형별로 코스와 따로 보여주는 숙소·펜션 추천
 export interface LodgingPick extends Place {
   lodgingType: string;
