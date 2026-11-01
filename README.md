@@ -383,6 +383,12 @@ Hosting이 앞에 서면서 생긴 제약 세 가지를 알고 있어야 한다.
 ### 배포 방법
 
 **main에 푸시하면 GitHub Actions(`.github/workflows/deploy.yml`)가 빌드해서 올린다.**
+그러려면 저장소 시크릿 `GCP_SA_KEY`에 배포용 서비스 계정 키(JSON 전문)가 있어야 한다 —
+비어 있으면 `Failed to authenticate, have you run firebase login?`으로 떨어진다.
+계정에 필요한 역할은 Firebase Admin, Cloud Functions Developer, Service Account User,
+API Keys Viewer, Secret Manager Secret Accessor다. 공개 값(`NEXT_PUBLIC_*`)은 시크릿이
+아니라 커밋된 `.env.production`에서 읽는다.
+
 손으로 올릴 때는 빌드 산출물을 Hosting 몫과 함수 몫으로 나눈 뒤 배포한다.
 
 ```bash
