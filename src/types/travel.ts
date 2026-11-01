@@ -26,11 +26,24 @@ export interface Place {
   reviewSummary?: string;
 }
 
+/**
+ * 도로 경로의 한 점 — **[경도, 위도]** 순서다(네이버 Directions 응답 순서를 그대로 쓴다).
+ * `LatLng`는 `{lat, lng}`라서 순서가 반대다 — 다루는 함수는 src/lib/routePath.ts.
+ */
+export type RoutePoint = [lng: number, lat: number];
+
 export interface ItineraryStop extends Place {
   timeSlot: string;
-  // 직전 지점(그날 출발지 또는 앞 스팟)에서 여기까지 오는 데 걸리는 어림 시간(분).
-  // src/lib/agents/schedule.ts가 붙인다 — 실측 경로가 아니라 직선거리 기준이다.
+  // 직전 지점(그날 출발지 또는 앞 스팟)에서 여기까지 오는 데 걸리는 시간(분).
+  // src/lib/agents/schedule.ts가 붙인다. travelMeters가 함께 있으면 실측 주행값이고,
+  // 없으면 직선거리 기준 어림값이다.
   travelMinutes?: number;
+  // 직전 지점에서 여기까지의 실제 주행거리(m). 실측 구간에만 있다 —
+  // 이 필드의 존재 자체가 "실측"의 표식이라, 따로 플래그를 두지 않는다.
+  travelMeters?: number;
+  // 직전 지점에서 여기까지의 실제 도로 경로(단순화된 좌표). 지도가 직선 대신 이걸 그린다.
+  // 서울 출발·복귀 구간에는 넣지 않는다 — 지도는 양평만 보여주므로 쓰이지 않는다.
+  routeFromPrev?: RoutePoint[];
   // 큐레이션 코스(src/lib/data/mbtiCourses.json)에서 이 장소를 넣은 이유
   reason?: string;
 }
@@ -40,6 +53,8 @@ export interface ItineraryTransfer {
   place: string;
   at: string;
   minutes: number;
+  // 실제 주행거리(m). 있으면 minutes도 실측값이다 (ItineraryStop.travelMeters와 같은 규칙).
+  meters?: number;
 }
 
 export interface ItineraryDay {

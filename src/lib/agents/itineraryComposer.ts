@@ -1,6 +1,7 @@
 import { retrievePlaces } from "@/lib/agents/placeRetrieval";
-import { SEOUL_ORIGIN, scheduleItinerary } from "@/lib/agents/schedule";
+import { SEOUL_ORIGIN, courseLegPairs, scheduleItinerary } from "@/lib/agents/schedule";
 import { distanceKm, type LatLng } from "@/lib/geo";
+import { resolveRouteLegs } from "@/lib/routeLegs";
 import { Category, ItineraryDay, ItineraryStop, Place } from "@/types/travel";
 
 // docs/agents/03-itinerary-composer-agent.md 참조.
@@ -10,10 +11,13 @@ import { Category, ItineraryDay, ItineraryStop, Place } from "@/types/travel";
 // 서울 출발 시각 + 이동시간 + 체류시간을 이어 붙여 계산한다 — 그래서 템플릿에는
 // 고정 시간대("14:00-15:00")가 더 이상 없다.
 //
-// TODO: 실제 이동시간 계산(네이버 Directions/ODsay) 연동 시 driveMinutes를 교체한다.
-// (NCP Directions는 발급받은 키에 아직 상품 구독이 안 되어 있어 대기 중 —
-// docs/prd/02-map-realtime-location-prd.md §5의 "직선거리 fallback" 요건대로
-// 현재는 좌표 기반 어림값을 쓴다.)
+// 이동시간은 네이버 Directions로 실측한 주행값이다 — 구간 조회표를 받아 scheduleItinerary에
+// 넘긴다(src/lib/routeLegs.ts). 미리 받아 둔 구간(scripts/build-routes.ts)에 없는 구간만
+// 그때 호출하고, 그마저 실패하면 직선거리 어림값으로 메워진다
+// (docs/prd/02-map-realtime-location-prd.md §5의 "직선거리 fallback" 요건).
+//
+// 다음 스팟을 고르는 nearestCandidate는 아직 직선거리를 쓴다 — 후보 네 곳의 도로 거리를
+// 재려면 고르기 전에 그만큼 호출해야 해서, 코스 생성이 느려지는 값을 치르게 된다.
 
 // 하루 일정의 뼈대. 시간은 schedule.ts가 붙이므로 여기엔 순서만 적는다.
 type DayTemplate = { category: Category; skipOnLastDay?: boolean }[];
@@ -130,5 +134,7 @@ export async function composeItinerary(params: {
     if (lodging) origin = lodging;
   }
 
-  return scheduleItinerary(days);
+  // 파이프라인 코스는 장소 조합이 그때그때 달라 미리 받아 둘 수 없다 — 쓰는 구간만
+  // 모아 한 번에 채운다. 이미 받아 둔 구간은 호출하지 않는다.
+  return scheduleItinerary(days, await resolveRouteLegs(courseLegPairs(days)));
 }

@@ -238,6 +238,10 @@ export function toPlaceSnapshot(place: Place): Place {
   const snapshot: Record<string, unknown> = { ...place };
   delete snapshot["timeSlot"];
   delete snapshot["travelMinutes"];
+  delete snapshot["travelMeters"];
+  // 도로 경로는 "직전 스팟에서 여기까지"라 장소 하나만 찜할 때는 가리키는 곳이 없다.
+  // 구간당 1KB 가까이 되므로 떼어 내지 않으면 찜 문서가 그만큼 무거워진다.
+  delete snapshot["routeFromPrev"];
   delete snapshot["reason"];
   for (const key of Object.keys(snapshot)) {
     if (snapshot[key] === undefined) delete snapshot[key];

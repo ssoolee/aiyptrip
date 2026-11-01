@@ -9,7 +9,10 @@
 // 네 값 모두 API Gateway의 (API Key ID, API Key) 쌍이다 — 네이버 개발자센터의
 // X-Naver-Client-Id/Secret이 아니다. 예전 이름(NCP_MAP_CLIENT_ID 등)이 그렇게 읽혀
 // 혼동을 불러서, 용도와 정체가 드러나는 이름으로 바꿨다.
-// 아래 함수들은 실패하면 null을 반환해 호출부가 직선거리(haversine) 등으로 fallback한다.
+// 아래 함수들은 실패하면 null을 반환해 호출부가 직선거리(src/lib/geo.ts) 등으로 fallback한다.
+import { simplifyPath } from "@/lib/routePath";
+import type { RoutePoint } from "@/types/travel";
+
 const NCP_MAPS_API_BASE = "https://maps.apigw.ntruss.com";
 
 function apiGatewayHeaders(keyId: string | undefined, key: string | undefined): Record<string, string> | null {
@@ -54,42 +57,92 @@ export async function geocodeAddress(address: string): Promise<LatLng | null> {
   }
 }
 
-export interface DrivingRoute {
+/**
+ * 길찾기 옵션. 쿼리의 `option`과 응답의 `route.<option>` 키가 **같은 값**이어야 하므로
+ * 상수 하나로 묶어 둔다 — 한쪽만 바꾸면 응답을 못 찾아 조용히 null이 된다.
+ * `trafast`(실시간 빠른길)도 같은 모양을 주는 것을 확인했지만(2026-10-31 실측),
+ * 코스 시각은 특정 순간의 정체보다 평상시 경로가 맞아 최적 경로를 쓴다.
+ */
+const ROUTE_OPTION = "traoptimal";
+
+/**
+ * 한 번에 넣을 수 있는 지점 수. Directions 5는 경유지가 최대 5개라
+ * 출발 + 경유지 5 + 도착 = 7지점, 즉 한 호출에 구간 6개까지다.
+ * 더 긴 코스는 호출부가 이 수로 끊어 나눠 부른다.
+ */
+export const MAX_ROUTE_POINTS = 7;
+
+/** 실측한 한 구간 — 주행거리(m), 주행시간(ms), 그리고 단순화한 도로 경로. */
+export interface DrivingLeg {
   distanceMeters: number;
   durationMs: number;
+  path: RoutePoint[];
 }
 
-// 두 지점 간 자동차 이동거리/시간. 실패 시 null — 호출부가
-// haversineDistanceKm 등으로 직선거리 fallback 처리.
-export async function getDrivingRoute(from: LatLng, to: LatLng): Promise<DrivingRoute | null> {
+/**
+ * 지점들을 순서대로 이은 자동차 경로를 **구간별로** 돌려준다 (`points.length - 1`개).
+ *
+ * 경유지로 한 번에 묻는 이유는 응답이 구간별 거리·시간·`pointIndex`를 함께 주기 때문이다
+ * (`summary.waypoints[]`). 구간마다 따로 부르는 것과 값이 같은 것을 확인했으므로
+ * (경유지 응답의 첫 구간 7919m = 2지점 호출의 7919m, 2026-10-31 실측),
+ * 호출 수를 구간 수만큼 줄이면서 같은 결과를 얻는다.
+ *
+ * 경로는 저장·전송 전에 반드시 줄여야 하므로 **여기서 단순화해서 내보낸다** —
+ * 빌드 스크립트와 런타임 미스 경로가 서로 다른 모양을 쓰지 않게 하려는 것이다.
+ *
+ * 실패하면 null이고, 호출부는 직선거리 어림값으로 돌아간다.
+ */
+export async function getDrivingLegs(points: LatLng[]): Promise<DrivingLeg[] | null> {
   const headers = getMapsApiHeaders();
-  if (!headers) return null;
+  if (!headers || points.length < 2 || points.length > MAX_ROUTE_POINTS) return null;
 
   try {
     const qs = new URLSearchParams({
-      start: `${from.lng},${from.lat}`,
-      goal: `${to.lng},${to.lat}`,
+      start: `${points[0].lng},${points[0].lat}`,
+      goal: `${points[points.length - 1].lng},${points[points.length - 1].lat}`,
+      option: ROUTE_OPTION,
     });
-    const res = await fetch(`${NCP_MAPS_API_BASE}/map-direction/v1/driving?${qs.toString()}`, { headers });
+    const waypoints = points.slice(1, -1);
+    if (waypoints.length > 0) {
+      qs.set("waypoints", waypoints.map((p) => `${p.lng},${p.lat}`).join("|"));
+    }
+
+    const res = await fetch(`${NCP_MAPS_API_BASE}/map-direction/v1/driving?${qs.toString()}`, {
+      headers,
+      // 도로는 자주 바뀌지 않지만 소요시간은 교통을 타므로, 다른 외부 API와 같은 6시간 캐시.
+      next: { revalidate: 60 * 60 * 6 },
+    });
     if (!res.ok) return null;
     const data = await res.json();
     if (data?.code !== 0) return null;
-    const summary = data?.route?.traoptimal?.[0]?.summary;
-    if (!summary) return null;
-    return { distanceMeters: summary.distance, durationMs: summary.duration };
+    const route = data?.route?.[ROUTE_OPTION]?.[0];
+    const summary = route?.summary;
+    const path: RoutePoint[] = route?.path;
+    if (!summary || !Array.isArray(path) || path.length === 0) return null;
+
+    // summary.waypoints[i]는 "i번째 경유지까지의 구간" 값이다. 마지막 구간만 빠져 있어
+    // 전체 합에서 앞 구간들을 빼서 구한다.
+    const legs: { distanceMeters: number; durationMs: number }[] = (summary.waypoints ?? []).map(
+      (w: { distance: number; duration: number }) => ({ distanceMeters: w.distance, durationMs: w.duration }),
+    );
+    const used = legs.reduce(
+      (acc, leg) => ({ d: acc.d + leg.distanceMeters, t: acc.t + leg.durationMs }),
+      { d: 0, t: 0 },
+    );
+    legs.push({ distanceMeters: summary.distance - used.d, durationMs: summary.duration - used.t });
+    if (legs.length !== points.length - 1) return null;
+
+    // pointIndex로 경로를 구간별로 자른다. 경계점은 두 구간이 함께 가져야 선이 끊기지 않는다.
+    const bounds = [
+      0,
+      ...(summary.waypoints ?? []).map((w: { pointIndex: number }) => w.pointIndex),
+      path.length - 1,
+    ];
+    return legs.map((leg, i) => ({
+      ...leg,
+      path: simplifyPath(path.slice(bounds[i], bounds[i + 1] + 1)),
+    }));
   } catch {
     return null;
   }
-}
-
-// NCP Directions 구독 전/실패 시 사용하는 직선거리(km) fallback.
-export function haversineDistanceKm(a: LatLng, b: LatLng): number {
-  const R = 6371;
-  const dLat = ((b.lat - a.lat) * Math.PI) / 180;
-  const dLng = ((b.lng - a.lng) * Math.PI) / 180;
-  const lat1 = (a.lat * Math.PI) / 180;
-  const lat2 = (b.lat * Math.PI) / 180;
-  const h =
-    Math.sin(dLat / 2) ** 2 + Math.cos(lat1) * Math.cos(lat2) * Math.sin(dLng / 2) ** 2;
-  return 2 * R * Math.asin(Math.sqrt(h));
 }

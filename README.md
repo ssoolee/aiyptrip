@@ -43,6 +43,7 @@ npm run dev
 | `npm run import:pet -- <엑셀>` | 공개된 반려동물 동반 업소 현황 엑셀을 원천 목록에 합치기 |
 | `npm run build:top` | 블로그 리뷰가 많은 맛집·카페 `src/lib/data/topPlaces.json` 재생성 |
 | `npm run build:hours` | 장소 스냅샷의 영업시간만 다시 수집 |
+| `npm run build:routes` | 코스 구간의 실측 주행경로 `src/lib/data/routeLegs.json` 재생성 (`-- --force`로 소요시간 재측정) |
 
 `build:*` 스크립트는 외부 API와 LLM을 호출하므로 `.env.local`이 채워져 있어야 한다.
 요청마다 검색·태깅하지 않도록 **오프라인에서 한 번 만들어 커밋하는** 캐시이며,

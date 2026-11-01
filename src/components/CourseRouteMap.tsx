@@ -2,10 +2,11 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import NaverMapView, { MapStop } from "@/components/NaverMapView";
-import { distanceKm, formatDistance } from "@/lib/geo";
+import { courseDistance, routeLegsOf } from "@/lib/courseRoute";
+import { formatDistance } from "@/lib/geo";
 import { Course } from "@/types/travel";
 
-// 코스 카드에 들어가는 작은 동선 지도 — 스팟을 번호 순서대로 선으로 이어 보여준다.
+// 코스 카드에 들어가는 작은 동선 지도 — 스팟을 번호 순서대로 실제 도로 경로로 이어 보여준다.
 // 누르거나 끌 수 없는 그림이라(NaverMapView interactive=false), 목록을 넘기다 손가락이
 // 지도에 걸리지 않는다. 자세히 보려면 카드의 "지도로 코스 보기"로 들어간다.
 //
@@ -21,11 +22,10 @@ export default function CourseRouteMap({ course }: { course: Course }) {
     () => stops.map((stop, i) => ({ lat: stop.lat, lng: stop.lng, name: stop.name, order: i + 1 })),
     [stops],
   );
-  // 스팟 사이 직선거리 합 — 주행거리가 아니라 동선의 규모를 가늠하는 값이다.
-  const totalKm = useMemo(
-    () => stops.slice(1).reduce((sum, stop, i) => sum + distanceKm(stops[i], stop), 0),
-    [stops],
-  );
+  // 지도를 다시 만들지 않도록 메모해서 넘긴다 — NaverMapView의 효과 의존성에 들어간다.
+  const routeLegs = useMemo(() => routeLegsOf(stops), [stops]);
+  // 전 구간이 실측이면 주행거리, 아니면 스팟 사이 직선거리 합.
+  const total = useMemo(() => courseDistance(course.days), [course]);
 
   useEffect(() => {
     const box = boxRef.current;
@@ -51,13 +51,13 @@ export default function CourseRouteMap({ course }: { course: Course }) {
   return (
     <div ref={boxRef} className="mt-3">
       {visible ? (
-        <NaverMapView stops={mapStops} heightClass="h-32" interactive={false} />
+        <NaverMapView stops={mapStops} routeLegs={routeLegs} heightClass="h-32" interactive={false} />
       ) : (
         <div className="h-32 w-full rounded-[var(--radius-card)] bg-[var(--color-character-ivory)]" />
       )}
       <p className="mt-1 text-center text-[11px] text-[var(--color-subtle)]">
         {stops.length}곳을 차례로 이은 동선
-        {totalKm > 0 && ` · 전체 ${formatDistance(totalKm)}(직선거리)`}
+        {total.km > 0 && ` · 전체 ${formatDistance(total.km)}(${total.measured ? "주행거리" : "직선거리"})`}
       </p>
     </div>
   );

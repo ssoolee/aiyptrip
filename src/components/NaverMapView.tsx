@@ -4,6 +4,7 @@ import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import Script from "next/script";
 import { CATEGORY_LABEL } from "@/lib/categories";
 import type { LatLng } from "@/lib/geo";
+import type { RoutePoint } from "@/types/travel";
 import type { DetailPlace } from "@/components/PlaceDetailSheet";
 
 // docs/prd/02-map-realtime-location-prd.md 참조.
@@ -84,6 +85,7 @@ function subscribeAuthFailure(notify: () => void): () => void {
 export default function NaverMapView({
   stops,
   showRoute = true,
+  routeLegs,
   userPosition,
   onSelectPlace,
   heightClass = "h-64 sm:h-96",
@@ -91,6 +93,10 @@ export default function NaverMapView({
 }: {
   stops: MapStop[];
   showRoute?: boolean;
+  // 스팟 사이 실제 도로 경로. 길이는 stops.length - 1이고 i번째가 stops[i]→stops[i+1] 구간이다.
+  // 없는 구간은 지금까지처럼 직선으로 잇는다 — 캐시 미스나 옛 찜 스냅샷에서 그렇게 된다.
+  // 지도를 다시 만들지 않도록 호출자가 메모해 넘긴다(의존성에 들어간다).
+  routeLegs?: (RoutePoint[] | undefined)[];
   // 화면마다 지도 높이가 다르다 (코스 상세는 모바일에서 화면의 45%).
   heightClass?: string;
   // false면 동선만 보여주는 그림이 된다 — 코스 카드처럼 목록 안에 놓이는 작은 지도용.
@@ -159,17 +165,31 @@ export default function NaverMapView({
       });
     });
 
+    const bounded = [...positions];
+
     if (showRoute && positions.length > 1) {
-      new maps.Polyline({
-        map,
-        path: positions,
-        strokeColor: "#145c45",
-        strokeWeight: 3,
-        strokeOpacity: 0.8,
-      });
+      // 구간마다 따로 그린다 — 실측 경로가 있는 구간과 없는 구간이 한 코스에 섞일 수 있고
+      // (캐시 미스·옛 찜 스냅샷), 그때 어느 쪽인지 지도만 보고도 알 수 있어야 한다.
+      for (let i = 0; i < positions.length - 1; i += 1) {
+        const road = routeLegs?.[i];
+        const path = road?.length
+          ? road.map(([lng, lat]) => new maps.LatLng(lat, lng))
+          : [positions[i], positions[i + 1]];
+        new maps.Polyline({
+          map,
+          path,
+          strokeColor: "#145c45",
+          strokeWeight: 3,
+          // 실측 도로는 또렷한 실선, 어림 직선은 흐린 점선.
+          strokeOpacity: road?.length ? 0.8 : 0.45,
+          strokeStyle: road?.length ? "solid" : "shortdash",
+        });
+        // 도로는 스팟을 이은 사각형 밖으로 부푼다(산을 돌아가는 구간). 경로를 넣지 않으면
+        // fitBounds가 선의 바깥쪽을 잘라 낸다.
+        if (road?.length) path.forEach((p) => bounded.push(p));
+      }
     }
 
-    const bounded = [...positions];
     if (userPosition) {
       const here = new maps.LatLng(userPosition.lat, userPosition.lng);
       new maps.Marker({
@@ -196,7 +216,7 @@ export default function NaverMapView({
       infoWindow.close();
       map.destroy();
     };
-  }, [sdkReady, stops, showRoute, userPosition, onSelectPlace, interactive]);
+  }, [sdkReady, stops, showRoute, routeLegs, userPosition, onSelectPlace, interactive]);
 
   if (!keyId || authFailed) {
     // 키가 없거나(개발) 인증이 거절됐을 때(운영). 코스 카드의 작은 지도까지 안내로 채우면

@@ -1,5 +1,6 @@
 import { SNAPSHOT_PLACES } from "@/lib/data/placeSnapshot";
 import { scheduleItinerary } from "@/lib/agents/schedule";
+import { staticLegLookup } from "@/lib/routeLegs";
 import { validateItinerary } from "@/lib/agents/validation";
 import { Course, ItineraryStop, Place } from "@/types/travel";
 
@@ -41,6 +42,11 @@ export function withHoursNotice(course: Course): Course {
 /**
  * 얼려 둔 코스를 오늘 쓸 수 있는 코스로 되살린다 — 장소 사실 갱신 → 시각 재계산
  * (서울 09:00 출발 + 이동·체류시간) → 영업시간 주의 문구.
+ *
+ * 이동시간은 미리 받아 둔 실측 구간(src/lib/data/routeLegs.json)을 쓴다. 목록을 그릴
+ * 때마다 도는 함수라 **동기로 유지**하는 것이 중요하다 — 여기서 Directions를 부르면
+ * 한 화면에 수십 번 왕복이 생겨 미리 만들어 둔 코스의 이점이 사라진다.
+ * 표에 없는 구간은 직선거리 어림값으로 메워진다.
  */
 export function rehydrateCourse(course: Course): Course {
   return withHoursNotice({
@@ -50,6 +56,7 @@ export function rehydrateCourse(course: Course): Course {
         ...day,
         stops: day.stops.map((stop) => withFreshFacts<ItineraryStop>(stop)),
       })),
+      staticLegLookup,
     ),
   });
 }

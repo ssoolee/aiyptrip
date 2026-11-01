@@ -1,5 +1,5 @@
 import { distanceKm, type LatLng } from "@/lib/geo";
-import { Category, ItineraryDay, ItineraryStop } from "@/types/travel";
+import { Category, ItineraryDay, ItineraryStop, type RoutePoint } from "@/types/travel";
 
 // 코스의 시각을 "서울에서 출발하는 사람" 기준으로 계산한다.
 //
@@ -9,9 +9,15 @@ import { Category, ItineraryDay, ItineraryStop } from "@/types/travel";
 //   도착 = 직전 지점 종료 + 이동시간,  종료 = 시작 + 체류시간
 // 을 사슬처럼 이어 실제로 돌 수 있는 시각을 만든다.
 //
-// 이동시간은 아직 어림값이다 — 실측 경로 API(NCP Directions / ODsay)는 키에 상품
-// 구독이 안 되어 대기 중이고(docs/prd/02-map-realtime-location-prd.md §5),
-// 그동안은 직선거리에 거리대별 평균 속도를 적용한다. 화면에서도 어림값임을 밝힌다.
+// 이동시간은 네이버 Directions로 실측한 주행시간을 쓴다
+// (docs/prd/02-map-realtime-location-prd.md §5). 다만 이 모듈은 **직접 조회하지 않는다** —
+// 구간 조회표를 인자로 받고, 없는 구간은 직선거리 어림값으로 메운다. 이유가 둘이다:
+//   1) 이 파일은 클라이언트 컴포넌트가 formatDuration 때문에 import한다. 여기서 경로
+//      캐시(src/lib/data/routeLegs.json)를 읽으면 그 JSON이 브라우저 번들에 실린다.
+//   2) rehydrateCourse(src/lib/curation.ts)가 목록을 그릴 때마다 이 함수를 다시 돌린다.
+//      여기서 네트워크를 타면 미리 만들어 둔 코스를 쓰는 의미가 사라진다
+//      (PRD-01 §8 "사전 생성 코스 노출 ≤ 0.5초").
+// 조회표를 만드는 쪽은 src/lib/routeLegs.ts다.
 
 /** 서울 출발지 기준점 — 서울시청. */
 export const SEOUL_ORIGIN: LatLng = { lat: 37.5665, lng: 126.978 };
@@ -49,10 +55,98 @@ function averageKmh(km: number): number {
   return 42;
 }
 
-/** 두 지점 사이 자동차 이동시간 어림값(분). 5분 단위로 끊어 읽기 쉽게 한다. */
+/**
+ * 두 지점 사이 자동차 이동시간 어림값(분). 5분 단위로 끊어 읽기 쉽게 한다.
+ * 실측 구간을 못 찾았을 때의 폴백이자, 실측값이 터무니없는지 재는 기준이기도 하다.
+ */
 export function driveMinutes(from: LatLng, to: LatLng): number {
   const km = distanceKm(from, to);
   return Math.max(5, Math.round((km / averageKmh(km)) * 60 / 5) * 5);
+}
+
+/** 실측한 한 구간 — 주행거리(m), 주행시간(분), 그리고 지도에 그릴 도로 경로. */
+export interface RouteLeg {
+  meters: number;
+  minutes: number;
+  /** 단순화된 도로 경로. 서울 출발·복귀 구간처럼 지도에 안 그리는 구간에는 없다. */
+  path?: RoutePoint[];
+}
+
+/** 구간 조회 함수. 못 찾으면 undefined를 주고, 그 구간은 어림값으로 메워진다. */
+export type RouteLegLookup = (from: LatLng, to: LatLng) => RouteLeg | undefined;
+
+/** 코스가 쓰는 한 구간 — 어디서 어디로, 그리고 어떤 성격의 구간인지. */
+export interface CourseLeg {
+  from: LatLng;
+  to: LatLng;
+  /** origin: 그날 출발지→첫 스팟, stop: 스팟→스팟, home: 마지막 스팟→서울 */
+  kind: "origin" | "stop" | "home";
+}
+
+/**
+ * 이 코스가 쓰는 구간을 순서대로 모두 열거한다.
+ *
+ * {@link scheduleItinerary}가 바로 이 목록을 그대로 소비하므로, 미리 경로를 받아 둘 쪽
+ * (scripts/build-routes.ts, src/lib/routeLegs.ts)이 같은 함수를 쓰면 캐시가 어긋날 수 없다.
+ * 구간 열거를 두 군데에 적어 두면 한쪽만 고쳤을 때 캐시가 조용히 전부 미스가 된다.
+ */
+export function courseLegPairs(days: ItineraryDay[]): CourseLeg[] {
+  const pairs: CourseLeg[] = [];
+  let origin = SEOUL_ORIGIN;
+
+  days.forEach((day, index) => {
+    let from: LatLng = origin;
+    day.stops.forEach((stop, i) => {
+      pairs.push({ from, to: stop, kind: i === 0 ? "origin" : "stop" });
+      from = stop;
+    });
+
+    // 이 날 묵는 숙소가 다음 날의 출발지가 된다.
+    const lodging = day.stops.find((stop) => stop.category === "lodging");
+    if (lodging) origin = lodging;
+    // 숙소에서 하루를 마치는 날은 돌아갈 곳이 없다.
+    if (index === days.length - 1 && !lodging && day.stops.length > 0) {
+      pairs.push({ from, to: SEOUL_ORIGIN, kind: "home" });
+    }
+  });
+
+  return pairs;
+}
+
+/**
+ * 실측 주행거리에 거리대별 평균 속도를 적용한 시간(분).
+ * 거리는 실측이고 시간만 의심스러울 때 쓴다 — 직선거리로 되돌리는 것보다 정확하다.
+ */
+function roadMinutes(meters: number): number {
+  const km = meters / 1000;
+  return Math.max(5, Math.round((km / averageKmh(km)) * 60 / 5) * 5);
+}
+
+/**
+ * 실측 주행거리는 믿을 수 없을 만큼 길어도 그대로 믿는다 — 양평은 강과 산을 돌아가서
+ * 도로가 직선거리의 세 배를 넘는 구간이 135개 중 7개이고 최대 5.8배다(2026-10-31 실측).
+ * 직선거리로 상한을 두면 그런 정상 구간을 버리게 된다.
+ *
+ * 의심해야 하는 쪽은 **시간**이다. Directions의 duration은 호출 시점의 교통을 반영하므로,
+ * 사고로 막힌 순간에 받은 값이 캐시에 박히면 코스 시각 전체가 그 한 구간 때문에 밀린다.
+ * 실측 거리와 시간이 만드는 평균 속도로 가린다 — 실측 구간의 최저가 시속 15.3km이고
+ * 10km/h 미만은 하나도 없으므로, 그 아래는 측정 당시의 정체로 본다.
+ * 그때도 거리와 경로는 실측값을 쓰고 시간만 {@link roadMinutes}로 바꾼다.
+ */
+const MIN_PLAUSIBLE_KMH = 10;
+
+function resolveLeg(from: LatLng, to: LatLng, legs?: RouteLegLookup): { minutes: number; leg?: RouteLeg } {
+  const measured = legs?.(from, to);
+  if (!measured) return { minutes: driveMinutes(from, to) };
+
+  // 아주 짧은 구간은 최소 5분이라 평균 속도가 낮게 나온다 — 정체로 볼 수 없다.
+  const impliedKmh = measured.meters / 1000 / (measured.minutes / 60);
+  if (measured.meters > 1000 && impliedKmh < MIN_PLAUSIBLE_KMH) {
+    const minutes = roadMinutes(measured.meters);
+    return { minutes, leg: { ...measured, minutes } };
+  }
+
+  return { minutes: measured.minutes, leg: measured };
 }
 
 /** 걸리는 시간을 사람이 읽는 말로 — 65 → "1시간 5분", 45 → "45분". */
@@ -80,11 +174,17 @@ export function formatClock(minutes: number): string {
  * - 마지막 날 마지막 스팟 뒤에는 서울로 돌아가는 시간을 붙인다.
  *
  * 들어온 코스의 장소·순서는 바꾸지 않는다 — 시각만 다시 쓴다.
+ *
+ * @param legs 실측 구간 조회표(선택). 주면 그 구간의 주행시간·거리·경로를 쓰고,
+ *   없는 구간은 {@link driveMinutes} 어림값으로 메운다. 이 함수가 스스로 조회하지
+ *   않는 이유는 파일 머리말에 적었다.
  */
-export function scheduleItinerary(days: ItineraryDay[]): ItineraryDay[] {
-  let origin = SEOUL_ORIGIN;
+export function scheduleItinerary(days: ItineraryDay[], legs?: RouteLegLookup): ItineraryDay[] {
   let originLabel = SEOUL_LABEL;
   let departAt = DEPART_SEOUL_MINUTES;
+  // courseLegPairs가 넘겨 주는 순서대로 소비한다 — 구간 열거를 한 곳에만 두기 위해서다.
+  const pairs = courseLegPairs(days);
+  let cursor = 0;
 
   return days.map((day, index) => {
     const isLastDay = index === days.length - 1;
@@ -92,15 +192,20 @@ export function scheduleItinerary(days: ItineraryDay[]): ItineraryDay[] {
     const dayOriginLabel = originLabel;
     const dayDepartAt = departAt;
     const stops: ItineraryStop[] = [];
-    let from = origin;
     let clock = dayDepartAt;
     let meals = 0;
     let firstLeg = 0;
+    let firstLegMeters: number | undefined;
     let firstStart = dayDepartAt;
 
     for (const stop of day.stops) {
-      const travel = driveMinutes(from, stop);
-      if (stops.length === 0) firstLeg = travel;
+      const pair = pairs[cursor];
+      cursor += 1;
+      const { minutes: travel, leg } = resolveLeg(pair.from, pair.to, legs);
+      if (stops.length === 0) {
+        firstLeg = travel;
+        firstLegMeters = leg?.meters;
+      }
 
       let start = clock + travel;
       if (stop.category === "restaurant") {
@@ -110,20 +215,28 @@ export function scheduleItinerary(days: ItineraryDay[]): ItineraryDay[] {
       }
       if (stops.length === 0) firstStart = start;
       const dwell = DWELL_MINUTES[stop.category];
-      stops.push({
+      const timed: ItineraryStop = {
         ...stop,
         timeSlot: dwell > 0 ? `${formatClock(start)}-${formatClock(start + dwell)}` : formatClock(start),
         travelMinutes: travel,
-      });
+      };
+      // 어림값으로 메운 구간에는 실측 흔적을 남기지 않는다 — 들어온 코스에 지난번 실측값이
+      // 붙어 있을 수 있고(커밋된 큐레이션 JSON·옛 찜 스냅샷), 그대로 두면 어림값이
+      // 실측으로 보인다. Firestore가 undefined를 거부하므로 키 자체를 지운다.
+      delete timed.travelMeters;
+      delete timed.routeFromPrev;
+      if (leg) {
+        timed.travelMeters = leg.meters;
+        if (leg.path) timed.routeFromPrev = leg.path;
+      }
+      stops.push(timed);
 
       clock = start + dwell;
-      from = stop;
     }
 
-    // 이 날 묵는 숙소가 다음 날의 출발지가 된다.
+    // 이 날 묵는 숙소가 다음 날의 출발지가 된다 (구간 자체는 courseLegPairs가 이미 안다).
     const lodging = day.stops.find((stop) => stop.category === "lodging");
     if (lodging) {
-      origin = lodging;
       originLabel = lodging.name;
       departAt = CHECKOUT_MINUTES;
     }
@@ -134,10 +247,14 @@ export function scheduleItinerary(days: ItineraryDay[]): ItineraryDay[] {
       // (하한은 출발 시각이라, 기다릴 일이 없는 코스는 09:00/10:00 그대로다.)
       const leaveAt = Math.max(dayDepartAt, firstStart - firstLeg);
       scheduled.departure = { place: dayOriginLabel, at: formatClock(leaveAt), minutes: firstLeg };
+      if (firstLegMeters !== undefined) scheduled.departure.meters = firstLegMeters;
       // 숙소에서 하루를 마치는 날은 돌아갈 곳이 없다.
       if (isLastDay && !lodging) {
-        const home = driveMinutes(from, SEOUL_ORIGIN);
+        const pair = pairs[cursor];
+        cursor += 1;
+        const { minutes: home, leg } = resolveLeg(pair.from, pair.to, legs);
         scheduled.arrival = { place: SEOUL_LABEL, at: formatClock(clock + home), minutes: home };
+        if (leg) scheduled.arrival.meters = leg.meters;
       }
     }
     return scheduled;

@@ -1,7 +1,12 @@
 // 좌표 기반 거리·소요시간 어림값.
 // docs/prd/02-map-realtime-location-prd.md §5는 경로 API(네이버 Directions 5 / ODsay)를
-// 우선 쓰고 실패 시 "좌표 기반 직선거리 fallback"을 두라고 적는다. 지금은 발급받은 NCP 키에
-// Directions 상품 구독이 안 되어 있어 이 fallback만 쓴다 — 화면에서도 직선거리임을 밝힌다.
+// 우선 쓰고 실패 시 "좌표 기반 직선거리 fallback"을 두라고 적는다. 여기가 그 fallback이다.
+//
+// 코스 구간의 이동시간은 실측 주행값을 쓴다(src/lib/routeLegs.ts). 이 파일의 어림값이
+// 여전히 필요한 곳은 두 군데다:
+//   - 실측 구간을 못 찾았을 때의 폴백 (src/lib/agents/schedule.ts)
+//   - "현재 위치에서 가장 가까운 스팟" — 사용자 위치가 끼는 좌표라 미리 받아 둘 수 없다
+// 화면은 어림값으로 적은 숫자에만 "(어림값)"을 붙인다.
 
 export interface LatLng {
   lat: number;
