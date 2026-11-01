@@ -1,6 +1,109 @@
 {
- "generatedAt": null,
+ "generatedAt": "2026-10-30T11:50:37.227Z",
  "basis": "네이버 지역 검색(양평 추천 맛집/카페) 결과를 네이버 블로그 글 수로 다시 정렬",
- "cafe": [],
- "restaurant": []
+ "cafe": [
+  {
+   "placeId": "naver_1273529941_375984976",
+   "name": "하우스 베이커리",
+   "category": "cafe",
+   "categoryLabel": "카페,디저트>베이커리",
+   "lat": 37.5984976,
+   "lng": 127.3529941,
+   "address": "경기도 양평군 서종면 북한강로 684 하우스베이커리",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/24/2794724_image2_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%ED%95%98%EC%9A%B0%EC%8A%A4%20%EB%B2%A0%EC%9D%B4%EC%BB%A4%EB%A6%AC%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%84%9C%EC%A2%85%EB%A9%B4%20%EB%B6%81%ED%95%9C%EA%B0%95%EB%A1%9C%20684%20%ED%95%98%EC%9A%B0%EC%8A%A4%EB%B2%A0%EC%9D%B4%EC%BB%A4%EB%A6%AC",
+   "tags": [],
+   "blogReviewCount": 6847,
+   "reviewTitle": "(내돈내산)양평 하우스베이커리 후기 | 블루리본 베이커리 카페 가....",
+   "reviewLink": "https://blog.naver.com/dalnimfam/224446535146",
+   "reviewSearchUrl": "https://search.naver.com/search.naver?ssc=tab.blog.all&query=%EC%96%91%ED%8F%89%20%ED%95%98%EC%9A%B0%EC%8A%A4%20%EB%B2%A0%EC%9D%B4%EC%BB%A4%EB%A6%AC%20%ED%9B%84%EA%B8%B0"
+  },
+  {
+   "placeId": "naver_1274249258_375088187",
+   "name": "구벼울",
+   "category": "cafe",
+   "categoryLabel": "음식점>카페,디저트",
+   "lat": 37.5088187,
+   "lng": 127.4249258,
+   "address": "경기도 양평군 옥천면 남한강변길 123-19",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%EA%B5%AC%EB%B2%BC%EC%9A%B8%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%98%A5%EC%B2%9C%EB%A9%B4%20%EB%82%A8%ED%95%9C%EA%B0%95%EB%B3%80%EA%B8%B8%20123-19",
+   "tags": [],
+   "blogReviewCount": 4328,
+   "reviewTitle": "양평 남한강뷰 대형카페 구벼울 솔직후기",
+   "reviewLink": "https://blog.naver.com/yase90/224452537332",
+   "reviewSearchUrl": "https://search.naver.com/search.naver?ssc=tab.blog.all&query=%EC%96%91%ED%8F%89%20%EA%B5%AC%EB%B2%BC%EC%9A%B8%20%ED%9B%84%EA%B8%B0"
+  },
+  {
+   "placeId": "naver_1273547638_376249287",
+   "name": "테라로사 서종점",
+   "category": "cafe",
+   "categoryLabel": "카페,디저트>카페",
+   "lat": 37.6249287,
+   "lng": 127.3547638,
+   "address": "경기도 양평군 서종면 북한강로 990",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%ED%85%8C%EB%9D%BC%EB%A1%9C%EC%82%AC%20%EC%84%9C%EC%A2%85%EC%A0%90%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%84%9C%EC%A2%85%EB%A9%B4%20%EB%B6%81%ED%95%9C%EA%B0%95%EB%A1%9C%20990",
+   "tags": [],
+   "blogReviewCount": 3809,
+   "reviewTitle": "서울 근교 양평 대형 카페 \"테라로사 서종점\"ㅣ노트북 작업하기 좋....",
+   "reviewLink": "https://blog.naver.com/kjhwjdgk98/224452266007",
+   "reviewSearchUrl": "https://search.naver.com/search.naver?ssc=tab.blog.all&query=%EC%96%91%ED%8F%89%20%ED%85%8C%EB%9D%BC%EB%A1%9C%EC%82%AC%20%EC%84%9C%EC%A2%85%EC%A0%90%20%ED%9B%84%EA%B8%B0"
+  }
+ ],
+ "restaurant": [
+  {
+   "placeId": "naver_1273168078_375348077",
+   "name": "두물머리연핫도그",
+   "category": "restaurant",
+   "categoryLabel": "음식점>핫도그",
+   "lat": 37.5348077,
+   "lng": 127.3168078,
+   "address": "경기도 양평군 양서면 두물머리길 103-8",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%EB%91%90%EB%AC%BC%EB%A8%B8%EB%A6%AC%EC%97%B0%ED%95%AB%EB%8F%84%EA%B7%B8%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%96%91%EC%84%9C%EB%A9%B4%20%EB%91%90%EB%AC%BC%EB%A8%B8%EB%A6%AC%EA%B8%B8%20103-8",
+   "tags": [],
+   "blogReviewCount": 17155,
+   "reviewTitle": "양평 두물머리 드라이브 갔다가 연핫도그 내돈내산 후기",
+   "reviewLink": "https://blog.naver.com/jinsshung/224453469920",
+   "reviewSearchUrl": "https://search.naver.com/search.naver?ssc=tab.blog.all&query=%EC%96%91%ED%8F%89%20%EB%91%90%EB%AC%BC%EB%A8%B8%EB%A6%AC%EC%97%B0%ED%95%AB%EB%8F%84%EA%B7%B8%20%ED%9B%84%EA%B8%B0"
+  },
+  {
+   "placeId": "naver_1274633019_375127462",
+   "name": "대디스바베큐",
+   "category": "restaurant",
+   "categoryLabel": "한식>육류,고기요리",
+   "lat": 37.5127462,
+   "lng": 127.4633019,
+   "address": "경기도 양평군 옥천면 옥천문화마을3길 15-24 대디스바베큐",
+   "photos": [
+    "http://tong.visitkorea.or.kr/cms/resource/05/2854205_image2_1.jpg",
+    "http://tong.visitkorea.or.kr/cms/resource/05/2854205_image3_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EB%8C%80%EB%94%94%EC%8A%A4%EB%B0%94%EB%B2%A0%ED%81%90%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%98%A5%EC%B2%9C%EB%A9%B4%20%EC%98%A5%EC%B2%9C%EB%AC%B8%ED%99%94%EB%A7%88%EC%9D%843%EA%B8%B8%2015-24%20%EB%8C%80%EB%94%94%EC%8A%A4%EB%B0%94%EB%B2%A0%ED%81%90",
+   "tags": [],
+   "blogReviewCount": 3309,
+   "reviewTitle": "양평 옥천 바베큐 맛집 대디스바베큐 | 캠핑 온 듯한 항아리바베큐",
+   "reviewLink": "https://blog.naver.com/epo_che_/224453858728",
+   "reviewSearchUrl": "https://search.naver.com/search.naver?ssc=tab.blog.all&query=%EC%96%91%ED%8F%89%20%EB%8C%80%EB%94%94%EC%8A%A4%EB%B0%94%EB%B2%A0%ED%81%90%20%ED%9B%84%EA%B8%B0"
+  },
+  {
+   "placeId": "naver_1273532640_376228372",
+   "name": "해물꾼조태산 양평본점",
+   "category": "restaurant",
+   "categoryLabel": "한식>칼국수,만두",
+   "lat": 37.6228372,
+   "lng": 127.353264,
+   "address": "경기도 양평군 서종면 북한강로 962",
+   "photos": [],
+   "mapUrl": "https://map.naver.com/p/search/%ED%95%B4%EB%AC%BC%EA%BE%BC%EC%A1%B0%ED%83%9C%EC%82%B0%20%EC%96%91%ED%8F%89%EB%B3%B8%EC%A0%90%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%84%9C%EC%A2%85%EB%A9%B4%20%EB%B6%81%ED%95%9C%EA%B0%95%EB%A1%9C%20962",
+   "tags": [],
+   "blogReviewCount": 616,
+   "reviewTitle": "양평 해물꾼조태산, 해물칼국수와 물회 후기",
+   "reviewLink": "https://blog.naver.com/tnp1984st/224446284593",
+   "reviewSearchUrl": "https://search.naver.com/search.naver?ssc=tab.blog.all&query=%EC%96%91%ED%8F%89%20%ED%95%B4%EB%AC%BC%EA%BE%BC%EC%A1%B0%ED%83%9C%EC%82%B0%20%EC%96%91%ED%8F%89%EB%B3%B8%EC%A0%90%20%ED%9B%84%EA%B8%B0"
+  }
+ ]
 }
