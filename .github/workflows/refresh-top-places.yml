@@ -1,0 +1,93 @@
+# 홈 "요즘 이야기가 많은 곳" 순위를 주 1회 다시 뽑아 커밋한다.
+#
+# 최근 30일 블로그 글 수는 날마다 달라지는데 src/lib/data/topPlaces.json은 빌드 때
+# 얼려 둔 파일이라, 돌려 주지 않으면 "요즘"이 몇 달 전 이야기가 된다.
+# scripts/build-top-places.ts가 하는 일은 npm run build:top과 같다.
+#
+# 필요한 저장소 시크릿 (지역 검색·블로그 검색·TourAPI)
+#   NCP_SEARCH_KEY_ID, NCP_SEARCH_KEY  NAVER API HUB 애플리케이션 키
+#   TOUR_API_KEY                       한국관광공사 인증키 (뽑힌 곳의 사진)
+# 없으면 후보를 못 받아 빈 목록이 되므로, 그때는 커밋하지 않고 실패로 끝낸다.
+name: 요즘 순위 갱신
+
+on:
+  schedule:
+    # 월요일 05:00 KST (일요일 20:00 UTC) — 주말 방문기가 올라온 뒤에 센다.
+    - cron: "0 20 * * 0"
+  workflow_dispatch:
+
+concurrency:
+  group: refresh-top-places
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      # 갱신된 JSON을 main에 커밋한다.
+      contents: write
+      # 커밋한 뒤 배포 워크플로를 부른다 (아래 주석 참조).
+      actions: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - run: npm ci
+
+      - name: 순위 다시 뽑기
+        env:
+          NCP_SEARCH_KEY_ID: ${{ secrets.NCP_SEARCH_KEY_ID }}
+          NCP_SEARCH_KEY: ${{ secrets.NCP_SEARCH_KEY }}
+          TOUR_API_KEY: ${{ secrets.TOUR_API_KEY }}
+        run: npm run build:top
+
+      # 후보를 한 곳도 못 받았으면(키 문제·API 장애) 빈 목록이 만들어진다.
+      # 그걸 커밋하면 홈에서 영역이 통째로 사라지므로 여기서 멈춘다.
+      - name: 빈 결과인지 확인
+        run: |
+          node -e '
+            const d = require("./src/lib/data/topPlaces.json");
+            const n = ["cafe", "restaurant", "recentCafe", "recentRestaurant"]
+              .map((k) => (d[k] ?? []).length);
+            console.log("목록 길이:", n.join(", "));
+            if (n.every((c) => c === 0)) {
+              console.error("모든 목록이 비었다 — 키나 API를 확인하세요.");
+              process.exit(1);
+            }
+          '
+
+      # build:top은 순위가 그대로면 generatedAt도 건드리지 않는다. 그래서 여기서
+      # 변화가 없으면 커밋할 것도 없다.
+      - name: 바뀐 게 있는지 확인
+        id: diff
+        run: |
+          if git diff --quiet -- src/lib/data/topPlaces.json; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "순위가 지난주와 같다 — 커밋하지 않는다."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git --no-pager diff --stat -- src/lib/data/topPlaces.json
+          fi
+
+      - name: 커밋
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/lib/data/topPlaces.json
+          git commit -m "요즘 순위를 이번 주 블로그 글 수로 갱신한다" -m "자동 실행: .github/workflows/refresh-top-places.yml"
+          git push
+
+      # GITHUB_TOKEN이 민 커밋은 다른 워크플로를 깨우지 않는다(깃허브가 무한 반복을
+      # 막는 규칙). 그래서 배포를 직접 부른다 — 안 부르면 갱신된 순위가 다음 푸시
+      # 때까지 운영에 안 올라간다.
+      - name: 배포 부르기
+        if: steps.diff.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh workflow run deploy.yml --ref main

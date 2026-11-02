@@ -15,7 +15,7 @@
 //
 // 사진은 지역 검색이 주지 않으므로 ① 장소 스냅샷 ② TourAPI 키워드 검색에서 가져온다.
 import { loadEnvConfig } from "@next/env";
-import { writeFileSync } from "node:fs";
+import { readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import type { Category, Place, TopPlace } from "@/types/travel";
 import { normalizeName, pickByName } from "./placeMatch";
@@ -26,6 +26,28 @@ const OUTPUT = path.join(process.cwd(), "src/lib/data/topPlaces.json");
 const PICK_COUNT = 3;
 /** "요즘"의 기준. 화면에도 이 수를 그대로 적는다. */
 const RECENT_DAYS = 30;
+
+/** 지금 파일에 적힌 내용(generatedAt 뺀 나머지)을 같은 순서로 직렬화한 것. 없으면 null. */
+function previousPayload(): string | null {
+  const old = readPrevious();
+  if (!old) return null;
+  const rest = { ...old };
+  delete rest.generatedAt;
+  return JSON.stringify(rest);
+}
+
+function previousGeneratedAt(): string | null {
+  return (readPrevious()?.generatedAt as string | undefined) ?? null;
+}
+
+function readPrevious(): Record<string, unknown> | null {
+  try {
+    return JSON.parse(readFileSync(OUTPUT, "utf8")) as Record<string, unknown>;
+  } catch {
+    // 파일이 없거나 깨졌으면 새로 쓴다.
+    return null;
+  }
+}
 
 async function main() {
   // env 로드 뒤에 import해야 모듈이 키를 읽는다.
@@ -142,26 +164,24 @@ async function main() {
     recent[category] = await rankRecent(category, candidates, label);
   }
 
-  writeFileSync(
-    OUTPUT,
-    `${JSON.stringify(
-      {
-        generatedAt: new Date().toISOString(),
-        basis: "네이버 지역 검색(양평 추천 맛집/카페) 결과를 네이버 블로그 글 수로 다시 정렬",
-        recentBasis: `스냅샷의 카페·맛집 전체를 최근 ${RECENT_DAYS}일 블로그 글 수로 정렬`,
-        recentDays: RECENT_DAYS,
-        cafe: result.cafe ?? [],
-        restaurant: result.restaurant ?? [],
-        recentCafe: recent.cafe ?? [],
-        recentRestaurant: recent.restaurant ?? [],
-      },
-      null,
-      1,
-    )}\n`,
-    "utf8",
-  );
+  const payload = {
+    basis: "네이버 지역 검색(양평 추천 맛집/카페) 결과를 네이버 블로그 글 수로 다시 정렬",
+    recentBasis: `스냅샷의 카페·맛집 전체를 최근 ${RECENT_DAYS}일 블로그 글 수로 정렬`,
+    recentDays: RECENT_DAYS,
+    cafe: result.cafe ?? [],
+    restaurant: result.restaurant ?? [],
+    recentCafe: recent.cafe ?? [],
+    recentRestaurant: recent.restaurant ?? [],
+  };
+
+  // 순위가 그대로면 generatedAt도 그대로 둔다 — 주 1회 자동 실행(.github/workflows/
+  // refresh-top-places.yml)이 시각만 바뀐 파일로 커밋을 만들지 않게.
+  const unchanged = previousPayload() === JSON.stringify(payload);
+  const generatedAt = (unchanged && previousGeneratedAt()) || new Date().toISOString();
+
+  writeFileSync(OUTPUT, `${JSON.stringify({ generatedAt, ...payload }, null, 1)}\n`, "utf8");
   console.log(
-    `\n저장: ${path.relative(process.cwd(), OUTPUT)} ` +
+    `\n저장: ${path.relative(process.cwd(), OUTPUT)}${unchanged ? " (순위 그대로)" : ""} ` +
       `(전체 기간 카페 ${result.cafe?.length ?? 0}곳·맛집 ${result.restaurant?.length ?? 0}곳, ` +
       `최근 ${RECENT_DAYS}일 카페 ${recent.cafe?.length ?? 0}곳·맛집 ${recent.restaurant?.length ?? 0}곳)`,
   );

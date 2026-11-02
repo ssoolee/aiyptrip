@@ -41,7 +41,7 @@ npm run dev
 | `npm run build:pet` | 반려동물 동반 업소 `src/lib/data/petPlaces.json` 재생성 |
 | `npm run build:solo` | 혼자 여행 테마 코스 `src/lib/data/soloCourses.json` 재생성 |
 | `npm run import:pet -- <엑셀>` | 공개된 반려동물 동반 업소 현황 엑셀을 원천 목록에 합치기 |
-| `npm run build:top` | 블로그 리뷰가 많은 맛집·카페 `src/lib/data/topPlaces.json` 재생성 |
+| `npm run build:top` | 홈 "요즘 이야기가 많은 곳" 순위 `src/lib/data/topPlaces.json` 재생성 (주 1회 자동 실행) |
 | `npm run build:hours` | 장소 스냅샷의 영업시간만 다시 수집 |
 | `npm run build:routes` | 코스 구간의 실측 주행경로 `src/lib/data/routeLegs.json` 재생성 (`-- --force`로 소요시간 재측정) |
 
@@ -61,9 +61,24 @@ npm run dev
 
 ### 블로그 리뷰가 많은 맛집·카페
 
-홈의 "요즘 이야기가 많은 곳"은 네이버에서 **"양평 추천 맛집 / 양평 추천 카페"**를
-검색한 결과를 네이버 블로그 글 수로 다시 줄 세워 세 곳씩 보여준다
+홈의 "요즘 이야기가 많은 곳"은 두 가지 순위를 나란히 보여준다
 (`npm run build:top` → `src/lib/data/topPlaces.json`).
+
+- **최근 30일** — 스냅샷의 카페·맛집 전체(65곳·73곳)를 훑어, 그 기간에 올라온 블로그
+  글이 많은 순. 지금 사람들이 가는 곳에 가깝다.
+- **전체 기간** — **"양평 추천 맛집 / 양평 추천 카페"** 검색 결과를 블로그 글 총수로
+  다시 줄 세운 것. 쌓인 유명세다.
+
+최근 순위는 글의 **제목**만 보고 센다. 본문(description)은 검색어 주변을 잘라 만든
+조각이라 이름이 거의 언제나 들어 있어서, 본문까지 세면 "휴식"·"소풍" 같은 흔한 낱말
+이름이 무관한 글을 끌어모아 1위가 된다(2026-11 실측). 같은 이유로 **두 글자 이름은
+순위에서 뺀다** — 흔한 낱말과 구별할 방법이 없다. 블로그 검색은 기간 필터를 주지 않아
+`sort=date`로 최신순 300건까지 훑으므로, 거기서 끊긴 곳은 화면에 "N건 이상"으로 적는다.
+
+최근 30일 수치는 날마다 바뀌는데 이 파일은 얼려 둔 사본이라, **주 1회 자동으로 다시
+뽑는다**(`.github/workflows/refresh-top-places.yml`, 월요일 05:00 KST). 순위가 지난주와
+같으면 커밋하지 않고, 바뀌면 커밋한 뒤 배포까지 부른다. 저장소 시크릿
+`NCP_SEARCH_KEY_ID`·`NCP_SEARCH_KEY`·`TOUR_API_KEY`가 있어야 돈다.
 
 순위의 근거가 블로그 글 수인 이유는 다른 수를 받을 수 없어서다 — 네이버는 플레이스의
 방문자 리뷰 수·별점을 공개 API로 주지 않고, 지역 검색은 `sort=comment`로 "리뷰 많은 순"
