@@ -19,7 +19,7 @@ export default function PyeonganiCard() {
           완성돼요.
         </p>
         <a
-          href="https://welflows.com/pyeongani.html"
+          href="https://ypcs.web.app"
           target="_blank"
           rel="noopener"
           className="mt-3 inline-flex min-h-10 items-center rounded-[var(--radius-button)] bg-[var(--color-primary)] px-4 text-sm font-semibold text-[var(--color-on-primary)]"
