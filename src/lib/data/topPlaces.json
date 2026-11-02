@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-02T14:16:55.993Z",
+ "generatedAt": "2026-11-02T14:59:23.039Z",
  "basis": "네이버 지역 검색(양평 추천 맛집/카페) 결과를 네이버 블로그 글 수로 다시 정렬",
  "recentBasis": "스냅샷의 카페·맛집 전체를 최근 30일 블로그 글 수로 정렬",
  "recentDays": 30,
@@ -13,7 +13,7 @@
    "lng": 127.3529941,
    "address": "경기도 양평군 서종면 북한강로 684 하우스베이커리",
    "photos": [
-    "http://tong.visitkorea.or.kr/cms/resource/24/2794724_image2_1.jpg"
+    "https://tong.visitkorea.or.kr/cms/resource/24/2794724_image2_1.jpg"
    ],
    "mapUrl": "https://map.naver.com/p/search/%ED%95%98%EC%9A%B0%EC%8A%A4%20%EB%B2%A0%EC%9D%B4%EC%BB%A4%EB%A6%AC%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%84%9C%EC%A2%85%EB%A9%B4%20%EB%B6%81%ED%95%9C%EA%B0%95%EB%A1%9C%20684%20%ED%95%98%EC%9A%B0%EC%8A%A4%EB%B2%A0%EC%9D%B4%EC%BB%A4%EB%A6%AC",
    "tags": [],
@@ -30,7 +30,9 @@
    "lat": 37.5088187,
    "lng": 127.4249258,
    "address": "경기도 양평군 옥천면 남한강변길 123-19",
-   "photos": [],
+   "photos": [
+    "https://search.pstatic.net/sunny/?type=b150&src=https%3A%2F%2Ft1.daumcdn.net%2Fcafeattach%2FmEr9%2F2a1011ff8f56fbd5cd446fd5787ab3de739ad94e_re_1630672435926"
+   ],
    "mapUrl": "https://map.naver.com/p/search/%EA%B5%AC%EB%B2%BC%EC%9A%B8%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%98%A5%EC%B2%9C%EB%A9%B4%20%EB%82%A8%ED%95%9C%EA%B0%95%EB%B3%80%EA%B8%B8%20123-19",
    "tags": [],
    "blogReviewCount": 4341,
@@ -46,7 +48,9 @@
    "lat": 37.6249287,
    "lng": 127.3547638,
    "address": "경기도 양평군 서종면 북한강로 990",
-   "photos": [],
+   "photos": [
+    "https://search.pstatic.net/common/?type=b150&src=https%3A%2F%2Fpup-post-phinf.pstatic.net%2FMjAyNjA1MjZfMjUx%2FMDAxNzc5ODAxMTAwNDI2.EkEaFBUH5REdcQX2WmRwbqJeF1tOkKjtarQXA19vGvMg.lNe6TwF_O-vlTRjrP881ocPsGcwQirNltuAfM2gf1Ksg.JPEG%2FPOST_IMAGE_ENC_20260526_220618_303.jpg"
+   ],
    "mapUrl": "https://map.naver.com/p/search/%ED%85%8C%EB%9D%BC%EB%A1%9C%EC%82%AC%20%EC%84%9C%EC%A2%85%EC%A0%90%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%84%9C%EC%A2%85%EB%A9%B4%20%EB%B6%81%ED%95%9C%EA%B0%95%EB%A1%9C%20990",
    "tags": [],
    "blogReviewCount": 3827,
@@ -64,10 +68,12 @@
    "lat": 37.5348077,
    "lng": 127.3168078,
    "address": "경기도 양평군 양서면 두물머리길 103-8",
-   "photos": [],
+   "photos": [
+    "https://search.pstatic.net/common/?type=b150&src=https%3A%2F%2Fpup-post-phinf.pstatic.net%2FMjAyNTExMjZfNjcg%2FMDAxNzY0MTM3MzAwNjAx.ePkjObwVP4yxB8LxoZfEx1kwhvOL7XSCiFIrcC_Wy9Ug.ExV21cSjir_WSz-tt8L4VpDZOmt13zCokP99mPHvYCog.JPEG%2FF8FB6F20-D72E-46C9-B077-BA2ADA22F70F.jpg"
+   ],
    "mapUrl": "https://map.naver.com/p/search/%EB%91%90%EB%AC%BC%EB%A8%B8%EB%A6%AC%EC%97%B0%ED%95%AB%EB%8F%84%EA%B7%B8%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%96%91%EC%84%9C%EB%A9%B4%20%EB%91%90%EB%AC%BC%EB%A8%B8%EB%A6%AC%EA%B8%B8%20103-8",
    "tags": [],
-   "blogReviewCount": 17216,
+   "blogReviewCount": 17217,
    "reviewTitle": "양평 두물머리 드라이브 갔다가 연핫도그 내돈내산 후기",
    "reviewLink": "https://blog.naver.com/jinsshung/224453469920",
    "reviewSearchUrl": "https://search.naver.com/search.naver?ssc=tab.blog.all&query=%EC%96%91%ED%8F%89%20%EB%91%90%EB%AC%BC%EB%A8%B8%EB%A6%AC%EC%97%B0%ED%95%AB%EB%8F%84%EA%B7%B8%20%ED%9B%84%EA%B8%B0"
@@ -81,8 +87,8 @@
    "lng": 127.4633019,
    "address": "경기도 양평군 옥천면 옥천문화마을3길 15-24 대디스바베큐",
    "photos": [
-    "http://tong.visitkorea.or.kr/cms/resource/05/2854205_image2_1.jpg",
-    "http://tong.visitkorea.or.kr/cms/resource/05/2854205_image3_1.jpg"
+    "https://tong.visitkorea.or.kr/cms/resource/05/2854205_image2_1.jpg",
+    "https://tong.visitkorea.or.kr/cms/resource/05/2854205_image3_1.jpg"
    ],
    "mapUrl": "https://map.naver.com/p/search/%EB%8C%80%EB%94%94%EC%8A%A4%EB%B0%94%EB%B2%A0%ED%81%90%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%98%A5%EC%B2%9C%EB%A9%B4%20%EC%98%A5%EC%B2%9C%EB%AC%B8%ED%99%94%EB%A7%88%EC%9D%843%EA%B8%B8%2015-24%20%EB%8C%80%EB%94%94%EC%8A%A4%EB%B0%94%EB%B2%A0%ED%81%90",
    "tags": [],
@@ -99,7 +105,9 @@
    "lat": 37.6228372,
    "lng": 127.353264,
    "address": "경기도 양평군 서종면 북한강로 962",
-   "photos": [],
+   "photos": [
+    "https://search.pstatic.net/common/?type=b150&src=https%3A%2F%2Fpup-post-phinf.pstatic.net%2FMjAyNjA5MTNfNzIg%2FMDAxNzg5MjkwMDYwNTgx.t9gk6rmXCDfb_ZIbsuv_5XlI_PI4zyR95Esq3ro0m-4g.Ub3kGMXjVPNcQvZ3Wf4JhqSPbCjRKB8RgisfmQVu8qUg.JPEG%2FPOST_IMAGE_ENC_20260913_180011_760.jpg"
+   ],
    "mapUrl": "https://map.naver.com/p/search/%ED%95%B4%EB%AC%BC%EA%BE%BC%EC%A1%B0%ED%83%9C%EC%82%B0%20%EC%96%91%ED%8F%89%EB%B3%B8%EC%A0%90%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%84%9C%EC%A2%85%EB%A9%B4%20%EB%B6%81%ED%95%9C%EA%B0%95%EB%A1%9C%20962",
    "tags": [],
    "blogReviewCount": 616,
@@ -117,7 +125,9 @@
    "lat": 37.5088187,
    "lng": 127.4249258,
    "address": "경기도 양평군 옥천면 남한강변길 123-19",
-   "photos": [],
+   "photos": [
+    "https://search.pstatic.net/sunny/?type=b150&src=https%3A%2F%2Ft1.daumcdn.net%2Fcafeattach%2FmEr9%2F2a1011ff8f56fbd5cd446fd5787ab3de739ad94e_re_1630672435926"
+   ],
    "mapUrl": "https://map.naver.com/p/search/%EA%B5%AC%EB%B2%BC%EC%9A%B8%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%98%A5%EC%B2%9C%EB%A9%B4%20%EB%82%A8%ED%95%9C%EA%B0%95%EB%B3%80%EA%B8%B8%20123-19",
    "tags": [],
    "businessHoursRaw": "10:00~21:00",
@@ -135,7 +145,9 @@
    "lat": 37.4827673,
    "lng": 127.5700064,
    "address": "경기도 양평군 용문면 용문로 116",
-   "photos": [],
+   "photos": [
+    "https://search.pstatic.net/sunny/?type=b150&src=https%3A%2F%2Fd12zq4w4guyljn.cloudfront.net%2F20260614053349034_photo_d6149deeb647.webp"
+   ],
    "mapUrl": "https://map.naver.com/p/search/%EC%BD%98%ED%81%AC%EB%A6%AC%ED%8A%B8%EC%A0%95%EA%B8%80%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%9A%A9%EB%AC%B8%EB%A9%B4%20%EC%9A%A9%EB%AC%B8%EB%A1%9C%20116",
    "tags": [],
    "businessHoursRaw": "10:00~20:00",
@@ -154,7 +166,9 @@
    "lat": 37.4677896,
    "lng": 127.5309985,
    "address": "경기도 양평군 개군면 신내길7번길 36 흑유재",
-   "photos": [],
+   "photos": [
+    "https://search.pstatic.net/common/?type=b150&src=https%3A%2F%2Fpup-post-phinf.pstatic.net%2FMjAyNjAyMDFfMTU3%2FMDAxNzY5OTQ1NjU2Nzc5.Fk_r5MdQgyy895p4Pq4-vcogPkqCE_Uu2vVezcfmVfMg.vISl6cIHXBRJ4s3x3Uvjmwmd_mEYsneAhs_R_D88koog.JPEG%2FPOST_IMAGE_ENCODING_20260201_203410_254.jpg"
+   ],
    "mapUrl": "https://map.naver.com/p/search/%ED%9D%91%EC%9C%A0%EC%9E%AC%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EA%B0%9C%EA%B5%B0%EB%A9%B4%20%EC%8B%A0%EB%82%B4%EA%B8%B87%EB%B2%88%EA%B8%B8%2036%20%ED%9D%91%EC%9C%A0%EC%9E%AC",
    "tags": [],
    "businessHoursRaw": "10:00~23:00",
@@ -174,11 +188,13 @@
    "lat": 37.5348077,
    "lng": 127.3168078,
    "address": "경기도 양평군 양서면 두물머리길 103-8",
-   "photos": [],
+   "photos": [
+    "https://search.pstatic.net/common/?type=b150&src=https%3A%2F%2Fpup-post-phinf.pstatic.net%2FMjAyNTExMjZfNjcg%2FMDAxNzY0MTM3MzAwNjAx.ePkjObwVP4yxB8LxoZfEx1kwhvOL7XSCiFIrcC_Wy9Ug.ExV21cSjir_WSz-tt8L4VpDZOmt13zCokP99mPHvYCog.JPEG%2FF8FB6F20-D72E-46C9-B077-BA2ADA22F70F.jpg"
+   ],
    "mapUrl": "https://map.naver.com/p/search/%EB%91%90%EB%AC%BC%EB%A8%B8%EB%A6%AC%EC%97%B0%ED%95%AB%EB%8F%84%EA%B7%B8%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%96%91%EC%84%9C%EB%A9%B4%20%EB%91%90%EB%AC%BC%EB%A8%B8%EB%A6%AC%EA%B8%B8%20103-8",
    "tags": [],
    "businessHoursRaw": "월~금 10:00~17:50, 토 일 09:00~17:50",
-   "blogReviewCount": 17216,
+   "blogReviewCount": 17217,
    "recentBlogCount": 49,
    "recentBlogCapped": true,
    "reviewTitle": "양평 두물머리 드라이브 갔다가 연핫도그 내돈내산 후기",
@@ -193,8 +209,8 @@
    "lng": 127.3329309711,
    "address": "경기도 양평군 양서면 목왕로 129",
    "photos": [
-    "http://tong.visitkorea.or.kr/cms/resource/48/2854148_image2_1.jpg",
-    "http://tong.visitkorea.or.kr/cms/resource/48/2854148_image3_1.jpg"
+    "https://tong.visitkorea.or.kr/cms/resource/48/2854148_image2_1.jpg",
+    "https://tong.visitkorea.or.kr/cms/resource/48/2854148_image3_1.jpg"
    ],
    "mapUrl": "https://map.naver.com/p/search/%EB%8B%A4%EC%9A%B0%EB%A6%AC",
    "tags": [
@@ -217,7 +233,9 @@
    "lat": 37.4913575,
    "lng": 127.4670218,
    "address": "경기도 양평군 강상면 강남로 802 핏제리아 루카네",
-   "photos": [],
+   "photos": [
+    "https://search.pstatic.net/common/?type=b150&src=https%3A%2F%2Fpup-post-phinf.pstatic.net%2FMjAyNjA1MjZfMzQg%2FMDAxNzc5Nzk5ODQ5MDEz.pX6je_fbn8ju00gayQ0A5g3DPKw1bFI3Y3QoQ0cGwD8g.ft2SXIfd3rRTjRmWu_glpW1DfdcgEJ7QLZLYZrNnL74g.JPEG%2FPostEncodingTask.673E07F2-D46D-467C-A010-69AB2739E97B.jpg"
+   ],
    "mapUrl": "https://map.naver.com/p/search/%ED%95%8F%EC%A0%9C%EB%A6%AC%EC%95%84%20%EB%A3%A8%EC%B9%B4%EB%84%A4%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EA%B0%95%EC%83%81%EB%A9%B4%20%EA%B0%95%EB%82%A8%EB%A1%9C%20802%20%ED%95%8F%EC%A0%9C%EB%A6%AC%EC%95%84%20%EB%A3%A8%EC%B9%B4%EB%84%A4",
    "tags": [],
    "businessHoursRaw": "11:00~20:30",

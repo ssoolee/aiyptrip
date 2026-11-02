@@ -122,9 +122,17 @@ function toPlace(item: TourApiItem, category: Category): Place | null {
     lng,
     address: item.addr1 ?? "",
     phone: item.tel || undefined,
+    // TourAPI는 사진 주소를 http로 준다. 우리 페이지는 https라 그대로 쓰면 브라우저가
+    // 섞인 콘텐츠로 보고 막는다(같은 주소를 https로 부르면 200이다 — 2026-11 실측).
     // firstimage와 firstimage2가 같은 주소인 항목이 있어(실측 7곳) 중복을 걷어낸다 —
     // 같은 사진이 갤러리에 두 번 들어가고 React key도 겹친다.
-    photos: [...new Set([item.firstimage, item.firstimage2].filter((v): v is string => !!v))],
+    photos: [
+      ...new Set(
+        [item.firstimage, item.firstimage2]
+          .filter((v): v is string => !!v)
+          .map((url) => url.replace(/^http:\/\//, "https://")),
+      ),
+    ],
     mapUrl: `https://map.naver.com/p/search/${encodeURIComponent(item.title)}`,
     // TourAPI 카테고리(cat3)를 내부 취향 태그 체계로 매핑하는 작업은
     // 추후 개선 과제 — 지금은 빈 배열로 두고 평점/거리 등 다른 기준으로만 정렬된다.
