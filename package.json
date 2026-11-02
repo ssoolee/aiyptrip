@@ -15,6 +15,7 @@
     "build:top": "tsx scripts/build-top-places.ts",
     "test": "tsx --test \"src/**/*.test.ts\"",
     "build:hours": "tsx scripts/build-hours.ts",
+    "build:photos": "tsx scripts/build-photos.ts",
     "build:routes": "tsx scripts/build-routes.ts",
     "pack:deploy": "tsx scripts/pack-deploy.ts"
   },

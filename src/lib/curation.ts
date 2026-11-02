@@ -23,7 +23,9 @@ export function withFreshFacts<T extends Place>(place: T): T {
     businessHoursRaw: fresh.businessHoursRaw ?? place.businessHoursRaw,
     phone: fresh.phone ?? place.phone,
     rating: fresh.rating ?? place.rating,
-    photos: place.photos.length > 0 ? place.photos : fresh.photos,
+    // 사진도 자주 바뀌는 쪽이다 — 스냅샷을 앞세워야 npm run build:photos로 받은 사진이
+    // 큐레이션 코스에도 바로 반영된다. 얼려 둔 사본은 스냅샷에 없는 장소에만 쓴다.
+    photos: fresh.photos.length > 0 ? fresh.photos : place.photos,
   };
 }
 

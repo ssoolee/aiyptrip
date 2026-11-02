@@ -18,7 +18,7 @@ import { loadEnvConfig } from "@next/env";
 import { readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import type { Category, Place, TopPlace } from "@/types/travel";
-import { normalizeName, pickByName } from "./placeMatch";
+import { normalizeName } from "./placeMatch";
 
 loadEnvConfig(process.cwd());
 
@@ -55,7 +55,6 @@ async function main() {
   const { searchBlogReviews, countRecentBlogPosts, canCountRecentPosts } = await import(
     "@/lib/api/naverBlogSearch",
   );
-  const { searchTourApiByKeyword } = await import("@/lib/api/tourApi");
   const { searchPlaceImage } = await import("@/lib/api/naverImageSearch");
   const { SNAPSHOT_PLACES } = await import("@/lib/data/placeSnapshot");
 
@@ -63,19 +62,17 @@ async function main() {
   const snapshotByName = new Map(SNAPSHOT_PLACES.map((p) => [normalizeName(p.name), p]));
 
   /**
-   * 지역 검색에는 사진이 없다. 스냅샷 → TourAPI → 네이버 이미지 검색 순으로 찾는다.
+   * 지역 검색에는 사진이 없다. 네이버 이미지 검색에서 받고, 못 찾으면 스냅샷에 있는
+   * 사진을 쓴다 (src/lib/api/naverImageSearch.ts).
    *
-   * 앞의 둘만 있을 때는 홈에 올린 열두 곳 중 다섯 곳만 사진이 있었다 — 네이버에만
-   * 있는 가게는 TourAPI가 아예 모른다(실측 0건). 이미지 검색은 제목에 이름이 적힌
-   * 사진만 골라 쓴다(src/lib/api/naverImageSearch.ts).
+   * 여기 쓰는 것은 150px 썸네일이다 — 목록의 자리가 80px이라 그보다 큰 사진을 걸
+   * 이유가 없다. 스냅샷 사진은 카드 커버용 340px이라 이 자리에선 조금 크다.
    */
   async function findPhotos(place: Place): Promise<{ photos: string[]; via: string }> {
-    const known = snapshotById.get(place.placeId) ?? snapshotByName.get(normalizeName(place.name));
-    if (known?.photos.length) return { photos: known.photos, via: "스냅샷" };
-    const matched = pickByName(await searchTourApiByKeyword(place.name, place.category), [place.name]);
-    if (matched?.photos.length) return { photos: matched.photos, via: "TourAPI" };
     const image = await searchPlaceImage(place.name);
     if (image) return { photos: [image.thumbnail], via: "이미지검색" };
+    const known = snapshotById.get(place.placeId) ?? snapshotByName.get(normalizeName(place.name));
+    if (known?.photos.length) return { photos: known.photos, via: "스냅샷" };
     return { photos: [], via: "없음" };
   }
 

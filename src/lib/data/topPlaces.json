@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-02T14:59:23.039Z",
+ "generatedAt": "2026-11-02T15:25:56.546Z",
  "basis": "네이버 지역 검색(양평 추천 맛집/카페) 결과를 네이버 블로그 글 수로 다시 정렬",
  "recentBasis": "스냅샷의 카페·맛집 전체를 최근 30일 블로그 글 수로 정렬",
  "recentDays": 30,
@@ -13,7 +13,7 @@
    "lng": 127.3529941,
    "address": "경기도 양평군 서종면 북한강로 684 하우스베이커리",
    "photos": [
-    "https://tong.visitkorea.or.kr/cms/resource/24/2794724_image2_1.jpg"
+    "https://search.pstatic.net/common/?type=b150&src=https%3A%2F%2Fpup-post-phinf.pstatic.net%2FMjAyNjA0MjRfMjk1%2FMDAxNzc3MDMxMjE2NTg5.1r5EDXx1gDJceD2Fub15WCdsasClDS9oNxMIi76o6BYg.Z4D5P2stx3DrvL8vp58CJAqYSItQrwVhiixUQ5va0e0g.JPEG%2FPostEncodingTask.28534E35-869A-4A46-90C5-0DC6B01364F2.jpg"
    ],
    "mapUrl": "https://map.naver.com/p/search/%ED%95%98%EC%9A%B0%EC%8A%A4%20%EB%B2%A0%EC%9D%B4%EC%BB%A4%EB%A6%AC%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%84%9C%EC%A2%85%EB%A9%B4%20%EB%B6%81%ED%95%9C%EA%B0%95%EB%A1%9C%20684%20%ED%95%98%EC%9A%B0%EC%8A%A4%EB%B2%A0%EC%9D%B4%EC%BB%A4%EB%A6%AC",
    "tags": [],
@@ -73,7 +73,7 @@
    ],
    "mapUrl": "https://map.naver.com/p/search/%EB%91%90%EB%AC%BC%EB%A8%B8%EB%A6%AC%EC%97%B0%ED%95%AB%EB%8F%84%EA%B7%B8%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%96%91%EC%84%9C%EB%A9%B4%20%EB%91%90%EB%AC%BC%EB%A8%B8%EB%A6%AC%EA%B8%B8%20103-8",
    "tags": [],
-   "blogReviewCount": 17217,
+   "blogReviewCount": 17218,
    "reviewTitle": "양평 두물머리 드라이브 갔다가 연핫도그 내돈내산 후기",
    "reviewLink": "https://blog.naver.com/jinsshung/224453469920",
    "reviewSearchUrl": "https://search.naver.com/search.naver?ssc=tab.blog.all&query=%EC%96%91%ED%8F%89%20%EB%91%90%EB%AC%BC%EB%A8%B8%EB%A6%AC%EC%97%B0%ED%95%AB%EB%8F%84%EA%B7%B8%20%ED%9B%84%EA%B8%B0"
@@ -87,8 +87,7 @@
    "lng": 127.4633019,
    "address": "경기도 양평군 옥천면 옥천문화마을3길 15-24 대디스바베큐",
    "photos": [
-    "https://tong.visitkorea.or.kr/cms/resource/05/2854205_image2_1.jpg",
-    "https://tong.visitkorea.or.kr/cms/resource/05/2854205_image3_1.jpg"
+    "https://search.pstatic.net/sunny/?type=b150&src=https%3A%2F%2Fcdn.visitkorea.or.kr%2Fimg%2Fcall%3Fcmd%3DVIEW%26id%3D62f0b65f-7a74-4020-8d56-2ec68434ab1b"
    ],
    "mapUrl": "https://map.naver.com/p/search/%EB%8C%80%EB%94%94%EC%8A%A4%EB%B0%94%EB%B2%A0%ED%81%90%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%98%A5%EC%B2%9C%EB%A9%B4%20%EC%98%A5%EC%B2%9C%EB%AC%B8%ED%99%94%EB%A7%88%EC%9D%843%EA%B8%B8%2015-24%20%EB%8C%80%EB%94%94%EC%8A%A4%EB%B0%94%EB%B2%A0%ED%81%90",
    "tags": [],
@@ -194,7 +193,7 @@
    "mapUrl": "https://map.naver.com/p/search/%EB%91%90%EB%AC%BC%EB%A8%B8%EB%A6%AC%EC%97%B0%ED%95%AB%EB%8F%84%EA%B7%B8%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%96%91%EC%84%9C%EB%A9%B4%20%EB%91%90%EB%AC%BC%EB%A8%B8%EB%A6%AC%EA%B8%B8%20103-8",
    "tags": [],
    "businessHoursRaw": "월~금 10:00~17:50, 토 일 09:00~17:50",
-   "blogReviewCount": 17217,
+   "blogReviewCount": 17218,
    "recentBlogCount": 49,
    "recentBlogCapped": true,
    "reviewTitle": "양평 두물머리 드라이브 갔다가 연핫도그 내돈내산 후기",
@@ -209,8 +208,7 @@
    "lng": 127.3329309711,
    "address": "경기도 양평군 양서면 목왕로 129",
    "photos": [
-    "https://tong.visitkorea.or.kr/cms/resource/48/2854148_image2_1.jpg",
-    "https://tong.visitkorea.or.kr/cms/resource/48/2854148_image3_1.jpg"
+    "https://search.pstatic.net/common/?type=b150&src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F5629%2F2018%2F12%2F28%2F0000020538_001_20181228144008829.jpeg"
    ],
    "mapUrl": "https://map.naver.com/p/search/%EB%8B%A4%EC%9A%B0%EB%A6%AC",
    "tags": [

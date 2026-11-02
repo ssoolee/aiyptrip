@@ -9,6 +9,7 @@ import { writeFileSync, mkdirSync } from "node:fs";
 import path from "node:path";
 import { isSamePlace, normalizePlaceName as normalizeName } from "@/lib/placeIdentity";
 import type { Category, Place } from "@/types/travel";
+import { fillNaverPhotos } from "./placePhotos";
 
 loadEnvConfig(process.cwd());
 
@@ -79,6 +80,13 @@ async function main() {
     }
     console.log(`${category}: 네이버 ${naver.length}, TourAPI ${tour.length} → ${added}곳 (중복 병합 ${merged})`);
   }
+
+  // 사진은 네이버 이미지 검색에서 받는다. TourAPI의 firstimage만 쓰던 때는 네이버에만
+  // 있는 가게(카페 45곳·음식점 31곳)의 자리가 통째로 비어 있었다. 못 찾은 곳은 위에서
+  // 합쳐 둔 TourAPI 사진이 그대로 남는다. (사진만 다시 받으려면 npm run build:photos)
+  console.log("\n사진 받기 (네이버 이미지 검색)");
+  const photoResult = await fillNaverPhotos(places);
+  console.log(`  새로 받음 ${photoResult.filled}곳, 기존 유지 ${photoResult.kept}곳, 없음 ${photoResult.empty}곳`);
 
   // 2. TourAPI 장소 소개글(태깅·요약 근거)과 영업시간
   // 네이버 장소라도 TourAPI에 같은 곳이 있으면(위에서 contentId를 합쳐 둔다) 영업시간을

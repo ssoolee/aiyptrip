@@ -28,12 +28,20 @@ interface NaverImageItem {
 const squash = (text: string) => text.replace(/\s+/g, "").toLowerCase();
 
 export interface PlaceImage {
-  /** 목록에 거는 작은 사진 (search.pstatic.net, 150px 안팎). */
+  /** 목록에 거는 작은 사진 (search.pstatic.net, 150px 안팎 · 7KB). */
   thumbnail: string;
-  /** 원본 사진 주소 — 큰 자리에 쓸 때를 위해 같이 둔다. */
+  /** 카드 커버·상세 시트에 거는 중간 크기 (340px 안팎 · 47KB). */
+  medium: string;
+  /** 원본 사진 주소 — 1080px에 0.5~1.3MB가 흔해 화면에는 쓰지 않는다. */
   link: string;
   /** 사진이 걸린 글의 제목. 무엇을 보고 고른 사진인지 남긴다. */
   title: string;
+}
+
+// 네이버 썸네일 주소는 type 파라미터로 크기를 고른다. b150(150px)과 a340(340px)만
+// 쓴다 — w466·f400_400 같은 값은 404다(2026-11 실측).
+function withThumbnailType(url: string, type: "b150" | "a340"): string {
+  return url.includes("type=b150") ? url.replace("type=b150", `type=${type}`) : url;
 }
 
 /**
@@ -74,7 +82,12 @@ export async function searchPlaceImage(placeName: string): Promise<PlaceImage | 
       const thumbnail = item.thumbnail ?? "";
       const link = item.link ?? "";
       if (!thumbnail.startsWith("https://")) continue;
-      return { thumbnail, link: link.startsWith("https://") ? link : thumbnail, title };
+      return {
+        thumbnail: withThumbnailType(thumbnail, "b150"),
+        medium: withThumbnailType(thumbnail, "a340"),
+        link: link.startsWith("https://") ? link : thumbnail,
+        title,
+      };
     }
     return null;
   } catch {
