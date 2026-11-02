@@ -14,7 +14,7 @@ export default function LodgingPicks({ title, picks }: { title: string; picks: L
   return (
     <section className="mt-10 px-4">
       <h2 className="mb-3 text-lg font-bold">{title}</h2>
-      <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+      <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {picks.map((pick) => (
           <li
             key={pick.placeId}

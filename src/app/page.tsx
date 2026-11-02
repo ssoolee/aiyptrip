@@ -15,7 +15,7 @@ export default function Home() {
   const top = getTopPlaces();
 
   return (
-    <div className="mx-auto max-w-2xl pb-2 pt-6">
+    <div className="page-width pb-2 pt-6">
       <HomeHero />
 
       <div className="mt-8">

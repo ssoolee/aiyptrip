@@ -36,7 +36,7 @@ export default async function CoursePresetPage({
     curated.length > 0 ? curated : await generateCourses({ presetType, count: 3, durationDays });
 
   return (
-    <div className="mx-auto max-w-2xl pb-6 pt-6">
+    <div className="page-width pb-6 pt-6">
       <PageHeader
         className="mb-4 px-4"
         backHref="/"
@@ -50,7 +50,8 @@ export default async function CoursePresetPage({
             <PetPlacesLink />
           </div>
         )}
-        <div role="tablist" className="mt-4 flex gap-2">
+        {/* 본문이 넓어지는 데스크톱에서 탭 두 개가 화면 끝까지 늘어나지 않게 가둔다. */}
+        <div role="tablist" className="mt-4 flex max-w-md gap-2">
           {DURATION_TABS.map((tab) => {
             const active = tab.days === durationDays;
             return (

@@ -88,7 +88,9 @@ export default function NaverMapView({
   routeLegs,
   userPosition,
   onSelectPlace,
-  heightClass = "h-64 sm:h-96",
+  // 지도가 본문을 혼자 쓰는 화면(/map)의 기본 높이 — 본문이 넓어지는 데스크톱에서
+  // 한 단 더 키운다. 코스 상세·코스 카드는 호출부가 높이를 넘기므로 영향이 없다.
+  heightClass = "h-64 sm:h-96 lg:h-[34rem]",
   interactive = true,
 }: {
   stops: MapStop[];

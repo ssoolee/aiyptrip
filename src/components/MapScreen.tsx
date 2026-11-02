@@ -57,7 +57,7 @@ export default function MapScreen({ overviewPlaces }: { overviewPlaces: Place[] 
   const closest = useMemo(() => (position ? nearest(position, stops) : null), [position, stops]);
 
   return (
-    <div className="mx-auto max-w-2xl px-4 pb-6 pt-6">
+    <div className="page-width px-4 pb-6 pt-6">
       <PageHeader className="mb-4" title="🗺️ 지도" description={subtitle} expression="wow" />
 
       {favorites.length > 1 && (

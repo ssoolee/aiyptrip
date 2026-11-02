@@ -26,7 +26,7 @@ export default function PetPlacesScreen({ places }: { places: Place[] }) {
   const handleSelectPlace = useCallback((place: DetailPlace) => setOpenPlace(place), []);
 
   return (
-    <div className="mx-auto max-w-2xl px-4 pb-6 pt-6">
+    <div className="page-width px-4 pb-6 pt-6">
       <PageHeader
         backHref="/course/pet"
         backLabel="반려동물 코스 보기"

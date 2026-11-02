@@ -10,7 +10,7 @@ import ThemeToggle from "./ThemeToggle";
 export default function SiteHeader() {
   return (
     <header className="sticky top-0 z-30 border-b border-[var(--color-border)] bg-[var(--background)]">
-      <div className="mx-auto flex h-14 max-w-2xl items-center gap-2 px-4">
+      <div className="page-width flex h-14 items-center gap-2 px-4">
         <Link href="/" className="display flex min-w-0 items-center gap-2 text-[17px]">
           <Mascot expression="smile" size={32} />
           <span className="truncate">양평 여행 코스</span>

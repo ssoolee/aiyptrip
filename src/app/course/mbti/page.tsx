@@ -6,7 +6,7 @@ import PageHeader from "@/components/PageHeader";
 // /course/[preset]보다 먼저 매칭된다.
 export default function MbtiSelectPage() {
   return (
-    <div className="mx-auto max-w-2xl px-4 pb-6 pt-6">
+    <div className="page-width px-4 pb-6 pt-6">
       <PageHeader
         className="mb-6"
         backHref="/"
@@ -20,6 +20,7 @@ export default function MbtiSelectPage() {
         {MBTI_GROUPS.map((group) => (
           <section key={group.label}>
             <h2 className="mb-2 text-sm font-semibold text-[var(--color-muted)]">{group.label}</h2>
+            {/* 한 그룹이 네 유형이라 열을 더 늘리면 빈 칸만 생긴다 — sm에서 멈춘다. */}
             <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
               {group.types.map((type) => (
                 <Link

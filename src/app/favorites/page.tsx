@@ -41,7 +41,7 @@ export default function FavoritesPage() {
   const showLoginBanner = configured && !loading && !user && favorites.length + places.length > 0;
 
   return (
-    <div className="mx-auto max-w-2xl px-4 pb-6 pt-8">
+    <div className="page-width px-4 pb-6 pt-8">
       <PageHeader className="mb-4" title="찜 목록" expression="heart" />
 
       {showLoginBanner && (

@@ -102,6 +102,21 @@ body {
   word-break: keep-all;
 }
 
+/* 모든 화면이 쓰는 본문 폭. 모바일·태블릿은 한 칸(42rem)이고, 데스크톱(64rem 이상)부터
+   넓혀 코스 카드가 세 열로 들어간다. 헤더·푸터·하단 내비도 같은 클래스를 써서 본문과
+   선이 맞는다 — 폭을 바꿀 일이 생기면 여기만 고친다.
+   (Tailwind의 max-w-* 를 화면마다 적는 대신 한 곳에 모아 둔 이유다.) */
+.page-width {
+  margin-inline: auto;
+  max-width: 42rem;
+}
+
+@media (min-width: 64rem) {
+  .page-width {
+    max-width: 64rem;
+  }
+}
+
 /* 제목용 글꼴(Jua). 본문 한글과 섞어 쓰므로 Noto Sans KR을 뒤에 받쳐 둔다. */
 .display {
   font-family: var(--font-jua), var(--font-noto-sans-kr), sans-serif;

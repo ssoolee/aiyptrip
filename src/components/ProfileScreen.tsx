@@ -69,7 +69,7 @@ export default function ProfileScreen() {
   const name = user.displayName?.trim() || user.email?.split("@")[0] || "여행자";
 
   return (
-    <div className="mx-auto max-w-2xl px-4 pb-6 pt-8">
+    <div className="page-width px-4 pb-6 pt-8">
       <PageHeader className="mb-4" title="내정보" expression="happy" />
 
       <div className="mb-4 flex items-center gap-3 surface-card p-4">

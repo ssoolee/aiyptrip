@@ -17,7 +17,7 @@ export default function CourseLoadingScreen({
   cards?: number;
 }) {
   return (
-    <div className="loading-appear mx-auto max-w-2xl px-4 pb-6 pt-6" role="status">
+    <div className="loading-appear page-width px-4 pb-6 pt-6" role="status">
       <div className="flex flex-col items-center text-center">
         {/* 기다리는 동안 유일하게 보이는 그림이라 지연 로딩하지 않는다. */}
         <MascotSpot expression="calm" size={72} eager bob />
@@ -25,7 +25,7 @@ export default function CourseLoadingScreen({
         <p className="mt-1 text-sm text-[var(--color-muted)]">{description}</p>
       </div>
       {cards > 0 && (
-        <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2" aria-hidden>
+        <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3" aria-hidden>
           {Array.from({ length: cards }, (_, i) => (
             <CourseCardSkeleton key={i} />
           ))}

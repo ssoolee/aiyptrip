@@ -40,7 +40,10 @@ export default function PageHeader({
         <div className="min-w-0 flex-1">
           <h1 className={`display text-2xl leading-snug${backHref ? " mt-2" : ""}`}>{title}</h1>
           {description && (
-            <p className="mt-1.5 text-sm leading-relaxed text-[var(--color-muted)]">{description}</p>
+            // 본문이 넓어지는 데스크톱에서 설명이 한 줄로 길게 늘어나지 않게 가둔다.
+            <p className="mt-1.5 max-w-2xl text-sm leading-relaxed text-[var(--color-muted)]">
+              {description}
+            </p>
           )}
         </div>
         {expression && (

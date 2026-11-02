@@ -29,7 +29,7 @@ export default function HomeHero() {
               <br />
               <span className="hl">양평 한 바퀴</span>
             </h1>
-            <p className="mt-3 text-sm leading-relaxed text-[var(--color-hero-text)] sm:text-base">
+            <p className="mt-3 max-w-2xl text-sm leading-relaxed text-[var(--color-hero-text)] sm:text-base">
               하고 싶은 여행을 한 줄로 적거나 유형만 고르면, 물방울 친구 평안이가 영업시간과
               이동 동선까지 확인한 코스를 그려드려요.
             </p>

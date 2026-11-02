@@ -5,7 +5,7 @@ import Mascot from "./Mascot";
 export default function SiteFooter() {
   return (
     <footer className="mt-12 border-t border-[var(--color-border)]">
-      <div className="mx-auto flex max-w-2xl flex-wrap items-start justify-between gap-5 px-4 py-7">
+      <div className="page-width flex flex-wrap items-start justify-between gap-5 px-4 py-7">
         <div className="min-w-0">
           <p className="display text-base">AI행정앱제작소</p>
           <p className="mt-1 text-xs text-[var(--color-subtle)]">

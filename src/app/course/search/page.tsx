@@ -20,7 +20,7 @@ export default async function CourseSearchPage({
   const initialCourses = await generateCourses({ presetType: "custom", count: 3, conditions });
 
   return (
-    <div className="mx-auto max-w-2xl pb-6 pt-6">
+    <div className="page-width pb-6 pt-6">
       <PageHeader
         className="mb-4 px-4"
         backHref="/"

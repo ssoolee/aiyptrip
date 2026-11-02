@@ -17,7 +17,7 @@ export default async function MbtiCoursePage({ params }: { params: Promise<{ typ
     curation.courses.length > 0 ? curation.courses : await generateCourses({ presetType: "mbti", count: 3, mbti: type });
 
   return (
-    <div className="mx-auto max-w-2xl pb-6 pt-6">
+    <div className="page-width pb-6 pt-6">
       <PageHeader
         className="mb-4 px-4"
         backHref="/course/mbti"
