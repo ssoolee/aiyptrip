@@ -85,6 +85,10 @@ export interface Course {
 export interface TopPlace extends Place {
   /** 네이버 블로그 검색 결과 수 — 평점·방문자 리뷰는 공개 API로 받을 수 없다. */
   blogReviewCount: number;
+  /** 최근 한 달 안에 올라온 블로그 글 수. "요즘 뜨는 곳" 순위의 근거다. */
+  recentBlogCount?: number;
+  /** 훑어본 상한에 걸려 recentBlogCount가 "이상"인지 (naverBlogSearch의 SCAN_LIMIT). */
+  recentBlogCapped?: boolean;
   /** 대표 블로그 글 한 건 (제목·주소) */
   reviewTitle?: string;
   reviewLink?: string;

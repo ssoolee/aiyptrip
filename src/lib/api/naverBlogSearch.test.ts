@@ -198,3 +198,105 @@ test("장소 이름을 넘기지 않으면 이름 검사는 건너뛴다", () =>
   const reviews = toReviews([{ title: "아무 글", link: "https://blog.naver.com/a/1" }], 3);
   assert.equal(reviews.length, 1);
 });
+
+// ── 최근 글 수 세기 ────────────────────────────────────────────────────────────
+
+/** 오늘로부터 n일 전의 postdate(YYYYMMDD). */
+function daysAgo(n: number): string {
+  const d = new Date(Date.now() - n * 24 * 60 * 60 * 1000);
+  return `${d.getUTCFullYear()}${String(d.getUTCMonth() + 1).padStart(2, "0")}${String(d.getUTCDate()).padStart(2, "0")}`;
+}
+
+test("최근 글은 제목이 그 장소를 가리키는 것만 센다", async () => {
+  process.env.NCP_SEARCH_KEY_ID = "test-id";
+  process.env.NCP_SEARCH_KEY = "test-secret";
+  const restore = withFetch(() => ({
+    status: 200,
+    body: {
+      total: 49978,
+      items: [
+        // 제목에 이름이 있다 — 센다. <b> 태그와 띄어쓰기가 끼어도 알아본다.
+        { title: "양평 <b>두물머리</b> <b>연핫도그</b> 순한맛 후기", link: "a", postdate: daysAgo(1) },
+        // 본문에만 이름이 걸쳤다 — 검색어 주변을 잘라 만든 조각이라 믿을 수 없다.
+        { title: "서울 근교 단풍 명소 BEST 10", link: "b", description: "두물머리 연핫도그", postdate: daysAgo(2) },
+        // 사건 기사는 제목이 맞아도 뺀다.
+        { title: "두물머리연핫도그 앞 폭행 사건", link: "c", postdate: daysAgo(3) },
+      ],
+    },
+  }));
+  try {
+    const { countRecentBlogPosts } = await import("@/lib/api/naverBlogSearch");
+    const result = await countRecentBlogPosts("두물머리연핫도그", { days: 30 });
+    assert.deepEqual(result, { count: 1, capped: false, days: 30 });
+  } finally {
+    restore();
+  }
+});
+
+test("기간을 벗어난 글이 나오면 거기서 멈춘다 — 최신순이라 뒤는 볼 필요가 없다", async () => {
+  process.env.NCP_SEARCH_KEY_ID = "test-id";
+  process.env.NCP_SEARCH_KEY = "test-secret";
+  const restore = withFetch(() => ({
+    status: 200,
+    body: {
+      items: [
+        { title: "양평 흑유재 다녀왔어요", link: "a", postdate: daysAgo(3) },
+        { title: "양평 흑유재 가을 방문", link: "b", postdate: daysAgo(40) },
+        { title: "양평 흑유재 또 감", link: "c", postdate: daysAgo(41) },
+      ],
+    },
+  }));
+  try {
+    const { countRecentBlogPosts } = await import("@/lib/api/naverBlogSearch");
+    assert.equal((await countRecentBlogPosts("흑유재", { days: 30 }))?.count, 1);
+  } finally {
+    restore();
+  }
+});
+
+test("한 쪽(100건)을 다 쓰고도 기간 안이면 다음 쪽을 받는다", async () => {
+  process.env.NCP_SEARCH_KEY_ID = "test-id";
+  process.env.NCP_SEARCH_KEY = "test-secret";
+  const starts: string[] = [];
+  const restore = withFetch((url) => {
+    const start = new URL(url).searchParams.get("start") ?? "";
+    starts.push(start);
+    // 첫 쪽은 꽉 채워 보내고(기간 안), 둘째 쪽은 한 건만 보낸다.
+    const count = start === "1" ? 100 : 1;
+    return {
+      status: 200,
+      body: {
+        items: Array.from({ length: count }, (_, i) => ({
+          title: `양평 구벼울 방문기 ${i}`,
+          link: `a${i}`,
+          postdate: daysAgo(1),
+        })),
+      },
+    };
+  });
+  try {
+    const { countRecentBlogPosts } = await import("@/lib/api/naverBlogSearch");
+    const result = await countRecentBlogPosts("구벼울", { days: 30 });
+    assert.equal(result?.count, 101);
+    assert.deepEqual(starts, ["1", "101"]);
+  } finally {
+    restore();
+  }
+});
+
+test("최근 글 수도 키가 없으면 호출조차 하지 않는다", async () => {
+  delete process.env.NCP_SEARCH_KEY_ID;
+  delete process.env.NCP_SEARCH_KEY;
+  let called = false;
+  const restore = withFetch(() => {
+    called = true;
+    return { status: 200, body: {} };
+  });
+  try {
+    const { countRecentBlogPosts } = await import("@/lib/api/naverBlogSearch");
+    assert.equal(await countRecentBlogPosts("두물머리"), null);
+    assert.equal(called, false);
+  } finally {
+    restore();
+  }
+});

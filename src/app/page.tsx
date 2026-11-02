@@ -41,16 +41,25 @@ export default function Home() {
         </div>
       </div>
 
-      {(top.cafe.length > 0 || top.restaurant.length > 0) && (
+      {(top.cafe.length > 0 ||
+        top.restaurant.length > 0 ||
+        top.recentCafe.length > 0 ||
+        top.recentRestaurant.length > 0) && (
         <div className="mt-9">
           <SectionHead
             className="mb-3 px-4"
             expression="wink"
             title="요즘 이야기가 많은 곳"
-            description="네이버 블로그에 글이 가장 많이 올라온 양평 카페·맛집이에요."
+            description={`네이버 블로그에 글이 많이 올라온 양평 카페·맛집이에요. 최근 ${top.recentDays}일과 전체 기간을 따로 보여드려요.`}
           />
           <div className="px-4">
-            <TopPlaces cafe={top.cafe} restaurant={top.restaurant} />
+            <TopPlaces
+              cafe={top.cafe}
+              restaurant={top.restaurant}
+              recentCafe={top.recentCafe}
+              recentRestaurant={top.recentRestaurant}
+              recentDays={top.recentDays}
+            />
           </div>
         </div>
       )}
