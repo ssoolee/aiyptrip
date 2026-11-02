@@ -4,10 +4,14 @@
 # 얼려 둔 파일이라, 돌려 주지 않으면 "요즘"이 몇 달 전 이야기가 된다.
 # scripts/build-top-places.ts가 하는 일은 npm run build:top과 같다.
 #
-# 필요한 저장소 시크릿 (지역 검색·블로그 검색·TourAPI)
-#   NCP_SEARCH_KEY_ID, NCP_SEARCH_KEY  NAVER API HUB 애플리케이션 키
-#   TOUR_API_KEY                       한국관광공사 인증키 (뽑힌 곳의 사진)
+# 필요한 저장소 시크릿
+#   NCP_SEARCH_KEY_ID, NCP_SEARCH_KEY  NAVER API HUB 애플리케이션 키(지역 검색 + 블로그 검색)
 # 없으면 후보를 못 받아 빈 목록이 되므로, 그때는 커밋하지 않고 실패로 끝낸다.
+#
+# TOUR_API_KEY는 넣지 않는다. 빌드 스크립트가 TourAPI를 부르는 곳은 뽑힌 장소의 사진을
+# 찾는 자리 하나인데, 실측 네 번 동안 사진은 전부 장소 스냅샷에서 나왔고 TourAPI가
+# 보탠 것은 없었다(스냅샷 11·없음 37·TourAPI 0). 키가 없으면 그 호출은 네트워크를
+# 타지 않고 빈 배열이 되고, 사진이 없는 자리는 평안이 그림이 대신한다.
 name: 요즘 순위 갱신
 
 on:
@@ -43,7 +47,6 @@ jobs:
         env:
           NCP_SEARCH_KEY_ID: ${{ secrets.NCP_SEARCH_KEY_ID }}
           NCP_SEARCH_KEY: ${{ secrets.NCP_SEARCH_KEY }}
-          TOUR_API_KEY: ${{ secrets.TOUR_API_KEY }}
         run: npm run build:top
 
       # 후보를 한 곳도 못 받았으면(키 문제·API 장애) 빈 목록이 만들어진다.

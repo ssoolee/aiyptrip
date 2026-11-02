@@ -78,7 +78,8 @@ npm run dev
 최근 30일 수치는 날마다 바뀌는데 이 파일은 얼려 둔 사본이라, **주 1회 자동으로 다시
 뽑는다**(`.github/workflows/refresh-top-places.yml`, 월요일 05:00 KST). 순위가 지난주와
 같으면 커밋하지 않고, 바뀌면 커밋한 뒤 배포까지 부른다. 저장소 시크릿
-`NCP_SEARCH_KEY_ID`·`NCP_SEARCH_KEY`·`TOUR_API_KEY`가 있어야 돈다.
+`NCP_SEARCH_KEY_ID`·`NCP_SEARCH_KEY`가 있어야 돈다 (사진은 장소 스냅샷에서 나오므로
+`TOUR_API_KEY` 없이 돈다 — 실측 네 번에서 TourAPI가 보탠 사진은 없었다).
 
 순위의 근거가 블로그 글 수인 이유는 다른 수를 받을 수 없어서다 — 네이버는 플레이스의
 방문자 리뷰 수·별점을 공개 API로 주지 않고, 지역 검색은 `sort=comment`로 "리뷰 많은 순"
