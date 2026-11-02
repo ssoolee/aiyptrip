@@ -26,7 +26,7 @@
 | **축제/행사 정보** | **TourAPI `searchFestival2`** | 양평군 축제 캘린더 데이터 소스 | 공공데이터포털 인증키 | Should | `01-ai-course-recommendation-prd.md` |
 | **반려동물 동반정보** | **TourAPI 반려동물 동반여행 서비스(`detailPetTour2`)** | 반려동물 동반 가능 업체 필터링 | 공공데이터포털 인증키 | Should | `01-ai-course-recommendation-prd.md`, `03-place-detail-prd.md` |
 | 날씨 | **기상청 단기예보 API (공공데이터포털)** | 여행일 날씨 기반 추천 보정(우천 시 실내 위주 등) | 공공데이터포털 인증키 | Should | `01-ai-course-recommendation-prd.md` |
-| AI 추천 로직 | **Anthropic Claude API (Messages API)** | `docs/agents/` 1~5번 런타임 에이전트의 LLM 호출 | API Key | Must | `docs/agents/` 전체 |
+| AI 추천 로직 | **OpenAI Responses API** (기본 모델 `gpt-6-luna`) | `docs/agents/` 1~5번 런타임 에이전트의 LLM 호출. 공급자는 `LLM_PROVIDER`로 교체 가능하다 — openai(기본)/gemini/anthropic, 구현은 `src/lib/llm/` | API Key | Must | `docs/agents/` 전체 |
 | **로그인 전용** | **카카오 로그인 (Kakao Login)** | 사용자 인증(로그인)만 담당. 장소/지도/길찾기 용도로는 사용하지 않음 | 카카오 REST API Key + Firebase Custom Token 연동 | Must | `06-infra-deployment-prd.md`, `04-favorites-prd.md` |
 | 인증 | **Firebase Authentication** | 로그인 세션 관리, 찜 데이터 사용자 구분 (이메일/구글/카카오 로그인 통합) | SDK/OAuth | Must | `06-infra-deployment-prd.md`, `04-favorites-prd.md` |
 | DB | **Cloud Firestore** | 사용자별 찜, 사전 생성 코스 캐시, 축제/MBTI 매핑 저장 | SDK/보안규칙 | Must | `06-infra-deployment-prd.md` |

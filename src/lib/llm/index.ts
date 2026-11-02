@@ -1,16 +1,18 @@
 import { anthropicProvider } from "@/lib/llm/anthropic";
 import { geminiProvider } from "@/lib/llm/gemini";
+import { openaiProvider } from "@/lib/llm/openai";
 import { LlmProvider, LlmProviderName, LlmRequest } from "@/lib/llm/types";
 
-// 공급자 전환은 .env.local의 LLM_PROVIDER 값만 바꾸면 된다 (기본: gemini).
+// 공급자 전환은 .env.local의 LLM_PROVIDER 값만 바꾸면 된다 (기본: openai).
 const PROVIDERS: Record<LlmProviderName, LlmProvider> = {
+  openai: openaiProvider,
   gemini: geminiProvider,
   anthropic: anthropicProvider,
 };
 
 export function getLlmProvider(): LlmProvider {
   const name = process.env.LLM_PROVIDER as LlmProviderName | undefined;
-  return (name && PROVIDERS[name]) || geminiProvider;
+  return (name && PROVIDERS[name]) || openaiProvider;
 }
 
 export function generateText(req: LlmRequest): Promise<string | null> {

@@ -12,7 +12,10 @@ runConfig:
 
 env:
   - variable: LLM_PROVIDER
-    value: gemini
+    value: openai
+  - variable: OPENAI_API_KEY
+    secret: openai-api-key
+  # 공급자를 되돌릴 때를 위해 남겨 둔다 — LLM_PROVIDER 값만 바꾸면 된다.
   - variable: GEMINI_API_KEY
     secret: gemini-api-key
   - variable: TOUR_API_KEY

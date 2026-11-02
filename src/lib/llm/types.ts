@@ -1,8 +1,8 @@
 // docs/prd/07-external-api-integration.md "AI 추천 로직" 참조.
-// LLM 공급자(Gemini/Anthropic)를 교체 가능하게 하는 공통 인터페이스.
+// LLM 공급자(OpenAI/Gemini/Anthropic)를 교체 가능하게 하는 공통 인터페이스.
 // 에이전트 코드는 공급자를 직접 import하지 않고 src/lib/llm/index.ts만 사용한다.
 
-export type LlmProviderName = "gemini" | "anthropic";
+export type LlmProviderName = "openai" | "gemini" | "anthropic";
 
 export interface LlmRequest {
   system?: string;

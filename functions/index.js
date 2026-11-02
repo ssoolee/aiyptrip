@@ -17,6 +17,7 @@ const { defineSecret } = require("firebase-functions/params");
 // App Hosting 때의 케밥케이스(gemini-api-key)가 아니라 대문자 스네이크로 등록한다
 // (등록: npx firebase-tools functions:secrets:set GEMINI_API_KEY).
 const SECRETS = [
+  "OPENAI_API_KEY",
   "GEMINI_API_KEY",
   "TOUR_API_KEY",
   "NCP_SEARCH_KEY_ID",
