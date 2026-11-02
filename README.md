@@ -386,8 +386,14 @@ Hosting이 앞에 서면서 생긴 제약 세 가지를 알고 있어야 한다.
 그러려면 저장소 시크릿 `GCP_SA_KEY`에 배포용 서비스 계정 키(JSON 전문)가 있어야 한다 —
 비어 있으면 `Failed to authenticate, have you run firebase login?`으로 떨어진다.
 계정에 필요한 역할은 Firebase Admin, Cloud Functions Developer, Service Account User,
-API Keys Viewer, Secret Manager Secret Accessor다. 공개 값(`NEXT_PUBLIC_*`)은 시크릿이
+API Keys Viewer, **Secret Manager Admin**이다. 공개 값(`NEXT_PUBLIC_*`)은 시크릿이
 아니라 커밋된 `.env.production`에서 읽는다.
+
+시크릿 역할이 Secret Manager Secret Accessor로는 모자란다 — 그건 값을 읽는 권한
+(`versions.access`)뿐이고, 배포할 때 firebase CLI는 시크릿이 있는지 조회하고
+(`secrets.get`) 함수 런타임 계정이 그 시크릿을 읽도록 IAM을 걸어 준다
+(`secrets.setIamPolicy`). Accessor만 주면 `Permission 'secretmanager.secrets.get'
+denied on resource .../secrets/OPENAI_API_KEY`로 떨어진다 (2026-11 실측).
 
 손으로 올릴 때는 빌드 산출물을 Hosting 몫과 함수 몫으로 나눈 뒤 배포한다.
 
