@@ -108,7 +108,7 @@ export default function PlaceDetailSheet({ place, onClose }: { place: DetailPlac
           <div className="mt-3">
             <HoursStatusBadge status={status} />
           </div>
-          <HoursTable parsedHours={parsedHours} raw={place.businessHoursRaw} />
+          <HoursTable parsedHours={parsedHours} raw={place.businessHoursRaw} phone={place.phone} />
 
           <dl className="mt-4 space-y-2 text-sm">
             <div className="flex items-start gap-2">
@@ -203,12 +203,28 @@ function PhotoGallery({ photos, name, category }: Pick<DetailPlace, "photos" | "
   );
 }
 
-function HoursTable({ parsedHours, raw }: { parsedHours: ParsedBusinessHours | null; raw: string | undefined }) {
-  // 파싱 실패 시에도 원본 텍스트는 노출한다 (PRD-03 §5).
+function HoursTable({
+  parsedHours,
+  raw,
+  phone,
+}: {
+  parsedHours: ParsedBusinessHours | null;
+  raw: string | undefined;
+  phone: string | undefined;
+}) {
+  // 파싱 실패 시에도 원본 텍스트는 노출한다 (PRD-03 §5) — "점포마다 상이함"처럼
+  // 표로 옮길 수 없는 문구도 그 자체가 답이 된다.
+  //
+  // 원문이 아예 없으면 다음 행동을 적는다. 어느 버튼으로 보낼지는 전화번호 유무로
+  // 갈린다 — 영업시간이 비는 장소는 전화번호도 함께 비어 있는 경우가 많아(현재 42곳
+  // 전부), 없는 "전화하기"를 가리키면 길이 끊긴다.
   if (!parsedHours) {
     return (
       <p className="mt-2 text-xs text-[var(--color-muted)]">
-        {raw ?? "영업시간이 수집되지 않은 장소예요. 방문 전 네이버 지도에서 확인하세요."}
+        {raw ??
+          (phone
+            ? "영업시간이 확인되지 않았어요. 아래 전화하기로 영업점에 문의해 주세요."
+            : "영업시간이 확인되지 않았어요. 아래 네이버 지도에서 영업점 정보를 확인해 주세요.")}
       </p>
     );
   }

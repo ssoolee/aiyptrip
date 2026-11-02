@@ -142,13 +142,46 @@ TourAPI 항목이 있으면 함께 채운다(89곳). 어느 API에도 없는
 코스 추천에서 뒤로 밀리고(`src/lib/agents/placeRetrieval.ts`), 상세 화면에는
 "방문 전 확인" 안내가 붙는다.
 
+## 외부 API
+
+각 API가 이 서비스에서 맡는 일. **하나도 없어도 앱은 뜬다** — 실패하면 그 기능만 빠지거나
+규칙 기반 결과로 내려앉는다(`docs/agents/` 참조).
+
+| API | 역할 | 부르는 시점 | 끊기면 |
+|---|---|---|---|
+| **OpenAI** (`gpt-6-luna`, 기본) | 자연어 요청 해석(문장→취향 태그), 코스 제목·장소 한 줄 요약, 장소 취향 태깅 | 요청마다 + 빌드 | 규칙 기반 문구로 폴백 — 코스는 그대로 나온다 |
+| **Gemini**·**Anthropic** | 위와 같은 역할의 대체 공급자. `LLM_PROVIDER` 한 줄로 바꾼다 | 같음 | — |
+| **네이버 지역 검색** (API HUB) | 양평 장소 수집 — 이름·주소·좌표·전화·업종 | `build:places`, 키워드 검색 | 커밋된 스냅샷으로 돌아간다 |
+| **네이버 블로그 검색** (API HUB) | 장소 상세의 블로그 리뷰, 홈 "요즘 이야기가 많은 곳" 순위(전체 기간·최근 30일) | 상세 열 때 + `build:top` | 리뷰·순위 영역만 빠진다 |
+| **네이버 이미지 검색** (API HUB) | 장소 사진 (위 "장소 사진") | `build:photos`, `build:top` | 기존 사진을 그대로 쓴다 |
+| **NCP Maps Geocoding** | 주소 → 좌표 | `build:mbti` | 좌표를 못 찾은 장소는 빠진다 |
+| **NCP Maps Directions** | 구간 이동시간 실측 → `routeLegs.json` | `build:routes` | 직선거리 어림값으로 센다 |
+| **네이버 지도 Web SDK** (`maps.js`) | 지도 화면과 코스 카드의 동선 그리기 | 브라우저 | 지도만 안 뜬다 |
+| **TourAPI** (공공데이터포털) | **영업시간**, 장소 소개글, 관광지·숙소 후보, 축제 | 빌드 + 추천 시 | 영업 배지와 "오늘 닫는 곳" 걸러내기가 빠진다 |
+| **Firebase** (Auth·Firestore) | 코스 저장·다시 열기 | 저장할 때 | 저장만 건너뛴다 |
+
+세 가지 키는 `.env.example`에 자리만 있고 **아직 코드에서 쓰지 않는다** —
+`ODSAY_API_KEY`(대중교통 길찾기), `WEATHER_API_KEY`(기상청 단기예보),
+`KAKAO_REST_API_KEY`(로그인 — 아래 "로그인 보류").
+
+### 영업시간은 왜 TourAPI에 남아 있나
+
+영업시간을 주는 공개 API는 사실상 구글 Places뿐이다 — 네이버 지역 검색·카카오 로컬·TMAP
+장소 상세 모두 영업시간 필드가 없다. 구글은 Places 콘텐츠를 `place_id`와 좌표(30일) 말고는
+저장하지 못하게 하고, 비구글 지도와 함께 쓰는 것도 막는다(서비스별 약관 Places 5.3·5.4).
+영업시간을 스냅샷에 커밋하고 네이버 지도를 쓰는 이 구조와는 맞지 않는다.
+
+그래서 TourAPI를 쓴다. 그래도 비는 42곳(숙소 20곳 포함)과 "점포마다 상이함"처럼 표로
+옮길 수 없는 4곳은 화면에 **"영업점 문의"**로 나간다(`src/components/HoursStatusBadge.tsx`).
+숙소는 애초에 영업시간을 따지지 않는다(`src/lib/agents/validation.ts`).
+
 ## 환경 변수
 
 `.env.example`이 전체 목록과 발급처를 담고 있다. 상세는
 [docs/prd/07-external-api-integration.md](./docs/prd/07-external-api-integration.md) 참조.
 
-- **LLM** — `LLM_PROVIDER`(gemini|anthropic), `GEMINI_API_KEY`, `GEMINI_MODEL`,
-  `ANTHROPIC_API_KEY`, `ANTHROPIC_MODEL`
+- **LLM** — `LLM_PROVIDER`(openai|gemini|anthropic), `OPENAI_API_KEY`, `OPENAI_MODEL`,
+  `GEMINI_API_KEY`, `GEMINI_MODEL`, `ANTHROPIC_API_KEY`, `ANTHROPIC_MODEL`
 - **지도/장소** — `NCP_SEARCH_KEY_ID`·`NCP_SEARCH_KEY`(API HUB 지역·블로그 검색),
   `NCP_MAPS_KEY_ID`·`NCP_MAPS_KEY`(Geocoding·Directions),
   `NEXT_PUBLIC_NCP_MAPS_KEY_ID`(브라우저 지도 SDK)
@@ -463,8 +496,8 @@ npx firebase-tools deploy --only firestore                # 규칙·인덱스 �
 ## 데이터 출처
 
 `src/lib/data/places.json`은 **네이버 오픈API 지역 검색(76곳)과 공공데이터포털
-TourAPI(101곳)** 의 응답을 골라 담고 LLM 요약을 붙인 캐시다. 장소 사진은
-`tong.visitkorea.or.kr`(TourAPI) 주소를 그대로 불러 쓴다. 반려동물 동반 업소
+TourAPI(101곳)** 의 응답을 골라 담고 LLM 요약을 붙인 캐시다. 장소 사진은 네이버 이미지
+검색이 준 썸네일 주소를 불러 쓴다(위 "장소 사진"). 반려동물 동반 업소
 (`data/pet-friendly.source.json`)는 식품안전나라 "반려동물 동반 가능 업소 현황"에서
 양평군만 추린 것이다.
 

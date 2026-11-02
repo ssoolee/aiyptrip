@@ -38,8 +38,8 @@ const SKIP_CATEGORIES = new Set(["lodging"]);
  *
  * `visitWeekday`는 1일차 방문 요일(0=일 … 6=토)이고, 생략하면 한국시간 기준 오늘이다.
  * 2일차는 그 다음 날로 센다. 영업시간을 모르는 장소는 반려하지 않고 notices로 남긴다 —
- * 스냅샷 177곳 중 100곳이 영업시간 출처가 없어, 모르는 곳을 모두 반려하면 코스가
- * 만들어지지 않는다.
+ * 스냅샷 194곳 중 42곳이 영업시간 출처가 없어, 모르는 곳을 모두 반려하면 코스가
+ * 만들어지지 않는다. 화면에는 "영업점 문의"로 나간다(src/components/HoursStatusBadge.tsx).
  */
 export function validateItinerary(
   days: ItineraryDay[],
