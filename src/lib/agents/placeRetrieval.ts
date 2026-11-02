@@ -1,15 +1,12 @@
 import { SNAPSHOT_PLACES } from "@/lib/data/placeSnapshot";
 import { getActiveFestivals, searchTourApiPlaces } from "@/lib/api/tourApi";
 import { searchNaverPlaces } from "@/lib/api/naverSearch";
+import { normalizePlaceName as normalizeName } from "@/lib/placeIdentity";
 import { Category, Place } from "@/types/travel";
 
 // 스냅샷 이후 새로 등록된 장소도 후보에 들 수 있도록 실시간으로 조회할 TourAPI
 // 카테고리별 개수 (Next.js fetch 캐시로 동일 카테고리 재호출은 저렴함).
 const TOUR_API_POOL_SIZE = 24;
-
-function normalizeName(name: string): string {
-  return name.replace(/\s+/g, "").toLowerCase();
-}
 
 // 스냅샷에 있는 장소는 실시간 결과에서 다시 넣지 않는다. 같은 업체가 네이버/TourAPI에
 // 다른 ID로 있을 수 있어 이름으로도 비교한다 — 이미 코스에 쓰여 제외된 장소가
@@ -50,15 +47,27 @@ export async function retrievePlaces(params: {
   category: Category;
   tags: string[];
   excludePlaceIds?: string[];
+  // 이미 코스에 쓴 장소 이름. 같은 업체가 출처마다 다른 ID로 있어 ID만으로는 막을 수
+  // 없는 중복을 거른다 (네이버는 좌표 기반 ID, TourAPI는 contentid).
+  excludeNames?: string[];
   requirePetFriendly?: boolean;
   count?: number;
   offset?: number;
 }): Promise<Place[]> {
-  const { category, tags, excludePlaceIds = [], requirePetFriendly, count = 3, offset = 0 } = params;
+  const {
+    category,
+    tags,
+    excludePlaceIds = [],
+    excludeNames = [],
+    requirePetFriendly,
+    count = 3,
+    offset = 0,
+  } = params;
   const excluded = new Set(excludePlaceIds);
+  const excludedNames = new Set(excludeNames.map(normalizeName));
 
   const scored = SNAPSHOT_PLACES.filter((p) => p.category === category)
-    .filter((p) => !excluded.has(p.placeId))
+    .filter((p) => !excluded.has(p.placeId) && !excludedNames.has(normalizeName(p.name)))
     .filter((p) => (requirePetFriendly ? p.petFriendly === true : true))
     .map((place) => ({ place, score: scorePlace(place, tags) }));
 
@@ -86,7 +95,13 @@ export async function retrievePlaces(params: {
       searchTourApiPlaces({ category, count: TOUR_API_POOL_SIZE }),
     ]);
     const knownIds = new Set([...excluded, ...SNAPSHOT_IDS, ...pool.map((p) => p.placeId)]);
-    const knownNames = new Set([...SNAPSHOT_NAMES, ...pool.map((p) => normalizeName(p.name))]);
+    // 제외된 장소의 이름도 넣는다 — 스냅샷에 없는 장소(실시간 조회 결과)는
+    // SNAPSHOT_NAMES에 없어서, 1일차에 쓴 네이버 식당이 2일차에 TourAPI ID로 다시 들어왔다.
+    const knownNames = new Set([
+      ...SNAPSHOT_NAMES,
+      ...excludedNames,
+      ...pool.map((p) => normalizeName(p.name)),
+    ]);
     for (const candidate of [...naverCandidates, ...tourCandidates]) {
       const name = normalizeName(candidate.name);
       if (knownIds.has(candidate.placeId) || knownNames.has(name)) continue;

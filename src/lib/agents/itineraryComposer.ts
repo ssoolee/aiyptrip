@@ -58,6 +58,24 @@ function templateFor(day: number, durationDays: number): DayTemplate {
   return DAY_TEMPLATES[Math.min(day - 1, DAY_TEMPLATES.length - 1)];
 }
 
+/**
+ * 코스 하나가 한 카테고리의 후보 풀에서 손대는 칸 수. 다음 코스(offset+1)는 이만큼
+ * 건너뛰어 시작해야 같은 장소가 두 코스에 뽑히지 않는다.
+ *
+ * 슬롯수가 아니라 "슬롯수 + SHORTLIST − 1"이다 — 슬롯마다 후보를 SHORTLIST개 받아
+ * 그중 한 곳만 고르므로(nearestCandidate) 마지막 슬롯은 풀의 slots + SHORTLIST − 2번째
+ * 칸까지 들여다본다. 보폭을 슬롯수로만 잡았을 때 첫 화면 세 장에서 장소가 2~6곳씩
+ * 겹쳤다 (예: "비 오는 날 아이랑" 1박 2일에서 9곳 중 4곳).
+ *
+ * 후보가 적어 FALLBACK_CATEGORIES로 다른 카테고리를 끌어다 쓰면(반려동물 코스처럼
+ * 관광지 후보가 0곳일 때) 한 카테고리를 슬롯수보다 많이 쓰게 되어 이 가정이 깨진다.
+ * 그런 조건은 후보 자체가 적어 겹침을 피할 수 없으므로, 똑같은 코스를 걸러내는
+ * orchestrator의 courseSignature 중복 제거에 맡긴다.
+ */
+function candidateStride(slots: number): number {
+  return slots + SHORTLIST - 1;
+}
+
 /** 후보 중 직전 지점에서 가장 빨리 닿는 곳. 이동시간이 같으면 앞선(취향 점수가 높은) 후보. */
 function nearestCandidate(from: LatLng, candidates: Place[]): Place {
   let best = candidates[0];
@@ -78,14 +96,17 @@ export async function composeItinerary(params: {
   requirePetFriendly?: boolean;
   offset?: number;
   usedPlaceIds?: Set<string>;
+  // 이미 쓴 장소 이름 — usedPlaceIds와 짝이다. 같은 업체가 출처마다 다른 ID로 있어
+  // (네이버는 좌표 기반, TourAPI는 contentid) ID만으로는 중복을 못 막는다.
+  usedPlaceNames?: Set<string>;
 }): Promise<ItineraryDay[]> {
   const { durationDays, tags, requirePetFriendly, offset = 0 } = params;
   const usedPlaceIds = params.usedPlaceIds ?? new Set<string>();
+  const usedNames = params.usedPlaceNames ?? new Set<string>();
   const days: ItineraryDay[] = [];
 
-  // 한 코스가 카테고리마다 쓰는 슬롯 수(예: 2일 코스의 식당 3곳). 코스 offset을
-  // 이만큼씩 건너뛰어야 다음 코스가 이전 코스의 후보를 다시 쓰지 않는다 —
-  // offset을 1씩만 밀면 코스 N의 두 번째 카페가 코스 N+1의 첫 카페가 된다.
+  // 한 코스가 카테고리마다 쓰는 슬롯 수(예: 2일 코스의 식당 3곳).
+  // 코스 offset은 이 수가 아니라 candidateStride()만큼 건너뛴다 — 아래 참조.
   const slotsPerCategory = new Map<Category, number>();
   for (let day = 1; day <= durationDays; day++) {
     const template = templateFor(day, durationDays);
@@ -113,8 +134,9 @@ export async function composeItinerary(params: {
           tags,
           requirePetFriendly,
           excludePlaceIds: Array.from(usedPlaceIds),
+          excludeNames: Array.from(usedNames),
           count: SHORTLIST,
-          offset: offset * (slotsPerCategory.get(category) ?? 1),
+          offset: offset * candidateStride(slotsPerCategory.get(category) ?? 1),
         });
         if (candidates.length > 0) {
           candidate = nearestCandidate(from, candidates);
@@ -123,6 +145,7 @@ export async function composeItinerary(params: {
       }
       if (!candidate) continue;
       usedPlaceIds.add(candidate.placeId);
+      usedNames.add(candidate.name);
       // 시각은 scheduleItinerary가 다시 쓴다 — 여기서는 자리만 채워 둔다.
       stops.push({ ...candidate, timeSlot: "" });
       from = candidate;

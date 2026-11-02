@@ -1,11 +1,12 @@
+import { normalizePlaceName } from "@/lib/placeIdentity";
 import type { Place } from "@/types/travel";
 
 // 외부 목록(큐레이션 자료, 반려동물 동반 업소 현황)의 장소 이름을 검색 결과와 맞춰 보는
 // 빌드 스크립트 공용 유틸.
 
-export function normalizeName(name: string): string {
-  return name.replace(/[\s·:()]+/g, "").toLowerCase();
-}
+// 이름 정규화 규칙은 앱과 같은 것을 쓴다 — 빌드 때 합친 장소를 화면에서 다시
+// 다른 곳으로 보면 중복이 생긴다.
+export const normalizeName = normalizePlaceName;
 
 // 검색 후보 중 찾는 이름(표시 이름 또는 검색어)과 같은 곳을 고른다. 정확히 같은 이름을
 // 먼저 찾고, 없으면 "블룸비스타" ↔ "블룸비스타호텔앤컨퍼런스"처럼 한쪽이 다른 쪽을

@@ -38,7 +38,13 @@ export default function CourseResults({
 
   const handleLoadMore = () => {
     startTransition(async () => {
-      const more = await loadMoreCourses(presetType, nextOffset, mbti, query, durationDays);
+      // 지금 화면에 있는 장소를 같이 보낸다 — 서버는 이번 요청에서 만든 코스끼리만
+      // 장소를 나눠 갖게 할 수 있어서, 앞서 보여 준 코스를 알려 주지 않으면
+      // 거의 같은 코스가 한 장 더 붙는다.
+      const shownPlaces = courses.flatMap((course) =>
+        course.days.flatMap((day) => day.stops.map((stop) => ({ placeId: stop.placeId, name: stop.name }))),
+      );
+      const more = await loadMoreCourses(presetType, nextOffset, mbti, query, durationDays, shownPlaces);
       const shown = new Set(courses.map((c) => courseSignature(c.days)));
       const fresh = more.filter((c) => !shown.has(courseSignature(c.days)));
       if (fresh.length === 0) setExhausted(true);

@@ -7,6 +7,7 @@
 import { loadEnvConfig } from "@next/env";
 import { writeFileSync, mkdirSync } from "node:fs";
 import path from "node:path";
+import { isSamePlace, normalizePlaceName as normalizeName } from "@/lib/placeIdentity";
 import type { Category, Place } from "@/types/travel";
 
 loadEnvConfig(process.cwd());
@@ -18,10 +19,6 @@ const CATEGORIES: Category[] = ["attraction", "cafe", "restaurant", "lodging"];
 
 // 반려동물 동반은 LLM 판단만 믿지 않고, 원문(소개글·업종)에 명시된 경우만 인정한다.
 const PET_EVIDENCE = /반려동물|반려견|애견|펫|pet/i;
-
-function normalizeName(name: string): string {
-  return name.replace(/\s+/g, "").toLowerCase();
-}
 
 interface TagEntry {
   tags?: unknown;
@@ -61,7 +58,10 @@ async function main() {
     let merged = 0;
     for (const place of [...naver, ...tour]) {
       const name = normalizeName(place.name);
-      const existing = byName.get(name);
+      // 이름이 완전히 같지 않아도 같은 업체일 수 있다 — 지점 이름이 붙은 쪽(네이버의
+      // "쏭바베큐 양평본점")과 안 붙은 쪽(TourAPI의 "쏭바베큐")이 따로 들어오면
+      // 한 코스에 같은 가게가 두 번 나온다 (src/lib/placeIdentity.ts).
+      const existing = byName.get(name) ?? places.find((p) => isSamePlace(p, place));
       const contentId = place.placeId.startsWith("tour_") ? place.placeId.slice("tour_".length) : undefined;
       if (existing) {
         if (contentId && !tourContentIds.has(existing.placeId)) {
