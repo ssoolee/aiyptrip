@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import { generateCourses } from "@/lib/agents/orchestrator";
 import { getMbtiCuration, isMbtiType } from "@/lib/mbti";
 import { fill } from "@/lib/i18n/format";
-import { serverDictionary } from "@/lib/i18n/server";
+import { currentLocale, serverDictionary } from "@/lib/i18n/server";
 import CourseResults from "@/components/CourseResults";
 import PageHeader from "@/components/PageHeader";
 import LodgingPicks from "@/components/LodgingPicks";
@@ -13,8 +13,8 @@ export default async function MbtiCoursePage({ params }: { params: Promise<{ typ
   const type = (await params).type.toUpperCase();
   if (!isMbtiType(type)) notFound();
 
-  const dict = await serverDictionary();
-  const curation = getMbtiCuration(type, dict.notice.mayBeClosed);
+  const [locale, dict] = await Promise.all([currentLocale(), serverDictionary()]);
+  const curation = getMbtiCuration(type, locale);
   // 아직 큐레이션 자료가 없는 유형은 파이프라인 코스로 대신한다.
   const initialCourses =
     curation.courses.length > 0 ? curation.courses : await generateCourses({ presetType: "mbti", count: 3, mbti: type });

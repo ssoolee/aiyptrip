@@ -199,7 +199,7 @@ export default function NaverMapView({
       new maps.Marker({
         position: here,
         map,
-        title: "현재 위치",
+        title: t.map.youAreHere,
         zIndex: 1000,
         icon: {
           content:
@@ -237,10 +237,11 @@ export default function NaverMapView({
         }`}
       >
         {!interactive
-          ? "지도를 불러올 수 없어요"
+          ? t.map.unavailable
           : authFailed
-            ? "지도를 불러올 수 없어요. 아래 목록과 길찾기 링크를 이용해 주세요."
-            : "NEXT_PUBLIC_NCP_MAPS_KEY_ID가 설정되지 않았습니다. .env.local을 확인하세요."}
+            ? t.map.unavailableBody
+            : // 키가 없을 때만 나오는 개발용 안내라 번역하지 않는다 — 보는 사람은 개발자다.
+              "NEXT_PUBLIC_NCP_MAPS_KEY_ID가 설정되지 않았습니다. .env.local을 확인하세요."}
       </div>
     );
   }

@@ -118,7 +118,13 @@ function PlaceRow({
   numberLocale: string;
 }) {
   // "경기도 양평군 서종면 북한강로 1161" → "서종면" — 한 줄에 들어가게 읍·면만 남긴다.
-  const area = /양평군\s+(\S+)/.exec(place.address)?.[1] ?? "양평군";
+  //
+  // 외국어에서는 주소가 "1161 Bukhangang-ro, Seojong-myeon, Yangpyeong-gun, Gyeonggi-do"로
+  // 번역돼 있어 한국어 규칙이 걸리지 않는다. 로마자 표기(-myeon/-eup/-dong/-ri)를 한 번 더 본다.
+  const area =
+    /양평군\s+(\S+)/.exec(place.address)?.[1] ??
+    /([A-Za-z]+-(?:myeon|eup|dong|ri))/i.exec(place.address)?.[1] ??
+    top.areaFallback;
   // 최근 묶음은 그 기간의 글 수가 순위의 근거다. 전체 기간 합계는 괄호로 덧붙인다.
   const recentCount = recentDays != null ? place.recentBlogCount : undefined;
 

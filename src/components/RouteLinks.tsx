@@ -38,13 +38,14 @@ export function RouteLink({ dest, origin, className }: { dest: RouteTarget; orig
       aria-label={fill(t.place.routeToName, { name: dest.name })}
       className={className}
     >
-      길찾기 →
+      {t.place.directions}
     </a>
   );
 }
 
 /** 상세 시트·안내 카드에 쓰는 버튼 묶음. 네이버 지도를 우선하고 티맵을 대안으로 둔다. */
 export function RouteButtons({ dest, origin }: { dest: RouteTarget; origin?: LatLng }) {
+  const { t } = useI18n();
   const isMobile = useIsMobile();
 
   return (
@@ -55,7 +56,7 @@ export function RouteButtons({ dest, origin }: { dest: RouteTarget; origin?: Lat
         rel="noreferrer"
         className="flex min-h-11 flex-1 items-center justify-center rounded-[var(--radius-button)] bg-[var(--color-primary)] text-[var(--color-on-primary)]"
       >
-        네이버 지도로 길찾기
+        {t.place.naverRoute}
       </a>
       {isMobile && (
         <a
@@ -63,7 +64,7 @@ export function RouteButtons({ dest, origin }: { dest: RouteTarget; origin?: Lat
           rel="noreferrer"
           className="flex min-h-11 items-center justify-center rounded-[var(--radius-button)] border border-[var(--color-border)] px-4"
         >
-          티맵
+          {t.place.tmap}
         </a>
       )}
     </div>

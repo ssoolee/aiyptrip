@@ -280,7 +280,7 @@ PRD에 있지만 아직 코드가 읽지 않는 키 세 개(`ODSAY_API_KEY` 대�
 `src/app` 아래 전부가 `src/app/[lang]/`에 있다. 예외는 셋이다.
 - `global-error.tsx` — 루트 레이아웃을 대체하는 파일이라 문서가 `app/` 뿌리에 두라고
   한다. Provider도 root-params도 못 쓰므로 `location.pathname`에서 언어를 읽는다.
-- `sitemap.ts`·`robots.ts` — 크롤러가 `/sitemap.xml`을 뿌리에서 찾는다.
+- `sitemap.ts` — 크롤러가 `/sitemap.xml`을 뿌리에서 찾는다.
 - `icon.tsx`·`apple-icon.tsx`·`opengraph-image.tsx`는 **`[lang]` 안에** 있다.
   뿌리에 두면 `og:image`가 통째로 빠진다(운영과 대조해 확인). 셋 중 **일부만** 옮기면
   물려받던 `<link rel="icon">`이 조용히 사라지므로 **항상 함께** 움직인다.
@@ -293,6 +293,38 @@ root-params는 서버 전용인데 글자가 많은 화면이 거의 다 `"use c
 
 주소를 적을 때는 `<LocaleLink href="/map">`을 쓴다. `typedRoutes`가 꺼져 있어
 `<Link href="/map">`처럼 언어를 빼먹어도 **타입 오류가 나지 않고 런타임에 404**가 된다.
+
+`robots.txt`는 생성 라우트가 아니라 **`public/robots.txt` 실제 파일**이다. Hosting이
+`/robots.txt`를 가로채 함수로 리라이트하지 않는다 — 실측(2026-11)에서 `/foo.txt`·
+`/nope.xml`은 함수까지 가 Next의 404를 받는데(`private, no-cache`) `/robots.txt`만
+Hosting 자신의 빈 404(`max-age=600`)가 나왔다. 대소문자를 바꿔도, 쿼리를 붙여도 같다.
+`/sitemap.xml`은 가로채지 않아 `src/app/sitemap.ts`가 그대로 돈다.
+
+### 장소·코스 자료
+
+커밋된 자료(장소 219곳·코스 28개)의 번역은 **사이드카 파일**에 따로 둔다 —
+`src/lib/data/i18n/content.<locale>.json`. 한국어 원본(`src/lib/data/*.json`)은
+건드리지 않는다: `build:places` 같은 스크립트가 그 파일들을 다시 쓰므로 번역을 안에
+넣으면 덮여 사라진다.
+
+```bash
+npm run build:i18n -- --locale en --dry   # 분량과 표본만 본다 (LLM 호출 없음)
+npm run build:i18n -- --locale en         # 번역해서 사이드카에 쓴다
+```
+
+- **장소**는 `placeId`로 묶어 한 번만 번역한다. 같은 장소가 스냅샷과 코스 사본에
+  중복으로 들어 있어, 묶지 않으면 8,729자를 더 번역한다(실측).
+- **자유 문장**(코스 제목·추천 이유·숙소 주의사항 등)은 **한국어 원문이 키다.**
+  원문이 바뀌면 키가 바뀌므로 낡은 번역이 조용히 남지 않고, 사람이 열어 무엇의
+  번역인지 읽고 고칠 수 있다. 고친 값은 다시 번역되지 않는다.
+- 읽는 자리는 `src/lib/i18n/content.ts` **한 곳**이고, 통로는 `curation.ts`의
+  `withFreshFacts`다. **두 번 적용하면 안 된다** — 이름이 `En (En (한글))`로 겹친다.
+  그래서 `TopPlace`·`LodgingPick`의 나머지 필드는 별도 함수가 맡는다.
+- `.map(withFreshFacts)`처럼 넘기지 않는다. 두 번째 인자로 **index가 들어가** 언어
+  자리에 `0`이 박히고, 타입 오류 없이 번역만 조용히 빠진다.
+- 장소 이름은 **`English name (한글)`** 으로 쓴다. 택시 기사나 가게에 보여줄 수 있어야
+  하고, 네이버 지도·전화 버튼이 가리키는 대상과 눈으로 맞출 수 있어야 한다.
+- 번역이 없는 항목은 **한국어로 떨어진다** — 한 장소를 못 찾았다고 코스가 사라지지 않는다.
 
 ### 번역하지 않는 것
 
@@ -307,8 +339,9 @@ root-params는 서버 전용인데 글자가 많은 화면이 거의 다 `"use c
   (`hours.weekdays`) — `WEEKDAY_LABELS`는 해석용이라 건드리지 않는다.
 - **코스 생성 프롬프트의 유형 이름**(`PRESET_PROMPT_LABEL`). 사람이 읽는 글자가 아니라
   LLM 입력이고, 생성은 한국어 전용이다.
-- **장소 이름·주소·추천 이유 등 커밋된 자료**는 아직 한국어다. 다음 단계에서
-  언어별 사이드카 파일로 옮긴다.
+- **찜 목록**. 찜은 그 화면에서 본 코스를 그대로 담으므로, `/en`에서 찜한 코스는
+  이미 영어이고 `/ko`에서 찜한 코스는 한국어로 남는다. 사이드카를 클라이언트 번들로
+  보내지 않으려고 이렇게 뒀다 — 번역해야 할 때는 서버에서 번역해 내려보내는 쪽을 본다.
 - `/login`·`/profile` 화면 — `LOGIN_ENABLED=false`라 지금 404다. 로그인을 다시 켤 때
   `LoginForm`·`ProfileScreen`도 함께 옮기면 된다.
 

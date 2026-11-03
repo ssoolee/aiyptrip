@@ -42,3 +42,12 @@ export const OG_LOCALE: Record<Locale, string> = {
   ko: "ko_KR",
   en: "en_US",
 };
+
+/**
+ * 번역 스크립트(scripts/build-i18n.ts)가 LLM에게 "무슨 언어로"를 말할 때 쓰는 이름.
+ * 코드("en")로 말하면 모델이 영어권 변종을 멋대로 고르므로 사람이 쓰는 이름으로 적는다.
+ */
+export const LANGUAGE_NAME: Record<Locale, string> = {
+  ko: "Korean",
+  en: "English",
+};

@@ -1,5 +1,7 @@
 import curation from "@/lib/data/mbtiCourses.json";
 import { rehydrateCourse, withFreshFacts } from "@/lib/curation";
+import { DEFAULT_LOCALE, type Locale } from "@/lib/i18n/config";
+import { localizeLodgingText, localizeText } from "@/lib/i18n/content";
 import type { Dictionary } from "@/lib/i18n/dictionaries";
 import { Course, LodgingPick } from "@/types/travel";
 
@@ -95,25 +97,27 @@ export interface MbtiCuration {
 // src/lib/courseCache.ts 참조).
 const CURATED_COURSE_ID = /^mbti_([A-Z]{4})_curated_\d+$/;
 
-export function findCuratedCourse(courseId: string, noticeTemplate?: string): Course | undefined {
+export function findCuratedCourse(courseId: string, locale: Locale = DEFAULT_LOCALE): Course | undefined {
   const match = CURATED_COURSE_ID.exec(courseId);
   if (!match) return undefined;
-  return getMbtiCuration(match[1], noticeTemplate).courses.find(
+  return getMbtiCuration(match[1], locale).courses.find(
     (course) => course.courseId === courseId,
   );
 }
 
 // scripts/build-mbti-courses.ts(npm run build:mbti)가 만든 유형별 큐레이션 코스.
 // 해당 유형 자료가 아직 없으면 빈 값 — 화면은 자동 생성 코스로 대체한다.
-export function getMbtiCuration(type: string, noticeTemplate?: string): MbtiCuration {
+export function getMbtiCuration(type: string, locale: Locale = DEFAULT_LOCALE): MbtiCuration {
   const entry = (curation.types as Record<string, Partial<MbtiCuration>>)[type];
   return {
-    summary: entry?.summary,
+    summary: entry?.summary === undefined ? undefined : localizeText(entry.summary, locale),
     // 장소와 순서만 사람이 고른 것이라, 시각은 파이프라인 코스와 같은 기준
     // (서울 09:00 출발 + 이동·체류시간)으로 다시 계산한다 — src/lib/curation.ts.
-    // map(rehydrateCourse)로 넘기면 두 번째 인자로 **index가 들어간다** — 주의 문구
-    // 틀 자리에 0이 박힌다. 화살표로 감싸 한 인자만 넘긴다.
-    courses: (entry?.courses ?? []).map((course) => rehydrateCourse(course, noticeTemplate)),
-    lodging: (entry?.lodging ?? []).map((pick) => withFreshFacts<LodgingPick>(pick)),
+    // map(rehydrateCourse)로 넘기면 두 번째 인자로 **index가 들어간다** — 언어 자리에
+    // 0이 박혀 번역이 조용히 빠진다. 화살표로 감싸 인자를 분명히 넘긴다.
+    courses: (entry?.courses ?? []).map((course) => rehydrateCourse(course, locale)),
+    lodging: (entry?.lodging ?? []).map((pick) =>
+      localizeLodgingText(withFreshFacts<LodgingPick>(pick, locale), locale),
+    ),
   };
 }

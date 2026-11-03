@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import LocaleLink from "@/components/LocaleLink";
 import { getPreset } from "@/lib/presets";
-import { serverDictionary } from "@/lib/i18n/server";
+import { currentLocale, serverDictionary } from "@/lib/i18n/server";
 import { generateCourses } from "@/lib/agents/orchestrator";
 import { getSoloCourses } from "@/lib/soloCourses";
 import { PresetType } from "@/types/travel";
@@ -23,7 +23,7 @@ export default async function CoursePresetPage({
   const { preset } = await params;
   const presetDef = getPreset(preset);
   if (!presetDef) notFound();
-  const dict = await serverDictionary();
+  const [locale, dict] = await Promise.all([currentLocale(), serverDictionary()]);
 
   const { days: rawDays } = await searchParams;
   const durationDays = (Array.isArray(rawDays) ? rawDays[0] : rawDays) === "2" ? 2 : 1;
@@ -32,7 +32,7 @@ export default async function CoursePresetPage({
   // 혼자 여행은 테마별 코스를 미리 만들어 뒀다(src/lib/data/soloCourses.json) —
   // 생성 대기 없이 바로 띄우고, "더 보기"는 파이프라인이 이어서 만든다.
   const curated =
-    presetType === "solo" ? getSoloCourses(durationDays, dict.notice.mayBeClosed) : [];
+    presetType === "solo" ? getSoloCourses(durationDays, locale) : [];
   // 외국어에서 이 유형을 열지 않는 판단은 layout.tsx가 한다 (상태 코드 때문).
   const initialCourses =
     curated.length > 0 ? curated : await generateCourses({ presetType, count: 3, durationDays });

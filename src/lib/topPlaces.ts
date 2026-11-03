@@ -1,5 +1,7 @@
 import data from "@/lib/data/topPlaces.json";
 import { withFreshFacts } from "@/lib/curation";
+import { DEFAULT_LOCALE, type Locale } from "@/lib/i18n/config";
+import { localizeReviewTitle } from "@/lib/i18n/content";
 import { TopPlace } from "@/types/travel";
 
 // scripts/build-top-places.ts(npm run build:top)가 뽑아 둔, 네이버 블로그 글이 많은
@@ -31,17 +33,22 @@ const file = data as {
 };
 
 // 영업시간·전화번호는 스냅샷 쪽이 새로우므로 덮어 쓴다 (src/lib/curation.ts).
-function fresh(places: TopPlace[] | undefined): TopPlace[] {
-  return (places ?? []).map(withFreshFacts);
+//
+// .map(withFreshFacts)로 넘기지 않는다 — 두 번째 인자로 **index가 들어가** 언어 자리에
+// 0이 박히고, 번역이 조용히 빠진다.
+function fresh(places: TopPlace[] | undefined, locale: Locale): TopPlace[] {
+  return (places ?? []).map((place) =>
+    localizeReviewTitle(withFreshFacts(place, locale), locale),
+  );
 }
 
-export function getTopPlaces(): TopPlaces {
+export function getTopPlaces(locale: Locale = DEFAULT_LOCALE): TopPlaces {
   return {
     generatedAt: file.generatedAt ?? null,
     recentDays: file.recentDays ?? DEFAULT_RECENT_DAYS,
-    cafe: fresh(file.cafe),
-    restaurant: fresh(file.restaurant),
-    recentCafe: fresh(file.recentCafe),
-    recentRestaurant: fresh(file.recentRestaurant),
+    cafe: fresh(file.cafe, locale),
+    restaurant: fresh(file.restaurant, locale),
+    recentCafe: fresh(file.recentCafe, locale),
+    recentRestaurant: fresh(file.recentRestaurant, locale),
   };
 }

@@ -14,9 +14,9 @@ import { currentLocale, serverDictionary } from "@/lib/i18n/server";
 // 이 페이지에는 가로 여백(px-4)을 두지 않는다 — PresetGrid의 가로 스크롤이 화면
 // 끝까지 흐르도록 각 섹션이 자기 여백을 직접 갖는 기존 규칙을 따른다.
 export default async function Home() {
-  // 아직 만들지 않았으면(npm run build:top) 빈 배열 — TopPlaces가 영역을 접는다.
-  const top = getTopPlaces();
   const [locale, { home }] = await Promise.all([currentLocale(), serverDictionary()]);
+  // 아직 만들지 않았으면(npm run build:top) 빈 배열 — TopPlaces가 영역을 접는다.
+  const top = getTopPlaces(locale);
   // 자연어 검색은 실시간 생성이라 한국어로만 답한다 (src/lib/i18n/config.ts).
   const canSearch = canGenerateCourses(locale);
 
