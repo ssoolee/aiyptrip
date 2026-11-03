@@ -1,5 +1,7 @@
 import ko from "./dictionaries/ko.json";
 import en from "./dictionaries/en.json";
+import ja from "./dictionaries/ja.json";
+import zh from "./dictionaries/zh.json";
 import { DEFAULT_LOCALE, type Locale } from "./config";
 
 // 화면 문구 사전. 서버에서 한 번 골라 I18nProvider로 넘긴다.
@@ -12,7 +14,7 @@ import { DEFAULT_LOCALE, type Locale } from "./config";
 // (키가 같은지는 src/lib/i18n/dictionaries.test.ts가 한 번 더 본다).
 export type Dictionary = typeof ko;
 
-const DICTIONARIES: Record<Locale, Dictionary> = { ko, en };
+const DICTIONARIES: Record<Locale, Dictionary> = { ko, en, ja, zh };
 
 export function getDictionary(locale: Locale): Dictionary {
   return DICTIONARIES[locale] ?? DICTIONARIES[DEFAULT_LOCALE];

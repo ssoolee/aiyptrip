@@ -32,6 +32,13 @@ const SOURCE_FILES = ["places", "mbtiCourses", "soloCourses", "topPlaces", "petP
 // 사본에 중복으로 들어 있어, 묶지 않으면 8,729자를 더 번역하게 된다 (실측).
 const PLACE_FIELDS = ["name", "address", "categoryLabel", "reviewSummary", "reviewTitle"] as const;
 
+// 이름과 주소는 **번역이 아니라 로마자 표기**다. 언어마다 따로 만들면 같은 장소가
+// 영어에서는 "Semiwon", 일본어에서는 "Semione"이 된다(실제로 그랬다). 언어와 무관하므로
+// 파일 하나에 두고 모든 언어가 같이 쓴다. 덤으로 언어를 더할 때 번역 분량이 5,000자 줄어든다.
+const ROMAN_FIELDS = ["name", "address"] as const;
+const PROSE_FIELDS = ["categoryLabel", "reviewSummary", "reviewTitle"] as const;
+const ROMAN_PATH = path.join(OUT_DIR, "places.roman.json");
+
 // 장소에 딸리지 않은 자유 문장. **한국어 원문을 키로 쓴다.** 이유 셋:
 //   ① 원문이 바뀌면 키가 바뀌므로 낡은 번역이 조용히 남지 않는다
 //   ② 같은 문장이 여러 번 나오면 한 번만 번역된다
@@ -69,6 +76,13 @@ interface TextSource {
 interface PlaceEntry extends Partial<Record<PlaceField, string>> {
   /** 한국어 원문의 해시. 원문이 바뀐 장소만 다시 번역한다. */
   hash: string;
+}
+
+/** 언어와 무관한 로마자 표기. 모든 언어가 같이 쓴다. */
+interface RomanFile {
+  version: number;
+  generatedAt: string;
+  places: Record<string, { hash: string; name?: string; address?: string }>;
 }
 
 interface Sidecar {
@@ -135,26 +149,48 @@ function collect() {
   return { places: [...places.values()], texts: [...texts.values()] };
 }
 
-function placeHash(source: PlaceSource): string {
-  return hash(PLACE_FIELDS.map((f) => source.fields[f] ?? "").join("\u0000"));
+function placeHash(source: PlaceSource, fields: readonly PlaceField[]): string {
+  return hash(fields.map((f) => source.fields[f] ?? "").join("\u0000"));
 }
 
 const SYSTEM = `You translate a Korean travel guide for Yangpyeong County, South Korea into {LANGUAGE}.
-Readers are foreign visitors who will use this to actually get around, so accuracy beats fluency.
+Readers are visitors who will use this to actually get around, so accuracy beats fluency.
 
-Rules:
-- Place names: use the English name the business itself uses when you know it; otherwise use
+Write every translation in {LANGUAGE}. Never leave a field in Korean, and never answer in
+English unless {LANGUAGE} is English.
+
+Two fields are the exception and stay in Latin letters even when {LANGUAGE} does not use them:
+- Place names: use the Latin name the business itself uses when you know it; otherwise use
   Revised Romanization of Korean. Return the name alone, with no Korean in it — the app shows
   the Korean next to it by itself.
 - Addresses: Revised Romanization in Western order, smallest unit first.
   "경기도 양평군 옥천면 고읍로 140" becomes "140 Goeup-ro, Okcheon-myeon, Yangpyeong-gun, Gyeonggi-do".
-- Category labels keep their separator: "한식>냉면" becomes "Korean > Naengmyeon".
-- Korean dishes and local terms stay romanized (Naengmyeon, Makguksu, Hanu) rather than being
-  replaced by an invented equivalent. Add a two- or three-word gloss only where a reader could
-  not guess at all.
+Both are what Korean road signs and map apps use, so a reader can type them in or say them
+aloud to a driver. A name written in the reader's own script would match nothing on the ground.
+
+Everything else — category labels, descriptions, reasons, course titles, cautions — is written
+in {LANGUAGE}:
+- Category labels keep their separator: translate each side of ">" into {LANGUAGE}.
+- Never leave Hangul in the answer. Korean dishes, place names and local terms are written the
+  way {LANGUAGE} normally writes borrowed Korean words — Chinese uses the Chinese reading of the
+  name's hanja, Japanese uses katakana or kanji, English uses Revised Romanization. Add a two-
+  or three-word gloss only where a reader could not guess at all.
 - Keep the warm, plain tone of the original and roughly its length. Do not add facts, prices,
-  opening hours or superlatives that are not in the Korean. Do not drop any caveat.
+  opening hours or superlatives that are not in the Korean. Do not drop any caution.
 - Reply with JSON only, in the exact shape asked for, with an entry for every id given.`;
+
+// 로마자 표기는 언어가 없는 일이라 프롬프트도 따로 둔다 — 여기에 "{LANGUAGE}로 쓰라"가
+// 섞이면 일본어 요청에서 이름이 가타카나로 나와 현지에서 가리키는 것이 없어진다.
+const ROMAN_SYSTEM = `You romanize Korean place names and addresses for travellers in Korea.
+
+- Place names: use the Latin name the business itself uses when you know it; otherwise use
+  Revised Romanization of Korean. Return the name alone, with no Korean in it.
+- Addresses: Revised Romanization in Western order, smallest unit first.
+  "경기도 양평군 옥천면 고읍로 140" becomes "140 Goeup-ro, Okcheon-myeon, Yangpyeong-gun, Gyeonggi-do".
+
+This is what Korean road signs and map apps use, so a reader can type it in or say it aloud to
+a driver. Be consistent: the same Korean syllable always romanizes the same way.
+Reply with JSON only, with an entry for every id given.`;
 
 interface TranslateOptions {
   language: string;
@@ -163,11 +199,11 @@ interface TranslateOptions {
 
 async function translateBatch<T>(
   prompt: string,
-  options: TranslateOptions,
+  options: TranslateOptions & { system?: string },
 ): Promise<Record<string, T> | null> {
   const { generateJson } = await import("@/lib/llm");
   return generateJson<Record<string, T>>({
-    system: SYSTEM.replace("{LANGUAGE}", options.language),
+    system: (options.system ?? SYSTEM).replaceAll("{LANGUAGE}", options.language),
     prompt,
     // 오프라인 배치라 길게 잡는다 — 한 배치에 열 항목이 들어간다.
     timeoutMs: 120_000,
@@ -193,11 +229,19 @@ async function main() {
     ? (JSON.parse(readFileSync(outPath, "utf8")) as Sidecar)
     : null;
 
+  // 로마자 표기는 언어와 무관하므로 파일 하나를 모든 언어가 같이 쓴다.
+  const roman: RomanFile = existsSync(ROMAN_PATH)
+    ? (JSON.parse(readFileSync(ROMAN_PATH, "utf8")) as RomanFile)
+    : { version: 1, generatedAt: "", places: {} };
+  const staleRoman = places.filter(
+    (source) => roman.places[source.placeId]?.hash !== placeHash(source, ROMAN_FIELDS),
+  );
+
   // 이미 번역돼 있고 원문이 그대로인 것은 건너뛴다. 사람이 고친 값도 이 규칙으로 살아남는다.
   const keptPlaces: Record<string, PlaceEntry> = {};
   const stalePlaces: PlaceSource[] = [];
   for (const source of places) {
-    const current = placeHash(source);
+    const current = placeHash(source, PROSE_FIELDS);
     const old = previous?.places?.[source.placeId];
     if (old && old.hash === current) keptPlaces[source.placeId] = old;
     else stalePlaces.push(source);
@@ -211,13 +255,16 @@ async function main() {
     else staleTexts.push(source);
   }
 
+  const fieldChars = (source: PlaceSource, fields: readonly PlaceField[]) =>
+    fields.reduce((sum, f) => sum + (source.fields[f]?.length ?? 0), 0);
   const chars =
-    stalePlaces.reduce((sum, p) => sum + Object.values(p.fields).join("").length, 0) +
+    staleRoman.reduce((sum, p) => sum + fieldChars(p, ROMAN_FIELDS), 0) +
+    stalePlaces.reduce((sum, p) => sum + fieldChars(p, PROSE_FIELDS), 0) +
     staleTexts.reduce((sum, t) => sum + t.ko.length, 0);
 
   console.log(`[${locale}] 장소 ${places.length}곳 · 문장 ${texts.length}개`);
   console.log(
-    `  번역할 것: 장소 ${stalePlaces.length}곳 · 문장 ${staleTexts.length}개 (${chars.toLocaleString()}자)`,
+    `  번역할 것: 로마자 ${staleRoman.length}곳 · 장소 ${stalePlaces.length}곳 · 문장 ${staleTexts.length}개 (${chars.toLocaleString()}자)`,
   );
   console.log(`  그대로 두는 것: 장소 ${Object.keys(keptPlaces).length}곳 · 문장 ${Object.keys(keptTexts).length}개`);
 
@@ -244,10 +291,51 @@ async function main() {
   const outTexts = { ...keptTexts };
   let failed = 0;
 
+  for (let i = 0; i < staleRoman.length; i += PLACE_BATCH) {
+    const batch = staleRoman.slice(i, i + PLACE_BATCH);
+    const payload = batch.map((source) => ({
+      id: source.placeId,
+      name: source.fields.name,
+      address: source.fields.address,
+    }));
+    const prompt = `Romanize each place.
+Reply as {"<id>": {"name": "...", "address": "..."}} using only the fields given for that id.
+
+${JSON.stringify(payload, null, 1)}`;
+
+    const result = await translateBatch<{ name?: string; address?: string }>(prompt, {
+      language: "Latin letters",
+      dry,
+      system: ROMAN_SYSTEM,
+    });
+    for (const source of batch) {
+      const got = result?.[source.placeId];
+      if (!got?.name?.trim()) {
+        // 로마자가 없으면 그 장소 이름은 한글만 나온다 — 빈 화면보다 낫다.
+        failed++;
+        continue;
+      }
+      roman.places[source.placeId] = {
+        hash: placeHash(source, ROMAN_FIELDS),
+        name: got.name.trim(),
+        ...(source.fields.address && got.address?.trim() ? { address: got.address.trim() } : {}),
+      };
+    }
+    console.log(`  로마자 ${Math.min(i + PLACE_BATCH, staleRoman.length)}/${staleRoman.length}`);
+    await sleep(PAUSE_MS);
+  }
+
   for (let i = 0; i < stalePlaces.length; i += PLACE_BATCH) {
     const batch = stalePlaces.slice(i, i + PLACE_BATCH);
-    const payload = batch.map((p) => ({ id: p.placeId, ...p.fields }));
+    // 이름·주소는 보내지 않는다 — 로마자 파일이 맡는다. 다만 이름은 **곁정보**로
+    // 같이 보낸다: 무엇에 대한 소개인지 알아야 소개글을 제대로 옮긴다.
+    const payload = batch.map((source) => ({
+      id: source.placeId,
+      about: source.fields.name,
+      ...Object.fromEntries(PROSE_FIELDS.filter((f) => source.fields[f]).map((f) => [f, source.fields[f]])),
+    }));
     const prompt = `Translate each field of each place into ${language}.
+"about" is the place's Korean name, for context only — do not put it in the answer.
 Reply as {"<id>": {"<field>": "<translation>"}} using only the fields given for that id.
 
 ${JSON.stringify(payload, null, 1)}`;
@@ -255,13 +343,13 @@ ${JSON.stringify(payload, null, 1)}`;
     const result = await translateBatch<Partial<Record<PlaceField, string>>>(prompt, { language, dry });
     for (const source of batch) {
       const translated = result?.[source.placeId];
-      if (!translated?.name) {
-        // 번역이 없으면 그 장소는 한국어로 떨어진다 — 빈 화면보다 낫다.
+      if (!translated) {
+        // 번역이 없으면 그 장소의 소개는 한국어로 떨어진다 — 빈 화면보다 낫다.
         failed++;
         continue;
       }
-      const entry: PlaceEntry = { hash: placeHash(source) };
-      for (const field of PLACE_FIELDS) {
+      const entry: PlaceEntry = { hash: placeHash(source, PROSE_FIELDS) };
+      for (const field of PROSE_FIELDS) {
         const value = translated[field];
         if (source.fields[field] && typeof value === "string" && value.trim()) {
           entry[field] = value.trim();
@@ -278,8 +366,8 @@ ${JSON.stringify(payload, null, 1)}`;
   const nameByKorean = new Map<string, string>();
   for (const source of places) {
     const name = source.fields.name;
-    const translated = outPlaces[source.placeId]?.name;
-    if (name && translated) nameByKorean.set(name, translated);
+    const romanized = roman.places[source.placeId]?.name;
+    if (name && romanized) nameByKorean.set(name, romanized);
   }
 
   const remaining = staleTexts.filter((t) => {
@@ -317,6 +405,17 @@ ${JSON.stringify(payload, null, 1)}`;
   }
 
   mkdirSync(OUT_DIR, { recursive: true });
+
+  if (staleRoman.length > 0) {
+    const romanFile: RomanFile = {
+      version: 1,
+      generatedAt: new Date().toISOString(),
+      places: Object.fromEntries(Object.entries(roman.places).sort(([a], [b]) => a.localeCompare(b))),
+    };
+    writeFileSync(ROMAN_PATH, `${JSON.stringify(romanFile, null, 1)}\n`, "utf8");
+    console.log(`  ${path.relative(process.cwd(), ROMAN_PATH)} — 로마자 ${Object.keys(romanFile.places).length}곳`);
+  }
+
   const sidecar: Sidecar = {
     version: 2,
     generatedAt: new Date().toISOString(),

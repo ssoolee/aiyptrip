@@ -1,0 +1,311 @@
+{
+  "site": {
+    "name": "杨平旅行路线",
+    "title": "杨平旅行路线推荐",
+    "description": "按MBTI性格类型·携宠出行等，AI会确认营业时间和路线，为你规划杨平旅行路线",
+    "ogTitle": "和平安伊一起游杨平",
+    "studio": "AI行政应用制作所",
+    "studioShort": "制作所"
+  },
+  "nav": {
+    "home": "首页",
+    "map": "地图",
+    "favorites": "收藏",
+    "profile": "我的"
+  },
+  "lang": {
+    "label": "语言",
+    "ko": "한국어",
+    "en": "English",
+    "ja": "日本語",
+    "zh": "简体中文"
+  },
+  "error": {
+    "title": "哎呀，出了点问题",
+    "body": "请稍后重试。",
+    "retry": "重试",
+    "digest": "错误编号",
+    "courseTitle": "创建路线时出了点问题",
+    "courseBody": "重试后，我会为你创建一条新路线。",
+    "courseBack": "查看其他类型 →"
+  },
+  "notFound": {
+    "title": "咦，好像走错路了",
+    "body": "找不到你要访问的页面。要和平安伊从头开始逛逛吗？",
+    "action": "返回首页"
+  },
+  "home": {
+    "topDescription": "这是在Naver博客上经常被提到的杨平咖啡馆和美食店。为你分别展示最近{days}天和整个期间的数据。",
+    "heroBadge": "💧 AI为你规划杨平旅行路线",
+    "heroTitleTop": "和平安伊一起出发",
+    "heroTitleBottom": "游杨平",
+    "heroBody": "只要选择想要的旅行类型，水滴伙伴平安伊就会为你规划路线，还会确认营业时间和出行路线。",
+    "heroPoints": [
+      "3种路线类型",
+      "已确认营业时间",
+      "可携宠物地图",
+      "无需登录，即刻使用"
+    ],
+    "searchTitle": "想去开启怎样的旅行呢？",
+    "searchDescription": "把你想要的旅行直接写下来吧。",
+    "presetTitle": "按类型挑选",
+    "presetDescription": "选好后马上为你生成路线。",
+    "topTitle": "最近热议的地方",
+    "stepsTitle": "平安伊规划路线的方法",
+    "stepsDescription": "三步就能完成。",
+    "steps": [
+      {
+        "title": "选择你想要的旅行",
+        "description": "只要选一个旅行类型就可以。"
+      },
+      {
+        "title": "平安伊来确认",
+        "description": "核实营业时间、休息日和出行路线。"
+      },
+      {
+        "title": "路线规划完成",
+        "description": "在同一屏幕查看地图、照片和联系方式。"
+      }
+    ]
+  },
+  "search": {
+    "placeholder": "例：下雨天适合带孩子去的地方",
+    "ariaLabel": "描述想要的旅行",
+    "submit": "查找路线",
+    "examples": [
+      "비 오는 날 아이랑 갈 만한 곳",
+      "연인과 조용한 뷰 카페 당일치기",
+      "강아지랑 1박 2일"
+    ],
+    "backLabel": "返回首页",
+    "understood": "我理解的是"
+  },
+  "pyeongani": {
+    "badge": "🌱 负责为你指引的伙伴，平安伊",
+    "body": "这是一个宛如平静水波的水滴角色。杨平郡有负责“杨”的伙伴杨春，因此我们创造了负责“平”的伙伴平安伊。两位并肩站在一起，“杨平”才算完整。",
+    "link": "查看平安伊介绍 →"
+  },
+  "footer": {
+    "studioBody": "打造让行政工作和地方日常更轻松的 AI 网页应用。",
+    "characterLink": "平安伊角色介绍",
+    "madeBy": "🛠️ 制作 · AI行政应用工坊",
+    "disclaimer": "平安伊不是杨平郡官方角色，而是怀着对杨平的喜爱创作的非官方角色。"
+  },
+  "presets": {
+    "solo": {
+      "label": "独自旅行",
+      "description": "适合疗愈与沉思的安静路线"
+    },
+    "pet": {
+      "label": "与宠物同行",
+      "description": "仅包含可携带宠物的商家路线"
+    },
+    "mbti": {
+      "label": "按 MBTI 性格推荐",
+      "description": "推荐适合自己性格的路线"
+    }
+  },
+  "categories": {
+    "restaurant": "餐厅",
+    "cafe": "咖啡馆",
+    "attraction": "旅游景点",
+    "lodging": "住宿"
+  },
+  "mbti": {
+    "listBackLabel": "查看其他类型",
+    "listTitle": "🔤 按 MBTI 性格规划旅行",
+    "listDescription": "选择自己的 MBTI，为你推荐符合性格的杨平路线。",
+    "artNote": "这是根据性格特点想象的职业角色，与路线推荐无关。",
+    "typeBackLabel": "选择其他 MBTI",
+    "groups": {
+      "analyst": "分析家型",
+      "diplomat": "外交家型",
+      "sentinel": "守护者型",
+      "explorer": "探险家型"
+    },
+    "jobs": {
+      "INTJ": "建筑师",
+      "INTP": "科学家",
+      "ENTJ": "企业家",
+      "ENTP": "发明家",
+      "INFJ": "咨询师",
+      "INFP": "作家",
+      "ENFJ": "教师",
+      "ENFP": "旅行策划师",
+      "ISTJ": "会计师",
+      "ISFJ": "护士",
+      "ESTJ": "现场管理人员",
+      "ESFJ": "厨师",
+      "ISTP": "维修技师",
+      "ISFP": "画家",
+      "ESTP": "消防员",
+      "ESFP": "歌手"
+    }
+  },
+  "course": {
+    "routeTotal": "· 全程 {distance}({kind})",
+    "nextStop": "↓ 到下一地点 {distance} · 开车约需 {minutes} 分钟（直线距离估算）",
+    "lodgingNotice": "预订前请确认",
+    "badgeCurated": "推荐路线",
+    "badgeAi": "AI推荐",
+    "reasonOpen": "查看推荐理由",
+    "reasonClose": "收起",
+    "openDetail": "在地图上查看路线 →",
+    "backLabel": "查看其他路线",
+    "backOther": "查看其他类型",
+    "loadMore": "查看更多路线",
+    "loadingMore": "正在生成路线...",
+    "exhausted": "已为您展示了所有符合这些条件的路线。",
+    "empty": "没有找到符合条件的路线。可以稍微调整条件再告诉我们吗？",
+    "missingTitle": "咦，没找到这条路线",
+    "missingBody": "推荐路线会在每次请求时重新生成，因此重新打开浏览器后就会消失。喜欢的路线可以先收藏，随时都能再看。",
+    "missingAction": "获取路线推荐",
+    "tabPlan": "行程",
+    "tabMap": "地图",
+    "tabSwitch": "切换视图",
+    "dayTab1": "一日游",
+    "dayTab2": "两天一夜",
+    "stopCount": "{count}处",
+    "straightTotal": "· 全程 {distance}（直线距离）",
+    "departLine": "{place} {at} 出发",
+    "arriveSuffix": "→ {at} 返回",
+    "transferMove": "移动（估算）",
+    "lodgingTitle": "适合{type}的住宿·民宿",
+    "mbtiTitle": "为{type}性格量身定制的杨平路线",
+    "dayCount": "{days}日路线",
+    "dayNth": "第{day}天",
+    "moreStops": "再看+{count}处",
+    "departure": "{at} 从{place}出发",
+    "arrivalSuffix": "· {at} 返回",
+    "transferDepart": "从{place}出发 · 约需{duration}",
+    "transferArrive": "到达{place} · 约{duration}",
+    "routeSummary": "按顺序串联{count}处的路线"
+  },
+  "place": {
+    "detail": "详细信息",
+    "openDetail": "查看详细信息",
+    "close": "关闭",
+    "address": "地址",
+    "phone": "电话号码",
+    "call": "拨打电话",
+    "copyAddress": "复制地址",
+    "copied": "已复制",
+    "favoriteAdd": "收藏",
+    "favoriteRemove": "取消收藏",
+    "favoritePlaceAdd": "收藏地点",
+    "favoritePlaceRemove": "取消收藏地点",
+    "routeTo": "导航至",
+    "mapPreviewDetail": "查看详情 →",
+    "mapPreviewNaver": "NAVER地图 →",
+    "directions": "导航 →",
+    "naverRoute": "使用NAVER地图导航",
+    "tmap": "T map",
+    "reviewsLoading": "正在查找NAVER博客评论",
+    "detailOf": "{name}详细信息",
+    "openDetailOf": "查看{name}详细信息",
+    "routeToName": "导航至{name}",
+    "photoAlt": "{name}照片 {index}/{total}"
+  },
+  "hours": {
+    "open": "营业中",
+    "closed": "已打烊",
+    "openUntil": "营业中 · {time}打烊",
+    "closedUntil": "已打烊 · {time}开门",
+    "closedUntilWeekday": "已打烊 · {weekday} {time}开门",
+    "allDay": "24小时",
+    "holidayToday": "今日例行休息",
+    "askStore": "咨询店铺",
+    "regularHoliday": "例行休息",
+    "tableCaption": "每周营业时间",
+    "unknownWithPhone": "营业时间暂未确认。请通过下方的拨打电话联系店铺。",
+    "unknownWithMap": "营业时间暂未确认。请通过下方的 Naver 地图查看店铺信息。",
+    "weekdays": [
+      "日",
+      "一",
+      "二",
+      "三",
+      "四",
+      "五",
+      "六"
+    ]
+  },
+  "map": {
+    "nearestLineShort": "直线距离 {distance} · 开车约 {car}分钟（估算）",
+    "title": "🗺️ 地图",
+    "subtitleAll": "杨平主要景点（未收藏路线，显示全部）",
+    "unavailable": "无法加载地图",
+    "unavailableBody": "无法加载地图。请使用下方列表和路线链接。",
+    "youAreHere": "当前位置",
+    "locating": "正在查找当前位置...",
+    "relocate": "📍 重新查找当前位置",
+    "locate": "📍 查看我的位置",
+    "locationFallback": "即使不提供位置，也可以照常查看路线和行程。",
+    "nearestPlace": "距离当前位置最近的地方",
+    "nearestStop": "距离当前位置最近的景点",
+    "straightLine": "直线距离",
+    "byCar": "驾车约",
+    "onFoot": "步行约",
+    "estimate": "(估算值)",
+    "nearestLine": "直线距离 {distance} · 驾车约 {car}分钟",
+    "walkSuffix": "· 步行约 {walk}分钟",
+    "totalDistance": "总计",
+    "drivingDistance": "行驶距离"
+  },
+  "pet": {
+    "backLabel": "查看宠物同行路线",
+    "title": "🐾 可携宠物同行的店铺",
+    "description": "在杨平可以带宠物一起去的地方共有{count}处。各店的同行条件（体型·是否可进入室内）不同，出发前请务必确认。",
+    "sourceNote": "来源：食品安全国家宠物同行可入场店铺现状（截至2026. 9. 28.）、韩国旅游发展局场所介绍",
+    "linkLabel": "🐾 一览可携宠物同行的店铺",
+    "filterAll": "全部"
+  },
+  "top": {
+    "recentBandLabel": "最近{days}天",
+    "recentCount": "最近{days}天的博客文章 {count}篇",
+    "allCount": "· 共{count}篇",
+    "blogCount": "博客评论 {count}条",
+    "recentBandNote": "该期间博客文章发布最多的地方",
+    "allBandLabel": "全部时段",
+    "allBandNote": "博客文章最多的地方",
+    "areaFallback": "杨平郡",
+    "groupCafe": "咖啡馆",
+    "groupRestaurant": "人气美食店",
+    "note": "这是按 Naver 博客文章数量排序的榜单。Place 的访客评价和星级无法通过公开 API 获取，因此以博客文章数量代替。",
+    "blogPosts": "篇",
+    "orMore": "及以上",
+    "allPeriod": "全部",
+    "blogReviews": "博客评价"
+  },
+  "favorites": {
+    "title": "收藏列表",
+    "tabsLabel": "收藏类型",
+    "loginBanner": "仅保存在此浏览器中。登录后也可以在其他设备上查看。",
+    "login": "登录",
+    "tabCourses": "路线",
+    "tabPlaces": "地点",
+    "remove": "取消收藏",
+    "emptyCourses": "还没有收藏的路线。",
+    "emptyCoursesAction": "去获取路线推荐 →",
+    "emptyPlaces": "还没有收藏的地点。打开路线或地图中的地点后，可以点击爱心收藏。",
+    "emptyPlacesAction": "去看地图 →"
+  },
+  "theme": {
+    "system": "跟随系统",
+    "light": "明亮",
+    "dark": "深色",
+    "switchTo": "屏幕亮度：{current} — 点击切换为{next}",
+    "label": "屏幕亮度"
+  },
+  "loading": {
+    "wait": "请稍等片刻。",
+    "detail": "正在加载行程",
+    "mbti": "正在挑选适合您性格的行程",
+    "search": "平安伊在读取您的请求",
+    "searchBody": "正在整理您想要的旅行方式，并挑选合适的地点。",
+    "preset": "平安伊正在规划行程",
+    "presetBody": "正在确认营业时间、休息日和路线安排。可能需要15秒左右。"
+  },
+  "notice": {
+    "mayBeClosed": "{names} — 今天可能不营业。出发前请确认。"
+  }
+}

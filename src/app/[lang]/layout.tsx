@@ -1,12 +1,12 @@
 import type { Metadata, Viewport } from "next";
-import { Jua, Noto_Sans_KR } from "next/font/google";
+import { Jua, Noto_Sans_JP, Noto_Sans_KR, Noto_Sans_SC } from "next/font/google";
 import { notFound } from "next/navigation";
 import BottomNav from "@/components/BottomNav";
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
 import { THEME_INIT_SCRIPT } from "@/components/ThemeToggle";
 import { AuthProvider } from "@/lib/auth/AuthProvider";
-import { HTML_LANG, LOCALES, OG_LOCALE, isLocale } from "@/lib/i18n/config";
+import { HTML_LANG, LOCALES, OG_LOCALE, isLocale, type Locale } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 import { I18nProvider } from "@/lib/i18n/I18nProvider";
 import "../globals.css";
@@ -16,10 +16,13 @@ import "../globals.css";
 // (node_modules/next/dist/compiled/@next/font/dist/google/find-font-files-in-css.js).
 // 한글은 쪽이 많아 preload까지 하면 접속할 때마다 쓰지도 않을 파일을 받는다.
 //
-// 영어는 두 글꼴 모두 Latin을 담고 있어 글꼴을 더 올리지 않아도 된다. 중국어·일본어를
-// 붙일 때는 이야기가 다르다 — Noto Sans KR의 한자는 한국 한자 집합이라 '国'·'駅'조차
-// 없고 간체 전용 글자는 0자, Jua는 한자가 349자뿐이다. 그때 Noto Sans SC/JP를 함께
-// 올리고 제목 글꼴도 바꿔야 한다.
+// 영어는 두 글꼴 모두 Latin을 담고 있어 더 올릴 것이 없다. 중국어·일본어는 다르다 —
+// Noto Sans KR의 한자는 한국 한자 집합이라 '国'·'駅'조차 없고 간체 전용 글자는 0자,
+// Jua는 한자가 349자뿐이다(실측). 그대로 두면 중국어가 두부(□)로 나온다.
+// 그래서 일본어·중국어에는 Noto Sans JP/SC를 얹고, 한자를 못 그리는 Jua는 제목에서 뺀다.
+//
+// 어느 언어에서나 Noto Sans KR은 함께 올린다 — 장소 이름을 "English (한글)"로 적어
+// 한글이 모든 화면에 나오기 때문이다.
 const notoSansKr = Noto_Sans_KR({
   variable: "--font-noto-sans-kr",
   subsets: ["latin"],
@@ -34,6 +37,29 @@ const jua = Jua({
   display: "swap",
   preload: false,
 });
+
+const notoSansJp = Noto_Sans_JP({
+  variable: "--font-noto-sans-jp",
+  subsets: ["latin"],
+  display: "swap",
+  preload: false,
+});
+
+const notoSansSc = Noto_Sans_SC({
+  variable: "--font-noto-sans-sc",
+  subsets: ["latin"],
+  display: "swap",
+  preload: false,
+});
+
+// 그 언어가 실제로 쓰는 글꼴만 <html>에 건다. 쓰지 않는 변수를 걸어 두면 CSS만
+// 늘어난다. 글꼴을 고르는 규칙 자체는 globals.css의 html[lang=...]에 있다.
+const FONT_VARIABLES: Record<Locale, string> = {
+  ko: `${notoSansKr.variable} ${jua.variable}`,
+  en: `${notoSansKr.variable} ${jua.variable}`,
+  ja: `${notoSansKr.variable} ${notoSansJp.variable}`,
+  zh: `${notoSansKr.variable} ${notoSansSc.variable}`,
+};
 
 // 언어마다 제목·설명이 다르므로 metadata 대신 generateMetadata를 쓴다
 // (한 파일에서 둘을 같이 내보낼 수는 없다).
@@ -88,7 +114,7 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[la
   return (
     <html
       lang={HTML_LANG[lang]}
-      className={`${notoSansKr.variable} ${jua.variable} h-full antialiased`}
+      className={`${FONT_VARIABLES[lang]} h-full antialiased`}
       // 아래 스크립트가 data-theme을 붙이므로, 서버가 그린 <html>과 달라도 괜찮다.
       suppressHydrationWarning
     >

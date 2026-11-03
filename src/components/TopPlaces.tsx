@@ -1,6 +1,7 @@
 import Mascot from "@/components/Mascot";
 import type { Dictionary } from "@/lib/i18n/dictionaries";
 import { fill } from "@/lib/i18n/format";
+import { HTML_LANG } from "@/lib/i18n/config";
 import { currentLocale, serverDictionary } from "@/lib/i18n/server";
 import { TopPlace } from "@/types/travel";
 
@@ -28,8 +29,8 @@ export default async function TopPlaces({
   if (!hasRecent && !hasAllTime) return null;
 
   const [locale, { top }] = await Promise.all([currentLocale(), serverDictionary()]);
-  // 숫자 자리 구분(1,234)은 언어를 따라간다.
-  const numberLocale = locale === "ko" ? "ko-KR" : "en-US";
+  // 숫자 자리 구분(1,234)은 언어를 따라간다. HTML_LANG이 곧 BCP47 태그다.
+  const numberLocale = HTML_LANG[locale];
 
   return (
     <div className="space-y-6">

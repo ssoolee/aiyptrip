@@ -4,7 +4,7 @@
 // __session 말고 모든 쿠키를 벗기기 때문이다(README "Hosting 제약") — next-intl 같은
 // 라이브러리가 흔히 쓰는 NEXT_LOCALE 쿠키 방식은 이 앱에서 아예 작동하지 않는다.
 
-export const LOCALES = ["ko", "en"] as const;
+export const LOCALES = ["ko", "en", "ja", "zh"] as const;
 
 export type Locale = (typeof LOCALES)[number];
 
@@ -24,6 +24,11 @@ export function isLocale(value: string): value is Locale {
  * 방식이고, 코드는 지우지 않는다.
  *
  * 해당하는 화면: /course/search, /course/pet, 홈의 검색창, 목록의 "더 보기".
+ *
+ * 여기에 언어를 더할 때는 그 언어 사전의 home.heroBody·home.heroPoints·home.steps[0]도
+ * 함께 본다 —
+ * 한국어 원문은 "한 줄로 적어도 된다"고 하는데, 검색창을 내린 언어에서 그대로 두면
+ * 화면에 없는 것을 가리키는 문장이 된다.
  * /course/solo·/course/mbti는 커밋된 큐레이션이라 번역되므로 모든 언어에서 열린다.
  */
 export const SEARCH_LOCALES: readonly Locale[] = ["ko"];
@@ -36,11 +41,17 @@ export function canGenerateCourses(locale: Locale): boolean {
 export const HTML_LANG: Record<Locale, string> = {
   ko: "ko",
   en: "en",
+  ja: "ja",
+  // 간체자임을 밝힌다 — 번체를 쓰는 사람의 브라우저가 글꼴을 잘못 고르지 않게.
+  // globals.css의 글꼴 규칙은 [lang^="zh"]로 받는다.
+  zh: "zh-Hans",
 };
 
 export const OG_LOCALE: Record<Locale, string> = {
   ko: "ko_KR",
   en: "en_US",
+  ja: "ja_JP",
+  zh: "zh_CN",
 };
 
 /**
@@ -50,4 +61,6 @@ export const OG_LOCALE: Record<Locale, string> = {
 export const LANGUAGE_NAME: Record<Locale, string> = {
   ko: "Korean",
   en: "English",
+  ja: "Japanese",
+  zh: "Simplified Chinese",
 };

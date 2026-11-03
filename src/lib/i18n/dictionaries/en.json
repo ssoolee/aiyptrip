@@ -3,7 +3,7 @@
     "name": "Yangpyeong",
     "title": "Yangpyeong Trip Course Planner",
     "description": "Day trips around Yangpyeong, Korea — AI checks opening hours and travel time, with courses by MBTI type and pet-friendly places.",
-    "ogTitle": "A loop around Yangpyeong with Pyeong-i",
+    "ogTitle": "A loop around Yangpyeong with Pyeongan-i",
     "studio": "AI Admin App Studio",
     "studioShort": "Studio"
   },
@@ -16,7 +16,9 @@
   "lang": {
     "label": "Language",
     "ko": "한국어",
-    "en": "English"
+    "en": "English",
+    "ja": "日本語",
+    "zh": "简体中文"
   },
   "error": {
     "title": "Something went wrong",
@@ -29,26 +31,26 @@
   },
   "notFound": {
     "title": "This page took a wrong turn",
-    "body": "We couldn't find that page. Shall we start over with Pyeong-i?",
+    "body": "We couldn't find that page. Shall we start over with Pyeongan-i?",
     "action": "Go to home"
   },
   "home": {
     "topDescription": "Yangpyeong cafes and restaurants with the most Naver blog posts — shown for the last {days} days and for all time.",
     "heroBadge": "💧 Yangpyeong trips, planned by AI",
     "heroTitleTop": "A loop around Yangpyeong",
-    "heroTitleBottom": "with Pyeong-i",
-    "heroBody": "Pick a trip type and Pyeong-i, your little water-drop guide, maps out a course with opening hours and travel times already checked.",
+    "heroTitleBottom": "with Pyeongan-i",
+    "heroBody": "Pick a trip type and Pyeongan-i, your little water-drop guide, maps out a course with opening hours and travel times already checked.",
     "heroPoints": ["Curated trip types", "Pet-friendly map", "Hours checked", "No sign-up needed"],
     "searchTitle": "Where shall we go?",
     "searchDescription": "Just describe the trip you want.",
     "presetTitle": "Pick a trip type",
     "presetDescription": "Choose one and the course is ready.",
     "topTitle": "Talked about lately",
-    "stepsTitle": "How Pyeong-i plans a course",
+    "stepsTitle": "How Pyeongan-i plans a course",
     "stepsDescription": "Three steps, that's all.",
     "steps": [
-      { "title": "Tell us the trip you want", "description": "One line, or just pick a type." },
-      { "title": "Pyeong-i checks it", "description": "Opening hours, closing days and the route between stops." },
+      { "title": "Pick the trip you want", "description": "Choose a type and you're done." },
+      { "title": "Pyeongan-i checks it", "description": "Opening hours, closing days and the route between stops." },
       { "title": "Your course is ready", "description": "Map, photos and contacts on one screen." }
     ]
   },
@@ -61,15 +63,15 @@
     "understood": "Here's what we understood"
   },
   "pyeongani": {
-    "badge": "🌱 Meet your guide, Pyeong-i",
-    "body": "A water-drop character shaped like a calm ripple. Yangpyeong County already has Yangchun-i for the \"Yang\", so we made Pyeong-i for the \"pyeong\". Side by side, the two of them spell Yangpyeong.",
-    "link": "More about Pyeong-i →"
+    "badge": "🌱 Meet your guide, Pyeongan-i",
+    "body": "A water-drop character shaped like a calm ripple. Yangpyeong County already has Yangchun-i for the \"Yang\", so we made Pyeongan-i for the \"pyeong\". Side by side, the two of them spell Yangpyeong.",
+    "link": "More about Pyeongan-i →"
   },
   "footer": {
     "studioBody": "We build small AI web apps that lighten public-service work and everyday life in local communities.",
-    "characterLink": "About the Pyeong-i character",
+    "characterLink": "About the Pyeongan-i character",
     "madeBy": "🛠️ Built by AI Admin App Studio",
-    "disclaimer": "Pyeong-i is not an official Yangpyeong County mascot — it's an unofficial character made out of fondness for the area."
+    "disclaimer": "Pyeongan-i is not an official Yangpyeong County mascot — it's an unofficial character made out of fondness for the area."
   },
   "presets": {
     "solo": { "label": "Travelling solo", "description": "Quiet stops for unwinding and thinking" },
@@ -263,9 +265,9 @@
     "wait": "This will only take a moment.",
     "detail": "Loading the course",
     "mbti": "Picking a course for your type",
-    "search": "Pyeong-i is reading your request",
+    "search": "Pyeongan-i is reading your request",
     "searchBody": "Working out the trip you want and picking places that fit.",
-    "preset": "Pyeong-i is building your course",
+    "preset": "Pyeongan-i is building your course",
     "presetBody": "Checking opening hours, closing days and the route. This can take about 15 seconds."
   },
   "notice": {

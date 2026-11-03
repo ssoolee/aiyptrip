@@ -1,0 +1,1101 @@
+{
+ "version": 1,
+ "generatedAt": "2026-11-03T22:43:45.632Z",
+ "places": {
+  "naver_1273158958_375334334": {
+   "hash": "3527dc42f528",
+   "name": "Dumulmeori",
+   "address": "Yangsu-ri, Yangseo-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1273168078_375348077": {
+   "hash": "60968df62e57",
+   "name": "Dumulmeori Yeon Hotdog",
+   "address": "103-8 Dumulmeori-gil, Yangseo-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1273172732_375466530": {
+   "hash": "8d7dc049a3e7",
+   "name": "Cafe Rino",
+   "address": "32-1 Yangsu-ro 152beon-gil, Yangseo-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1273183136_375469053": {
+   "hash": "f02e76050618",
+   "name": "Cafe Geurim Jeongwon",
+   "address": "32-18 Yangsu-ro 152beon-gil, Yangseo-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1273187592_375424796": {
+   "hash": "97ec329e3097",
+   "name": "Haruen Sokku Yangsuri Branch",
+   "address": "2F, 7 Dumulmeori-gil 20beon-gil, Yangseo-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1273215655_375517883": {
+   "hash": "2b4ea3fcb915",
+   "name": "Susu Cafe",
+   "address": "19 Bukhangang-ro 89beon-gil, Yangseo-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1273227950_375432960": {
+   "hash": "06330e31e721",
+   "name": "Yangsu-ri Bread Factory",
+   "address": "9 Yangsu-ro 118beon-gil, Yangseo-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1273255953_375502790": {
+   "hash": "912e0cc31643",
+   "name": "Yeonkkot Eondeok",
+   "address": "57 Yongneup Eondeok-gil, Yangseo-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1273282488_375571760": {
+   "hash": "cfc7a01d6a6d",
+   "name": "Sopung",
+   "address": "21 Golyongjin-gil, Yangseo-myeon, Yangpyeong-gun, Gyeonggi-do, Sopung"
+  },
+  "naver_1273467534_375999326": {
+   "hash": "3f10078e08e3",
+   "name": "Dumon Cafe Dog Cafe",
+   "address": "64 Dangmokppuri-gil, Seojong-myeon, Yangpyeong-gun, Gyeonggi-do, 1st and 2nd floors"
+  },
+  "naver_1273502173_375955238": {
+   "hash": "37f9b9151c94",
+   "name": "Munhori Patjuk",
+   "address": "641 Bukhangang-ro, Seojong-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1273511444_376030516": {
+   "hash": "d3ed5b377e87",
+   "name": "Koo House Museum",
+   "address": "49-12 Munaemi-gil, Seojong-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1273529941_375984976": {
+   "hash": "b982aa42cb48",
+   "name": "House Bakery",
+   "address": "House Bakery, 684 Bukhangang-ro, Seojong-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1273532640_376228372": {
+   "hash": "878b227e0b79",
+   "name": "Haemulkkun Jotaesan Yangpyeong Main Branch",
+   "address": "962 Bukhangang-ro, Seojong-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1273547638_376249287": {
+   "hash": "732a67fb739d",
+   "name": "Terarosa Seojong",
+   "address": "990 Bukhangang-ro, Seojong-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1273593186_376320611": {
+   "hash": "0c0f5674b36a",
+   "name": "Seojong Bakery",
+   "address": "1079 Bukhangang-ro, Seojong-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1273725180_375975600": {
+   "hash": "cb7a18bbbd67",
+   "name": "Chez Roll",
+   "address": "7-7 Nakchon-gil, Seojong-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1273726462_376006617": {
+   "hash": "1cd1fddcaff2",
+   "name": "Page Moment",
+   "address": "13 Hwangsunwon-ro, Seojong-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1273776844_375939128": {
+   "hash": "5b01eb927387",
+   "name": "Hwang Sun-won Literary Village Sonagi Village",
+   "address": "24 Sonagimaeul-gil, Seojong-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1273866935_375799212": {
+   "hash": "604a913a3865",
+   "name": "Sagye Dome Glamping",
+   "address": "414-47 Hwangsunwon-ro, Seojong-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1273876864_375989987": {
+   "hash": "68a7ae6da12e",
+   "name": "In the Soop",
+   "address": "1F, 62-62 Beolmadang-gil, Seojong-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1273896161_375797033": {
+   "hash": "b648ca7e8eb7",
+   "name": "Cafe Onui",
+   "address": "455-1 Hwangsunwon-ro, Seojong-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1273896739_374924028": {
+   "hash": "53e77bd7f900",
+   "name": "Heribert",
+   "address": "3096 Sansu-ro, Ganggaha-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1273915928_375879348": {
+   "hash": "0eb47f38502a",
+   "name": "Barbecue Rave",
+   "address": "5-24 Suneungsaemmal-gil, Seojong-myeon, Yangpyeong-gun, Gyeonggi-do, Barbecue Rave"
+  },
+  "naver_1273999723_374922473": {
+   "hash": "584a2c4e8dfe",
+   "name": "Kant's Village",
+   "address": "Kant's Village, 102-10 Gangnam-ro, Gangha-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1274098107_374971433": {
+   "hash": "d381b708e2ba",
+   "name": "Via Veneto Imported Furniture & Cafe",
+   "address": "208 Gangnam-ro, Gangha-myeon, Yangpyeong-gun, Gyeonggi-do, Via Veneto"
+  },
+  "naver_1274226241_375000855": {
+   "hash": "e808f3af280f",
+   "name": "Bloomvista Hotel & Conference",
+   "address": "316 Gangnam-ro, Gangha-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1274249258_375088187": {
+   "hash": "f83336276668",
+   "name": "Gubeoul",
+   "address": "123-19 Namhangangbyeon-gil, Okcheon-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1274267948_375041384": {
+   "hash": "5988611fa282",
+   "name": "Cafe Mureu",
+   "address": "1F, 379 Gangnam-ro, Gangha-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1274304126_375038871": {
+   "hash": "536e71feb653",
+   "name": "Moon River",
+   "address": "8 Jeonui 1-gil, Gangha-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1274330368_375103107": {
+   "hash": "559d6f05f74f",
+   "name": "Be My Garden Yangpyeong",
+   "address": "209 Namhangangbyeon-gil, Okcheon-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1274372397_375281249": {
+   "hash": "678dd5f09833",
+   "name": "Brickyard",
+   "address": "35-4 Sanggok-gil, Okcheon-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1274423732_375042162": {
+   "hash": "9eabc8f991e8",
+   "name": "Ssang Barbecue Yangpyeong Main Branch",
+   "address": "520 Gangnam-ro, Gangha-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1274450803_375128899": {
+   "hash": "183e832a6304",
+   "name": "Wonder Dessert",
+   "address": "18 Asinyeok-gil, Okcheon-myeon, Yangpyeong-gun, Gyeonggi-do, Unit 104"
+  },
+  "naver_1274556589_375831399": {
+   "hash": "6f3b2331798a",
+   "name": "National Jungmisan Natural Recreation Forest",
+   "address": "1152 Jungmisan-ro, Okcheon-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1274562671_375250244": {
+   "hash": "05caf1901476",
+   "name": "Da Antonio",
+   "address": "13 Hyanggyo-gil 45beon-gil, Okcheon-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1274578813_375197847": {
+   "hash": "a66183e059e3",
+   "name": "Okcheon Naengmyeon Hwanghae Sikdang Main Branch",
+   "address": "140 Goeup-ro, Okcheon-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1274593925_375817882": {
+   "hash": "3a7af789b3f7",
+   "name": "Jungmisan Observatory",
+   "address": "1268 Jungmisan-ro, Okcheon-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1274621799_375233520": {
+   "hash": "c12b0e27f382",
+   "name": "Yangpyeong Okcheon Naengmyeon Mongsil Myeondang",
+   "address": "15 Sinbok-gil, Okcheon-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1274628927_375585882": {
+   "hash": "e6c3ad37fbf8",
+   "name": "Yangpyeong Paragliding Park",
+   "address": "49 Dongmak-gil, Okcheon-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1274633019_375127462": {
+   "hash": "b6ef6b7f813c",
+   "name": "Daddy's Barbecue",
+   "address": "Daddy's Barbecue, 15-24 Okcheon Munhwa Maeul 3-gil, Okcheon-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1274633514_375043681": {
+   "hash": "165eec50b850",
+   "name": "Hyangchon Heukyeomso Yangpyeong Smart Branch",
+   "address": "1F, 1634 Gyeonggang-ro, Yangpyeong-eup, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1274634588_375399962": {
+   "hash": "81975ff72ebd",
+   "name": "Ssoyu",
+   "address": "2F, 658 Mayusan-ro, Okcheon-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1274648739_375438596": {
+   "hash": "758595a88ad7",
+   "name": "Damda",
+   "address": "1F, 20-15 Sinbokbokdong-gil, Okcheon-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1274670218_374913575": {
+   "hash": "c9e5b699d831",
+   "name": "Pizzeria Lucane",
+   "address": "802 Gangnam-ro, Gangsang-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1274711310_374908248": {
+   "hash": "37a8d42099ed",
+   "name": "Bonga Yangpyeong Haejangguk Yangpyeong Branch",
+   "address": "837-1 Gangnam-ro, Gangsang-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1274714717_374907347": {
+   "hash": "c637a3976681",
+   "name": "Coffee and Garden",
+   "address": "841 Gangnam-ro, Gangsang-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1274724753_374905187": {
+   "hash": "0a537f761f68",
+   "name": "Yangpyeong Livestock Cooperative Hanu Plaza",
+   "address": "851 Gangnam-ro, Gangsang-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1274740894_375333890": {
+   "hash": "f14ac30c9f65",
+   "name": "Sinbok-ri 709",
+   "address": "26-10 Sinbokdongchon-gil 14beon-gil, Okcheon-myeon, Yangpyeong-gun, Gyeonggi-do, Sinbok-ri 709 Café"
+  },
+  "naver_1274796309_374872813": {
+   "hash": "5e23e8dfcda0",
+   "name": "Jeong-ae-ga Sikppang",
+   "address": "922 Gangnam-ro, Gangsang-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1274796632_374981478": {
+   "hash": "68e9eb0766e7",
+   "name": "Yangpyeong Bread Factory",
+   "address": "5-1 Mulangae Park-gil, Yangpyeong-eup, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1274817523_374970050": {
+   "hash": "30137f982480",
+   "name": "Starbucks The Yangpyeong DT",
+   "address": "76 Yanggeun-ro, Yangpyeong-eup, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1274855652_374826816": {
+   "hash": "7b785d8d737b",
+   "name": "Kim Myeongja Nakji Madang Yangpyeong Branch",
+   "address": "1F, Kim Myeongja Nakji Madang, 81 Yangpyeongdaegyo-gil, Gangsang-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1274857339_374700839": {
+   "hash": "15712c90cb52",
+   "name": "Godeungeo Sarang",
+   "address": "1141 Gangnam-ro, Gangsang-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1274860212_374777703": {
+   "hash": "e586dc90ecde",
+   "name": "My Little Australia",
+   "address": "1052-2 Gangnam-ro, Gangsang-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1274864136_374924984": {
+   "hash": "b044b0314078",
+   "name": "Brown Tail Coffee",
+   "address": "106 Yanggeungangbyeon-gil, Yangpyeong-eup, Yangpyeong-gun, Gyeonggi-do, 1st floor"
+  },
+  "naver_1274897676_374913164": {
+   "hash": "751f8ec33861",
+   "name": "Gobongmin Gimbap In Yangpyeong Jungang Branch",
+   "address": "35 Yangpyeongsijang-gil, Yangpyeong-eup, Yangpyeong-gun, Gyeonggi-do, Gobongmin Gimbap In Yangpyeong Jungang Branch"
+  },
+  "naver_1274899958_374897717": {
+   "hash": "2e391fd386fb",
+   "name": "Sambi",
+   "address": "186 Yanggeun-ro, Yangpyeong-eup, Yangpyeong-gun, Gyeonggi-do, 2nd floor"
+  },
+  "naver_1274901815_375104226": {
+   "hash": "ae2466289b2b",
+   "name": "Feed",
+   "address": "225 Mayusan-ro, Yangpyeong-eup, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1274912005_374345480": {
+   "hash": "b9307f2cc8a7",
+   "name": "Lowood",
+   "address": "1F, Lowood, 1604 Gangnam-ro, Gangsang-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1274913228_375085245": {
+   "hash": "160946307ec5",
+   "name": "Maru Garden Bakery Yangpyeong Main Branch",
+   "address": "197 Mayusan-ro, Yangpyeong-eup, Yangpyeong-gun, Gyeonggi-do, Good Morning Pastry Yangpyeong Branch"
+  },
+  "naver_1274930038_374902752": {
+   "hash": "b15826821283",
+   "name": "Mongsil Sikdang",
+   "address": "9-1 Yangpyeongjangteo-gil, Yangpyeong-eup, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1274946094_374911048": {
+   "hash": "596a094c9215",
+   "name": "Yejihyeon",
+   "address": "7 Gwanmun-gil 8beon-gil, Yangpyeong-eup, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1274960336_375421827": {
+   "hash": "d06d1d9541a1",
+   "name": "Haroksurim",
+   "address": "21 Yongcheon-ro 219beon-gil, Okcheon-myeon, Yangpyeong-gun, Gyeonggi-do, Building A, Building B"
+  },
+  "naver_1274999390_374910640": {
+   "hash": "f785fca9574b",
+   "name": "Starbucks Gyeonggi Yangpyeong",
+   "address": "75 Simin-ro, Yangpyeong-eup, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1275005216_375485858": {
+   "hash": "76854ba8eb34",
+   "name": "Yesarang",
+   "address": "333 Yongcheon-ro, Okcheon-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1275099358_374610457": {
+   "hash": "5c5ca2e436c3",
+   "name": "Gasodam",
+   "address": "172 Chungsin-ro, Yangpyeong-eup, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1275110468_374428633": {
+   "hash": "aaaf8d7b1a7b",
+   "name": "Rururu",
+   "address": "11 Angdeok-gil 69beon-gil, Gaegun-myeon, Yangpyeong-gun, Gyeonggi-do, White Building"
+  },
+  "naver_1275259770_374600959": {
+   "hash": "b800ee824046",
+   "name": "Green Mango",
+   "address": "32 Gaegunsan-ro, Gaegun-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1275265172_375079427": {
+   "hash": "7e379a9a9ff7",
+   "name": "Hyusik",
+   "address": "127 Samsan-gil, Yangpyeong-eup, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1275278849_374650707": {
+   "hash": "af5a60819e7a",
+   "name": "Yangpyeong Shinnae Seoul Haejangguk Main Branch",
+   "address": "16 Shinnae-gil, Gaegun-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1275309263_374318844": {
+   "hash": "6f13dac3226b",
+   "name": "Café Iyeon",
+   "address": "85-10 Jajingae 1-gil, Gaegun-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1275309286_374682941": {
+   "hash": "a40a4c6fbe41",
+   "name": "Chereville Spa Tourist Hotel",
+   "address": "37 Sinnaegil 7beon-gil, Gaegun-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1275309985_374677896": {
+   "hash": "94c329cd971e",
+   "name": "Heugyujae",
+   "address": "Heugyujae, 36 Sinnae-gil 7beon-gil, Gaegun-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1275325829_374692251": {
+   "hash": "4f996d40a400",
+   "name": "Sono Belle Yangpyeong Pattio",
+   "address": "55 Sinnaegil 7beon-gil, Gaegun-myeon, Yangpyeong-gun, Gyeonggi-do, Sono Belle Yangpyeong, 1st-floor lobby"
+  },
+  "naver_1275326070_374691847": {
+   "hash": "6e50c5ea7b06",
+   "name": "Sono Belle Yangpyeong",
+   "address": "55 Sinnae-gil 7beon-gil, Gaegun-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1275376247_374257530": {
+   "hash": "1ebe501afe9f",
+   "name": "Gaegun Halmeoni Local Sundaeguk",
+   "address": "1F, 27-2 Hajapo-gil, Gaegun-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1275393373_374131738": {
+   "hash": "7af20da8ac62",
+   "name": "Yeoyang-ro 2111",
+   "address": "239-1 Sangjapo-ri, 2111 Yeoyang-ro, Gaegun-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1275485971_375621496": {
+   "hash": "9bdb3f65c3bf",
+   "name": "Yongmunsan Tourist Site · Yongmunsa Temple",
+   "address": "Yongmunsa Temple, 782 Yongmunsan-ro, Yongmun-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1275509372_374778657": {
+   "hash": "b4a0a60429cb",
+   "name": "Honam Mugeunji",
+   "address": "Honam Mugeunji, 204 Daeheung-ro, Yangpyeong-eup, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1275700064_374827673": {
+   "hash": "66ebdda9e8de",
+   "name": "Concrete Jungle",
+   "address": "116 Yongmun-ro, Yongmun-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1275882734_375385157": {
+   "hash": "d3ed207aa083",
+   "name": "Cloud Garden Bakery",
+   "address": "543 Yongmunsan-ro, Yongmun-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1276010620_375177271": {
+   "hash": "bd96f5596417",
+   "name": "Yongmunsan Bread Factory",
+   "address": "235 Yongmunsan-ro, Yongmun-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1276015256_375180098": {
+   "hash": "6a0e320c4b5f",
+   "name": "Pizzeria Delfino Main Branch",
+   "address": "234 Yongmunsan-ro, Yongmun-myeon, Yangpyeong-gun, Gyeonggi-do, Building C"
+  },
+  "naver_1276029970_375158121": {
+   "hash": "7f5c07c11d9e",
+   "name": "Dotgabi Buljjukkumi Main Branch",
+   "address": "207 Yongmunsan-ro, Yongmun-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1276042495_375094839": {
+   "hash": "e5307e7254b4",
+   "name": "Flora Neul Café",
+   "address": "133 Yongmunsan-ro, Yongmun-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1276045082_375089099": {
+   "hash": "314791080d83",
+   "name": "Ara Seafood Kalguksu",
+   "address": "125 Yongmunsan-ro, Yongmun-myeon, Yangpyeong-gun, Gyeonggi-do, Ara Seafood Kalguksu"
+  },
+  "naver_1276055217_375073139": {
+   "hash": "ea99eba25dca",
+   "name": "Gwangiwon Bobaebap",
+   "address": "1F, 120-13 Yongmunsan-ro, Yongmun-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1276055423_375074390": {
+   "hash": "6f91e72c0b04",
+   "name": "Gwangiwon",
+   "address": "120-11 Yongmunsan-ro, Yongmun-myeon, Yangpyeong-gun, Gyeonggi-do, 1F"
+  },
+  "naver_1276139388_375086425": {
+   "hash": "01ede1880e97",
+   "name": "Delago Pool Villa",
+   "address": "62-9 Geumgok-gil, Yongmun-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1276139573_374161415": {
+   "hash": "1a9e576c2784",
+   "name": "Hangang Butcher Shop Restaurant",
+   "address": "2 Goksu Sijang-gil, Jipyeong-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1276213739_375367567": {
+   "hash": "675fb818e435",
+   "name": "Dreaming Camera",
+   "address": "35 Hansol-gil, Yongmun-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1276245750_376378571": {
+   "hash": "505de51a2597",
+   "name": "Sorisan Charcoal-Grilling Village",
+   "address": "12-29 Seoksandolgogaet-gil, Danwol-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1276296907_375072938": {
+   "hash": "1fbd2016f7a3",
+   "name": "Gobau Seolleongtang",
+   "address": "3 Eungogaet-gil, Yongmun-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1276304617_374741538": {
+   "hash": "62ea24d7d9fd",
+   "name": "Parrot Town",
+   "address": "209-22 Jipyeong 1-ro, Jipyeong-myeon, Yangpyeong-gun, Gyeonggi-do, Parrot Town"
+  },
+  "naver_1276318595_375011652": {
+   "hash": "2655a0623a09",
+   "name": "Jipyeong-ro 76 Cafe",
+   "address": "76 Jipyeong-ro, Jipyeong-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1276326294_375086393": {
+   "hash": "b7b09b82bbff",
+   "name": "Hoeryeong Son Mandu-guk",
+   "address": "827 Yongmun-ro, Yongmun-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1276369452_374744965": {
+   "hash": "29701eb1f76c",
+   "name": "Hoho Bunsik",
+   "address": "4-1 Jipyeong Sijang 2-gil, Jipyeong-myeon, Yangpyeong-gun, Gyeonggi-do, 4"
+  },
+  "naver_1276369553_374755983": {
+   "hash": "0451dacf3e2f",
+   "name": "Jipyeong Boribap House",
+   "address": "396 Jipyeong-ro, Jipyeong-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1276374011_374748463": {
+   "hash": "64e1c60cf9ea",
+   "name": "Dotkkwabi Main Branch",
+   "address": "104 Jipyeonguibyeong-ro, Jipyeong-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1276414885_375157826": {
+   "hash": "8d6c06f2131a",
+   "name": "Meomureum",
+   "address": "112 Sumi-gil, Danwol-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1276620122_375073093": {
+   "hash": "aef9c23dfb70",
+   "name": "Dotori-gol Yangpyeong Garden Cafe",
+   "address": "Dotori-gol Yangpyeong Garden Cafe, 151-1 Gopdani-gil, Danwol-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1276675294_375549647": {
+   "hash": "85f1ec3e928d",
+   "name": "Sunnyple",
+   "address": "12-1 Seoksan-ro, Danwol-myeon, Yangpyeong-gun, Gyeonggi-do, 1st Floor"
+  },
+  "naver_1276712534_375703518": {
+   "hash": "05305f654dac",
+   "name": "Memilga Makguksu",
+   "address": "408 Danwol-ro, Danwol-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1276739858_375553492": {
+   "hash": "aabff1cfa2fa",
+   "name": "Wolhwasu Dessert Cafe",
+   "address": "41 Jeomgol-gil, Danwol-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1276814533_375805759": {
+   "hash": "9a3f00856502",
+   "name": "House in Thoughts",
+   "address": "37 Daeburok-gil, Danwol-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1276842272_375817960": {
+   "hash": "eb71bcc96598",
+   "name": "Swieogandeul Eotteohari",
+   "address": "71 Daeburok-gil, Danwol-myeon, Yangpyeong-gun, Gyeonggi-do, Red Roof"
+  },
+  "naver_1276940227_375420645": {
+   "hash": "1a496e5370e8",
+   "name": "Cafe La Neve",
+   "address": "Cafe La Neve, 4069 Gyeonggang-ro, Cheongun-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1276963285_375432453": {
+   "hash": "26022cac3a5a",
+   "name": "Toechon Freshwater Fish Maeuntang and Eotang Guksu",
+   "address": "4091 Gyeonggang-ro, Cheongun-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1277096023_375548494": {
+   "hash": "d2a23845aee7",
+   "name": "Yongduri Jjamppong Specialist",
+   "address": "148 Yongdu-ro, Cheongun-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1277322617_375627039": {
+   "hash": "07eb8e2cfd79",
+   "name": "Yangpyeong Cast-Iron-Lid Dakbokkeumtang",
+   "address": "1F, 33-1 Omokgol-gil, Cheongun-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1277655086_375679343": {
+   "hash": "9d2b6b16f4e8",
+   "name": "Baramgil Cafe",
+   "address": "231 Sinnon-ro, Cheongun-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1277699364_375414427": {
+   "hash": "6f83c71ec5a3",
+   "name": "Café Lulu",
+   "address": "7 Gareunyangjimaeul 1-gil, Cheongun-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1277723035_375405995": {
+   "hash": "c99b2f6b57ff",
+   "name": "Yangpyeong Jjinppang and Yangpyeong Potato Tteok",
+   "address": "4907 Gyeonggang-ro, Cheongun-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "naver_1277746571_374689608": {
+   "hash": "16300f1b1f99",
+   "name": "Gyejeong Hoetjip",
+   "address": "666-13 Yangseobuk-ro, Yangdong-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_1104314": {
+   "hash": "ea9bd43a1380",
+   "name": "Jipyeong District Battle Monument",
+   "address": "357 Jipyeong-ro, Jipyeong-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_125470": {
+   "hash": "2cc480c5a4f5",
+   "name": "Baegunbong Peak, Yongmunsan Mountain",
+   "address": "Yongcheon-ri, Okcheon-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_125474": {
+   "hash": "d5029f4f9524",
+   "name": "Jungwonsan Mountain",
+   "address": "Jungwon-ri, Yongmun-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_127171": {
+   "hash": "f0b137a7e93a",
+   "name": "National Saneum Recreational Forest",
+   "address": "347 Gobuk-gil, Danwol-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_127365": {
+   "hash": "dc31af720c64",
+   "name": "Sanasa Valley",
+   "address": "1082-12 Yongcheon-ro, Okcheon-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_127688": {
+   "hash": "e3e5e58bb4d7",
+   "name": "Sanasa Temple",
+   "address": "329 Sanasagil, Okcheon-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_127692": {
+   "hash": "6a8c0413c070",
+   "name": "Jungmisan Natural Recreation Forest",
+   "address": "1152 Jungmisan-ro, Okcheon-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_129331": {
+   "hash": "e50785f32a71",
+   "name": "Yangpyeong Ongdalsaem Kkotnureum Village",
+   "address": "16 Gungchon-gil 29beon-gil, Yongmun-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_129398": {
+   "hash": "dd0fd78c52f1",
+   "name": "Yangpyeong Madeulgari Village",
+   "address": "572 Yangdong-ro, Yangdong-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_129645": {
+   "hash": "0fc79d5caba0",
+   "name": "Seoksan Valley",
+   "address": "Seoksan-ri, Danwol-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_129647": {
+   "hash": "4276881998fd",
+   "name": "Jipyeonghyanggyo",
+   "address": "333 Jipyeong-ro, Jipyeong-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_131987": {
+   "hash": "61706f316478",
+   "name": "Yongmun Millennium Market",
+   "address": "11 Yongmun Sijang 2-gil, Yongmun-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_133171": {
+   "hash": "11422027650e",
+   "name": "Naru-kke",
+   "address": "489 Gangnam-ro, Gangha-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_133214": {
+   "hash": "867c8d3c78f8",
+   "name": "Hanmadang Restaurant",
+   "address": "2 Yongmunsan-ro 628beon-gil, Yongmun-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_133215": {
+   "hash": "f819b3087fda",
+   "name": "Biwon Maeuntang",
+   "address": "58 Yanggeungangbyeon-gil, Yangpyeong-eup, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_134461": {
+   "hash": "cce6157d8bbd",
+   "name": "Giljo",
+   "address": "32-25 Dokbae-gil, Gangsang-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_1553085": {
+   "hash": "35e7989b8b0e",
+   "name": "Garumae Village",
+   "address": "Okhyeon-ri, Jipyeong-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_1566740": {
+   "hash": "7a2ca2288b56",
+   "name": "Yangpyeong Malgeunsup Camp",
+   "address": "33 Omokgol-gil, Cheongun-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_1660508": {
+   "hash": "0c5cad097249",
+   "name": "Sonamu House",
+   "address": "180 Goeup-ro, Okcheon-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_1807162": {
+   "hash": "1fec540ac70f",
+   "name": "Sumi Village",
+   "address": "55-2 Gopdani-gil, Danwol-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_1926610": {
+   "hash": "229c01971edb",
+   "name": "Yangpyeong County Museum of Art",
+   "address": "2 Munhwabokji-gil, Yangpyeong-eup, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_1955902": {
+   "hash": "44d5b6fe8735",
+   "name": "Sugok Seowon",
+   "address": "41-1 Sugokanmal-gil, Jipyeong-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_2397543": {
+   "hash": "299c8d7efb61",
+   "name": "Mokkoji Village",
+   "address": "76 Jungwonsan-ro, Yongmun-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_2554274": {
+   "hash": "45fbdbac4077",
+   "name": "Eco-Friendly Agriculture Museum",
+   "address": "670 Yongmunsan-ro, Yongmun-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_2605339": {
+   "hash": "733c19546f59",
+   "name": "Supul-ro Yangsu-ri",
+   "address": "33-2 Bukhangang-ro, Yangseo-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_2674763": {
+   "hash": "19ab9f2860b4",
+   "name": "Seohuri Forest",
+   "address": "200 Geobukbawi 1-gil, Seojong-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_2683997": {
+   "hash": "c79f790845b7",
+   "name": "Car Fore",
+   "address": "458 Gangnam-ro, Gangha-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_2744530": {
+   "hash": "4d4e9d1607c8",
+   "name": "Mind Glampers",
+   "address": "37 Daeburok-gil, Danwol-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_2754402": {
+   "hash": "e59d8710d8d4",
+   "name": "Payuk-kal",
+   "address": "51 Mulgangae Park-gil, Yangpyeong-eup, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_2754403": {
+   "hash": "c0b7fb01a14d",
+   "name": "Cham Joeun Saenggak",
+   "address": "45 Sudaegol-gil, Gangha-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_2754412": {
+   "hash": "1ecedeb2b7f6",
+   "name": "Hangang Freshwater Eel",
+   "address": "9 Yangsu-ro 138beon-gil, Yangseo-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_2754413": {
+   "hash": "f2c95e2dd1d6",
+   "name": "Farmers Garden Bom",
+   "address": "729-12 Gangnam-ro, Gangsang-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_2755456": {
+   "hash": "8fa755f6a050",
+   "name": "Yangpyeong Sheep Ranch",
+   "address": "112 Eungogaet-gil, Yongmun-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_2755483": {
+   "hash": "e2de2f24bde7",
+   "name": "Jipyeong Leisure Sports Park",
+   "address": "128 Songjeong-gil, Jipyeong-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_2755489": {
+   "hash": "d3944dd307d6",
+   "name": "Yongmun Sports Park",
+   "address": "31-5 Macheon-gil, Yongmun-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_2755793": {
+   "hash": "2f41b9ab96f2",
+   "name": "Song Barbecue",
+   "address": "520 Gangnam-ro, Gangha-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_2755829": {
+   "hash": "05c8d92580a0",
+   "name": "Galsan Park",
+   "address": "24 Yangpyeongcheyukgongwon-gil, Yangpyeong-eup, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_2755846": {
+   "hash": "44dcbce6dab1",
+   "name": "Mirinae Resort",
+   "address": "21 Wolsanjeosuji-gil, Jipyeong-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_2757536": {
+   "hash": "23c457dc9419",
+   "name": "Gaegun Leisure Sports Park",
+   "address": "84 Jajingae 1-gil, Gaegun-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_2757538": {
+   "hash": "7ffea7ffbd61",
+   "name": "Guksuri Guksujip",
+   "address": "1061 Gyeonggang-ro, Yangseo-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_2757697": {
+   "hash": "ceeab186a7df",
+   "name": "Yangpyeong Swija Park",
+   "address": "193 Swijapark-gil, Yangpyeong-eup, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_2765216": {
+   "hash": "932e7ec6f87c",
+   "name": "Daepyeongji Reservoir",
+   "address": "148 Daepyeong-ro, Jipyeong-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_2765225": {
+   "hash": "d017630fa656",
+   "name": "Gangha Sports Park",
+   "address": "70 Unsim-gil, Gangha-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_2765231": {
+   "hash": "6a290c6c118c",
+   "name": "Gangsang Sports Park",
+   "address": "79 Yangpyeongdaegyo-gil, Gangsang-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_2773710": {
+   "hash": "5b8f22b02f56",
+   "name": "Two Stroke",
+   "address": "2 Gwangjangyeop-gil, Yangseo-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_2788203": {
+   "hash": "3a38996983eb",
+   "name": "The Forest Cafe",
+   "address": "1284 Bukhangang-ro, Seojong-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_2789673": {
+   "hash": "a5da7c4f6236",
+   "name": "Sorisan Village",
+   "address": "6 Mullegol-gil, Danwol-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_2792660": {
+   "hash": "e324e1077695",
+   "name": "Moonlit",
+   "address": "109 Deokchon-gil, Yongmun-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_2792937": {
+   "hash": "ce7ac9c60864",
+   "name": "Nosansaji Shrine",
+   "address": "241 Hwaseo 1-ro, Seojong-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_2792940": {
+   "hash": "77defeb2b463",
+   "name": "Myeongdalli Valley",
+   "address": "Myeongdal-ri, Seojong-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_2814153": {
+   "hash": "aeffb1b6f739",
+   "name": "Lemongrass",
+   "address": "230 Myeongseong-gil, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_2831170": {
+   "hash": "82f5651a9fce",
+   "name": "Aloha Oe",
+   "address": "51 Yangsu-ro 138beon-gil, Yangseo-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_2831223": {
+   "hash": "ea7ef8a73c57",
+   "name": "Little Foret",
+   "address": "58 Sangwonsa-gil, Yongmun-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_2836534": {
+   "hash": "593eae47b5dd",
+   "name": "Tobang",
+   "address": "1167 Bukhangang-ro, Seojong-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_2836946": {
+   "hash": "b40c63941687",
+   "name": "Munho-ri Rice Noodles",
+   "address": "806 Bukhangang-ro, Seojong-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_2836963": {
+   "hash": "16441d364668",
+   "name": "Yangsu-ri Duck School",
+   "address": "176 Sudaeul-gil, Seojong-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_2836977": {
+   "hash": "a3b2de99e3fb",
+   "name": "Eomui Mat Yangpyeong Haejangguk",
+   "address": "88 Jungang-ro, Yangpyeong-eup, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_2842724": {
+   "hash": "753f9f6fff67",
+   "name": "Yangsu-ri Trout Sashimi Restaurant",
+   "address": "27-1 Yangsu-ro 152beon-gil, Yangseo-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_2842742": {
+   "hash": "a97c0c67410c",
+   "name": "Black Bamboo",
+   "address": "39-2 Kkotdaeul 2-gil, Seojong-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_2842754": {
+   "hash": "c128cbc2ae9c",
+   "name": "Gang Ida",
+   "address": "23 Bukhangang-ro 81beon-gil, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_2846008": {
+   "hash": "00428aa0873f",
+   "name": "Beotgogae Pass",
+   "address": "121 Beotgogaet-gil, Yangdong-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_2852773": {
+   "hash": "85bf91a6770a",
+   "name": "Yangpyeong Hanu Village",
+   "address": "304 Gangnam-ro, Gangha-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_2853279": {
+   "hash": "5255d2cedfb5",
+   "name": "Sogeun-ri Makguksu",
+   "address": "5 Soguni 2-gil, Seojong-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_2853502": {
+   "hash": "bba0097e3eec",
+   "name": "Sore Hotel",
+   "address": "375 Gangnam-ro, Gangha-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_2853508": {
+   "hash": "55eda1983cc0",
+   "name": "Cafe Pit",
+   "address": "953 Gyeonggang-ro, Yangseo-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_2853532": {
+   "hash": "22e0fba832e2",
+   "name": "Okcheon Hamheung Naengmyeon",
+   "address": "18 Bukbu-gil, Okcheon-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_2853598": {
+   "hash": "17134f4de17e",
+   "name": "En Rose",
+   "address": "32 Hwaseo-ro, Seojong-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_2853622": {
+   "hash": "4182aca91b2b",
+   "name": "Yangsu-ri Hanokjip",
+   "address": "41 Yangsu-ro 138beon-gil, Yangseo-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_2854120": {
+   "hash": "310196b7603a",
+   "name": "Noksucheongsan Restaurant",
+   "address": "108 Daepyeong-ro, Jipyeong-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_2854157": {
+   "hash": "429b4242e316",
+   "name": "Dawoori",
+   "address": "129 Mokwang-ro, Yangseo-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_2854246": {
+   "hash": "d400e376b0d1",
+   "name": "Yemadang",
+   "address": "83 Daesim-gil, Yangseo-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_2854346": {
+   "hash": "fb220cbcd484",
+   "name": "Bogwangjeong Garden",
+   "address": "27 Yongcheon-ro 149beon-gil, Okcheon-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_2918674": {
+   "hash": "a191191109db",
+   "name": "Hue Village",
+   "address": "756 Yangdong-ro, Yangdong-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_3014808": {
+   "hash": "fed437f04f6c",
+   "name": "Keunsamchon Rural Experience",
+   "address": "358 Sillon-ro, Cheongun-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_3093991": {
+   "hash": "ed7d9386773c",
+   "name": "Siwolae",
+   "address": "278 Yongmunsan-ro, Yongmun-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_3355615": {
+   "hash": "72479ad31250",
+   "name": "Daebak Handmade Makguksu",
+   "address": "18 Bukhangang-ro, Yangseo-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_3355714": {
+   "hash": "232be9a82e98",
+   "name": "Baegan-ri Coffee",
+   "address": "84 Baegan-gil, Yangpyeong-eup, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_3358870": {
+   "hash": "e9791e144ab1",
+   "name": "Jipyeong Donkatsu Sotbap",
+   "address": "37-4 Jipyeong Uibyeong-ro, Jipyeong-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_3438041": {
+   "hash": "3890292cf0c9",
+   "name": "Yuseonjae",
+   "address": "89-11 Jangmandae-gil, Yangdong-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_3438560": {
+   "hash": "b09c549b20d8",
+   "name": "Janwon Yurim Pool Villa",
+   "address": "216 Seomi-gil, Danwol-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_3445749": {
+   "hash": "e2f6f3ee8a40",
+   "name": "007 Yangpyeong Branch",
+   "address": "5-1 Mulangyeongongwon-gil, Yangpyeong-eup, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_3448778": {
+   "hash": "2996073f5293",
+   "name": "Yangpyeong Living Culture Center",
+   "address": "38 Mulgangae Park-gil, Yangpyeong-eup, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_3456270": {
+   "hash": "32ff8e595228",
+   "name": "Jinseonmiga",
+   "address": "369 Jungang-ro, Yangpyeong-eup, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_3458271": {
+   "hash": "92bcd751a6f6",
+   "name": "Dwaeji Maeul",
+   "address": "90-1 Yangpyeongdaegyo-gil, Gangsang-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_3532665": {
+   "hash": "97991f841bec",
+   "name": "Heyum, So",
+   "address": "313 Yangdong-ro, Danwol-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_3532732": {
+   "hash": "b9962b10913e",
+   "name": "Onyurang",
+   "address": "306-11 Morungogaet-gil, Cheongun-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_3532734": {
+   "hash": "ddb718b497f0",
+   "name": "Merry Dog House",
+   "address": "440-1 Gahyeon-gil, Cheongun-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_3532756": {
+   "hash": "1be6379f8a41",
+   "name": "Earsing Sagye",
+   "address": "63-5 Gongseoul-gil 88beon-gil, Gaegun-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_3532772": {
+   "hash": "f4245c7f9226",
+   "name": "Sanon Jandeung",
+   "address": "22-13 Dongmun 3-gil, Gangha-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_3533005": {
+   "hash": "57f949ad3cfd",
+   "name": "Slow In Pool Villa",
+   "address": "329-11 Seomi-gil, Danwol-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_3533129": {
+   "hash": "1adc480b0449",
+   "name": "Gamseongboda Yangpyeong Seojong Branch",
+   "address": "21-52 Dangsan Gongwon-gil, Seojong-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_397692": {
+   "hash": "901a8a75ebae",
+   "name": "Pension View",
+   "address": "10-8 Yongmunsan-ro 192beon-gil, Yongmun-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_397867": {
+   "hash": "8d7fa3e2ede3",
+   "name": "Haetsal Joeun Nal",
+   "address": "1544 Gangnam-ro, Gangsang-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_407051": {
+   "hash": "3e7517b04d81",
+   "name": "Semiwon",
+   "address": "93 Yangsu-ro, Yangseo-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_407259": {
+   "hash": "326e2ce9ec61",
+   "name": "Yangpyeong Baegunbong Natural Recreation Forest",
+   "address": "78-14 Yaksusa-gil, Yangpyeong-eup, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_582936": {
+   "hash": "1102f65ca69a",
+   "name": "Solbial",
+   "address": "391 Yongcheon-ro, Okcheon-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_612693": {
+   "hash": "1bd155814983",
+   "name": "Yongmunsan Local Food Village",
+   "address": "640 Yongmunsan-ro, Yongmun-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_697068": {
+   "hash": "4c931a0e8e93",
+   "name": "Jayeon Hyanggi Pension",
+   "address": "151-12 Bachiul-gil, Seojong-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_700255": {
+   "hash": "d9ae6ef4221f",
+   "name": "Mulsori Pension",
+   "address": "1038 Yongcheon-ro, Okcheon-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_700278": {
+   "hash": "95771f31be48",
+   "name": "Mulsori Saesori",
+   "address": "57-1 Mudeuri 2-gil, Seojong-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_809302": {
+   "hash": "9dcfba7fc756",
+   "name": "Madang Gondre Bap",
+   "address": "239 Yongmunsan-ro, Yongmun-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_943362": {
+   "hash": "009d5615217f",
+   "name": "Log Camp Pension",
+   "address": "293 Yeonsu-ro, Yongmun-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_945085": {
+   "hash": "a8715dd5d943",
+   "name": "Edelweiss",
+   "address": "10-9 Yongmunsan-ro 192beon-gil, Yongmun-myeon, Yangpyeong-gun, Gyeonggi-do"
+  },
+  "tour_990201": {
+   "hash": "e4ff4e57ebcd",
+   "name": "Tov's Riverside",
+   "address": "73-10 Yongmunsamseong-ro 20beon-gil, Yongmun-myeon, Yangpyeong-gun, Gyeonggi-do"
+  }
+ }
+}

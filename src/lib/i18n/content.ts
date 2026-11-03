@@ -1,6 +1,9 @@
 import { DEFAULT_LOCALE, type Locale } from "@/lib/i18n/config";
 import type { Course, ItineraryTransfer, LodgingPick, Place, TopPlace } from "@/types/travel";
+import roman from "@/lib/data/i18n/places.roman.json";
 import en from "@/lib/data/i18n/content.en.json";
+import ja from "@/lib/data/i18n/content.ja.json";
+import zh from "@/lib/data/i18n/content.zh.json";
 
 // 커밋된 장소·코스 자료를 화면에 올릴 때 언어를 입힌다. 번역은 scripts/build-i18n.ts가
 // 미리 만들어 둔 사이드카에서 온다(src/lib/data/i18n/content.<locale>.json).
@@ -17,12 +20,17 @@ import en from "@/lib/data/i18n/content.en.json";
 // 번역해야 할 때는 서버에서 번역한 뒤 내려보내는 쪽을 먼저 보자.
 
 interface PlaceTranslation {
-  name?: string;
-  address?: string;
   categoryLabel?: string;
   reviewSummary?: string;
   reviewTitle?: string;
 }
+
+/**
+ * 이름과 주소는 **번역이 아니라 로마자 표기**라 언어가 없다. 파일 하나를 모든 언어가
+ * 같이 쓴다 — 언어마다 만들면 같은 장소가 영어에서는 "Semiwon", 일본어에서는
+ * "Semione"이 된다(실제로 그랬다).
+ */
+const ROMAN = roman.places as Record<string, { name?: string; address?: string } | undefined>;
 
 interface Sidecar {
   places: Record<string, PlaceTranslation | undefined>;
@@ -33,6 +41,8 @@ interface Sidecar {
 // 한국어는 사이드카가 없다 — 원본이 한국어다.
 const SIDECARS: Partial<Record<Locale, Sidecar>> = {
   en: en as unknown as Sidecar,
+  ja: ja as unknown as Sidecar,
+  zh: zh as unknown as Sidecar,
 };
 
 /** 번역된 문장. 없으면 한국어 원문 그대로. */
@@ -46,9 +56,13 @@ function localizeMaybe(ko: string | undefined, locale: Locale): string | undefin
 }
 
 /**
- * 장소 이름은 **`English name (한글)`** 로 쓴다. 외국인 여행자가 택시 기사나 가게에
+ * 장소 이름은 **`로마자 이름 (한글)`** 로 쓴다. 외국인 여행자가 택시 기사나 가게에
  * 보여줄 수 있어야 하고, 네이버 지도·전화 버튼이 가리키는 대상과 눈으로 맞출 수 있어야
- * 한다 — 영문 이름만 남기면 둘 다 못 한다.
+ * 한다 — 한쪽만 남기면 둘 다 못 한다.
+ *
+ * 이름과 주소는 **일본어·중국어에서도 로마자**다(scripts/build-i18n.ts). 한국의 도로
+ * 표지와 지도 앱이 쓰는 표기라 읽어서 말하거나 그대로 입력할 수 있다. 한자로 옮기면
+ * 현지에서 가리키는 것이 없어진다 — '세미원'을 '洗美苑'으로 적어 봐야 통하지 않는다.
  */
 function displayName(translated: string, korean: string): string {
   return translated === korean ? korean : `${translated} (${korean})`;
@@ -62,13 +76,14 @@ function displayName(translated: string, korean: string): string {
 export function localizePlace<T extends Place>(place: T, locale: Locale): T {
   if (locale === DEFAULT_LOCALE) return place;
   const t = SIDECARS[locale]?.places[place.placeId];
-  if (!t) return place;
+  const r = ROMAN[place.placeId];
+  if (!t && !r) return place;
 
   const next: T = { ...place };
-  if (t.name) next.name = displayName(t.name, place.name);
-  if (t.address) next.address = t.address;
-  if (t.categoryLabel) next.categoryLabel = t.categoryLabel;
-  if (t.reviewSummary) next.reviewSummary = t.reviewSummary;
+  if (r?.name) next.name = displayName(r.name, place.name);
+  if (r?.address) next.address = r.address;
+  if (t?.categoryLabel) next.categoryLabel = t.categoryLabel;
+  if (t?.reviewSummary) next.reviewSummary = t.reviewSummary;
   // 영업시간 원문(businessHoursRaw)은 번역하지 않는다 — src/lib/businessHours.ts가
   // 한국어 정규식으로 해석하는 입력이다. 화면에 보이는 해석 결과는 사전(hours.*)에서 온다.
   return next;

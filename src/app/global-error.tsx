@@ -4,6 +4,8 @@ import "./globals.css";
 import { DEFAULT_LOCALE, isLocale, type Locale } from "@/lib/i18n/config";
 import ko from "@/lib/i18n/dictionaries/ko.json";
 import en from "@/lib/i18n/dictionaries/en.json";
+import ja from "@/lib/i18n/dictionaries/ja.json";
+import zh from "@/lib/i18n/dictionaries/zh.json";
 
 // 루트 레이아웃 자체가 깨졌을 때만 열린다 — 레이아웃을 건너뛰므로 html·body를
 // 직접 그리고 스타일도 스스로 불러와야 한다. 평안이 그림은 이 상황에서 최적화
@@ -12,7 +14,7 @@ import en from "@/lib/i18n/dictionaries/en.json";
 // 이 파일은 다국어가 들어와도 src/app/에 그대로 둔다(문서: "located in the root app
 // directory, even when leveraging internationalization"). 그래서 [lang] 레이아웃 밖이고
 // I18nProvider도 next/root-params도 쓸 수 없다 — 주소에서 언어를 직접 읽는다.
-const DICTS: Record<Locale, typeof ko> = { ko, en };
+const DICTS: Record<Locale, typeof ko> = { ko, en, ja, zh };
 
 function localeFromLocation(): Locale {
   if (typeof window === "undefined") return DEFAULT_LOCALE;
@@ -47,7 +49,7 @@ export default function GlobalError({
           </button>
           {error.digest && (
             <p className="mt-4 text-xs text-[var(--color-muted)]">
-              {locale === "ko" ? "오류 번호" : "Error code"}: {error.digest}
+              {t.digest}: {error.digest}
             </p>
           )}
         </div>

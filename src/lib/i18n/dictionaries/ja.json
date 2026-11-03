@@ -1,0 +1,311 @@
+{
+  "site": {
+    "name": "楊平旅行コース",
+    "title": "おすすめ楊平旅行コース",
+    "description": "MBTIの傾向別・ペット同伴まで、AIが営業時間や移動ルートを確認して作る楊平旅行コース",
+    "ogTitle": "ピョンアニと出かける楊平一周の旅",
+    "studio": "AI行政アプリ制作所",
+    "studioShort": "制作所"
+  },
+  "nav": {
+    "home": "ホーム",
+    "map": "地図",
+    "favorites": "お気に入り",
+    "profile": "マイページ"
+  },
+  "lang": {
+    "label": "言語",
+    "ko": "한국어",
+    "en": "English",
+    "ja": "日本語",
+    "zh": "简体中文"
+  },
+  "error": {
+    "title": "あれ、問題が発生しました",
+    "body": "しばらくしてからもう一度お試しください。",
+    "retry": "再試行",
+    "digest": "エラー番号",
+    "courseTitle": "コースの作成中に問題が発生しました",
+    "courseBody": "もう一度お試しいただければ、新しいコースを作成します。",
+    "courseBack": "別のタイプを見る →"
+  },
+  "notFound": {
+    "title": "あれ、道を間違えたようです",
+    "body": "お探しのページはありません。ピョンアニと最初から見てみますか？",
+    "action": "ホームへ戻る"
+  },
+  "home": {
+    "topDescription": "Naverブログで多く紹介されている楊平のカフェ・グルメです。直近{days}日間と全期間を分けて表示します。",
+    "heroBadge": "💧 AIが作る楊平旅行コース",
+    "heroTitleTop": "ピョンアニと出かける",
+    "heroTitleBottom": "楊平一周の旅",
+    "heroBody": "タイプを選ぶだけで、水滴の友だちピョンアニが営業時間や移動ルートまで確認したコースを作ります。",
+    "heroPoints": [
+      "コースタイプ3種",
+      "営業時間を確認済み",
+      "ペット同伴マップ",
+      "ログイン不要ですぐ使える"
+    ],
+    "searchTitle": "どんな旅行に出かけましょうか？",
+    "searchDescription": "したい旅行をそのまま入力してください。",
+    "presetTitle": "タイプから選ぶ",
+    "presetDescription": "選ぶとすぐにコースを作ります。",
+    "topTitle": "最近話題のスポット",
+    "stepsTitle": "ピョンアニのコース作り",
+    "stepsDescription": "3ステップで完了です。",
+    "steps": [
+      {
+        "title": "希望の旅行を選んでください",
+        "description": "タイプを選ぶだけで大丈夫です。"
+      },
+      {
+        "title": "ピョンアニが確認します",
+        "description": "営業時間・定休日や移動ルートまで確認します。"
+      },
+      {
+        "title": "コースが完成します",
+        "description": "地図・写真・連絡先を一画面で確認できます。"
+      }
+    ]
+  },
+  "search": {
+    "placeholder": "例：雨の日に子どもと行ける場所",
+    "ariaLabel": "希望する旅行の説明",
+    "submit": "コースを探す",
+    "examples": [
+      "비 오는 날 아이랑 갈 만한 곳",
+      "연인과 조용한 뷰 카페 당일치기",
+      "강아지랑 1박 2일"
+    ],
+    "backLabel": "最初に戻る",
+    "understood": "このように理解しました"
+  },
+  "pyeongani": {
+    "badge": "🌱 案内役の友だち、ピョンアニ",
+    "body": "穏やかな波に似た水滴のキャラクターです。楊平郡には「楊」を担当するヤンチュニがいるので、「平」を担当する友だちとしてピョンアニを作りました。二人が並んで初めて「楊平」が完成します。",
+    "link": "ピョンアニの紹介を見る →"
+  },
+  "footer": {
+    "studioBody": "行政業務と地域の日常をより快適にするAIウェブアプリを作っています。",
+    "characterLink": "ピョンアニのキャラクター紹介",
+    "madeBy": "🛠️ 制作 · AI行政アプリ工房",
+    "disclaimer": "ピョンアニは楊平郡の公式キャラクターではなく、楊平を大切に思う気持ちから生まれた非公式の創作キャラクターです。"
+  },
+  "presets": {
+    "solo": {
+      "label": "ひとり旅",
+      "description": "癒やしと思索のための静かなコース"
+    },
+    "pet": {
+      "label": "ペットと一緒に",
+      "description": "ペット同伴可能な施設だけを集めたコース"
+    },
+    "mbti": {
+      "label": "MBTIのタイプ別",
+      "description": "自分のタイプに合ったコースをおすすめ"
+    }
+  },
+  "categories": {
+    "restaurant": "飲食店",
+    "cafe": "カフェ",
+    "attraction": "観光スポット",
+    "lodging": "宿泊施設"
+  },
+  "mbti": {
+    "listBackLabel": "ほかのタイプを見る",
+    "listTitle": "🔤 MBTIタイプ別の旅",
+    "listDescription": "自分のMBTIを選ぶと、タイプに合わせた楊平コースをおすすめします。",
+    "artNote": "性格の特徴から想像した職業キャラクターです。コースのおすすめとは関係ありません。",
+    "typeBackLabel": "ほかのMBTIを選ぶ",
+    "groups": {
+      "analyst": "分析家型",
+      "diplomat": "外交官型",
+      "sentinel": "番人型",
+      "explorer": "探検家型"
+    },
+    "jobs": {
+      "INTJ": "建築家",
+      "INTP": "科学者",
+      "ENTJ": "起業家",
+      "ENTP": "発明家",
+      "INFJ": "カウンセラー",
+      "INFP": "作家",
+      "ENFJ": "教師",
+      "ENFP": "旅行プランナー",
+      "ISTJ": "会計士",
+      "ISFJ": "看護師",
+      "ESTJ": "現場管理者",
+      "ESFJ": "料理人",
+      "ISTP": "整備士",
+      "ISFP": "画家",
+      "ESTP": "消防士",
+      "ESFP": "歌手"
+    }
+  },
+  "course": {
+    "routeTotal": "· 合計 {distance}（{kind}）",
+    "nextStop": "↓ 次の場所まで {distance} · 車で約{minutes}分（直線距離の目安）",
+    "lodgingNotice": "予約前に確認",
+    "badgeCurated": "おすすめコース",
+    "badgeAi": "AIおすすめ",
+    "reasonOpen": "おすすめの理由を見る",
+    "reasonClose": "閉じる",
+    "openDetail": "地図でコースを見る →",
+    "backLabel": "ほかのコースを見る",
+    "backOther": "ほかのタイプを見る",
+    "loadMore": "ほかのコースを見る",
+    "loadingMore": "コースを作成中...",
+    "exhausted": "この条件で作成できるコースはすべてご紹介しました。",
+    "empty": "条件に合うコースが見つかりませんでした。条件を少し変えて、もう一度お知らせいただけますか？",
+    "missingTitle": "あれ、このコースが見つかりません",
+    "missingBody": "おすすめコースはリクエストのたびに新しく作成されるため、ブラウザを開き直すと消えてしまいます。気に入ったコースはお気に入りに登録すると、いつでも見られます。",
+    "missingAction": "コースをおすすめしてもらう",
+    "tabPlan": "日程",
+    "tabMap": "地図",
+    "tabSwitch": "表示切替",
+    "dayTab1": "日帰り",
+    "dayTab2": "1泊2日",
+    "stopCount": "{count}か所",
+    "straightTotal": "· 合計{distance}（直線距離）",
+    "departLine": "{place}を{at}に出発",
+    "arriveSuffix": "→ {at}に戻る",
+    "transferMove": "移動（目安）",
+    "lodgingTitle": "{type}にぴったりの宿・ペンション",
+    "mbtiTitle": "{type}の好みに合わせた楊平コース",
+    "dayCount": "{days}日コース",
+    "dayNth": "{day}日目",
+    "moreStops": "+{count}か所を見る",
+    "departure": "{at}に{place}を出発",
+    "arrivalSuffix": "· {at}に戻る",
+    "transferDepart": "{place}を出発 · 約{duration}",
+    "transferArrive": "{place}到着 · 約{duration}",
+    "routeSummary": "{count}か所を順につないだルート"
+  },
+  "place": {
+    "detail": "詳細情報",
+    "openDetail": "詳細情報を見る",
+    "close": "閉じる",
+    "address": "住所",
+    "phone": "電話番号",
+    "call": "電話する",
+    "copyAddress": "住所をコピー",
+    "copied": "コピーしました",
+    "favoriteAdd": "お気に入りに追加",
+    "favoriteRemove": "お気に入りを解除",
+    "favoritePlaceAdd": "場所をお気に入りに追加",
+    "favoritePlaceRemove": "場所のお気に入りを解除",
+    "routeTo": "までのルートを検索",
+    "mapPreviewDetail": "詳細を見る →",
+    "mapPreviewNaver": "NAVER地図 →",
+    "directions": "ルート検索 →",
+    "naverRoute": "NAVER地図でルート検索",
+    "tmap": "T map",
+    "reviewsLoading": "NAVERブログのレビューを探しています",
+    "detailOf": "{name}の詳細情報",
+    "openDetailOf": "{name}の詳細情報を見る",
+    "routeToName": "{name}までのルートを検索",
+    "photoAlt": "{name}の写真 {index}/{total}"
+  },
+  "hours": {
+    "open": "営業中",
+    "closed": "営業時間外",
+    "openUntil": "営業中 · {time}まで",
+    "closedUntil": "営業時間外 · {time}から営業",
+    "closedUntilWeekday": "営業時間外 · {weekday} {time}から営業",
+    "allDay": "24時間",
+    "holidayToday": "本日定休日",
+    "askStore": "店舗に問い合わせ",
+    "regularHoliday": "定休日",
+    "tableCaption": "曜日別営業時間",
+    "unknownWithPhone": "営業時間を確認できませんでした。下の電話ボタンから店舗にお問い合わせください。",
+    "unknownWithMap": "営業時間を確認できませんでした。下のNAVERマップで店舗情報をご確認ください。",
+    "weekdays": [
+      "日",
+      "月",
+      "火",
+      "水",
+      "木",
+      "金",
+      "土"
+    ]
+  },
+  "map": {
+    "nearestLineShort": "直線距離 {distance} · 車で約{car}分（目安）",
+    "title": "🗺️ 地図",
+    "subtitleAll": "楊平の主なスポット（お気に入りのコースがないため全件表示）",
+    "unavailable": "地図を読み込めません",
+    "unavailableBody": "地図を読み込めません。下の一覧とルート検索リンクをご利用ください。",
+    "youAreHere": "現在地",
+    "locating": "現在地を確認中...",
+    "relocate": "📍 現在地を再確認",
+    "locate": "📍 現在地を見る",
+    "locationFallback": "位置情報がなくても、コースとルートはそのまま確認できます。",
+    "nearestPlace": "現在地から最も近い場所",
+    "nearestStop": "現在地から最も近いスポット",
+    "straightLine": "直線距離",
+    "byCar": "車で約",
+    "onFoot": "徒歩で約",
+    "estimate": "(目安)",
+    "nearestLine": "直線距離 {distance} · 車で約{car}分",
+    "walkSuffix": "· 徒歩で約{walk}分",
+    "totalDistance": "全体",
+    "drivingDistance": "走行距離"
+  },
+  "pet": {
+    "backLabel": "ペット同伴コースを見る",
+    "title": "🐾 ペット同伴可能な施設",
+    "description": "楊平でペットと一緒に行ける場所は{count}か所です。同伴条件（大きさ・店内への入店）は施設ごとに異なるため、訪問前に必ずご確認ください。",
+    "sourceNote": "出典：食品安全ナラ ペット同伴可能施設一覧（2026. 9. 28.時点）、韓国観光公社の施設紹介文",
+    "linkLabel": "🐾 ペット同伴可能な施設を一覧で見る",
+    "filterAll": "すべて"
+  },
+  "top": {
+    "recentBandLabel": "直近{days}日",
+    "recentCount": "直近{days}日のブログ記事 {count}件",
+    "allCount": "· 全{count}件",
+    "blogCount": "ブログレビュー {count}件",
+    "recentBandNote": "その期間にブログ記事が最も多く投稿された場所",
+    "allBandLabel": "全期間",
+    "allBandNote": "ブログ記事が最も多く集まった場所",
+    "areaFallback": "楊平郡",
+    "groupCafe": "カフェ",
+    "groupRestaurant": "グルメ",
+    "note": "NAVERブログの記事数をもとに並べたランキングです。施設の訪問者レビュー・評価は公開APIから取得できないため、ブログ記事数で代用しています。",
+    "blogPosts": "件",
+    "orMore": "以上",
+    "allPeriod": "全て",
+    "blogReviews": "ブログレビュー"
+  },
+  "favorites": {
+    "title": "お気に入り一覧",
+    "tabsLabel": "お気に入りの種類",
+    "loginBanner": "このブラウザにのみ保存されています。ログインすると、他の端末でも見られます。",
+    "login": "ログイン",
+    "tabCourses": "コース",
+    "tabPlaces": "場所",
+    "remove": "お気に入り解除",
+    "emptyCourses": "お気に入りのコースはまだありません。",
+    "emptyCoursesAction": "コースのおすすめを見る →",
+    "emptyPlaces": "お気に入りの場所はまだありません。コースや地図から場所を開くと、ハートを押せます。",
+    "emptyPlacesAction": "地図を見る →"
+  },
+  "theme": {
+    "system": "システム",
+    "light": "明るく",
+    "dark": "暗く",
+    "switchTo": "画面の明るさ: {current} — 押して{next}に切り替え",
+    "label": "画面の明るさ"
+  },
+  "loading": {
+    "wait": "少々お待ちください。",
+    "detail": "コースを読み込み中です",
+    "mbti": "好みに合ったコースを選んでいます",
+    "search": "ピョンアニがリクエストを確認しています",
+    "searchBody": "どんな旅行をご希望か整理して、ぴったりの場所を選んでいます。",
+    "preset": "ピョンアニがコースを組んでいます",
+    "presetBody": "営業時間・定休日や移動ルートも確認しています。15秒ほどかかる場合があります。"
+  },
+  "notice": {
+    "mayBeClosed": "{names} — 今日は休業している可能性があります。行く前にご確認ください。"
+  }
+}

@@ -9,16 +9,18 @@ import {
   localizeText,
 } from "@/lib/i18n/content";
 import sidecar from "@/lib/data/i18n/content.en.json";
+import roman from "@/lib/data/i18n/places.roman.json";
 import type { Course, LodgingPick, Place, TopPlace } from "@/types/travel";
 
 // 자료 번역(scripts/build-i18n.ts가 만든 사이드카)을 화면에 입히는 부분.
 // 특정 번역문에 기대지 않는다 — 사이드카를 다시 만들거나 사람이 고쳐도 통과해야 한다.
 
-const PLACES = sidecar.places as Record<string, { name?: string; address?: string } | undefined>;
+const PLACES = sidecar.places as Record<string, { reviewSummary?: string } | undefined>;
 const TEXTS = sidecar.texts as Record<string, string | undefined>;
+const ROMAN = roman.places as Record<string, { name?: string; address?: string } | undefined>;
 
-/** 사이드카에서 이름이 번역된 장소 하나. 특정 장소를 박아 두지 않는다. */
-const [sampleId, sampleTranslation] = Object.entries(PLACES).find(([, t]) => t?.name) as [
+/** 로마자 표기가 있는 장소 하나. 특정 장소를 박아 두지 않는다. */
+const [sampleId, sampleTranslation] = Object.entries(ROMAN).find(([, t]) => t?.name) as [
   string,
   { name: string },
 ];
@@ -40,8 +42,18 @@ function place(overrides: Partial<Place> = {}): Place {
 }
 
 test("사이드카가 비어 있지 않다", () => {
-  assert.ok(Object.keys(PLACES).length > 100, "장소 번역이 들어 있어야 한다");
+  assert.ok(Object.keys(PLACES).length > 100, "장소 소개 번역이 들어 있어야 한다");
   assert.ok(Object.keys(TEXTS).length > 100, "문장 번역이 들어 있어야 한다");
+  assert.ok(Object.keys(ROMAN).length > 100, "로마자 표기가 들어 있어야 한다");
+});
+
+test("로마자 표기에는 한글이 남아 있지 않다", () => {
+  // 이름은 "로마자 (한글)"로 조립하므로, 원본에 한글이 섞이면 괄호가 겹친다.
+  for (const [id, entry] of Object.entries(ROMAN)) {
+    for (const value of [entry?.name, entry?.address]) {
+      if (value) assert.ok(!/[가-힣]/.test(value), `${id}의 로마자에 한글이 있다: ${value}`);
+    }
+  }
 });
 
 test("한국어에서는 아무것도 바꾸지 않는다", () => {
@@ -110,9 +122,7 @@ test("숙소·인기 장소의 나머지 글도 번역된다", () => {
   assert.equal(localizedLodging.name, "한글이름");
 
   const top: TopPlace = { ...place(), blogReviewCount: 10, reviewTitle: "원문 제목" };
-  const title = sidecar.places[sampleId as keyof typeof sidecar.places] as
-    | { reviewTitle?: string }
-    | undefined;
+  const title = PLACES[sampleId] as { reviewTitle?: string } | undefined;
   const localizedTop = localizeReviewTitle({ ...top, placeId: sampleId }, "en");
   assert.equal(localizedTop.reviewTitle, title?.reviewTitle ?? "원문 제목");
 });

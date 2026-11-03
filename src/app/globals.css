@@ -134,11 +134,31 @@ html[lang="ko"] body {
   }
 }
 
-/* 제목용 글꼴(Jua). 본문 한글과 섞어 쓰므로 Noto Sans KR을 뒤에 받쳐 둔다. */
+/* 제목용 글꼴. 기본은 둥근 Jua이고, 본문 한글과 섞어 쓰므로 --font-sans를 뒤에 받친다.
+   토큰으로 적어 두면 아래 html[lang=...]에서 언어마다 갈아 끼울 수 있다. */
 .display {
-  font-family: var(--font-jua), var(--font-noto-sans-kr), sans-serif;
+  font-family: var(--font-display), var(--font-sans), sans-serif;
   font-weight: 400;
   letter-spacing: 0;
+}
+
+/* 일본어·중국어: 한자를 그릴 수 있는 글꼴로 갈아 끼운다.
+   Jua는 한자가 349자뿐이고 Noto Sans KR의 한자는 한국 한자 집합이라 '国'·'駅'조차 없다.
+   한글은 뒤에 받쳐 둔다 — 장소 이름이 "English (한글)"로 나오기 때문이다.
+   제목에서 Jua가 빠지는 만큼 굵기로 대신한다. */
+html[lang="ja"] {
+  --font-sans: var(--font-noto-sans-jp), var(--font-noto-sans-kr);
+  --font-display: var(--font-noto-sans-jp);
+}
+
+html[lang^="zh"] {
+  --font-sans: var(--font-noto-sans-sc), var(--font-noto-sans-kr);
+  --font-display: var(--font-noto-sans-sc);
+}
+
+html[lang="ja"] .display,
+html[lang^="zh"] .display {
+  font-weight: 700;
 }
 
 /* 제목에 형광펜처럼 깔리는 민트 밑줄. 글자 아래 38%만 칠해 글씨를 가리지 않는다. */

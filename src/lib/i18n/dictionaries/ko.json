@@ -16,7 +16,9 @@
   "lang": {
     "label": "언어",
     "ko": "한국어",
-    "en": "English"
+    "en": "English",
+    "ja": "日本語",
+    "zh": "简体中文"
   },
   "error": {
     "title": "앗, 문제가 생겼어요",

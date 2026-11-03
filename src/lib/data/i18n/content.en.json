@@ -1,1358 +1,924 @@
 {
  "version": 2,
- "generatedAt": "2026-11-03T22:03:35.441Z",
+ "generatedAt": "2026-11-03T22:45:00.104Z",
  "places": {
   "naver_1273158958_375334334": {
-   "hash": "9a0a3dea9b2b",
-   "name": "Dumulmeori",
-   "address": "Yangsu-ri, Yangseo-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "66c88fe46ce8",
    "categoryLabel": "Travel, Attractions > Natural Attractions"
   },
   "naver_1273168078_375348077": {
-   "hash": "fdcd9b2ab520",
-   "name": "Dumulmeori Yeon Hotdog",
-   "address": "103-8 Dumulmeori-gil, Yangseo-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "1031c01d7c53",
    "categoryLabel": "Restaurant > Hot Dogs",
    "reviewTitle": "A drive to Dumulmeori in Yangpyeong, followed by an honest review of Yeon Hotdog that I paid for myself"
   },
   "naver_1273172732_375466530": {
-   "hash": "ae08e32a9377",
-   "name": "Cafe Rino",
-   "address": "32-1 Yangsu-ro 152beon-gil, Yangseo-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "72a4359adfeb",
    "categoryLabel": "Restaurant > Cafe, Dessert"
   },
   "naver_1273183136_375469053": {
-   "hash": "a06397ec0e89",
-   "name": "Cafe Geurim Jeongwon",
-   "address": "32-18 Yangsu-ro 152beon-gil, Yangseo-myeon, Yangpyeong-gun, Gyeonggi-do"
+   "hash": "72a4359adfeb",
+   "categoryLabel": "Restaurants > Cafes and Desserts"
   },
   "naver_1273187592_375424796": {
-   "hash": "096855a0a4d4",
-   "name": "Haruen Sokku Yangsuri Branch",
-   "address": "2F, 7 Dumulmeori-gil 20beon-gil, Yangseo-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "46522570e9a1",
    "categoryLabel": "Restaurant > Japanese > Tonkatsu",
    "reviewSummary": "This place is listed as pet-friendly."
   },
   "naver_1273215655_375517883": {
-   "hash": "465ed6d69a5b",
-   "name": "Susu Cafe",
-   "address": "19 Bukhangang-ro 89beon-gil, Yangseo-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "72a4359adfeb",
    "categoryLabel": "Restaurant > Cafe, Dessert"
   },
   "naver_1273227950_375432960": {
-   "hash": "9f9202e39d9a",
-   "name": "Yangsu-ri Bread Factory",
-   "address": "9 Yangsu-ro 118beon-gil, Yangseo-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "0c9a7b56a756",
    "categoryLabel": "Cafe, Dessert > Bakery"
   },
   "naver_1273255953_375502790": {
-   "hash": "c59dd278152d",
-   "name": "Yeonkkot Eondeok",
-   "address": "57 Yongneup Eondeok-gil, Yangseo-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "41aa64e6b584",
    "categoryLabel": "Restaurant > Korean"
   },
   "naver_1273282488_375571760": {
-   "hash": "9626f9fb8ca0",
-   "name": "Sopung",
-   "address": "21 Golyongjin-gil, Yangseo-myeon, Yangpyeong-gun, Gyeonggi-do, Sopung",
+   "hash": "72a4359adfeb",
    "categoryLabel": "Restaurant > Cafe, Dessert"
   },
   "naver_1273467534_375999326": {
-   "hash": "f24114f92a5e",
-   "name": "Dumon Cafe Dog Cafe",
-   "address": "64 Dangmokppuri-gil, Seojong-myeon, Yangpyeong-gun, Gyeonggi-do, 1st and 2nd floors",
+   "hash": "42195dd87681",
    "categoryLabel": "Restaurant > Cafe, Desserts",
    "reviewSummary": "This establishment is listed as allowing pets."
   },
   "naver_1273502173_375955238": {
-   "hash": "1e728d52c728",
-   "name": "Munhori Patjuk",
-   "address": "641 Bukhangang-ro, Seojong-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "77f93bf50ec4",
    "categoryLabel": "Korean > Juk (porridge)"
   },
   "naver_1273511444_376030516": {
-   "hash": "eac8aeac49b1",
-   "name": "Koo House Museum",
-   "address": "49-12 Munaemi-gil, Seojong-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "4e4d5cdc9051",
    "categoryLabel": "Culture, Arts > Art Museums"
   },
   "naver_1273529941_375984976": {
-   "hash": "1e5575157430",
-   "name": "House Bakery",
-   "address": "House Bakery, 684 Bukhangang-ro, Seojong-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "785e58907b6f",
    "categoryLabel": "Cafe, Dessert > Bakery",
    "reviewSummary": "A hanok-style cafe with organic baked goods and a spacious yard, making it a nice place to visit with children.",
    "reviewTitle": "Yangpyeong Cafe Recommendation | House Bakery: An Honest Review, Personally Paid / Yangpyeong Seojong..."
   },
   "naver_1273532640_376228372": {
-   "hash": "ec0cdfea0566",
-   "name": "Haemulkkun Jotaesan Yangpyeong Main Branch",
-   "address": "962 Bukhangang-ro, Seojong-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "e1b0a762d1b2",
    "categoryLabel": "Korean > Kalguksu, Mandu",
    "reviewTitle": "“Yangpyeong is all cafes,” I thought... but there’s also a third-generation Sundaeguk restaurant—7 best restaurants in Yangpyeong, Gyeonggi-do"
   },
   "naver_1273547638_376249287": {
-   "hash": "e0a8fb1a4919",
-   "name": "Terarosa Seojong",
-   "address": "990 Bukhangang-ro, Seojong-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "a82d2ac60835",
    "categoryLabel": "Cafe, Dessert > Cafe",
    "reviewTitle": "Yangpyeong Terarosa Seojong | Yangpyeong bakery cafe, large cafe near Seoul..."
   },
   "naver_1273593186_376320611": {
-   "hash": "b34bf0c790ed",
-   "name": "Seojong Bakery",
-   "address": "1079 Bukhangang-ro, Seojong-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "14a3d51dfc09",
    "categoryLabel": "Restaurant > Cafe, Dessert",
    "reviewSummary": "A bakery cafe where you can relax and enjoy delicious bread and coffee amid beautiful nature, right by the Bukhangang River."
   },
   "naver_1273725180_375975600": {
-   "hash": "ce1597017b53",
-   "name": "Chez Roll",
-   "address": "7-7 Nakchon-gil, Seojong-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "0c9a7b56a756",
    "categoryLabel": "Cafe, Dessert > Bakery"
   },
   "naver_1273726462_376006617": {
-   "hash": "00a7835c1545",
-   "name": "Page Moment",
-   "address": "13 Hwangsunwon-ro, Seojong-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "42195dd87681",
    "categoryLabel": "Restaurant > Cafe, Dessert",
    "reviewSummary": "This place is listed as pet-friendly."
   },
   "naver_1273776844_375939128": {
-   "hash": "aee0a4401a77",
-   "name": "Hwang Sun-won Literary Village Sonagi Village",
-   "address": "24 Sonagimaeul-gil, Seojong-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "c1dbe185bd83",
    "categoryLabel": "Travel, Attractions > Museum"
   },
   "naver_1273866935_375799212": {
-   "hash": "fb70550fcc72",
-   "name": "Sagye Dome Glamping",
-   "address": "414-47 Hwangsunwon-ro, Seojong-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "187135b47ae3",
    "categoryLabel": "Accommodation > Camping, Campgrounds"
   },
   "naver_1273876864_375989987": {
-   "hash": "46fc806b8bfa",
-   "name": "In the Soop",
-   "address": "1F, 62-62 Beolmadang-gil, Seojong-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "42195dd87681",
    "categoryLabel": "Restaurant > Cafe, Dessert",
    "reviewSummary": "This place is listed as pet-friendly."
   },
   "naver_1273896161_375797033": {
-   "hash": "40d4e96e3d2e",
-   "name": "Cafe Onui",
-   "address": "455-1 Hwangsunwon-ro, Seojong-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "42195dd87681",
    "categoryLabel": "Restaurant > Cafe, Dessert",
    "reviewSummary": "This place is listed as pet-friendly."
   },
   "naver_1273896739_374924028": {
-   "hash": "72a97173022a",
-   "name": "Heribert",
-   "address": "3096 Sansu-ro, Ganggaha-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "178657bcbccb",
    "categoryLabel": "Cafe, Dessert > Bakery",
    "reviewSummary": "A large bakery café next to Hangang Riverside Park where you can enjoy views of the Namhangang River and a green garden."
   },
   "naver_1273915928_375879348": {
-   "hash": "98b93f12f8fc",
-   "name": "Barbecue Rave",
-   "address": "5-24 Suneungsaemmal-gil, Seojong-myeon, Yangpyeong-gun, Gyeonggi-do, Barbecue Rave",
+   "hash": "6f063032368d",
    "categoryLabel": "Restaurant > Western",
    "reviewSummary": "This establishment is listed as allowing pets."
   },
   "naver_1273999723_374922473": {
-   "hash": "7880e1eef56a",
-   "name": "Kant's Village",
-   "address": "Kant's Village, 102-10 Gangnam-ro, Gangha-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "5ac0c120cfe3",
    "categoryLabel": "Restaurant > Cafe, Dessert",
    "reviewSummary": "A large garden cafe with an antique feel, where you can relax surrounded by lush greenery."
   },
   "naver_1274098107_374971433": {
-   "hash": "0747c97bcc32",
-   "name": "Via Veneto Imported Furniture & Cafe",
-   "address": "208 Gangnam-ro, Gangha-myeon, Yangpyeong-gun, Gyeonggi-do, Via Veneto",
+   "hash": "72a4359adfeb",
    "categoryLabel": "Restaurant > Cafe, Dessert"
   },
   "naver_1274226241_375000855": {
-   "hash": "46b359db9a74",
-   "name": "Bloomvista Hotel & Conference",
-   "address": "316 Gangnam-ro, Gangha-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "5fec327f25a6",
    "categoryLabel": "Accommodation > Hotels"
   },
   "naver_1274249258_375088187": {
-   "hash": "3c1e1b38e6ef",
-   "name": "Gubeoul",
-   "address": "123-19 Namhangangbyeon-gil, Okcheon-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "8be2742c1420",
    "categoryLabel": "Restaurant > Cafe, Dessert",
    "reviewTitle": "Honest Review of Gubeoul, a Large Cafe with Views of the Namhan River in Yangpyeong"
   },
   "naver_1274267948_375041384": {
-   "hash": "eefc3a31bc7e",
-   "name": "Cafe Mureu",
-   "address": "1F, 379 Gangnam-ro, Gangha-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "292976bf41de",
    "categoryLabel": "Brunch Cafe",
    "reviewSummary": "A popular photo spot for social media, with an open river view and a beautiful, exotic garden."
   },
   "naver_1274304126_375038871": {
-   "hash": "57b2750723e1",
-   "name": "Moon River",
-   "address": "8 Jeonui 1-gil, Gangha-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "08147318d81f",
    "categoryLabel": "Korean > Duck dishes",
    "reviewSummary": "In a 100-year-old log house, enjoy healthy herbal Baeksuk made with 13 medicinal herbs and no seasonings."
   },
   "naver_1274330368_375103107": {
-   "hash": "3fd7345b98a3",
-   "name": "Be My Garden Yangpyeong",
-   "address": "209 Namhangangbyeon-gil, Okcheon-myeon, Yangpyeong-gun, Gyeonggi-do"
+   "hash": "72a4359adfeb",
+   "categoryLabel": "Restaurants > Cafes and Desserts"
   },
   "naver_1274372397_375281249": {
-   "hash": "22a940c8c2fc",
-   "name": "Brickyard",
-   "address": "35-4 Sanggok-gil, Okcheon-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "9253db5ba409",
    "categoryLabel": "Cafe, Desserts > Cafe",
    "reviewSummary": "This establishment is listed as allowing pets."
   },
   "naver_1274423732_375042162": {
-   "hash": "509e7c8c3ffa",
-   "name": "Ssang Barbecue Yangpyeong Main Branch",
-   "address": "520 Gangnam-ro, Gangha-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "7ed1822a63c0",
    "categoryLabel": "Korean > Grilled pork"
   },
   "naver_1274450803_375128899": {
-   "hash": "d60f47a0a249",
-   "name": "Wonder Dessert",
-   "address": "18 Asinyeok-gil, Okcheon-myeon, Yangpyeong-gun, Gyeonggi-do, Unit 104",
+   "hash": "9253db5ba409",
    "categoryLabel": "Cafe, Desserts > Cafe",
    "reviewSummary": "This establishment is listed as allowing pets."
   },
   "naver_1274556589_375831399": {
-   "hash": "b0f19cf06a41",
-   "name": "National Jungmisan Natural Recreation Forest",
-   "address": "1152 Jungmisan-ro, Okcheon-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "3e3a9df376bb",
    "categoryLabel": "Natural Attractions > Recreation Forest, Forest Bathing Area"
   },
   "naver_1274562671_375250244": {
-   "hash": "bcbd7af435d6",
-   "name": "Da Antonio",
-   "address": "13 Hyanggyo-gil 45beon-gil, Okcheon-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "dd293b44555e",
    "categoryLabel": "Restaurant > Italian"
   },
   "naver_1274578813_375197847": {
-   "hash": "4aa7eb88c4ca",
-   "name": "Okcheon Naengmyeon Hwanghae Sikdang Main Branch",
-   "address": "140 Goeup-ro, Okcheon-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "8f2879932aab",
    "categoryLabel": "Korean > Naengmyeon"
   },
   "naver_1274593925_375817882": {
-   "hash": "50c9b4be9a3a",
-   "name": "Jungmisan Observatory",
-   "address": "1268 Jungmisan-ro, Okcheon-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "9fed7c627e59",
    "categoryLabel": "Travel, Attractions > Observatories"
   },
   "naver_1274621799_375233520": {
-   "hash": "06f1f12fb7ea",
-   "name": "Yangpyeong Okcheon Naengmyeon Mongsil Myeondang",
-   "address": "15 Sinbok-gil, Okcheon-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "8f2879932aab",
    "categoryLabel": "Korean > Naengmyeon"
   },
   "naver_1274628927_375585882": {
-   "hash": "198958fdada6",
-   "name": "Yangpyeong Paragliding Park",
-   "address": "49 Dongmak-gil, Okcheon-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "34d7cfac06f7",
    "categoryLabel": "Sports, Recreation > Hang Gliding, Paragliding"
   },
   "naver_1274633019_375127462": {
-   "hash": "c39e226e10a0",
-   "name": "Daddy's Barbecue",
-   "address": "Daddy's Barbecue, 15-24 Okcheon Munhwa Maeul 3-gil, Okcheon-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "061a139756c8",
    "categoryLabel": "Korean > Meat and Grilled Dishes",
    "reviewSummary": "A barbecue specialty restaurant where you can enjoy pot barbecue smoked over oak on a mountainside, with a camping atmosphere.",
    "reviewTitle": "Review of Daddy's Barbecue in Yangpyeong: From Weekend Waits to the Couple Set"
   },
   "naver_1274633514_375043681": {
-   "hash": "ecb17ae36065",
-   "name": "Hyangchon Heukyeomso Yangpyeong Smart Branch",
-   "address": "1F, 1634 Gyeonggang-ro, Yangpyeong-eup, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "bbd1236c83e3",
    "categoryLabel": "Restaurant > Korean",
    "reviewSummary": "This place is listed as pet-friendly."
   },
   "naver_1274634588_375399962": {
-   "hash": "881036ae3fa5",
-   "name": "Ssoyu",
-   "address": "2F, 658 Mayusan-ro, Okcheon-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "56663ba6e378",
    "categoryLabel": "Brunch Cafe",
    "reviewSummary": "This place is listed as pet-friendly."
   },
   "naver_1274648739_375438596": {
-   "hash": "ea89019a5f70",
-   "name": "Damda",
-   "address": "1F, 20-15 Sinbokbokdong-gil, Okcheon-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "56663ba6e378",
    "categoryLabel": "Brunch Cafe",
    "reviewSummary": "This place is listed as pet-friendly."
   },
   "naver_1274670218_374913575": {
-   "hash": "14fb93d24b4b",
-   "name": "Pizzeria Lucane",
-   "address": "802 Gangnam-ro, Gangsang-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "9c7861d1df68",
    "categoryLabel": "Restaurant > Italian",
    "reviewTitle": "An honest review of Neapolitan pizza in Yangpyeong: “Pizzeria Lucane”"
   },
   "naver_1274711310_374908248": {
-   "hash": "43b885a34ed0",
-   "name": "Bonga Yangpyeong Haejangguk Yangpyeong Branch",
-   "address": "837-1 Gangnam-ro, Gangsang-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "45ef939ead82",
    "categoryLabel": "Korean > Haejangguk"
   },
   "naver_1274714717_374907347": {
-   "hash": "a6e8d3149593",
-   "name": "Coffee and Garden",
-   "address": "841 Gangnam-ro, Gangsang-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "ae7140ee7c2c",
    "categoryLabel": "Cafe, Dessert > Takeout Coffee"
   },
   "naver_1274724753_374905187": {
-   "hash": "3fa53c4c3699",
-   "name": "Yangpyeong Livestock Cooperative Hanu Plaza",
-   "address": "851 Gangnam-ro, Gangsang-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "8ed093dd664b",
    "categoryLabel": "Korean > Grilled beef"
   },
   "naver_1274740894_375333890": {
-   "hash": "e3af71e78ae2",
-   "name": "Sinbok-ri 709",
-   "address": "26-10 Sinbokdongchon-gil 14beon-gil, Okcheon-myeon, Yangpyeong-gun, Gyeonggi-do, Sinbok-ri 709 Café",
+   "hash": "72a4359adfeb",
    "categoryLabel": "Restaurant > Cafe, Dessert"
   },
   "naver_1274796309_374872813": {
-   "hash": "5122b336cc99",
-   "name": "Jeong-ae-ga Sikppang",
-   "address": "922 Gangnam-ro, Gangsang-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "0c9a7b56a756",
    "categoryLabel": "Cafe, Dessert > Bakery"
   },
   "naver_1274796632_374981478": {
-   "hash": "2fd21aaee73f",
-   "name": "Yangpyeong Bread Factory",
-   "address": "5-1 Mulangae Park-gil, Yangpyeong-eup, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "72a4359adfeb",
    "categoryLabel": "Restaurant > Cafe, Dessert"
   },
   "naver_1274817523_374970050": {
-   "hash": "63e0ba8d3a7f",
-   "name": "Starbucks The Yangpyeong DT",
-   "address": "76 Yanggeun-ro, Yangpyeong-eup, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "7f7377535224",
    "categoryLabel": "Cafe, Dessert > Cafe",
    "reviewTitle": "Yangpyeong River-View Mega-Cafe? An Honest, Personally Paid Review of Starbucks Yangpyeong DT—Not a Fan..."
   },
   "naver_1274855652_374826816": {
-   "hash": "96badce76b3f",
-   "name": "Kim Myeongja Nakji Madang Yangpyeong Branch",
-   "address": "1F, Kim Myeongja Nakji Madang, 81 Yangpyeongdaegyo-gil, Gangsang-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "d8a810ae9ca5",
    "categoryLabel": "Korean > Nakji Dishes"
   },
   "naver_1274857339_374700839": {
-   "hash": "8992db110e61",
-   "name": "Godeungeo Sarang",
-   "address": "1141 Gangnam-ro, Gangsang-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "41aa64e6b584",
    "categoryLabel": "Restaurant > Korean"
   },
   "naver_1274860212_374777703": {
-   "hash": "d4b061e9e639",
-   "name": "My Little Australia",
-   "address": "1052-2 Gangnam-ro, Gangsang-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "72a4359adfeb",
    "categoryLabel": "Restaurant > Cafe, Dessert"
   },
   "naver_1274864136_374924984": {
-   "hash": "4a3ce569d9ee",
-   "name": "Brown Tail Coffee",
-   "address": "106 Yanggeungangbyeon-gil, Yangpyeong-eup, Yangpyeong-gun, Gyeonggi-do, 1st floor",
+   "hash": "42195dd87681",
    "categoryLabel": "Restaurant > Cafe, Desserts",
    "reviewSummary": "This establishment is listed as allowing pets."
   },
   "naver_1274897676_374913164": {
-   "hash": "f64f97567622",
-   "name": "Gobongmin Gimbap In Yangpyeong Jungang Branch",
-   "address": "35 Yangpyeongsijang-gil, Yangpyeong-eup, Yangpyeong-gun, Gyeonggi-do, Gobongmin Gimbap In Yangpyeong Jungang Branch",
+   "hash": "a5352f8d9c0b",
    "categoryLabel": "Restaurant > Bunsik",
    "reviewTitle": "A great combination at Gobongmin Gimbap, a Yangpyeong market-day favorite: tuna gimbap and jjambbong ramen"
   },
   "naver_1274899958_374897717": {
-   "hash": "c181abc2467b",
-   "name": "Sambi",
-   "address": "186 Yanggeun-ro, Yangpyeong-eup, Yangpyeong-gun, Gyeonggi-do, 2nd floor",
+   "hash": "fa16bb85a598",
    "categoryLabel": "Restaurant > Hamburgers",
    "reviewSummary": "This establishment is listed as allowing pets."
   },
   "naver_1274901815_375104226": {
-   "hash": "4c6d4a8c3790",
-   "name": "Feed",
-   "address": "225 Mayusan-ro, Yangpyeong-eup, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "42195dd87681",
    "categoryLabel": "Restaurant > Cafe, Dessert",
    "reviewSummary": "This place is listed as pet-friendly."
   },
   "naver_1274912005_374345480": {
-   "hash": "f181afc00d86",
-   "name": "Lowood",
-   "address": "1F, Lowood, 1604 Gangnam-ro, Gangsang-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "72a4359adfeb",
    "categoryLabel": "Restaurant > Cafe, Dessert"
   },
   "naver_1274913228_375085245": {
-   "hash": "589c5343d60a",
-   "name": "Maru Garden Bakery Yangpyeong Main Branch",
-   "address": "197 Mayusan-ro, Yangpyeong-eup, Yangpyeong-gun, Gyeonggi-do, Good Morning Pastry Yangpyeong Branch",
+   "hash": "0c9a7b56a756",
    "categoryLabel": "Cafe, Dessert > Bakery"
   },
   "naver_1274930038_374902752": {
-   "hash": "d81adfefe4f6",
-   "name": "Mongsil Sikdang",
-   "address": "9-1 Yangpyeongjangteo-gil, Yangpyeong-eup, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "7ed1822a63c0",
    "categoryLabel": "Korean > Grilled pork"
   },
   "naver_1274946094_374911048": {
-   "hash": "c90fd2c855f5",
-   "name": "Yejihyeon",
-   "address": "7 Gwanmun-gil 8beon-gil, Yangpyeong-eup, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "bab8c065881c",
    "categoryLabel": "Chinese > Chinese restaurant",
    "reviewSummary": "This popular Chinese restaurant in Yangpyeong-eup serves Chinese-style bibim noodles and spicy Jjamppong in a café-like interior."
   },
   "naver_1274960336_375421827": {
-   "hash": "076c2820fcd8",
-   "name": "Haroksurim",
-   "address": "21 Yongcheon-ro 219beon-gil, Okcheon-myeon, Yangpyeong-gun, Gyeonggi-do, Building A, Building B",
+   "hash": "dff4228b2c63",
    "categoryLabel": "Cafe, Dessert > Cafe"
   },
   "naver_1274999390_374910640": {
-   "hash": "12d11233f9b2",
-   "name": "Starbucks Gyeonggi Yangpyeong",
-   "address": "75 Simin-ro, Yangpyeong-eup, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "dff4228b2c63",
    "categoryLabel": "Cafe, Dessert > Cafe"
   },
   "naver_1275005216_375485858": {
-   "hash": "a0b80f5ab74d",
-   "name": "Yesarang",
-   "address": "333 Yongcheon-ro, Okcheon-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "6a3d0a9f740b",
    "categoryLabel": "Korean > Baeksuk, Samgyetang",
    "reviewSummary": "Enjoy Nurungji Baeksuk and a swim by the stream, with the sound of cool flowing water, in a mountain lodge setting."
   },
   "naver_1275099358_374610457": {
-   "hash": "bf234b1ffd46",
-   "name": "Gasodam",
-   "address": "172 Chungsin-ro, Yangpyeong-eup, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "72a4359adfeb",
    "categoryLabel": "Restaurant > Cafe, Dessert"
   },
   "naver_1275110468_374428633": {
-   "hash": "e5abe0cfa7a6",
-   "name": "Rururu",
-   "address": "11 Angdeok-gil 69beon-gil, Gaegun-myeon, Yangpyeong-gun, Gyeonggi-do, White Building",
+   "hash": "72a4359adfeb",
    "categoryLabel": "Restaurant > Cafe, Dessert"
   },
   "naver_1275259770_374600959": {
-   "hash": "1aed7da7bff7",
-   "name": "Green Mango",
-   "address": "32 Gaegunsan-ro, Gaegun-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "72a4359adfeb",
    "categoryLabel": "Restaurant > Cafe, Dessert"
   },
   "naver_1275265172_375079427": {
-   "hash": "b34431753804",
-   "name": "Hyusik",
-   "address": "127 Samsan-gil, Yangpyeong-eup, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "323155d6a105",
    "categoryLabel": "Restaurant > Brunch",
    "reviewSummary": "This place is listed as pet-friendly."
   },
   "naver_1275278849_374650707": {
-   "hash": "395eb3b40dfd",
-   "name": "Yangpyeong Shinnae Seoul Haejangguk Main Branch",
-   "address": "16 Shinnae-gil, Gaegun-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "45ef939ead82",
    "categoryLabel": "Korean > Haejangguk"
   },
   "naver_1275309263_374318844": {
-   "hash": "ebeef58cf47b",
-   "name": "Café Iyeon",
-   "address": "85-10 Jajingae 1-gil, Gaegun-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "72a4359adfeb",
    "categoryLabel": "Restaurant > Cafe, Dessert"
   },
   "naver_1275309286_374682941": {
-   "hash": "f27ed268bf7b",
-   "name": "Chereville Spa Tourist Hotel",
-   "address": "37 Sinnaegil 7beon-gil, Gaegun-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "5fec327f25a6",
    "categoryLabel": "Accommodation > Hotel"
   },
   "naver_1275309985_374677896": {
-   "hash": "6255764ba441",
-   "name": "Heugyujae",
-   "address": "Heugyujae, 36 Sinnae-gil 7beon-gil, Gaegun-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "910e808d0c20",
    "categoryLabel": "Restaurant > Cafe, Dessert",
    "reviewTitle": "[Yangpyeong Cafe] Heugyujae, Charming for Its Serene Atmosphere"
   },
   "naver_1275325829_374692251": {
-   "hash": "7600795929a6",
-   "name": "Sono Belle Yangpyeong Pattio",
-   "address": "55 Sinnaegil 7beon-gil, Gaegun-myeon, Yangpyeong-gun, Gyeonggi-do, Sono Belle Yangpyeong, 1st-floor lobby",
+   "hash": "9564e351d373",
    "categoryLabel": "Restaurant > Italian",
    "reviewSummary": "This establishment is listed as allowing pets."
   },
   "naver_1275326070_374691847": {
-   "hash": "9b33d885996a",
-   "name": "Sono Belle Yangpyeong",
-   "address": "55 Sinnae-gil 7beon-gil, Gaegun-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "e99a93e4400a",
    "categoryLabel": "Accommodation > Condos, Resorts"
   },
   "naver_1275376247_374257530": {
-   "hash": "3fb0531c862b",
-   "name": "Gaegun Halmeoni Local Sundaeguk",
-   "address": "1F, 27-2 Hajapo-gil, Gaegun-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "ede2106674ca",
    "categoryLabel": "Korean > Sundae and Sundaeguk"
   },
   "naver_1275393373_374131738": {
-   "hash": "b4163a7f615c",
-   "name": "Yeoyang-ro 2111",
-   "address": "239-1 Sangjapo-ri, 2111 Yeoyang-ro, Gaegun-myeon, Yangpyeong-gun, Gyeonggi-do"
+   "hash": "72a4359adfeb",
+   "categoryLabel": "Restaurants > Cafes and Desserts"
   },
   "naver_1275485971_375621496": {
-   "hash": "56b6878be8cd",
-   "name": "Yongmunsan Tourist Site · Yongmunsa Temple",
-   "address": "Yongmunsa Temple, 782 Yongmunsan-ro, Yongmun-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "119a70a48150",
    "categoryLabel": "Travel, Attractions > Mountain"
   },
   "naver_1275509372_374778657": {
-   "hash": "614accee138f",
-   "name": "Honam Mugeunji",
-   "address": "Honam Mugeunji, 204 Daeheung-ro, Yangpyeong-eup, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "be88128b0e6f",
    "categoryLabel": "Korean > Meat and Grilled Dishes",
    "reviewSummary": "A place to enjoy house-made Mugeunji (aged kimchi), charcoal-scented pre-grilled samgyeopsal, and Mugeunji dakbokkeumtang."
   },
   "naver_1275700064_374827673": {
-   "hash": "614f8cfd25f6",
-   "name": "Concrete Jungle",
-   "address": "116 Yongmun-ro, Yongmun-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "d650128e12e7",
    "categoryLabel": "Restaurant > Cafe, Dessert",
    "reviewTitle": "Yangpyeong garden cafe Concrete Jungle: Can you have a picnic on a mat?"
   },
   "naver_1275882734_375385157": {
-   "hash": "b2de033b6661",
-   "name": "Cloud Garden Bakery",
-   "address": "543 Yongmunsan-ro, Yongmun-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "0c9a7b56a756",
    "categoryLabel": "Cafe, Dessert > Bakery"
   },
   "naver_1276010620_375177271": {
-   "hash": "ccd3dcc441b1",
-   "name": "Yongmunsan Bread Factory",
-   "address": "235 Yongmunsan-ro, Yongmun-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "72a4359adfeb",
    "categoryLabel": "Restaurant > Cafe, Dessert"
   },
   "naver_1276015256_375180098": {
-   "hash": "0662e8834cbd",
-   "name": "Pizzeria Delfino Main Branch",
-   "address": "234 Yongmunsan-ro, Yongmun-myeon, Yangpyeong-gun, Gyeonggi-do, Building C",
+   "hash": "9564e351d373",
    "categoryLabel": "Restaurant > Italian",
    "reviewSummary": "This establishment is listed as allowing pets."
   },
   "naver_1276029970_375158121": {
-   "hash": "451e61019bd9",
-   "name": "Dotgabi Buljjukkumi Main Branch",
-   "address": "207 Yongmunsan-ro, Yongmun-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "7e469244b4bc",
    "categoryLabel": "Korean > Jukkumi (small octopus) dishes",
    "reviewSummary": "Near Yongmunsan Tourist Area, this specialty restaurant serves clean-tasting charcoal-grilled Buljjukkumi and perilla dishes without chemical seasonings."
   },
   "naver_1276042495_375094839": {
-   "hash": "10e22c7cf1c6",
-   "name": "Flora Neul Café",
-   "address": "133 Yongmunsan-ro, Yongmun-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "fe8f0c841669",
    "categoryLabel": "Cafe, Dessert > Cafe",
    "reviewSummary": "A large bakery café with views of Yongmunsan Mountain and an outdoor garden, where pets are welcome."
   },
   "naver_1276045082_375089099": {
-   "hash": "11131e7a4075",
-   "name": "Ara Seafood Kalguksu",
-   "address": "125 Yongmunsan-ro, Yongmun-myeon, Yangpyeong-gun, Gyeonggi-do, Ara Seafood Kalguksu",
+   "hash": "b6e02b8cd752",
    "categoryLabel": "Korean > Kalguksu, Mandu",
    "reviewSummary": "This establishment is listed as allowing pets."
   },
   "naver_1276055217_375073139": {
-   "hash": "10b4e9b1f3f9",
-   "name": "Gwangiwon Bobaebap",
-   "address": "1F, 120-13 Yongmunsan-ro, Yongmun-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "41aa64e6b584",
    "categoryLabel": "Restaurants > Korean"
   },
   "naver_1276055423_375074390": {
-   "hash": "338b99cde4b6",
-   "name": "Gwangiwon",
-   "address": "120-11 Yongmunsan-ro, Yongmun-myeon, Yangpyeong-gun, Gyeonggi-do, 1F",
+   "hash": "41aa64e6b584",
    "categoryLabel": "Restaurant > Korean"
   },
   "naver_1276139388_375086425": {
-   "hash": "2cfb71a688aa",
-   "name": "Delago Pool Villa",
-   "address": "62-9 Geumgok-gil, Yongmun-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "b14ea5e6acde",
    "categoryLabel": "Accommodation > Pension"
   },
   "naver_1276139573_374161415": {
-   "hash": "4b909d9a7741",
-   "name": "Hangang Butcher Shop Restaurant",
-   "address": "2 Goksu Sijang-gil, Jipyeong-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "3983238d8fe8",
    "categoryLabel": "Korean > Meat Dishes"
   },
   "naver_1276213739_375367567": {
-   "hash": "dfcc7df3b61a",
-   "name": "Dreaming Camera",
-   "address": "35 Hansol-gil, Yongmun-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "dff4228b2c63",
    "categoryLabel": "Cafe, Dessert > Cafe"
   },
   "naver_1276245750_376378571": {
-   "hash": "9df7e39c9fbf",
-   "name": "Sorisan Charcoal-Grilling Village",
-   "address": "12-29 Seoksandolgogaet-gil, Danwol-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "7ed1822a63c0",
    "categoryLabel": "Korean > Grilled Pork"
   },
   "naver_1276296907_375072938": {
-   "hash": "a94f9d925780",
-   "name": "Gobau Seolleongtang",
-   "address": "3 Eungogaet-gil, Yongmun-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "88777650f150",
    "categoryLabel": "Korean > Gomtang, Seolleongtang",
    "reviewTitle": "[Yangpyeong-gun, Gyeonggi-do] Yangpyeong favorite Gobau Seolleongtang Main Branch: quality meat and kimchi..."
   },
   "naver_1276304617_374741538": {
-   "hash": "742fd864a32e",
-   "name": "Parrot Town",
-   "address": "209-22 Jipyeong 1-ro, Jipyeong-myeon, Yangpyeong-gun, Gyeonggi-do, Parrot Town",
+   "hash": "604763ea187d",
    "categoryLabel": "Animal Café"
   },
   "naver_1276318595_375011652": {
-   "hash": "ae708e86a369",
-   "name": "Jipyeong-ro 76 Cafe",
-   "address": "76 Jipyeong-ro, Jipyeong-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "dff4228b2c63",
    "categoryLabel": "Cafe, Dessert > Cafe"
   },
   "naver_1276326294_375086393": {
-   "hash": "00dffb85a1a7",
-   "name": "Hoeryeong Son Mandu-guk",
-   "address": "827 Yongmun-ro, Yongmun-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "cc15cb4cc6fe",
    "categoryLabel": "Korean > Northern Korean Cuisine"
   },
   "naver_1276369452_374744965": {
-   "hash": "86d77a5f3b9f",
-   "name": "Hoho Bunsik",
-   "address": "4-1 Jipyeong Sijang 2-gil, Jipyeong-myeon, Yangpyeong-gun, Gyeonggi-do, 4",
+   "hash": "da18e73f8f25",
    "categoryLabel": "Bunsik > Assorted Bunsik"
   },
   "naver_1276369553_374755983": {
-   "hash": "42b8ae4beb54",
-   "name": "Jipyeong Boribap House",
-   "address": "396 Jipyeong-ro, Jipyeong-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "f9b4d1d21aa7",
    "categoryLabel": "Korean > Boribap"
   },
   "naver_1276374011_374748463": {
-   "hash": "22e4569a735f",
-   "name": "Dotkkwabi Main Branch",
-   "address": "104 Jipyeonguibyeong-ro, Jipyeong-myeon, Yangpyeong-gun, Gyeonggi-do"
+   "hash": "72a4359adfeb",
+   "categoryLabel": "Restaurants > Cafes and Desserts"
   },
   "naver_1276414885_375157826": {
-   "hash": "7439d531a799",
-   "name": "Meomureum",
-   "address": "112 Sumi-gil, Danwol-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "57abd108564d",
    "categoryLabel": "Korean > Makguksu"
   },
   "naver_1276620122_375073093": {
-   "hash": "01fe444aea27",
-   "name": "Dotori-gol Yangpyeong Garden Cafe",
-   "address": "Dotori-gol Yangpyeong Garden Cafe, 151-1 Gopdani-gil, Danwol-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "72a4359adfeb",
    "categoryLabel": "Restaurant > Cafe, Dessert"
   },
   "naver_1276675294_375549647": {
-   "hash": "f7f994ab6851",
-   "name": "Sunnyple",
-   "address": "12-1 Seoksan-ro, Danwol-myeon, Yangpyeong-gun, Gyeonggi-do, 1st Floor",
+   "hash": "72a4359adfeb",
    "categoryLabel": "Restaurant > Cafe, Dessert"
   },
   "naver_1276712534_375703518": {
-   "hash": "49ea81a7233d",
-   "name": "Memilga Makguksu",
-   "address": "408 Danwol-ro, Danwol-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "41aa64e6b584",
    "categoryLabel": "Restaurant > Korean"
   },
   "naver_1276739858_375553492": {
-   "hash": "ffe2faed41e6",
-   "name": "Wolhwasu Dessert Cafe",
-   "address": "41 Jeomgol-gil, Danwol-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "72a4359adfeb",
    "categoryLabel": "Restaurant > Cafe, Dessert"
   },
   "naver_1276814533_375805759": {
-   "hash": "a1c8a68d78f4",
-   "name": "House in Thoughts",
-   "address": "37 Daeburok-gil, Danwol-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "b14ea5e6acde",
    "categoryLabel": "Accommodation > Pension"
   },
   "naver_1276842272_375817960": {
-   "hash": "4da0281d832e",
-   "name": "Swieogandeul Eotteohari",
-   "address": "71 Daeburok-gil, Danwol-myeon, Yangpyeong-gun, Gyeonggi-do, Red Roof",
+   "hash": "93e96fc85fcc",
    "categoryLabel": "Cafe, Dessert > Tea"
   },
   "naver_1276940227_375420645": {
-   "hash": "87b50cdb2d78",
-   "name": "Cafe La Neve",
-   "address": "Cafe La Neve, 4069 Gyeonggang-ro, Cheongun-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "72a4359adfeb",
    "categoryLabel": "Restaurant > Cafe, Dessert"
   },
   "naver_1276963285_375432453": {
-   "hash": "8b24d8544745",
-   "name": "Toechon Freshwater Fish Maeuntang and Eotang Guksu",
-   "address": "4091 Gyeonggang-ro, Cheongun-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "41aa64e6b584",
    "categoryLabel": "Restaurant > Korean"
   },
   "naver_1277096023_375548494": {
-   "hash": "75634e821cec",
-   "name": "Yongduri Jjamppong Specialist",
-   "address": "148 Yongdu-ro, Cheongun-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "b9746cac9a7d",
    "categoryLabel": "Chinese > Chinese Restaurant",
    "reviewSummary": "A jjamppong specialist in Yongduri, serving the spicy noodle soup generously filled with fresh seafood and vegetables."
   },
   "naver_1277322617_375627039": {
-   "hash": "17aca0959d33",
-   "name": "Yangpyeong Cast-Iron-Lid Dakbokkeumtang",
-   "address": "1F, 33-1 Omokgol-gil, Cheongun-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "4f95b279944f",
    "categoryLabel": "Korean > Dakbokkeumtang"
   },
   "naver_1277655086_375679343": {
-   "hash": "12159329df31",
-   "name": "Baramgil Cafe",
-   "address": "231 Sinnon-ro, Cheongun-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "72a4359adfeb",
    "categoryLabel": "Restaurant > Cafe, Dessert"
   },
   "naver_1277699364_375414427": {
-   "hash": "412550a1956c",
-   "name": "Café Lulu",
-   "address": "7 Gareunyangjimaeul 1-gil, Cheongun-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "72a4359adfeb",
    "categoryLabel": "Restaurant > Cafe, Dessert"
   },
   "naver_1277723035_375405995": {
-   "hash": "a86cb40f9107",
-   "name": "Yangpyeong Jjinppang and Yangpyeong Potato Tteok",
-   "address": "4907 Gyeonggang-ro, Cheongun-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "aae16384e7c3",
    "categoryLabel": "Cafe, Dessert > Jjinppang"
   },
   "naver_1277746571_374689608": {
-   "hash": "4746f35a2832",
-   "name": "Gyejeong Hoetjip",
-   "address": "666-13 Yangseobuk-ro, Yangdong-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "96dd300c5b6b",
    "categoryLabel": "Korean > Hoe",
    "reviewSummary": "This long-established seafood restaurant serves fresh trout hoe raised in its own fish farm next to the restaurant, as well as spicy Maeuntang."
   },
   "tour_1104314": {
-   "hash": "166cf96a402b",
-   "name": "Jipyeong District Battle Monument",
-   "address": "357 Jipyeong-ro, Jipyeong-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "eb642fe31897",
    "reviewSummary": "A place commemorating the victory at the Battle of Jipyeong-ri during the Korean War and honoring the soldiers who died."
   },
   "tour_125470": {
-   "hash": "1fb306042982",
-   "name": "Baegunbong Peak, Yongmunsan Mountain",
-   "address": "Yongcheon-ri, Okcheon-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "70f450c201d2",
    "reviewSummary": "From this striking rocky peak, you can take in sweeping views of the Namhan River and downtown Yangpyeong."
   },
   "tour_125474": {
-   "hash": "3b114eac0102",
-   "name": "Jungwonsan Mountain",
-   "address": "Jungwon-ri, Yongmun-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "d643c3073c69",
    "reviewSummary": "This rocky mountain boasts beautiful natural scenery, with picturesque valleys and waterfalls."
   },
   "tour_127171": {
-   "hash": "412e9bcbd9b8",
-   "name": "National Saneum Recreational Forest",
-   "address": "347 Gobuk-gil, Danwol-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "fff40f821c49",
    "reviewSummary": "Clear streams and a healing forest come together at this recreational forest, where you can enjoy forest activities and relaxation."
   },
   "tour_127365": {
-   "hash": "5bc5a69d32ca",
-   "name": "Sanasa Valley",
-   "address": "1082-12 Yongcheon-ro, Okcheon-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "cde778fc5aa2",
    "reviewSummary": "A Yongmunsan valley with abundant, clean water and spectacular views of dense forest."
   },
   "tour_127688": {
-   "hash": "ea09b8afb40d",
-   "name": "Sanasa Temple",
-   "address": "329 Sanasagil, Okcheon-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "3e6fc84e3db0",
    "reviewSummary": "Located on the slopes of Baegunbong Peak on Yongmunsan Mountain, Sanasa is a historic temple founded during the Silla Dynasty."
   },
   "tour_127692": {
-   "hash": "6450536042d7",
-   "name": "Jungmisan Natural Recreation Forest",
-   "address": "1152 Jungmisan-ro, Okcheon-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "0d784574e72d",
    "reviewSummary": "This recreation forest offers dense woods, views of the Namhangang River, forest interpretation programs, and forest activities."
   },
   "tour_129331": {
-   "hash": "352f8d8fce4b",
-   "name": "Yangpyeong Ongdalsaem Kkotnureum Village",
-   "address": "16 Gungchon-gil 29beon-gil, Yongmun-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "e5e0a27ba526",
    "reviewSummary": "A clean village that farms using groundwater and practices eco-friendly duck farming."
   },
   "tour_129398": {
-   "hash": "f25a5324e4f4",
-   "name": "Yangpyeong Madeulgari Village",
-   "address": "572 Yangdong-ro, Yangdong-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "1ac3e3a005b4",
    "reviewSummary": "Enjoy a variety of activities amid pristine nature, including using traditional tools and harvesting farm produce."
   },
   "tour_129645": {
-   "hash": "de74f7b3d485",
-   "name": "Seoksan Valley",
-   "address": "Seoksan-ri, Danwol-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "776d1e917429",
    "reviewSummary": "Seoksan Valley winds around Sorisan Mountain. With its dense forest and clear water, it is an ideal family getaway in summer."
   },
   "tour_129647": {
-   "hash": "46d660588f24",
-   "name": "Jipyeonghyanggyo",
-   "address": "333 Jipyeong-ro, Jipyeong-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "9362ebf00dbf",
    "reviewSummary": "Jipyeonghyanggyo, a local educational institution during the Joseon Dynasty, continues to serve as a place for ancestral rites."
   },
   "tour_131987": {
-   "hash": "c255133f5896",
-   "name": "Yongmun Millennium Market",
-   "address": "11 Yongmun Sijang 2-gil, Yongmun-myeon, Yangpyeong-gun, Gyeonggi-do"
+   "hash": "1489f923c4dc"
   },
   "tour_133171": {
-   "hash": "5c520bfaaaad",
-   "name": "Naru-kke",
-   "address": "489 Gangnam-ro, Gangha-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "4fc53b9585ee",
    "reviewSummary": "Enjoy charcoal-scented Hanu beef from female cattle. Private rooms make it suitable for group gatherings and family events."
   },
   "tour_133214": {
-   "hash": "db7530b78506",
-   "name": "Hanmadang Restaurant",
-   "address": "2 Yongmunsan-ro 628beon-gil, Yongmun-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "a69db1076815",
    "reviewSummary": "Enjoy charcoal-grilled dishes and mountain greens while taking in the scenery of Yongmunsan in the traditional atmosphere of a tiled-roof house."
   },
   "tour_133215": {
-   "hash": "cbe9d55f13db",
-   "name": "Biwon Maeuntang",
-   "address": "58 Yanggeungangbyeon-gil, Yangpyeong-eup, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "f51ad74ac3d2",
    "reviewSummary": "This long-established restaurant makes rich freshwater fish Maeuntang using a traditional recipe passed down for three generations."
   },
   "tour_134461": {
-   "hash": "481219cef1b3",
-   "name": "Giljo",
-   "address": "32-25 Dokbae-gil, Gangsang-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "38ef6a531f0d",
    "reviewSummary": "This Japanese restaurant, styled like a Japanese ryokan, serves fresh sashimi and sushi with views of the Namhangang River."
   },
   "tour_1553085": {
-   "hash": "28c610218e41",
-   "name": "Garumae Village",
-   "address": "Okhyeon-ri, Jipyeong-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "34816c6a760e",
    "reviewSummary": "Located in Yangpyeong, a place known for its spirit of loyalty, Garumae Village is an experience village where several valley settlements come together in unity."
   },
   "tour_1566740": {
-   "hash": "ee923b673483",
-   "name": "Yangpyeong Malgeunsup Camp",
-   "address": "33 Omokgol-gil, Cheongun-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "a357c4e87e4b",
    "reviewSummary": "Enjoy a jjimjil (Korean sauna) and outdoor water play in Cheongun-myeon, Yangpyeong, where nature is well preserved."
   },
   "tour_1660508": {
-   "hash": "352b543071e2",
-   "name": "Sonamu House",
-   "address": "180 Goeup-ro, Okcheon-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "f979b2d0228c",
    "reviewSummary": "This barbecue restaurant serves pork king ribs and freshly made Naengmyeon, and offers a clear stream nearby where you can play in the water."
   },
   "tour_1807162": {
-   "hash": "51677ddc3527",
-   "name": "Sumi Village",
-   "address": "55-2 Gopdani-gil, Danwol-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "24b9961677c5",
    "reviewSummary": "Sumi Village hosts seasonal festivals and is a rural experience village where visitors can experience a range of farming traditions."
   },
   "tour_1926610": {
-   "hash": "0b20856dc470",
-   "name": "Yangpyeong County Museum of Art",
-   "address": "2 Munhwabokji-gil, Yangpyeong-eup, Yangpyeong-gun, Gyeonggi-do"
+   "hash": "1489f923c4dc"
   },
   "tour_1955902": {
-   "hash": "c12dcabc3e49",
-   "name": "Sugok Seowon",
-   "address": "41-1 Sugokanmal-gil, Jipyeong-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "31c9378a43fc",
    "reviewSummary": "A shrine housing the spirit tablets of brothers Gwon Gyeong-u and Gwon Gyeong-yu, civil officials of the early Joseon period."
   },
   "tour_2397543": {
-   "hash": "c53c0d9ce4f5",
-   "name": "Mokkoji Village",
-   "address": "76 Jungwonsan-ro, Yongmun-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "e73ed6b17c46",
    "reviewSummary": "A village where you can enjoy a variety of rural activities throughout the year, including strawberry picking, water play, and ice sledding."
   },
   "tour_2554274": {
-   "hash": "e59c642258ec",
-   "name": "Eco-Friendly Agriculture Museum",
-   "address": "670 Yongmunsan-ro, Yongmun-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "718971cf8ab4",
    "reviewSummary": "Located at the entrance to Yongmunsan Mountain, the Eco-Friendly Agriculture Museum is an exhibition and education space covering Yangpyeong’s history and eco-friendly agriculture."
   },
   "tour_2605339": {
-   "hash": "8802d956eca2",
-   "name": "Supul-ro Yangsu-ri",
-   "address": "33-2 Bukhangang-ro, Yangseo-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "070779fcf677",
    "reviewSummary": "This ecological park is a lovely place for a leisurely walk, with views of the Bukhangang River and an ecological pond."
   },
   "tour_2674763": {
-   "hash": "12d58c1ce5a3",
-   "name": "Seohuri Forest",
-   "address": "200 Geobukbawi 1-gil, Seojong-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "58fd193d7ac0",
    "reviewSummary": "With forests of diverse tree species and walking trails, Seohuri Forest is an arboretum ideal for relaxation."
   },
   "tour_2683997": {
-   "hash": "55e5c20a2cac",
-   "name": "Car Fore",
-   "address": "458 Gangnam-ro, Gangha-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "0c7619fb31b1",
    "reviewSummary": "Car Fore is a cultural complex where modern architecture, a gallery, and a café come together, offering exhibitions and drinks amid nature."
   },
   "tour_2744530": {
-   "hash": "8e5edb4c9062",
-   "name": "Mind Glampers",
-   "address": "37 Daeburok-gil, Danwol-myeon, Yangpyeong-gun, Gyeonggi-do"
+   "hash": "1489f923c4dc"
   },
   "tour_2754402": {
-   "hash": "344268037b4a",
-   "name": "Payuk-kal",
-   "address": "51 Mulgangae Park-gil, Yangpyeong-eup, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "99dcb02fb841",
    "reviewSummary": "Near a well-known spot on the Namhan River, this place serves rich, deeply flavored Yukgaejang and kalguksu in its Payuk-kal dish."
   },
   "tour_2754403": {
-   "hash": "11aaf2745af9",
-   "name": "Cham Joeun Saenggak",
-   "address": "45 Sudaegol-gil, Gangha-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "dc4bad8f5490",
    "reviewSummary": "Enjoy a delicious fusion Hanjeongsik course meal and a stroll through the garden while looking at the fountain in the peaceful foothills."
   },
   "tour_2754412": {
-   "hash": "1a7710e1304b",
-   "name": "Hangang Freshwater Eel",
-   "address": "9 Yangsu-ro 138beon-gil, Yangseo-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "0f24ebdb6ba2",
    "reviewSummary": "An eel restaurant where you can enjoy fresh wild water dropwort alongside thick cuts of eel."
   },
   "tour_2754413": {
-   "hash": "d3c865f0b958",
-   "name": "Farmers Garden Bom",
-   "address": "729-12 Gangnam-ro, Gangsang-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "975719ea7351",
    "reviewSummary": "Located by the Namhan River, Farmers Garden Bom is a cultural complex with a garden, restaurant, and small art museum."
   },
   "tour_2755456": {
-   "hash": "d3186fae482c",
-   "name": "Yangpyeong Sheep Ranch",
-   "address": "112 Eungogaet-gil, Yongmun-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "dcb4075f51dd",
    "reviewSummary": "At this sheep ranch, you can enjoy feeding hay and interacting with baby animals at your own pace."
   },
   "tour_2755483": {
-   "hash": "1ca0d04fd2c2",
-   "name": "Jipyeong Leisure Sports Park",
-   "address": "128 Songjeong-gil, Jipyeong-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "1f8d96b28f87",
    "reviewSummary": "Set below Galjisan Mountain, this pleasant spot has a range of sports facilities and is also great for walking."
   },
   "tour_2755489": {
-   "hash": "6db780e1ba1c",
-   "name": "Yongmun Sports Park",
-   "address": "31-5 Macheon-gil, Yongmun-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "1bed9ccd43dd",
    "reviewSummary": "Located between Heukcheon and Galjisan, this is a good place for quiet walks and exercise."
   },
   "tour_2755793": {
-   "hash": "387f1aae1cac",
-   "name": "Song Barbecue",
-   "address": "520 Gangnam-ro, Gangha-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "34151894842a",
    "reviewSummary": "Enjoy pork back ribs barbecue, first cooked over oak firewood and finished with Yangpyeong shiitake seasoning."
   },
   "tour_2755829": {
-   "hash": "25f380f6b06d",
-   "name": "Galsan Park",
-   "address": "24 Yangpyeongcheyukgongwon-gil, Yangpyeong-eup, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "30668cd012c7",
    "reviewSummary": "Located along the Namhan River, this park is a popular cherry blossom spot with cycling paths and walking trails."
   },
   "tour_2755846": {
-   "hash": "1ff3c9ca3696",
-   "name": "Mirinae Resort",
-   "address": "21 Wolsanjeosuji-gil, Jipyeong-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "9ab56b900a7c",
    "reviewSummary": "This resort has a range of accommodations and facilities, making it a good place for relaxation and group training retreats."
   },
   "tour_2757536": {
-   "hash": "935cb1f234d8",
-   "name": "Gaegun Leisure Sports Park",
-   "address": "84 Jajingae 1-gil, Gaegun-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "3c885db6bb8a",
    "reviewSummary": "Gaegun Leisure Sports Park has a range of sports facilities and park areas, and also hosts festivals."
   },
   "tour_2757538": {
-   "hash": "6eef696716fd",
-   "name": "Guksuri Guksujip",
-   "address": "1061 Gyeonggang-ro, Yangseo-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "bd24b6684937",
    "reviewSummary": "A noodle restaurant near Guksu Station where you can enjoy chewy kalguksu, sujebi, and boribap without strong seasoning."
   },
   "tour_2757697": {
-   "hash": "8f4a46759950",
-   "name": "Yangpyeong Swija Park",
-   "address": "193 Swijapark-gil, Yangpyeong-eup, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "ebc887b23550",
    "reviewSummary": "A park that makes use of the existing forest, offering a quiet, peaceful place for walks and picnics."
   },
   "tour_2765216": {
-   "hash": "43c0d897de12",
-   "name": "Daepyeongji Reservoir",
-   "address": "148 Daepyeong-ro, Jipyeong-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "2682c947ff51",
    "reviewSummary": "A reservoir completed in 1964, where clear valley water gathers between Udusan and Maebongsan."
   },
   "tour_2765225": {
-   "hash": "02ada78cd8d4",
-   "name": "Gangha Sports Park",
-   "address": "70 Unsim-gil, Gangha-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "dcd17fa831fa",
    "reviewSummary": "This multipurpose community sports park has various facilities, including soccer and tennis courts, as well as a children's sand playground."
   },
   "tour_2765231": {
-   "hash": "8b8cc8812a08",
-   "name": "Gangsang Sports Park",
-   "address": "79 Yangpyeongdaegyo-gil, Gangsang-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "0425e61af1e4",
    "reviewSummary": "This riverside park offers sports facilities such as soccer and baseball fields, as well as kayaking in the fresh air."
   },
   "tour_2773710": {
-   "hash": "635698e657b8",
-   "name": "Two Stroke",
-   "address": "2 Gwangjangyeop-gil, Yangseo-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "47c3a8950559",
    "reviewSummary": "A stylish café specializing in handmade burgers, decorated with car and motorcycle memorabilia."
   },
   "tour_2788203": {
-   "hash": "62259c298302",
-   "name": "The Forest Cafe",
-   "address": "1284 Bukhangang-ro, Seojong-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "8ea228af1dca",
    "reviewSummary": "Enjoy bread and drinks made with quality ingredients in a garden full of charming flowers in bloom."
   },
   "tour_2789673": {
-   "hash": "491160be4b78",
-   "name": "Sorisan Village",
-   "address": "6 Mullegol-gil, Danwol-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "bb036b05fb43",
    "reviewSummary": "This village is home to Sorisan Mountain and Seoksan Valley, and holds a gorosoe festival every year."
   },
   "tour_2792660": {
-   "hash": "8481b6951a3d",
-   "name": "Moonlit",
-   "address": "109 Deokchon-gil, Yongmun-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "ed3b915d371c",
    "reviewSummary": "A relaxing retreat with an exotic feel, featuring a spacious outdoor garden and views of a stream valley."
   },
   "tour_2792937": {
-   "hash": "48f1b7d52311",
-   "name": "Nosansaji Shrine",
-   "address": "241 Hwaseo 1-ro, Seojong-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "c712eea18fdb",
    "reviewSummary": "A shrine housing portraits and spirit tablets of Zhu Xi, Song Si-yeol, and Hwaseo Yi Hang-ro."
   },
   "tour_2792940": {
-   "hash": "1a3de251d4b8",
-   "name": "Myeongdalli Valley",
-   "address": "Myeongdal-ri, Seojong-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "71c0b1172b2d",
    "reviewSummary": "Myeongdalli Valley, a remote area untouched by development, preserves pristine natural ecosystems and wildflowers."
   },
   "tour_2814153": {
-   "hash": "9721d8d0ab8e",
-   "name": "Lemongrass",
-   "address": "230 Myeongseong-gil, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "2c9a0d9c69b5",
    "reviewSummary": "Located in Sori Mountain Valley, this whole-house pension has a split-level layout and floor-to-ceiling windows overlooking the mountain slopes."
   },
   "tour_2831170": {
-   "hash": "fa650291877a",
-   "name": "Aloha Oe",
-   "address": "51 Yangsu-ro 138beon-gil, Yangseo-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "d09986964680",
    "reviewSummary": "An exotic restaurant where you can enjoy healthy Italian dishes on a terrace overlooking the gently flowing river."
   },
   "tour_2831223": {
-   "hash": "1f3c3667eea9",
-   "name": "Little Foret",
-   "address": "58 Sangwonsa-gil, Yongmun-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "7d9a68db6a6b",
    "reviewSummary": "A cafe where you can relax in a dense forest with a gentle stream flowing through it."
   },
   "tour_2836534": {
-   "hash": "965b7204be5a",
-   "name": "Tobang",
-   "address": "1167 Bukhangang-ro, Seojong-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "c8146bbcde40",
    "reviewSummary": "A wholesome hanjeongsik restaurant near the Bukhangang River that has preserved traditional flavors for 20 years."
   },
   "tour_2836946": {
-   "hash": "f72719350359",
-   "name": "Munho-ri Rice Noodles",
-   "address": "806 Bukhangang-ro, Seojong-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "4a1ede44f91d",
    "reviewSummary": "Located on the banks of the Bukhangang River, this restaurant serves Vietnamese pho that people of all ages can enjoy."
   },
   "tour_2836963": {
-   "hash": "588834b1d71e",
-   "name": "Yangsu-ri Duck School",
-   "address": "176 Sudaeul-gil, Seojong-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "655815f09957",
    "reviewSummary": "A good-value restaurant specializing in duck dishes, set alongside a valley where you can enjoy swimming and a camping atmosphere."
   },
   "tour_2836977": {
-   "hash": "4637bb64cfb7",
-   "name": "Eomui Mat Yangpyeong Haejangguk",
-   "address": "88 Jungang-ro, Yangpyeong-eup, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "f4e1d71bc26c",
    "reviewSummary": "A restaurant specializing in Haejangguk with a rich broth, generous portions of meat, and chewy tripe."
   },
   "tour_2842724": {
-   "hash": "ee1d13a54bcc",
-   "name": "Yangsu-ri Trout Sashimi Restaurant",
-   "address": "27-1 Yangsu-ro 152beon-gil, Yangseo-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "522b153d6f1f",
    "reviewSummary": "Enjoy fresh trout sashimi and a variety of dishes in a pleasant garden overlooking the Bukhangang River."
   },
   "tour_2842742": {
-   "hash": "e701dc6815f7",
-   "name": "Black Bamboo",
-   "address": "39-2 Kkotdaeul 2-gil, Seojong-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "650327ce909d",
    "reviewSummary": "A restaurant serving Asian food in a modern interior with views of the Bukhangang River."
   },
   "tour_2842754": {
-   "hash": "ec2f6e2863da",
-   "name": "Gang Ida",
-   "address": "23 Bukhangang-ro 81beon-gil, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "853f1f6438ab",
    "reviewSummary": "A dessert cafe full of photo spots where you can enjoy coffee and brunch while looking out over the Bukhangang River.",
    "reviewTitle": "Gang Ida, the large cafe in Dumulmeori, Yangpyeong, famous for its train views"
   },
   "tour_2846008": {
-   "hash": "28943d107e65",
-   "name": "Beotgogae Pass",
-   "address": "121 Beotgogaet-gil, Yangdong-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "267e1b52f556",
    "reviewSummary": "This beautiful mountain pass is counted among the three top stargazing spots near Seoul."
   },
   "tour_2852773": {
-   "hash": "c4f4b74e8f0a",
-   "name": "Yangpyeong Hanu Village",
-   "address": "304 Gangnam-ro, Gangha-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "224ed0108e63",
    "reviewSummary": "A butcher-restaurant where you can choose fresh beef directly from the butcher shop and grill it at a reasonable price."
   },
   "tour_2853279": {
-   "hash": "e06debcae847",
-   "name": "Sogeun-ri Makguksu",
-   "address": "5 Soguni 2-gil, Seojong-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "bb2233e7a97f",
    "reviewSummary": "Enjoy Makguksu made with chewy noodles freshly kneaded and cut to order, served in Dongchimi broth."
   },
   "tour_2853502": {
-   "hash": "a23848760470",
-   "name": "Sore Hotel",
-   "address": "375 Gangnam-ro, Gangha-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "6921b8ba3710",
    "reviewSummary": "A drive-in unmanned motel where you can enjoy views of the Namhan River through floor-to-ceiling windows and from the balcony in every room."
   },
   "tour_2853508": {
-   "hash": "bd6dcd751fb0",
-   "name": "Cafe Pit",
-   "address": "953 Gyeonggang-ro, Yangseo-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "3c0e48addef8",
    "reviewSummary": "A rest stop with a rooftop and terrace where riders can take a comfortable break."
   },
   "tour_2853532": {
-   "hash": "a9d573a25a75",
-   "name": "Okcheon Hamheung Naengmyeon",
-   "address": "18 Bukbu-gil, Okcheon-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "758dbd919385",
    "reviewSummary": "A spacious restaurant specializing in Hamheung Naengmyeon, serving chewy Hoe Naengmyeon, Suyuk, and Wanja."
   },
   "tour_2853598": {
-   "hash": "c75c5ca671da",
-   "name": "En Rose",
-   "address": "32 Hwaseo-ro, Seojong-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "79b9ffd87628",
    "reviewSummary": "A large café where the stream valley and mountains create a peaceful atmosphere, and you can enjoy hand-drip coffee."
   },
   "tour_2853622": {
-   "hash": "91816937a09e",
-   "name": "Yangsu-ri Hanokjip",
-   "address": "41 Yangsu-ro 138beon-gil, Yangseo-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "fe3f290c2ea2",
    "reviewSummary": "A hanok restaurant serving jjim dishes generously filled with fresh seafood and anglerfish, as well as Deulkkae Kalguksu."
   },
   "tour_2854120": {
-   "hash": "ae0d751f7c8d",
-   "name": "Noksucheongsan Restaurant",
-   "address": "108 Daepyeong-ro, Jipyeong-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "0a63afc360cf",
    "reviewSummary": "A Korean restaurant near Daepyeong Reservoir that golfers often visit for breakfast."
   },
   "tour_2854157": {
-   "hash": "112053c32809",
-   "name": "Dawoori",
-   "address": "129 Mokwang-ro, Yangseo-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "d137fa514c62",
    "reviewSummary": "A place to enjoy a premium set meal of ganjang gejang and yangnyeom gejang made with domestic female blue crabs full of roe.",
    "reviewTitle": "Review of Dawoori’s Ganjang Gejang Set Meal in Yangseo-myeon, Yangpyeong"
   },
   "tour_2854246": {
-   "hash": "8e334608643c",
-   "name": "Yemadang",
-   "address": "83 Daesim-gil, Yangseo-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "76cefc27902a",
    "reviewSummary": "A multi-purpose cultural space where you can enjoy a meal, coffee, gallery visits, and a walk all in one place."
   },
   "tour_2854346": {
-   "hash": "75fd5c0fa152",
-   "name": "Bogwangjeong Garden",
-   "address": "27 Yongcheon-ro 149beon-gil, Okcheon-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "30bd0a166509",
    "reviewSummary": "A native chicken restaurant that prepares its dishes with hens and ingredients raised by the owner."
   },
   "tour_2918674": {
-   "hash": "cdbcb0961703",
-   "name": "Hue Village",
-   "address": "756 Yangdong-ro, Yangdong-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "265f1cb13d0f",
    "reviewSummary": "Enjoy a relaxing stay in a village within the resort, with open views, an outdoor pool, and Hue Garden."
   },
   "tour_3014808": {
-   "hash": "f8ef7658b1cd",
-   "name": "Keunsamchon Rural Experience",
-   "address": "358 Sillon-ro, Cheongun-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "f6863577b4a1",
    "reviewSummary": "This rural village offers a range of seasonal activities and opportunities to make traditional foods."
   },
   "tour_3093991": {
-   "hash": "a17e8a6fb8f8",
-   "name": "Siwolae",
-   "address": "278 Yongmunsan-ro, Yongmun-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "649a1c557f32",
    "reviewSummary": "A spacious restaurant on the way to Yongmunsa Temple, serving native chicken baeksuk with neungi mushrooms, hearty Korean dishes, and stone-pot rice."
   },
   "tour_3355615": {
-   "hash": "22b6baf0e06a",
-   "name": "Daebak Handmade Makguksu",
-   "address": "18 Bukhangang-ro, Yangseo-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "69a87a3b395c",
    "reviewSummary": "This specialty restaurant makes its noodles to order, serving fresh, chewy Makguksu."
   },
   "tour_3355714": {
-   "hash": "2dbec242647a",
-   "name": "Baegan-ri Coffee",
-   "address": "84 Baegan-gil, Yangpyeong-eup, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "f76e2bdbc2ea",
    "reviewSummary": "A dessert cafe serving coffee made with beans roasted in-house and homemade walnut pie."
   },
   "tour_3358870": {
-   "hash": "acffa30b78d1",
-   "name": "Jipyeong Donkatsu Sotbap",
-   "address": "37-4 Jipyeong Uibyeong-ro, Jipyeong-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "cf2af0407375",
    "reviewSummary": "A Yangpyeong donkatsu restaurant where you can enjoy donkatsu, sotbap, and a range of pasta dishes."
   },
   "tour_3438041": {
-   "hash": "a2098418ec15",
-   "name": "Yuseonjae",
-   "address": "89-11 Jangmandae-gil, Yangdong-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "53f23f104d1f",
    "reviewSummary": "A peaceful, 100-year-old traditional hanok house rented exclusively to one family per day."
   },
   "tour_3438560": {
-   "hash": "934364b7ce73",
-   "name": "Janwon Yurim Pool Villa",
-   "address": "216 Seomi-gil, Danwol-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "8d2838d320fb",
    "reviewSummary": "Enjoy a quiet, relaxing stay at this pool villa, looking out at a small mountain behind and the peak of Bongsan in front."
   },
   "tour_3445749": {
-   "hash": "7b20a79143c8",
-   "name": "007 Yangpyeong Branch",
-   "address": "5-1 Mulangyeongongwon-gil, Yangpyeong-eup, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "461e08c83031",
    "reviewSummary": "A spacious, beautiful large café where you can enjoy the scenery through floor-to-ceiling windows on every floor."
   },
   "tour_3448778": {
-   "hash": "4dbe0c802296",
-   "name": "Yangpyeong Living Culture Center",
-   "address": "38 Mulgangae Park-gil, Yangpyeong-eup, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "1238d1908fa2",
    "reviewSummary": "This indoor cultural space offers a range of cultural programs, educational activities, and exhibitions."
   },
   "tour_3456270": {
-   "hash": "2636f5b7d8bb",
-   "name": "Jinseonmiga",
-   "address": "369 Jungang-ro, Yangpyeong-eup, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "d5846a7674de",
    "reviewSummary": "This popular restaurant serves braised kodari made with chewy, air-dried fish, offering a tender texture and deep flavor."
   },
   "tour_3458271": {
-   "hash": "77e1eb9e8de0",
-   "name": "Dwaeji Maeul",
-   "address": "90-1 Yangpyeongdaegyo-gil, Gangsang-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "35653ecb8365",
    "reviewSummary": "Open from early morning, this welcoming local favorite serves hearty Sundaeguk and bone hangover soup."
   },
   "tour_3532665": {
-   "hash": "3b4c37941805",
-   "name": "Heyum, So",
-   "address": "313 Yangdong-ro, Danwol-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "0586f476a6cd",
    "reviewSummary": "Enjoy stream activities and a relaxing getaway in a private space reserved for just two groups per day."
   },
   "tour_3532732": {
-   "hash": "7a492fa67cda",
-   "name": "Onyurang",
-   "address": "306-11 Morungogaet-gil, Cheongun-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "94d8762c0502",
    "reviewSummary": "This pet-friendly whole-house pension has a spacious lawn and a large jacuzzi for a truly restful stay."
   },
   "tour_3532734": {
-   "hash": "6b27ea2da3ec",
-   "name": "Merry Dog House",
-   "address": "440-1 Gahyeon-gil, Cheongun-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "8efead827739",
    "reviewSummary": "A dedicated pet pension with a spacious dog playground, swimming pool, and sauna."
   },
   "tour_3532756": {
-   "hash": "562d382af07f",
-   "name": "Earsing Sagye",
-   "address": "63-5 Gongseoul-gil 88beon-gil, Gaegun-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "667e30a4a844",
    "reviewSummary": "A private whole-house stay where nature and art come together, with a four-season garden and an outdoor gallery."
   },
   "tour_3532772": {
-   "hash": "469b34aff025",
-   "name": "Sanon Jandeung",
-   "address": "22-13 Dongmun 3-gil, Gangha-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "51687a8beb46",
    "reviewSummary": "Enjoy a relaxing time with family or friends in a peaceful place surrounded by gentle mountains."
   },
   "tour_3533005": {
-   "hash": "36b33c4e3b69",
-   "name": "Slow In Pool Villa",
-   "address": "329-11 Seomi-gil, Danwol-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "54952ef9bccd",
    "reviewSummary": "This private pool villa is set in quiet mountains near a pine forest. Enjoy a private pool and a relaxing stay with your dog."
   },
   "tour_3533129": {
-   "hash": "f2b3b88303df",
-   "name": "Gamseongboda Yangpyeong Seojong Branch",
-   "address": "21-52 Dangsan Gongwon-gil, Seojong-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "439f38a043c0",
    "reviewSummary": "A private hanok stay for one group per day, with exclusive use of a jacuzzi, retro street-stall-style bar, and barbecue area."
   },
   "tour_397692": {
-   "hash": "2af5bd773e35",
-   "name": "Pension View",
-   "address": "10-8 Yongmunsan-ro 192beon-gil, Yongmun-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "290cbd013a99",
    "reviewSummary": "This pension offers a relaxing stay amid beautiful natural scenery, with opportunities for stream fishing and collecting marsh snails."
   },
   "tour_397867": {
-   "hash": "2cf0ab4c8bb3",
-   "name": "Haetsal Joeun Nal",
-   "address": "1544 Gangnam-ro, Gangsang-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "06339d99ce45",
    "reviewSummary": "This whole-house pension has a spacious garden and a range of facilities, making it a good choice for workshops and family events."
   },
   "tour_407051": {
-   "hash": "4ca9e8285bd1",
-   "name": "Semiwon",
-   "address": "93 Yangsu-ro, Yangseo-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "aa43e26e183f",
    "reviewSummary": "A garden of water and flowers, Semiwon is a place to discover a range of aquatic plants and historical culture around Paldang Lake."
   },
   "tour_407259": {
-   "hash": "5e742785d9b8",
-   "name": "Yangpyeong Baegunbong Natural Recreation Forest",
-   "address": "78-14 Yaksusa-gil, Yangpyeong-eup, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "b7c8798b708d",
    "reviewSummary": "Located below Baegunbong Peak in the Yongmunsan range, this recreation forest is a place to relax and recharge in the woods."
   },
   "tour_582936": {
-   "hash": "ff2f1d0f4a27",
-   "name": "Solbial",
-   "address": "391 Yongcheon-ro, Okcheon-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "fa1f73fcfba2",
    "reviewSummary": "A wooden lodge nestled in nature at the far end of the scenic Yongcheon Valley."
   },
   "tour_612693": {
-   "hash": "f9d7e0bb448d",
-   "name": "Yongmunsan Local Food Village",
-   "address": "640 Yongmunsan-ro, Yongmun-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "f4bc7f221786",
    "reviewSummary": "Located at the entrance to Yongmunsan Tourist Complex, this village serves a range of local Korean dishes, including wild greens and Deodeok Bulgogi."
   },
   "tour_697068": {
-   "hash": "b5eedce302ae",
-   "name": "Jayeon Hyanggi Pension",
-   "address": "151-12 Bachiul-gil, Seojong-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "1406ec12dacc",
    "reviewSummary": "Set in nature, this whole-house pension is a place to gather without interruption and run around in the lawn garden."
   },
   "tour_700255": {
-   "hash": "f8cadd450c8b",
-   "name": "Mulsori Pension",
-   "address": "1038 Yongcheon-ro, Okcheon-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "87fc6a258ed1",
    "reviewSummary": "Located in the upper reaches of Eobi Valley, this pension offers water play, picking produce from the garden, and campfires."
   },
   "tour_700278": {
-   "hash": "3e18685b7444",
-   "name": "Mulsori Saesori",
-   "address": "57-1 Mudeuri 2-gil, Seojong-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "09a7502888ed",
    "reviewSummary": "At this pension, with views of the Bukhangang River and Byeokgyecheon Stream, you can play jokgu and try catching fish in the valley."
   },
   "tour_809302": {
-   "hash": "5c169865d979",
-   "name": "Madang Gondre Bap",
-   "address": "239 Yongmunsan-ro, Yongmun-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "f11ac710b0ef",
    "reviewSummary": "This Gondre bap restaurant serves Gondre from its own farm, rice cooked in bamboo, and 21 side dishes, with a variety of teas to enjoy."
   },
   "tour_943362": {
-   "hash": "6a7ff446d4ea",
-   "name": "Log Camp Pension",
-   "address": "293 Yeonsu-ro, Yongmun-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "3635ebde39a0",
    "reviewSummary": "Relax and enjoy nature in handcrafted log cabins surrounded by the valley of Yongmunsan and a pine forest."
   },
   "tour_945085": {
-   "hash": "d82eb7bc5214",
-   "name": "Edelweiss",
-   "address": "10-9 Yongmunsan-ro 192beon-gil, Yongmun-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "889fdcfc1226",
    "reviewSummary": "Enjoy the clear water and fresh air of Yongmunsan and Jungwonsan mountains, and relax in comfort at this pension."
   },
   "tour_990201": {
-   "hash": "15ebab124457",
-   "name": "Tov's Riverside",
-   "address": "73-10 Yongmunsamseong-ro 20beon-gil, Yongmun-myeon, Yangpyeong-gun, Gyeonggi-do",
+   "hash": "9780ffef79bf",
    "reviewSummary": "Located at the foot of Chireupsan, this pension has separate buildings for groups and couples and offers a range of facilities."
   }
  },
