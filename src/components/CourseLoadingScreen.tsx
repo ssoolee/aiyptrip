@@ -26,9 +26,12 @@ export default function CourseLoadingScreen({
         <p className="mt-1 text-sm text-[var(--color-muted)]">{description}</p>
       </div>
       {cards > 0 && (
-        <div className={`mt-6 ${cardGridClass(cards)}`} aria-hidden>
+        <div
+          className={`mt-6 ${cards === 1 ? "grid grid-cols-1 gap-4" : cardGridClass(cards)}`}
+          aria-hidden
+        >
           {Array.from({ length: cards }, (_, i) => (
-            <CourseCardSkeleton key={i} />
+            <CourseCardSkeleton key={i} wide={cards === 1} />
           ))}
         </div>
       )}
@@ -36,17 +39,25 @@ export default function CourseLoadingScreen({
   );
 }
 
-// CourseCard와 같은 껍데기(테두리·모서리·사진 높이)를 써서 결과가 들어올 때
-// 자리가 튀지 않게 한다.
-function CourseCardSkeleton() {
+// CourseCard와 같은 껍데기(테두리·모서리·사진 높이·두 단 배치)를 써서 결과가 들어올 때
+// 자리가 튀지 않게 한다. wide는 뼈대가 한 장일 때 — 그때는 결과도 가로형 카드다.
+function CourseCardSkeleton({ wide = false }: { wide?: boolean }) {
   return (
-    <div className="overflow-hidden surface-card">
-      <div className="skeleton-line h-40" />
-      <div className="p-4">
-        <div className="skeleton-line h-4 w-24 rounded-full" />
-        <div className="skeleton-line mt-3 h-5 w-3/4 rounded-full" />
-        <div className="skeleton-line mt-2 h-3 w-16 rounded-full" />
-        <div className="mt-4 space-y-2">
+    <div className={`overflow-hidden surface-card${wide ? " lg:grid lg:grid-cols-2" : ""}`}>
+      <div>
+        <div className={`skeleton-line ${wide ? "h-40 lg:h-72" : "h-40"}`} />
+        <div className={`px-4 pt-4${wide ? " lg:pb-4" : ""}`}>
+          <div className="skeleton-line h-4 w-24 rounded-full" />
+          <div className="skeleton-line mt-3 h-5 w-3/4 rounded-full" />
+          <div className="skeleton-line mt-2 h-3 w-16 rounded-full" />
+        </div>
+      </div>
+      <div
+        className={`px-4 pb-4 pt-4${
+          wide ? " lg:border-l lg:border-[var(--color-border)]" : ""
+        }`}
+      >
+        <div className="space-y-2">
           <div className="skeleton-line h-3 w-full rounded-full" />
           <div className="skeleton-line h-3 w-5/6 rounded-full" />
           <div className="skeleton-line h-3 w-2/3 rounded-full" />

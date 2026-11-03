@@ -12,27 +12,42 @@ export default function LodgingPicks({ title, picks }: { title: string; picks: L
 
   if (picks.length === 0) return null;
 
+  // 숙소가 한 곳뿐이면(지금 열여섯 유형 모두 그렇다) 코스 카드와 같이 가로로 가른다 —
+  // 좁은 카드를 가운데로 모으기만 하면 제목은 왼쪽 끝인데 카드만 가운데라 어색하다.
+  const single = picks.length === 1;
+
   return (
     <section className="mt-10 px-4">
       <h2 className="mb-3 text-lg font-bold">{title}</h2>
-      <ul className={cardGridClass(picks.length)}>
+      <ul className={single ? "grid grid-cols-1 gap-4" : cardGridClass(picks.length)}>
         {picks.map((pick) => (
           <li
             key={pick.placeId}
-            className="overflow-hidden surface-card"
+            className={`overflow-hidden surface-card${single ? " lg:grid lg:grid-cols-2" : ""}`}
           >
             {pick.photos[0] ? (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img src={pick.photos[0]} alt={pick.name} loading="lazy" className="h-36 w-full object-cover" />
+              <div className={single ? "relative lg:min-h-56" : undefined}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={pick.photos[0]}
+                  alt={pick.name}
+                  loading="lazy"
+                  className={`w-full object-cover ${
+                    single ? "h-36 lg:absolute lg:inset-0 lg:h-full" : "h-36"
+                  }`}
+                />
+              </div>
             ) : (
               <div
-                className="flex h-24 items-center justify-center bg-[var(--color-character-blue)]/15 text-3xl"
+                className={`flex h-24 items-center justify-center bg-[var(--color-character-blue)]/15 text-3xl${
+                  single ? " lg:h-auto lg:min-h-56" : ""
+                }`}
                 aria-hidden
               >
                 {CATEGORY_EMOJI.lodging}
               </div>
             )}
-            <div className="p-4">
+            <div className={`p-4${single ? " lg:border-l lg:border-[var(--color-border)]" : ""}`}>
               <span className="mb-1 inline-block rounded-full bg-[var(--color-primary)]/10 px-2 py-0.5 text-xs font-medium text-[var(--color-primary)]">
                 {pick.lodgingType}
               </span>

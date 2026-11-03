@@ -36,6 +36,7 @@ export default function CourseResults({
   // "더 보기"로 새 코스가 하나도 안 나오면 후보가 소진된 것 — 버튼 대신 안내 문구를 보여준다.
   const [exhausted, setExhausted] = useState(false);
   const [isPending, startTransition] = useTransition();
+  const singleWide = courses.length === 1;
 
   const handleLoadMore = () => {
     startTransition(async () => {
@@ -56,9 +57,11 @@ export default function CourseResults({
 
   return (
     <div className="px-4">
-      <div className={cardGridClass(courses.length)}>
+      {/* 코스가 하나뿐이면(MBTI 큐레이션) 카드를 가로로 펼쳐 폭을 쓴다 — 좁혀서
+          가운데로 모으면 제목은 왼쪽 끝인데 카드만 가운데라 어색했다. */}
+      <div className={singleWide ? "grid grid-cols-1 gap-4" : cardGridClass(courses.length)}>
         {courses.map((course) => (
-          <CourseCard key={course.courseId} course={course} />
+          <CourseCard key={course.courseId} course={course} wide={singleWide} />
         ))}
       </div>
 
