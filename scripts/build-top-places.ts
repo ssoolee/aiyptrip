@@ -8,6 +8,9 @@
 //      말해 주지 않는다. 후보를 추천 검색 결과(열 곳 남짓)로 좁히면 이미 유명한 곳만
 //      다시 나오므로, 이쪽은 스냅샷 전체를 본다.
 //
+// 묶음마다 PICK_COUNT곳을 싣는다. 넷이면 넓은 화면의 두 열 배치(TopPlaces.tsx)가
+// 딱 떨어지고, 셋일 때처럼 마지막 줄에 한 칸이 남지 않는다.
+//
 // 네이버는 플레이스의 방문자 리뷰 수·별점을 공개 API로 주지 않는다. 지역 검색은
 // sort=comment로 "리뷰 많은 순" 정렬만 해 주고 개수는 안 준다. 그래서 순위는
 // 공개 API로 셀 수 있는 블로그 글 수(naverBlogSearch의 total)로 매긴다 —
@@ -23,7 +26,7 @@ import { normalizeName } from "./placeMatch";
 loadEnvConfig(process.cwd());
 
 const OUTPUT = path.join(process.cwd(), "src/lib/data/topPlaces.json");
-const PICK_COUNT = 3;
+const PICK_COUNT = 4;
 /** "요즘"의 기준. 화면에도 이 수를 그대로 적는다. */
 const RECENT_DAYS = 30;
 

@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-02T15:25:56.546Z",
+ "generatedAt": "2026-11-03T09:00:49.379Z",
  "basis": "네이버 지역 검색(양평 추천 맛집/카페) 결과를 네이버 블로그 글 수로 다시 정렬",
  "recentBasis": "스냅샷의 카페·맛집 전체를 최근 30일 블로그 글 수로 정렬",
  "recentDays": 30,
@@ -17,7 +17,7 @@
    ],
    "mapUrl": "https://map.naver.com/p/search/%ED%95%98%EC%9A%B0%EC%8A%A4%20%EB%B2%A0%EC%9D%B4%EC%BB%A4%EB%A6%AC%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%84%9C%EC%A2%85%EB%A9%B4%20%EB%B6%81%ED%95%9C%EA%B0%95%EB%A1%9C%20684%20%ED%95%98%EC%9A%B0%EC%8A%A4%EB%B2%A0%EC%9D%B4%EC%BB%A4%EB%A6%AC",
    "tags": [],
-   "blogReviewCount": 6867,
+   "blogReviewCount": 6868,
    "reviewTitle": "양평 카페 추천 ㅣ 하우스 베이커리 내돈내산 솔직 후기 / 양평 서종....",
    "reviewLink": "https://blog.naver.com/jungjooyeon_/224458922848",
    "reviewSearchUrl": "https://search.naver.com/search.naver?ssc=tab.blog.all&query=%EC%96%91%ED%8F%89%20%ED%95%98%EC%9A%B0%EC%8A%A4%20%EB%B2%A0%EC%9D%B4%EC%BB%A4%EB%A6%AC%20%ED%9B%84%EA%B8%B0"
@@ -35,7 +35,7 @@
    ],
    "mapUrl": "https://map.naver.com/p/search/%EA%B5%AC%EB%B2%BC%EC%9A%B8%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%98%A5%EC%B2%9C%EB%A9%B4%20%EB%82%A8%ED%95%9C%EA%B0%95%EB%B3%80%EA%B8%B8%20123-19",
    "tags": [],
-   "blogReviewCount": 4341,
+   "blogReviewCount": 4339,
    "reviewTitle": "양평 남한강뷰 대형카페 구벼울 솔직후기",
    "reviewLink": "https://blog.naver.com/yase90/224452537332",
    "reviewSearchUrl": "https://search.naver.com/search.naver?ssc=tab.blog.all&query=%EC%96%91%ED%8F%89%20%EA%B5%AC%EB%B2%BC%EC%9A%B8%20%ED%9B%84%EA%B8%B0"
@@ -53,10 +53,28 @@
    ],
    "mapUrl": "https://map.naver.com/p/search/%ED%85%8C%EB%9D%BC%EB%A1%9C%EC%82%AC%20%EC%84%9C%EC%A2%85%EC%A0%90%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%84%9C%EC%A2%85%EB%A9%B4%20%EB%B6%81%ED%95%9C%EA%B0%95%EB%A1%9C%20990",
    "tags": [],
-   "blogReviewCount": 3827,
-   "reviewTitle": "[양평] 테라로사 서종점 주말 후기  오전 방문부터 매일상회까지",
-   "reviewLink": "https://blog.naver.com/olivia_nova/224397366206",
+   "blogReviewCount": 3831,
+   "reviewTitle": "양평 테라로사 서종점  Ι  양평 베이커리 카페 서울 근교 카페 대형 ....",
+   "reviewLink": "https://blog.naver.com/jjoooooo_o/224462565219",
    "reviewSearchUrl": "https://search.naver.com/search.naver?ssc=tab.blog.all&query=%EC%96%91%ED%8F%89%20%ED%85%8C%EB%9D%BC%EB%A1%9C%EC%82%AC%20%EC%84%9C%EC%A2%85%EC%A0%90%20%ED%9B%84%EA%B8%B0"
+  },
+  {
+   "placeId": "naver_1274817523_374970050",
+   "name": "스타벅스 더양평DT점",
+   "category": "cafe",
+   "categoryLabel": "카페,디저트>카페",
+   "lat": 37.497005,
+   "lng": 127.4817523,
+   "address": "경기도 양평군 양평읍 양근로 76",
+   "photos": [
+    "https://search.pstatic.net/sunny/?type=b150&src=https%3A%2F%2Fi.namu.wiki%2Fi%2FWu6EnAq8oET3g92ej-XGut4Hk8_A4D7kQd4PGlzW5HjcFjLJT8B7JOeDNrNeE7fuBc4Jk8p0kyRKgB2z85tHZg.webp"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EC%8A%A4%ED%83%80%EB%B2%85%EC%8A%A4%20%EB%8D%94%EC%96%91%ED%8F%89DT%EC%A0%90%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%96%91%ED%8F%89%EC%9D%8D%20%EC%96%91%EA%B7%BC%EB%A1%9C%2076",
+   "tags": [],
+   "blogReviewCount": 3696,
+   "reviewTitle": "양평 리버뷰 대형카페? 양평 스타벅스 DT점 내돈내산 불호 후기 양평....",
+   "reviewLink": "https://blog.naver.com/dalhh817/224411718554",
+   "reviewSearchUrl": "https://search.naver.com/search.naver?ssc=tab.blog.all&query=%EC%96%91%ED%8F%89%20%EC%8A%A4%ED%83%80%EB%B2%85%EC%8A%A4%20%EB%8D%94%EC%96%91%ED%8F%89DT%EC%A0%90%20%ED%9B%84%EA%B8%B0"
   }
  ],
  "restaurant": [
@@ -73,7 +91,7 @@
    ],
    "mapUrl": "https://map.naver.com/p/search/%EB%91%90%EB%AC%BC%EB%A8%B8%EB%A6%AC%EC%97%B0%ED%95%AB%EB%8F%84%EA%B7%B8%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%96%91%EC%84%9C%EB%A9%B4%20%EB%91%90%EB%AC%BC%EB%A8%B8%EB%A6%AC%EA%B8%B8%20103-8",
    "tags": [],
-   "blogReviewCount": 17218,
+   "blogReviewCount": 17231,
    "reviewTitle": "양평 두물머리 드라이브 갔다가 연핫도그 내돈내산 후기",
    "reviewLink": "https://blog.naver.com/jinsshung/224453469920",
    "reviewSearchUrl": "https://search.naver.com/search.naver?ssc=tab.blog.all&query=%EC%96%91%ED%8F%89%20%EB%91%90%EB%AC%BC%EB%A8%B8%EB%A6%AC%EC%97%B0%ED%95%AB%EB%8F%84%EA%B7%B8%20%ED%9B%84%EA%B8%B0"
@@ -91,7 +109,7 @@
    ],
    "mapUrl": "https://map.naver.com/p/search/%EB%8C%80%EB%94%94%EC%8A%A4%EB%B0%94%EB%B2%A0%ED%81%90%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%98%A5%EC%B2%9C%EB%A9%B4%20%EC%98%A5%EC%B2%9C%EB%AC%B8%ED%99%94%EB%A7%88%EC%9D%843%EA%B8%B8%2015-24%20%EB%8C%80%EB%94%94%EC%8A%A4%EB%B0%94%EB%B2%A0%ED%81%90",
    "tags": [],
-   "blogReviewCount": 3317,
+   "blogReviewCount": 3319,
    "reviewTitle": "양평 대디스바베큐 후기, 주말 웨이팅부터 커플세트까지",
    "reviewLink": "https://blog.naver.com/ljy_3950/224438280220",
    "reviewSearchUrl": "https://search.naver.com/search.naver?ssc=tab.blog.all&query=%EC%96%91%ED%8F%89%20%EB%8C%80%EB%94%94%EC%8A%A4%EB%B0%94%EB%B2%A0%ED%81%90%20%ED%9B%84%EA%B8%B0"
@@ -109,10 +127,28 @@
    ],
    "mapUrl": "https://map.naver.com/p/search/%ED%95%B4%EB%AC%BC%EA%BE%BC%EC%A1%B0%ED%83%9C%EC%82%B0%20%EC%96%91%ED%8F%89%EB%B3%B8%EC%A0%90%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%84%9C%EC%A2%85%EB%A9%B4%20%EB%B6%81%ED%95%9C%EA%B0%95%EB%A1%9C%20962",
    "tags": [],
-   "blogReviewCount": 616,
+   "blogReviewCount": 617,
    "reviewTitle": "\"양평은 카페뿐\" 했는데.. 3대 순대국까지, 경기 양평 맛집 BEST 7",
    "reviewLink": "https://blog.naver.com/peachakt/224430483591",
    "reviewSearchUrl": "https://search.naver.com/search.naver?ssc=tab.blog.all&query=%EC%96%91%ED%8F%89%20%ED%95%B4%EB%AC%BC%EA%BE%BC%EC%A1%B0%ED%83%9C%EC%82%B0%20%EC%96%91%ED%8F%89%EB%B3%B8%EC%A0%90%20%ED%9B%84%EA%B8%B0"
+  },
+  {
+   "placeId": "naver_1274897676_374913164",
+   "name": "고봉민김밥인 양평중앙점",
+   "category": "restaurant",
+   "categoryLabel": "음식점>분식",
+   "lat": 37.4913164,
+   "lng": 127.4897676,
+   "address": "경기도 양평군 양평읍 양평시장길 35 고봉민김밥인양평중앙점",
+   "photos": [
+    "https://search.pstatic.net/common/?type=b150&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230408_169%2F1680952204939teNzK_JPEG%2F20230313_094805.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EA%B3%A0%EB%B4%89%EB%AF%BC%EA%B9%80%EB%B0%A5%EC%9D%B8%20%EC%96%91%ED%8F%89%EC%A4%91%EC%95%99%EC%A0%90%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%96%91%ED%8F%89%EC%9D%8D%20%EC%96%91%ED%8F%89%EC%8B%9C%EC%9E%A5%EA%B8%B8%2035%20%EA%B3%A0%EB%B4%89%EB%AF%BC%EA%B9%80%EB%B0%A5%EC%9D%B8%EC%96%91%ED%8F%89%EC%A4%91%EC%95%99%EC%A0%90",
+   "tags": [],
+   "blogReviewCount": 54,
+   "reviewTitle": "양평 5일장 맛집 고봉민김밥, 참치김밥에 짬뽕라면 이 조합 좋네요",
+   "reviewLink": "https://blog.naver.com/pch0002a/224385763585",
+   "reviewSearchUrl": "https://search.naver.com/search.naver?ssc=tab.blog.all&query=%EC%96%91%ED%8F%89%20%EA%B3%A0%EB%B4%89%EB%AF%BC%EA%B9%80%EB%B0%A5%EC%9D%B8%20%EC%96%91%ED%8F%89%EC%A4%91%EC%95%99%EC%A0%90%20%ED%9B%84%EA%B8%B0"
   }
  ],
  "recentCafe": [
@@ -130,8 +166,8 @@
    "mapUrl": "https://map.naver.com/p/search/%EA%B5%AC%EB%B2%BC%EC%9A%B8%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%98%A5%EC%B2%9C%EB%A9%B4%20%EB%82%A8%ED%95%9C%EA%B0%95%EB%B3%80%EA%B8%B8%20123-19",
    "tags": [],
    "businessHoursRaw": "10:00~21:00",
-   "blogReviewCount": 4341,
-   "recentBlogCount": 29,
+   "blogReviewCount": 4339,
+   "recentBlogCount": 25,
    "reviewTitle": "양평 남한강뷰 대형카페 구벼울 솔직후기",
    "reviewLink": "https://blog.naver.com/yase90/224452537332",
    "reviewSearchUrl": "https://search.naver.com/search.naver?ssc=tab.blog.all&query=%EC%96%91%ED%8F%89%20%EA%B5%AC%EB%B2%BC%EC%9A%B8%20%ED%9B%84%EA%B8%B0"
@@ -150,7 +186,7 @@
    "mapUrl": "https://map.naver.com/p/search/%EC%BD%98%ED%81%AC%EB%A6%AC%ED%8A%B8%EC%A0%95%EA%B8%80%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%9A%A9%EB%AC%B8%EB%A9%B4%20%EC%9A%A9%EB%AC%B8%EB%A1%9C%20116",
    "tags": [],
    "businessHoursRaw": "10:00~20:00",
-   "blogReviewCount": 1533,
+   "blogReviewCount": 1532,
    "recentBlogCount": 18,
    "recentBlogCapped": true,
    "reviewTitle": "양평 정원카페 콘크리트 정글, 돗자리 피크닉 가능할까요?",
@@ -171,11 +207,36 @@
    "mapUrl": "https://map.naver.com/p/search/%ED%9D%91%EC%9C%A0%EC%9E%AC%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EA%B0%9C%EA%B5%B0%EB%A9%B4%20%EC%8B%A0%EB%82%B4%EA%B8%B87%EB%B2%88%EA%B8%B8%2036%20%ED%9D%91%EC%9C%A0%EC%9E%AC",
    "tags": [],
    "businessHoursRaw": "10:00~23:00",
-   "blogReviewCount": 2515,
-   "recentBlogCount": 13,
+   "blogReviewCount": 2517,
+   "recentBlogCount": 14,
    "reviewTitle": "[양평 카페] 고즈넉한 분위기가 매력적인 흑유재",
    "reviewLink": "https://blog.naver.com/anstnr4207/224461441988",
    "reviewSearchUrl": "https://search.naver.com/search.naver?ssc=tab.blog.all&query=%EC%96%91%ED%8F%89%20%ED%9D%91%EC%9C%A0%EC%9E%AC%20%ED%9B%84%EA%B8%B0"
+  },
+  {
+   "placeId": "tour_2842754",
+   "name": "강이다",
+   "category": "cafe",
+   "lat": 37.5505122828,
+   "lng": 127.3202625949,
+   "address": "경기도 양평군 북한강로81번길 23",
+   "photos": [
+    "https://search.pstatic.net/sunny/?type=b150&src=https%3A%2F%2Ftong.visitkorea.or.kr%2Fcms%2Fresource%2F46%2F2842746_image2_1.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EA%B0%95%EC%9D%B4%EB%8B%A4",
+   "tags": [
+    "view_cafe",
+    "photo_spot",
+    "aesthetic",
+    "romantic"
+   ],
+   "reviewSummary": "북한강을 바라보며 커피와 브런치를 즐길 수 있는 포토존 가득한 디저트 카페입니다.",
+   "businessHoursRaw": "10:00~21:00 / 휴무: 연중무휴",
+   "blogReviewCount": 2065,
+   "recentBlogCount": 9,
+   "reviewTitle": "양평 두물머리 대형카페 기차뷰로 유명한 강이다",
+   "reviewLink": "https://blog.naver.com/am3i31/224459616387",
+   "reviewSearchUrl": "https://search.naver.com/search.naver?ssc=tab.blog.all&query=%EC%96%91%ED%8F%89%20%EA%B0%95%EC%9D%B4%EB%8B%A4%20%ED%9B%84%EA%B8%B0"
   }
  ],
  "recentRestaurant": [
@@ -193,8 +254,8 @@
    "mapUrl": "https://map.naver.com/p/search/%EB%91%90%EB%AC%BC%EB%A8%B8%EB%A6%AC%EC%97%B0%ED%95%AB%EB%8F%84%EA%B7%B8%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%96%91%EC%84%9C%EB%A9%B4%20%EB%91%90%EB%AC%BC%EB%A8%B8%EB%A6%AC%EA%B8%B8%20103-8",
    "tags": [],
    "businessHoursRaw": "월~금 10:00~17:50, 토 일 09:00~17:50",
-   "blogReviewCount": 17218,
-   "recentBlogCount": 49,
+   "blogReviewCount": 17231,
+   "recentBlogCount": 48,
    "recentBlogCapped": true,
    "reviewTitle": "양평 두물머리 드라이브 갔다가 연핫도그 내돈내산 후기",
    "reviewLink": "https://blog.naver.com/jinsshung/224453469920",
@@ -217,7 +278,7 @@
    ],
    "reviewSummary": "국내산 알배기 암꽃게로 담근 명품 간장·양념게장 정식을 맛볼 수 있는 곳이다.",
    "businessHoursRaw": "- 10:30~20:00 - 마지막 주문 19:00 / 휴무: 매주 수요일",
-   "blogReviewCount": 454,
+   "blogReviewCount": 451,
    "recentBlogCount": 16,
    "reviewTitle": "양평 양서면 다우리 간장게장정식 후기",
    "reviewLink": "https://blog.naver.com/didgmlwo1004/224458059216",
@@ -237,11 +298,31 @@
    "mapUrl": "https://map.naver.com/p/search/%ED%95%8F%EC%A0%9C%EB%A6%AC%EC%95%84%20%EB%A3%A8%EC%B9%B4%EB%84%A4%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EA%B0%95%EC%83%81%EB%A9%B4%20%EA%B0%95%EB%82%A8%EB%A1%9C%20802%20%ED%95%8F%EC%A0%9C%EB%A6%AC%EC%95%84%20%EB%A3%A8%EC%B9%B4%EB%84%A4",
    "tags": [],
    "businessHoursRaw": "11:00~20:30",
-   "blogReviewCount": 984,
-   "recentBlogCount": 13,
-   "reviewTitle": "양평 맛집 핏제리아 루카네 후기",
-   "reviewLink": "https://blog.naver.com/allure264/224461909452",
+   "blogReviewCount": 986,
+   "recentBlogCount": 14,
+   "reviewTitle": "양평 나폴리 피자 솔직후기 “핏제리아 루카네”",
+   "reviewLink": "https://blog.naver.com/haazzo/224454404050",
    "reviewSearchUrl": "https://search.naver.com/search.naver?ssc=tab.blog.all&query=%EC%96%91%ED%8F%89%20%ED%95%8F%EC%A0%9C%EB%A6%AC%EC%95%84%20%EB%A3%A8%EC%B9%B4%EB%84%A4%20%ED%9B%84%EA%B8%B0"
+  },
+  {
+   "placeId": "naver_1276296907_375072938",
+   "name": "고바우설렁탕",
+   "category": "restaurant",
+   "categoryLabel": "한식>곰탕,설렁탕",
+   "lat": 37.5072938,
+   "lng": 127.6296907,
+   "address": "경기도 양평군 용문면 은고갯길 3 고바우설렁탕",
+   "photos": [
+    "https://search.pstatic.net/common/?type=b150&src=https%3A%2F%2Fpup-post-phinf.pstatic.net%2FMjAyNjAzMTRfMjk2%2FMDAxNzczNDc2OTc3MDY2.c11EcI3C5nBk9ZVVfuECX0D4_W7_bkCAkOrK1HbbKiYg.c5ci1Tuji3WFvI9WALq0fT2HfRfJK5kX9i0HRqGNUiAg.JPEG%2FC4BF86F7-0949-4FE4-928A-DB1790489976.jpg"
+   ],
+   "mapUrl": "https://map.naver.com/p/search/%EA%B3%A0%EB%B0%94%EC%9A%B0%EC%84%A4%EB%A0%81%ED%83%95%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%9A%A9%EB%AC%B8%EB%A9%B4%20%EC%9D%80%EA%B3%A0%EA%B0%AF%EA%B8%B8%203%20%EA%B3%A0%EB%B0%94%EC%9A%B0%EC%84%A4%EB%A0%81%ED%83%95",
+   "tags": [],
+   "businessHoursRaw": "월 화 목~일 07:00~16:00, 15:30 라스트오더 / 휴무: 매주 수요일",
+   "blogReviewCount": 1810,
+   "recentBlogCount": 11,
+   "reviewTitle": "[경기도 양평군] 양평 맛집 고바우설렁탕 본점,고기 질 좋고 김치까....",
+   "reviewLink": "https://blog.naver.com/nul_012/224458890447",
+   "reviewSearchUrl": "https://search.naver.com/search.naver?ssc=tab.blog.all&query=%EC%96%91%ED%8F%89%20%EA%B3%A0%EB%B0%94%EC%9A%B0%EC%84%A4%EB%A0%81%ED%83%95%20%ED%9B%84%EA%B8%B0"
   }
  ]
 }
