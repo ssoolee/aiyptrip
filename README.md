@@ -255,17 +255,71 @@ PRD에 있지만 아직 코드가 읽지 않는 키 세 개(`ODSAY_API_KEY` 대�
 
 ## 화면 구성
 
+모든 주소는 **언어로 시작한다** — `/ko/...`, `/en/...` (아래 "다국어" 참조).
+아래 표는 그 뒤에 붙는 부분이다.
+
 | 경로 | 화면 |
 |---|---|
 | `/` | 평안이 히어로 + 자연어 검색창 + 동행 유형 프리셋 + 서비스 소개 3단계 |
-| `/course/search` | 자연어 요청 기반 코스 추천 결과 (당일치기/1박 탭) |
+| `/course/search` | 자연어 요청 기반 코스 추천 결과 (당일치기/1박 탭) — **한국어 전용** |
 | `/course/[preset]` | 유형별 코스 추천 결과 — `solo`·`pet`·`mbti`만, 나머지는 404 |
 | `/course/mbti`, `/course/mbti/[type]` | MBTI 유형 선택 및 큐레이션 코스 |
 | `/map` | 지도 + 실시간 위치 |
 | `/pet-places` | 반려동물 동반 가능 업소 |
 | `/favorites` | 찜한 코스 / 장소 (탭) |
 | `/login`, `/profile` | 로그인 / 내 정보 — **보류 중이라 404** (아래 "로그인 보류" 참조) |
-| (없는 주소) | 평안이 404 — `src/app/not-found.tsx` |
+| (없는 주소) | 평안이 404 — `src/app/[lang]/not-found.tsx` |
+
+## 다국어
+
+한국어와 영어로 나온다. 언어는 **주소에 들어간다**(`/ko/map`, `/en/map`) —
+쿠키를 쓰지 않는 이유는 Hosting이 `__session` 말고 **모든 쿠키를 벗기기** 때문이다
+(아래 "Hosting 제약"). next-intl 같은 라이브러리가 흔히 쓰는 `NEXT_LOCALE` 쿠키
+방식은 이 앱에서 아예 작동하지 않는다.
+
+`src/app` 아래 전부가 `src/app/[lang]/`에 있다. 예외는 셋이다.
+- `global-error.tsx` — 루트 레이아웃을 대체하는 파일이라 문서가 `app/` 뿌리에 두라고
+  한다. Provider도 root-params도 못 쓰므로 `location.pathname`에서 언어를 읽는다.
+- `sitemap.ts`·`robots.ts` — 크롤러가 `/sitemap.xml`을 뿌리에서 찾는다.
+- `icon.tsx`·`apple-icon.tsx`·`opengraph-image.tsx`는 **`[lang]` 안에** 있다.
+  뿌리에 두면 `og:image`가 통째로 빠진다(운영과 대조해 확인). 셋 중 **일부만** 옮기면
+  물려받던 `<link rel="icon">`이 조용히 사라지므로 **항상 함께** 움직인다.
+
+사전은 `src/lib/i18n/dictionaries/{ko,en}.json` 한 곳이다. 서버 컴포넌트는
+`serverDictionary()`(`next/root-params`), 클라이언트는 `useI18n()`으로 받는다 —
+root-params는 서버 전용인데 글자가 많은 화면이 거의 다 `"use client"`라 Provider가
+본길이다. 값이 들어가는 문구는 `fill("{count}곳", { count })`로 끼운다. 코드에서
+이어 붙이면 "18곳"과 "18 places"의 자리·띄어쓰기가 달라 한쪽이 반드시 어색해진다.
+
+주소를 적을 때는 `<LocaleLink href="/map">`을 쓴다. `typedRoutes`가 꺼져 있어
+`<Link href="/map">`처럼 언어를 빼먹어도 **타입 오류가 나지 않고 런타임에 404**가 된다.
+
+### 번역하지 않는 것
+
+- **실시간 AI 생성**(`/course/search`, 큐레이션이 없는 유형, "더 보기")은 한국어에서만
+  연다(`SEARCH_LOCALES`). 프롬프트가 한국어이고 글자 수 제한("25자 이내 한국어")·
+  조사 처리(받침 계산)·한국어 정규식 규칙이 전부 한국어에 묶여 있다. 막는 자리는
+  페이지가 아니라 `layout.tsx`다 — 같은 폴더의 `loading.tsx`가 Suspense 경계를 만들어,
+  페이지 안에서 `notFound()`를 부르면 껍데기가 이미 200으로 나간 뒤라 **내용만 404이고
+  코드는 200인 가짜 404**가 된다.
+- **영업시간 원문**(`businessHoursRaw`). `src/lib/businessHours.ts`가 한국어 정규식으로
+  해석하므로 번역하면 파서가 죽는다. 화면에 쓰는 요일 이름만 사전에 따로 둔다
+  (`hours.weekdays`) — `WEEKDAY_LABELS`는 해석용이라 건드리지 않는다.
+- **코스 생성 프롬프트의 유형 이름**(`PRESET_PROMPT_LABEL`). 사람이 읽는 글자가 아니라
+  LLM 입력이고, 생성은 한국어 전용이다.
+- **장소 이름·주소·추천 이유 등 커밋된 자료**는 아직 한국어다. 다음 단계에서
+  언어별 사이드카 파일로 옮긴다.
+- `/login`·`/profile` 화면 — `LOGIN_ENABLED=false`라 지금 404다. 로그인을 다시 켤 때
+  `LoginForm`·`ProfileScreen`도 함께 옮기면 된다.
+
+### 구 주소
+
+언어 없이 들어온 옛 주소(`/course/mbti/ESTJ` 등)는 `firebase.json`의 `redirects`가
+`/ko/...`로 301 보낸다. **source는 하나씩 적는다** — `/**` 같은 glob을 쓰면 redirects가
+정적 파일보다 먼저라 `/_next/static/**`와 `/character/*.png`까지 끌고 가 사이트가 죽는다.
+
+Next의 `proxy.ts`(16에서 middleware의 새 이름)로도 되지만 Hosting 쪽을 골랐다 —
+redirects는 리라이트보다 먼저라 구 주소가 함수를 **아예 깨우지 않는다**.
 
 ## 코스 유형 3종
 
@@ -314,8 +368,9 @@ PRD에 있지만 아직 코드가 읽지 않는 키 세 개(`ODSAY_API_KEY` 대�
 ## 코드 구조
 
 ```
-src/app/            App Router 페이지
+src/app/[lang]/     App Router 페이지 (언어 세그먼트 아래. 예외는 "다국어" 참조)
 src/components/     화면 단위 컴포넌트 (지도, 코스 카드, 하단 내비게이션 등)
+src/lib/i18n/       언어 설정·사전·주소 헬퍼 (dictionaries/{ko,en}.json)
 src/lib/actions.ts  추천 요청 Server Action (프론트 → 에이전트 진입점)
 src/lib/agents/     에이전트 파이프라인 (요청 해석 → 장소 검색 → 코스 구성 → 검증 → 보강)
 src/lib/api/        외부 API 클라이언트 (네이버 지역 검색, NCP Maps, TourAPI)
