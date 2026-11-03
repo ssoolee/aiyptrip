@@ -85,7 +85,10 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       signUpWithEmail,
       signOut,
     }),
-    // revision: User 참조가 그대로여도 프로필이 바뀌면 값을 새로 만든다.
+    // revision은 콜백 안에서 쓰지 않아 린터가 불필요한 의존성으로 본다. 실제로는 필요하다 —
+    // updateProfile은 User 객체를 제자리에서 바꿔 참조가 그대로라, 이 값이 없으면 새 컨텍스트
+    // 값이 만들어지지 않고 바뀐 표시 이름이 화면에 나오지 않는다(위 setRevision 참조).
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     [user, loading, revision, signInWithGoogle, signInWithEmail, signUpWithEmail, signOut],
   );
 

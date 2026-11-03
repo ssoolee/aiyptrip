@@ -160,9 +160,11 @@ TourAPI 항목이 있으면 함께 채운다(89곳). 어느 API에도 없는
 | **TourAPI** (공공데이터포털) | **영업시간**, 장소 소개글, 관광지·숙소 후보, 축제 | 빌드 + 추천 시 | 영업 배지와 "오늘 닫는 곳" 걸러내기가 빠진다 |
 | **Firebase** (Auth·Firestore) | 코스 저장·다시 열기 | 저장할 때 | 저장만 건너뛴다 |
 
-세 가지 키는 `.env.example`에 자리만 있고 **아직 코드에서 쓰지 않는다** —
-`ODSAY_API_KEY`(대중교통 길찾기), `WEATHER_API_KEY`(기상청 단기예보),
-`KAKAO_REST_API_KEY`(로그인 — 아래 "로그인 보류").
+PRD에 있지만 아직 코드가 읽지 않는 키 세 개(`ODSAY_API_KEY` 대중교통 길찾기,
+`WEATHER_API_KEY` 기상청 단기예보, `KAKAO_REST_API_KEY` 카카오 로그인)는
+`.env.example`에서 뺐다 — 채워도 달라지는 것이 없어 혼동만 줬다. 그 기능을 붙일 때
+[docs/prd/07-external-api-integration.md](./docs/prd/07-external-api-integration.md)를 보고
+다시 추가한다.
 
 ### 영업시간은 왜 TourAPI에 남아 있나
 
@@ -185,7 +187,7 @@ TourAPI 항목이 있으면 함께 채운다(89곳). 어느 API에도 없는
 - **지도/장소** — `NCP_SEARCH_KEY_ID`·`NCP_SEARCH_KEY`(API HUB 지역·블로그 검색),
   `NCP_MAPS_KEY_ID`·`NCP_MAPS_KEY`(Geocoding·Directions),
   `NEXT_PUBLIC_NCP_MAPS_KEY_ID`(브라우저 지도 SDK)
-- **공공 데이터** — `TOUR_API_KEY`(필수), `ODSAY_API_KEY`·`WEATHER_API_KEY`(선택)
+- **공공 데이터** — `TOUR_API_KEY`(필수)
 - **Firebase** — `NEXT_PUBLIC_FIREBASE_API_KEY`, `..._AUTH_DOMAIN`, `..._PROJECT_ID`, `..._APP_ID`,
   `FIREBASE_SERVICE_ACCOUNT_KEY`(선택 — 아래 "코스 저장" 참조)
 
