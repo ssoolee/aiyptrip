@@ -85,8 +85,11 @@ function CourseDetail({ course }: { course: Course }) {
   const arrival = course.days[course.days.length - 1]?.arrival;
   const trip = departure ? { departure, arrival } : null;
 
+  // 폭은 다른 화면과 같은 .page-width를 쓴다. 전에는 혼자 max-w-5xl이라 데스크톱에서는
+  // 우연히 값이 같았지만 1024px 미만에서는 다른 코스 화면보다 넓게 벌어졌고, 본문이
+  // 80rem까지 넓어진 지금은 헤더만 넓어져 좌우 선이 어긋났을 것이다.
   return (
-    <div className="mx-auto max-w-5xl px-4 pb-10 pt-6">
+    <div className="page-width px-4 pb-10 pt-6">
       <Link href="/" className="text-sm text-[var(--color-muted)]">
         ← 다른 코스 보기
       </Link>

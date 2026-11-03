@@ -115,7 +115,9 @@ export default function MapScreen({ overviewPlaces }: { overviewPlaces: Place[] 
         </div>
       )}
 
-      <ul className="mt-4 space-y-2">
+      {/* 코스 장소 목록도 한 줄로 두면 넓은 화면에서 좌우가 통째로 벌어진다
+          — PetPlacesScreen·TopPlaces와 같이 두 열로 나눈다. */}
+      <ul className="mt-4 grid gap-2 lg:grid-cols-2">
         {stops.map((stop) => (
           <li
             key={`${stop.order}-${stop.name}`}

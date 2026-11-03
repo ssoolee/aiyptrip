@@ -3,6 +3,7 @@
 import { useState, useTransition } from "react";
 import CourseCard from "@/components/CourseCard";
 import EmptyState from "@/components/EmptyState";
+import { cardGridClass } from "@/lib/cardGrid";
 import { loadMoreCourses } from "@/lib/actions";
 import { courseSignature } from "@/lib/courseSignature";
 import { Course, PresetType } from "@/types/travel";
@@ -55,7 +56,7 @@ export default function CourseResults({
 
   return (
     <div className="px-4">
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className={cardGridClass(courses.length)}>
         {courses.map((course) => (
           <CourseCard key={course.courseId} course={course} />
         ))}

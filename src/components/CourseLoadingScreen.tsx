@@ -1,3 +1,4 @@
+import { cardGridClass } from "@/lib/cardGrid";
 import MascotSpot from "./MascotSpot";
 
 // 코스를 만드는 동안 보여주는 화면. 에이전트 파이프라인이 15초까지 걸릴 수 있어
@@ -25,7 +26,7 @@ export default function CourseLoadingScreen({
         <p className="mt-1 text-sm text-[var(--color-muted)]">{description}</p>
       </div>
       {cards > 0 && (
-        <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3" aria-hidden>
+        <div className={`mt-6 ${cardGridClass(cards)}`} aria-hidden>
           {Array.from({ length: cards }, (_, i) => (
             <CourseCardSkeleton key={i} />
           ))}

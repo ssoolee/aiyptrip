@@ -64,7 +64,9 @@ export default function PetPlacesScreen({ places }: { places: Place[] }) {
 
       <NaverMapView stops={stops} showRoute={false} onSelectPlace={handleSelectPlace} />
 
-      <ul className="mt-4 space-y-2">
+      {/* 한 줄이 1280px까지 늘어나면 업소 이름과 "상세정보" 버튼 사이가 통째로 벌어진다
+          — 넓은 화면에서는 두 열로 나눈다 (TopPlaces와 같은 처방). */}
+      <ul className="mt-4 grid gap-2 lg:grid-cols-2">
         {visible.map((place, i) => (
           <li
             key={place.placeId}

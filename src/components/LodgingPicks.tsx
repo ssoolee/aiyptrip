@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import PlaceDetailSheet from "@/components/PlaceDetailSheet";
+import { cardGridClass } from "@/lib/cardGrid";
 import { CATEGORY_EMOJI } from "@/lib/categories";
 import { LodgingPick } from "@/types/travel";
 
@@ -14,7 +15,7 @@ export default function LodgingPicks({ title, picks }: { title: string; picks: L
   return (
     <section className="mt-10 px-4">
       <h2 className="mb-3 text-lg font-bold">{title}</h2>
-      <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <ul className={cardGridClass(picks.length)}>
         {picks.map((pick) => (
           <li
             key={pick.placeId}
