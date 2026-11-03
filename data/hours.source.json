@@ -3,6 +3,13 @@
  "format": "\"09:00~18:00 / 휴무: 매주 수요일\" — 해석 규칙은 src/lib/businessHours.ts",
  "places": [
   {
+   "name": "구하우스 미술관",
+   "category": "attraction",
+   "hours": "",
+   "source": "",
+   "checkedAt": ""
+  },
+  {
    "name": "미리내리조트",
    "category": "attraction",
    "hours": "00:00~24:00",
@@ -15,6 +22,41 @@
    "hours": "화~금 10:00~21:00, 토 10:00~18:00 / 휴무: 매주 일요일, 월요일",
    "source": "카카오맵 https://place.map.kakao.com/1450522167",
    "checkedAt": "2026-10-21"
+  },
+  {
+   "name": "양평군립미술관",
+   "category": "attraction",
+   "hours": "",
+   "source": "",
+   "checkedAt": ""
+  },
+  {
+   "name": "양평패러글라이딩파크",
+   "category": "attraction",
+   "hours": "",
+   "source": "",
+   "checkedAt": ""
+  },
+  {
+   "name": "용문산관광지·용문사",
+   "category": "attraction",
+   "hours": "",
+   "source": "",
+   "checkedAt": ""
+  },
+  {
+   "name": "용문천년시장",
+   "category": "attraction",
+   "hours": "",
+   "source": "",
+   "checkedAt": ""
+  },
+  {
+   "name": "중미산천문대",
+   "category": "attraction",
+   "hours": "",
+   "source": "",
+   "checkedAt": ""
   },
   {
    "name": "지평향교",
@@ -57,6 +99,13 @@
    "hours": "월 화 목~일 09:00~18:00 / 휴무: 매주 수요일",
    "source": "카카오맵 https://place.map.kakao.com/27325640",
    "checkedAt": "2026-10-21"
+  },
+  {
+   "name": "꿈꾸는 사진기",
+   "category": "cafe",
+   "hours": "",
+   "source": "",
+   "checkedAt": ""
   },
   {
    "name": "도토리골 양평정원카페",
@@ -332,11 +381,25 @@
    "checkedAt": "2026-10-21"
   },
   {
+   "name": "광이원",
+   "category": "restaurant",
+   "hours": "",
+   "source": "",
+   "checkedAt": ""
+  },
+  {
    "name": "김명자낙지마당 양평점",
    "category": "restaurant",
    "hours": "11:00~22:00, 20:30 라스트오더",
    "source": "카카오맵 https://place.map.kakao.com/1746901365",
    "checkedAt": "2026-10-21"
+  },
+  {
+   "name": "다 안토니오",
+   "category": "restaurant",
+   "hours": "",
+   "source": "",
+   "checkedAt": ""
   },
   {
    "name": "두물머리연핫도그",

@@ -14,6 +14,14 @@ const MOBILE_APP = "ypaicourse";
 const AREA_CODE = "31";
 const SIGUNGU_CODE = "19";
 
+// searchKeyword2만 지역을 법정동 코드로 받는다. areaBasedList2에 쓰는 위 관광지 코드
+// (경기도 31 / 양평군 19)를 그대로 넣으면 HTTP 200에 totalCount가 늘 0으로 돌아온다 —
+// 오류가 아니라 "결과 없음"이라 조용히 빈 배열이 되고, 영업시간 공급원 ②(이름 매칭)가
+// 한 번도 동작하지 않았다. 2026-11 실측: "두물머리"가 areaCode로는 0건, 아래 코드로는
+// 2건(둘 다 양평군). 시군구는 앞 두 자리를 뺀 세 자리다 — 41830은 0건이다.
+const LEGAL_REGION_CODE = "41"; // 경기도
+const LEGAL_SIGUNGU_CODE = "830"; // 양평군
+
 const CONTENT_TYPE_ID: Record<Category, string> = {
   attraction: "12",
   lodging: "32",
@@ -183,8 +191,8 @@ export async function searchTourApiPlaces(params: {
 export async function searchTourApiByKeyword(keyword: string, category: Category): Promise<Place[]> {
   const items = await callTourApi("searchKeyword2", {
     keyword,
-    areaCode: AREA_CODE,
-    sigunguCode: SIGUNGU_CODE,
+    lDongRegnCd: LEGAL_REGION_CODE,
+    lDongSignguCd: LEGAL_SIGUNGU_CODE,
     numOfRows: "10",
     pageNo: "1",
   });

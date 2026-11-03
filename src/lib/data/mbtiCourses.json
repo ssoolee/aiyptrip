@@ -107,7 +107,8 @@
          "mapUrl": "https://map.naver.com/p/search/%EB%AC%B8%ED%98%B8%EB%A6%AC%ED%8C%A5%EC%A3%BD%20%EB%B3%B8%EC%A0%90%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%84%9C%EC%A2%85%EB%A9%B4%20%EB%B6%81%ED%95%9C%EA%B0%95%EB%A1%9C%20641",
          "tags": [],
          "timeSlot": "12:00-13:30",
-         "reason": "국산 팥 팥죽 전문점으로, 동행자의 입맛에 맞춰 간을 조절할 수 있어요."
+         "reason": "국산 팥 팥죽 전문점으로, 동행자의 입맛에 맞춰 간을 조절할 수 있어요.",
+         "businessHoursRaw": "- 11:00~19:20- 준비시간 14:50~16:00- 마지막 주문 18:40 / 휴무: 매주 월요일"
         },
         {
          "placeId": "naver_1273529941_375984976",
@@ -219,7 +220,8 @@
          "mapUrl": "https://map.naver.com/p/search/%EC%89%90%EC%A6%88%EB%A1%A4%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%84%9C%EC%A2%85%EB%A9%B4%20%EB%82%99%EC%B4%8C%EA%B8%B8%207-7%20%EC%89%90%EC%A6%88%EB%A1%A4",
          "tags": [],
          "timeSlot": "14:00-15:00",
-         "reason": "저온 발효·장작 화덕으로 굽는 과정을 소개하는 베이커리 카페예요."
+         "reason": "저온 발효·장작 화덕으로 굽는 과정을 소개하는 베이커리 카페예요.",
+         "businessHoursRaw": "목요일~일요일 10:00~17:00 / 휴무: 매주 월요일~수요일"
         },
         {
          "placeId": "naver_1273776844_375939128",
@@ -235,7 +237,8 @@
          "mapUrl": "https://map.naver.com/p/search/%ED%99%A9%EC%88%9C%EC%9B%90%EB%AC%B8%ED%95%99%EC%B4%8C%EC%86%8C%EB%82%98%EA%B8%B0%EB%A7%88%EC%9D%84%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%84%9C%EC%A2%85%EB%A9%B4%20%EC%86%8C%EB%82%98%EA%B8%B0%EB%A7%88%EC%9D%84%EA%B8%B8%2024",
          "tags": [],
          "timeSlot": "15:30-17:30",
-         "reason": "작가의 삶과 작품 속 감정·관계를 떠올리며 공간을 경험할 수 있어요."
+         "reason": "작가의 삶과 작품 속 감정·관계를 떠올리며 공간을 경험할 수 있어요.",
+         "businessHoursRaw": "[하절기(3월~10월)]09:30~18:00 (입장 마감 17:30)[동절기(11월~2월)]09:30~17:00 (입장 마감 16:30) / 휴무: 매주 월요일 (단, 월요일이 공휴일인 경우 다음날 휴관) / 1월 1일 / 설·추석 당일 / 그 밖에 군수가 필요하여 정하는 날"
         }
        ]
       }
@@ -379,7 +382,8 @@
          "mapUrl": "https://map.naver.com/p/search/%ED%9A%8C%EB%A0%B9%EC%86%90%EB%A7%8C%EB%91%90%EA%B5%AD%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%9A%A9%EB%AC%B8%EB%A9%B4%20%EC%9A%A9%EB%AC%B8%EB%A1%9C%20827",
          "tags": [],
          "timeSlot": "12:00-13:30",
-         "reason": "만두의 속·피·국물을 직접 비교하며 자기 기준으로 맛을 판단해 볼 수 있어요."
+         "reason": "만두의 속·피·국물을 직접 비교하며 자기 기준으로 맛을 판단해 볼 수 있어요.",
+         "businessHoursRaw": "- 09:30~19:00- 마지막 주문 18:30 / 휴무: 매주 수요일"
         },
         {
          "placeId": "naver_1276213739_375367567",
@@ -476,7 +480,8 @@
          "mapUrl": "https://map.naver.com/p/search/%EB%91%90%EB%AC%BC%EB%A8%B8%EB%A6%AC%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%96%91%EC%84%9C%EB%A9%B4%20%EC%96%91%EC%88%98%EB%A6%AC",
          "tags": [],
          "timeSlot": "15:30-17:30",
-         "reason": "마음에 드는 장면에서 멈추며 걷는 풍경 여행이에요. 세 곳 모두 양서면이에요."
+         "reason": "마음에 드는 장면에서 멈추며 걷는 풍경 여행이에요. 세 곳 모두 양서면이에요.",
+         "businessHoursRaw": "상시 개방 / 휴무: 연중무휴"
         }
        ]
       }
@@ -529,7 +534,8 @@
          "mapUrl": "https://map.naver.com/p/search/%EB%AC%B8%ED%98%B8%EB%A6%AC%ED%8C%A5%EC%A3%BD%20%EB%B3%B8%EC%A0%90%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%84%9C%EC%A2%85%EB%A9%B4%20%EB%B6%81%ED%95%9C%EA%B0%95%EB%A1%9C%20641",
          "tags": [],
          "timeSlot": "12:00-13:30",
-         "reason": "팥죽이 가족·계절·어린 시절의 기억과 이어진다면 더 의미 있는 식사가 돼요."
+         "reason": "팥죽이 가족·계절·어린 시절의 기억과 이어진다면 더 의미 있는 식사가 돼요.",
+         "businessHoursRaw": "- 11:00~19:20- 준비시간 14:50~16:00- 마지막 주문 18:40 / 휴무: 매주 월요일"
         },
         {
          "placeId": "naver_1276213739_375367567",
@@ -561,7 +567,8 @@
          "mapUrl": "https://map.naver.com/p/search/%ED%99%A9%EC%88%9C%EC%9B%90%EB%AC%B8%ED%95%99%EC%B4%8C%EC%86%8C%EB%82%98%EA%B8%B0%EB%A7%88%EC%9D%84%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%84%9C%EC%A2%85%EB%A9%B4%20%EC%86%8C%EB%82%98%EA%B8%B0%EB%A7%88%EC%9D%84%EA%B8%B8%2024",
          "tags": [],
          "timeSlot": "15:30-17:30",
-         "reason": "읽었던 작품의 장면을 실제 공간과 연결하며 개인적인 감상을 남길 수 있어요."
+         "reason": "읽었던 작품의 장면을 실제 공간과 연결하며 개인적인 감상을 남길 수 있어요.",
+         "businessHoursRaw": "[하절기(3월~10월)]09:30~18:00 (입장 마감 17:30)[동절기(11월~2월)]09:30~17:00 (입장 마감 16:30) / 휴무: 매주 월요일 (단, 월요일이 공휴일인 경우 다음날 휴관) / 1월 1일 / 설·추석 당일 / 그 밖에 군수가 필요하여 정하는 날"
         }
        ]
       }
@@ -895,7 +902,8 @@
          "mapUrl": "https://map.naver.com/p/search/%EA%B4%91%EC%9D%B4%EC%9B%90%EB%B3%B4%EB%B0%B0%EB%B0%A5%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%9A%A9%EB%AC%B8%EB%A9%B4%20%EC%9A%A9%EB%AC%B8%EC%82%B0%EB%A1%9C%20120-13%201%EC%B8%B5",
          "tags": [],
          "timeSlot": "12:00-13:30",
-         "reason": "비빔밥을 비빔덮밥정식으로 재해석한 곳이라 익숙한 음식의 새로운 모습을 발견해요."
+         "reason": "비빔밥을 비빔덮밥정식으로 재해석한 곳이라 익숙한 음식의 새로운 모습을 발견해요.",
+         "businessHoursRaw": "10:30~16:30 (마지막 주문 16:00) / 휴무: 매주 월요일"
         },
         {
          "placeId": "naver_1276213739_375367567",
@@ -978,7 +986,8 @@
          "mapUrl": "https://map.naver.com/p/search/%EA%B4%91%EC%9D%B4%EC%9B%90%EB%B3%B4%EB%B0%B0%EB%B0%A5%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%9A%A9%EB%AC%B8%EB%A9%B4%20%EC%9A%A9%EB%AC%B8%EC%82%B0%EB%A1%9C%20120-13%201%EC%B8%B5",
          "tags": [],
          "timeSlot": "12:00-13:30",
-         "reason": "익숙한 형식을 바꾼 아이디어를 경험하고 이야기할 소재가 생겨요."
+         "reason": "익숙한 형식을 바꾼 아이디어를 경험하고 이야기할 소재가 생겨요.",
+         "businessHoursRaw": "10:30~16:30 (마지막 주문 16:00) / 휴무: 매주 월요일"
         },
         {
          "placeId": "tour_2683997",
@@ -1284,7 +1293,8 @@
          "mapUrl": "https://map.naver.com/p/search/%ED%99%A9%EC%88%9C%EC%9B%90%EB%AC%B8%ED%95%99%EC%B4%8C%EC%86%8C%EB%82%98%EA%B8%B0%EB%A7%88%EC%9D%84%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%96%91%ED%8F%89%EA%B5%B0%20%EC%84%9C%EC%A2%85%EB%A9%B4%20%EC%86%8C%EB%82%98%EA%B8%B0%EB%A7%88%EC%9D%84%EA%B8%B8%2024",
          "tags": [],
          "timeSlot": "15:30-17:30",
-         "reason": "관람 후 인상 깊었던 장면과 감정을 나누며 서로를 더 이해할 수 있어요."
+         "reason": "관람 후 인상 깊었던 장면과 감정을 나누며 서로를 더 이해할 수 있어요.",
+         "businessHoursRaw": "[하절기(3월~10월)]09:30~18:00 (입장 마감 17:30)[동절기(11월~2월)]09:30~17:00 (입장 마감 16:30) / 휴무: 매주 월요일 (단, 월요일이 공휴일인 경우 다음날 휴관) / 1월 1일 / 설·추석 당일 / 그 밖에 군수가 필요하여 정하는 날"
         }
        ]
       }
