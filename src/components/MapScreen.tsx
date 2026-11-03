@@ -11,6 +11,8 @@ import PlaceDetailSheet, { DetailPlace } from "@/components/PlaceDetailSheet";
 import { RouteLink } from "@/components/RouteLinks";
 import { useCurrentPosition } from "@/lib/useCurrentPosition";
 import { estimateMinutes, formatDistance, nearest } from "@/lib/geo";
+import { fill } from "@/lib/i18n/format";
+import { useI18n } from "@/lib/i18n/I18nProvider";
 import { Place } from "@/types/travel";
 import PageHeader from "@/components/PageHeader";
 
@@ -18,6 +20,7 @@ import PageHeader from "@/components/PageHeader";
 // 코스별 상세 화면이 아직 없어, 우선 "찜한 코스"를 골라 지도로 보는 형태로
 // 연동한다. 찜한 코스가 없으면 양평 주요 스팟(overviewPlaces)을 보여준다.
 export default function MapScreen({ overviewPlaces }: { overviewPlaces: Place[] }) {
+  const { t } = useI18n();
   const favorites = useSyncExternalStore(
     subscribeFavorites,
     getFavoritesSnapshot,
@@ -46,9 +49,9 @@ export default function MapScreen({ overviewPlaces }: { overviewPlaces: Place[] 
     return {
       stops: overviewStops,
       showRoute: false,
-      subtitle: "양평 주요 스팟 (찜한 코스가 없어 전체 보기)",
+      subtitle: t.map.subtitleAll,
     };
-  }, [selected, overviewPlaces]);
+  }, [selected, overviewPlaces, t.map.subtitleAll]);
 
   // 지도를 다시 그리지 않도록 핸들러를 고정한다 (NaverMapView의 effect 의존성).
   const handleSelectPlace = useCallback((place: DetailPlace) => setOpenPlace(place), []);
@@ -58,7 +61,7 @@ export default function MapScreen({ overviewPlaces }: { overviewPlaces: Place[] 
 
   return (
     <div className="page-width px-4 pb-6 pt-6">
-      <PageHeader className="mb-4" title="🗺️ 지도" description={subtitle} expression="wow" />
+      <PageHeader className="mb-4" title={t.map.title} description={subtitle} expression="wow" />
 
       {favorites.length > 1 && (
         <select
@@ -88,22 +91,27 @@ export default function MapScreen({ overviewPlaces }: { overviewPlaces: Place[] 
         disabled={loading}
         className="mt-3 flex min-h-11 w-full items-center justify-center gap-1.5 rounded-[var(--radius-button)] border border-[var(--color-primary)] text-sm font-semibold text-[var(--color-primary)] disabled:opacity-50"
       >
-        {loading ? "현재 위치를 찾는 중..." : position ? "📍 현재 위치 다시 찾기" : "📍 내 위치 보기"}
+        {loading ? t.map.locating : position ? t.map.relocate : t.map.locate}
       </button>
 
       {error && (
         <p role="status" className="mt-2 notice rounded-xl px-3 py-2 text-xs">
-          {error} 위치 없이도 코스와 동선은 그대로 볼 수 있어요.
+          {error} {t.map.locationFallback}
         </p>
       )}
 
       {closest && (
         <div className="mt-3 surface-card p-4">
-          <p className="text-xs text-[var(--color-muted)]">현재 위치에서 가장 가까운 곳</p>
+          <p className="text-xs text-[var(--color-muted)]">{t.map.nearestPlace}</p>
           <p className="mt-0.5 font-semibold">{closest.item.name}</p>
           <p className="mt-0.5 text-xs text-[var(--color-muted)]">
-            직선거리 {formatDistance(closest.km)} · 차로 약 {estimateMinutes(closest.km, "car")}분
-            {closest.km < 2 && ` · 걸어서 약 ${estimateMinutes(closest.km, "walk")}분`} (어림값)
+            {fill(t.map.nearestLine, {
+              distance: formatDistance(closest.km),
+              car: estimateMinutes(closest.km, "car"),
+            })}
+            {closest.km < 2 &&
+              fill(t.map.walkSuffix, { walk: estimateMinutes(closest.km, "walk") })}{" "}
+            {t.map.estimate}
           </p>
           <div className="mt-3">
             <RouteLink
@@ -128,7 +136,7 @@ export default function MapScreen({ overviewPlaces }: { overviewPlaces: Place[] 
                 type="button"
                 onClick={() => setOpenPlace(stop.place as DetailPlace)}
                 aria-haspopup="dialog"
-                aria-label={`${stop.name} 상세정보 보기`}
+                aria-label={fill(t.place.openDetailOf, { name: stop.name })}
                 className="min-w-0 flex-1 truncate text-left"
               >
                 <span className="mr-2 text-[var(--color-muted)]">{stop.order}</span>

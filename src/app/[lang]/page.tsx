@@ -6,17 +6,17 @@ import SectionHead from "@/components/SectionHead";
 import TripSearchBox from "@/components/TripSearchBox";
 import PetPlacesLink from "@/components/PetPlacesLink";
 import TopPlaces from "@/components/TopPlaces";
-import { lang } from "next/root-params";
 import { getTopPlaces } from "@/lib/topPlaces";
-import { canGenerateCourses, DEFAULT_LOCALE, isLocale } from "@/lib/i18n/config";
+import { canGenerateCourses } from "@/lib/i18n/config";
+import { fill } from "@/lib/i18n/format";
+import { currentLocale, serverDictionary } from "@/lib/i18n/server";
 
 // 이 페이지에는 가로 여백(px-4)을 두지 않는다 — PresetGrid의 가로 스크롤이 화면
 // 끝까지 흐르도록 각 섹션이 자기 여백을 직접 갖는 기존 규칙을 따른다.
 export default async function Home() {
   // 아직 만들지 않았으면(npm run build:top) 빈 배열 — TopPlaces가 영역을 접는다.
   const top = getTopPlaces();
-  const segment = await lang();
-  const locale = segment && isLocale(segment) ? segment : DEFAULT_LOCALE;
+  const [locale, { home }] = await Promise.all([currentLocale(), serverDictionary()]);
   // 자연어 검색은 실시간 생성이라 한국어로만 답한다 (src/lib/i18n/config.ts).
   const canSearch = canGenerateCourses(locale);
 
@@ -29,8 +29,8 @@ export default async function Home() {
           <SectionHead
             className="mb-3 px-4"
             expression="wow"
-            title="어떤 여행을 떠나볼까요?"
-            description="하고 싶은 여행을 그대로 적어 보세요."
+            title={home.searchTitle}
+            description={home.searchDescription}
           />
           <TripSearchBox showExamples />
         </div>
@@ -40,8 +40,8 @@ export default async function Home() {
         <SectionHead
           className="mb-3 px-4"
           expression="smile"
-          title="유형으로 골라보기"
-          description="고르면 바로 코스를 만들어요."
+          title={home.presetTitle}
+          description={home.presetDescription}
         />
         <PresetGrid />
         <div className="mt-3 px-4">
@@ -57,8 +57,8 @@ export default async function Home() {
           <SectionHead
             className="mb-3 px-4"
             expression="wink"
-            title="요즘 이야기가 많은 곳"
-            description={`네이버 블로그에 글이 많이 올라온 양평 카페·맛집이에요. 최근 ${top.recentDays}일과 전체 기간을 따로 보여드려요.`}
+            title={home.topTitle}
+            description={fill(home.topDescription, { days: top.recentDays })}
           />
           <div className="px-4">
             <TopPlaces
@@ -76,8 +76,8 @@ export default async function Home() {
         <SectionHead
           className="mb-3 px-4"
           expression="happy"
-          title="평안이가 코스를 짜는 방법"
-          description="세 걸음이면 끝나요."
+          title={home.stepsTitle}
+          description={home.stepsDescription}
         />
         <HomeSteps />
       </div>

@@ -1,14 +1,16 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import { CATEGORY_EMOJI, CATEGORY_LABEL } from "@/lib/categories";
+import { CATEGORY_EMOJI } from "@/lib/categories";
+import type { Dictionary } from "@/lib/i18n/dictionaries";
+import { fill } from "@/lib/i18n/format";
+import { useI18n } from "@/lib/i18n/I18nProvider";
 import {
   formatRange,
   getHoursStatus,
   parseBusinessHours,
   seoulNow,
   WEEKDAY_DISPLAY_ORDER,
-  WEEKDAY_LABELS,
   type HoursStatus,
   type ParsedBusinessHours,
 } from "@/lib/businessHours";
@@ -26,6 +28,7 @@ export type DetailPlace = Place & Partial<Pick<ItineraryStop, "timeSlot" | "reas
 // 정보 우선순위: 사진 → 이름/카테고리 → 영업상태 → 주소/전화 → 리뷰 요약 →
 // 네이버 블로그 리뷰 → 지도 링크.
 export default function PlaceDetailSheet({ place, onClose }: { place: DetailPlace; onClose: () => void }) {
+  const { t } = useI18n();
   const panelRef = useRef<HTMLDivElement>(null);
 
   const parsedHours = useMemo(() => parseBusinessHours(place.businessHoursRaw), [place.businessHoursRaw]);
@@ -54,7 +57,7 @@ export default function PlaceDetailSheet({ place, onClose }: { place: DetailPlac
     <div className="fixed inset-0 z-50 flex items-end sm:items-stretch sm:justify-end">
       <button
         type="button"
-        aria-label="닫기"
+        aria-label={t.place.close}
         onClick={onClose}
         className="sheet-backdrop absolute inset-0 bg-black/50"
       />
@@ -62,7 +65,7 @@ export default function PlaceDetailSheet({ place, onClose }: { place: DetailPlac
         ref={panelRef}
         role="dialog"
         aria-modal="true"
-        aria-label={`${place.name} 상세정보`}
+        aria-label={fill(t.place.detailOf, { name: place.name })}
         tabIndex={-1}
         className="sheet-panel relative max-h-[88vh] w-full overflow-y-auto rounded-t-[20px] bg-[var(--color-card)] pb-[max(1rem,env(safe-area-inset-bottom))] shadow-2xl outline-none sm:max-h-none sm:w-[400px] sm:rounded-none sm:rounded-l-[20px]"
       >
@@ -74,7 +77,7 @@ export default function PlaceDetailSheet({ place, onClose }: { place: DetailPlac
           <button
             type="button"
             onClick={onClose}
-            aria-label="닫기"
+            aria-label={t.place.close}
             className="flex h-9 w-9 items-center justify-center rounded-full bg-black/50 text-lg leading-none text-white"
           >
             ✕
@@ -85,7 +88,7 @@ export default function PlaceDetailSheet({ place, onClose }: { place: DetailPlac
           <div className="flex items-baseline gap-2">
             <h2 className="text-lg font-bold leading-snug">{place.name}</h2>
             <span className="shrink-0 text-xs text-[var(--color-muted)]">
-              {place.categoryLabel ?? CATEGORY_LABEL[place.category]}
+              {place.categoryLabel ?? t.categories[place.category]}
             </span>
           </div>
 
@@ -108,17 +111,22 @@ export default function PlaceDetailSheet({ place, onClose }: { place: DetailPlac
           <div className="mt-3">
             <HoursStatusBadge status={status} />
           </div>
-          <HoursTable parsedHours={parsedHours} raw={place.businessHoursRaw} phone={place.phone} />
+          <HoursTable
+            parsedHours={parsedHours}
+            raw={place.businessHoursRaw}
+            phone={place.phone}
+            t={t}
+          />
 
           <dl className="mt-4 space-y-2 text-sm">
             <div className="flex items-start gap-2">
-              <dt className="sr-only">주소</dt>
+              <dt className="sr-only">{t.place.address}</dt>
               <dd className="min-w-0 flex-1 text-[var(--color-muted)]">📍 {place.address}</dd>
               <CopyAddressButton address={place.address} />
             </div>
             {place.phone && (
               <div>
-                <dt className="sr-only">전화번호</dt>
+                <dt className="sr-only">{t.place.phone}</dt>
                 <dd className="text-[var(--color-muted)]">📞 {place.phone}</dd>
               </div>
             )}
@@ -207,10 +215,12 @@ function HoursTable({
   parsedHours,
   raw,
   phone,
+  t,
 }: {
   parsedHours: ParsedBusinessHours | null;
   raw: string | undefined;
   phone: string | undefined;
+  t: Dictionary;
 }) {
   // 파싱 실패 시에도 원본 텍스트는 노출한다 (PRD-03 §5) — "점포마다 상이함"처럼
   // 표로 옮길 수 없는 문구도 그 자체가 답이 된다.
@@ -223,8 +233,8 @@ function HoursTable({
       <p className="mt-2 text-xs text-[var(--color-muted)]">
         {raw ??
           (phone
-            ? "영업시간이 확인되지 않았어요. 아래 전화하기로 영업점에 문의해 주세요."
-            : "영업시간이 확인되지 않았어요. 아래 네이버 지도에서 영업점 정보를 확인해 주세요.")}
+            ? t.hours.unknownWithPhone
+            : t.hours.unknownWithMap)}
       </p>
     );
   }
@@ -233,7 +243,7 @@ function HoursTable({
   return (
     <>
       <table className="mt-2 w-full text-xs">
-        <caption className="sr-only">요일별 영업시간</caption>
+        <caption className="sr-only">{t.hours.tableCaption}</caption>
         <tbody>
           {WEEKDAY_DISPLAY_ORDER.map((weekday) => {
             const day = parsedHours.days.find((d) => d.weekday === weekday);
@@ -241,9 +251,11 @@ function HoursTable({
             return (
               <tr key={weekday} className={weekday === today ? "font-semibold" : "text-[var(--color-muted)]"}>
                 <th scope="row" className="w-8 py-0.5 text-left font-normal">
-                  {WEEKDAY_LABELS[weekday]}
+                  {t.hours.weekdays[weekday]}
                 </th>
-                <td className="py-0.5">{day.closed ? "정기휴무" : day.ranges.map(formatRange).join(", ")}</td>
+                <td className="py-0.5">
+                  {day.closed ? t.hours.regularHoliday : day.ranges.map(formatRange).join(", ")}
+                </td>
               </tr>
             );
           })}
@@ -255,6 +267,7 @@ function HoursTable({
 }
 
 function CopyAddressButton({ address }: { address: string }) {
+  const { t } = useI18n();
   const [copied, setCopied] = useState(false);
 
   const copy = async () => {
@@ -273,7 +286,7 @@ function CopyAddressButton({ address }: { address: string }) {
       onClick={copy}
       className="shrink-0 rounded-[var(--radius-button)] border border-[var(--color-border)] px-2.5 py-1 text-xs font-semibold"
     >
-      {copied ? "복사됨" : "주소 복사"}
+      {copied ? t.place.copied : t.place.copyAddress}
     </button>
   );
 }

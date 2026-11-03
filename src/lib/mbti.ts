@@ -1,5 +1,6 @@
 import curation from "@/lib/data/mbtiCourses.json";
 import { rehydrateCourse, withFreshFacts } from "@/lib/curation";
+import type { Dictionary } from "@/lib/i18n/dictionaries";
 import { Course, LodgingPick } from "@/types/travel";
 
 // docs/prd/01-ai-course-recommendation-prd.md §3.1 MBTI-취향 매핑표
@@ -26,11 +27,20 @@ export function tagsForMbti(mbti?: string): string[] {
 }
 
 // 16유형을 흔히 쓰는 4개 기질 그룹으로 묶어 버튼 화면에 보여준다.
-export const MBTI_GROUPS: { label: string; types: string[] }[] = [
-  { label: "분석가형", types: ["INTJ", "INTP", "ENTJ", "ENTP"] },
-  { label: "외교관형", types: ["INFJ", "INFP", "ENFJ", "ENFP"] },
-  { label: "관리자형", types: ["ISTJ", "ISFJ", "ESTJ", "ESFJ"] },
-  { label: "탐험가형", types: ["ISTP", "ISFP", "ESTP", "ESFP"] },
+// 그룹 이름은 언어마다 다르므로 사전(mbti.groups)이 갖는다 — 여기 남는 건 묶음뿐이다.
+export type MbtiGroupKey = "analyst" | "diplomat" | "sentinel" | "explorer";
+
+/**
+ * 열여섯 유형. 사전의 직업 표에서 뽑는다 — 유형을 하나 빠뜨리거나 오타를 내면
+ * 사전과 어긋나는 순간 타입에서 걸린다.
+ */
+export type MbtiType = keyof Dictionary["mbti"]["jobs"];
+
+export const MBTI_GROUPS: { key: MbtiGroupKey; types: MbtiType[] }[] = [
+  { key: "analyst", types: ["INTJ", "INTP", "ENTJ", "ENTP"] },
+  { key: "diplomat", types: ["INFJ", "INFP", "ENFJ", "ENFP"] },
+  { key: "sentinel", types: ["ISTJ", "ISFJ", "ESTJ", "ESFJ"] },
+  { key: "explorer", types: ["ISTP", "ISFP", "ESTP", "ESFP"] },
 ];
 
 export const MBTI_TYPES = MBTI_GROUPS.flatMap((g) => g.types);
@@ -70,8 +80,8 @@ export function mbtiArtSrc(type: string): string {
   return `/character/mbti/${type}.png`;
 }
 
-export function isMbtiType(value: string): boolean {
-  return MBTI_TYPES.includes(value);
+export function isMbtiType(value: string): value is MbtiType {
+  return (MBTI_TYPES as string[]).includes(value);
 }
 
 export interface MbtiCuration {
@@ -85,21 +95,25 @@ export interface MbtiCuration {
 // src/lib/courseCache.ts 참조).
 const CURATED_COURSE_ID = /^mbti_([A-Z]{4})_curated_\d+$/;
 
-export function findCuratedCourse(courseId: string): Course | undefined {
+export function findCuratedCourse(courseId: string, noticeTemplate?: string): Course | undefined {
   const match = CURATED_COURSE_ID.exec(courseId);
   if (!match) return undefined;
-  return getMbtiCuration(match[1]).courses.find((course) => course.courseId === courseId);
+  return getMbtiCuration(match[1], noticeTemplate).courses.find(
+    (course) => course.courseId === courseId,
+  );
 }
 
 // scripts/build-mbti-courses.ts(npm run build:mbti)가 만든 유형별 큐레이션 코스.
 // 해당 유형 자료가 아직 없으면 빈 값 — 화면은 자동 생성 코스로 대체한다.
-export function getMbtiCuration(type: string): MbtiCuration {
+export function getMbtiCuration(type: string, noticeTemplate?: string): MbtiCuration {
   const entry = (curation.types as Record<string, Partial<MbtiCuration>>)[type];
   return {
     summary: entry?.summary,
     // 장소와 순서만 사람이 고른 것이라, 시각은 파이프라인 코스와 같은 기준
     // (서울 09:00 출발 + 이동·체류시간)으로 다시 계산한다 — src/lib/curation.ts.
-    courses: (entry?.courses ?? []).map(rehydrateCourse),
+    // map(rehydrateCourse)로 넘기면 두 번째 인자로 **index가 들어간다** — 주의 문구
+    // 틀 자리에 0이 박힌다. 화살표로 감싸 한 인자만 넘긴다.
+    courses: (entry?.courses ?? []).map((course) => rehydrateCourse(course, noticeTemplate)),
     lodging: (entry?.lodging ?? []).map((pick) => withFreshFacts<LodgingPick>(pick)),
   };
 }

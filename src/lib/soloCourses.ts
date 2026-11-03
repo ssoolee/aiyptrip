@@ -8,8 +8,11 @@ import { Course } from "@/types/travel";
 
 const DURATIONS = data.durations as Record<string, Course[]>;
 
-export function getSoloCourses(durationDays: number): Course[] {
-  return (DURATIONS[String(durationDays)] ?? []).map(rehydrateCourse);
+export function getSoloCourses(durationDays: number, noticeTemplate?: string): Course[] {
+  // map(rehydrateCourse)로 넘기면 두 번째 인자로 index가 들어간다 — 화살표로 감싼다.
+  return (DURATIONS[String(durationDays)] ?? []).map((course) =>
+    rehydrateCourse(course, noticeTemplate),
+  );
 }
 
 // courseId는 "solo_water_1d_curated"처럼 고정이라, 코스 상세 화면이 URL만으로
@@ -17,8 +20,10 @@ export function getSoloCourses(durationDays: number): Course[] {
 // src/lib/courseCache.ts 참조).
 const SOLO_COURSE_ID = /^solo_[a-z]+_(\d+)d_curated$/;
 
-export function findCuratedSoloCourse(courseId: string): Course | undefined {
+export function findCuratedSoloCourse(courseId: string, noticeTemplate?: string): Course | undefined {
   const match = SOLO_COURSE_ID.exec(courseId);
   if (!match) return undefined;
-  return getSoloCourses(Number(match[1])).find((course) => course.courseId === courseId);
+  return getSoloCourses(Number(match[1]), noticeTemplate).find(
+    (course) => course.courseId === courseId,
+  );
 }

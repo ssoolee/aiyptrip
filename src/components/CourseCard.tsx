@@ -6,6 +6,9 @@ import CourseRouteMap from "@/components/CourseRouteMap";
 import FavoriteButton from "@/components/FavoriteButton";
 import MascotSpot from "@/components/MascotSpot";
 import { cacheCourse } from "@/lib/courseCache";
+import type { Dictionary } from "@/lib/i18n/dictionaries";
+import { fill } from "@/lib/i18n/format";
+import { useI18n } from "@/lib/i18n/I18nProvider";
 import PlaceDetailSheet, { DetailPlace } from "@/components/PlaceDetailSheet";
 import { Course, ItineraryStop } from "@/types/travel";
 
@@ -18,6 +21,7 @@ function courseCoverPhoto(course: Course): string | undefined {
 }
 
 export default function CourseCard({ course, wide: wideProp = false }: { course: Course; wide?: boolean }) {
+  const { t } = useI18n();
   // 열린 상세 시트의 스팟. null이면 닫힌 상태.
   const [openStop, setOpenStop] = useState<DetailPlace | null>(null);
   const [expanded, setExpanded] = useState(false);
@@ -86,7 +90,7 @@ export default function CourseCard({ course, wide: wideProp = false }: { course:
                 : "bg-[var(--color-primary)]/10 text-[var(--color-primary)]"
             }`}
           >
-            {course.source === "curated" ? "추천 코스" : "AI 추천"}
+            {course.source === "curated" ? t.course.badgeCurated : t.course.badgeAi}
           </span>
         )}
         <h3 className="display mb-1 text-[17px] leading-snug">
@@ -95,12 +99,15 @@ export default function CourseCard({ course, wide: wideProp = false }: { course:
             {course.title}
           </LocaleLink>
         </h3>
-        <p className="mb-2 text-xs text-[var(--color-muted)]">{course.days.length}일 코스</p>
+        <p className="mb-2 text-xs text-[var(--color-muted)]">
+          {fill(t.course.dayCount, { days: course.days.length })}
+        </p>
         {/* 서울에서 출발하는 사람 기준 (src/lib/agents/schedule.ts). 찜해 둔 옛 코스에는
             아직 없을 수 있어 있을 때만 보여준다. */}
         {departure && (
           <p className="mb-3 text-xs font-semibold text-[var(--color-accent)]">
-            🚗 {departure.at} {departure.place} 출발{arrival && ` · ${arrival.at} 복귀`}
+            🚗 {fill(t.course.departure, { at: departure.at, place: departure.place })}
+            {arrival && fill(t.course.arrivalSuffix, { at: arrival.at })}
           </p>
         )}
         {/* 왜 이 코스인지 (src/lib/agents/courseReason.ts) */}
@@ -114,7 +121,7 @@ export default function CourseCard({ course, wide: wideProp = false }: { course:
             <span aria-hidden className="mr-1">💧</span>
             <span className={reasonOpen ? "" : "line-clamp-2"}>{course.reason}</span>
             <span className="mt-1 block font-semibold text-[var(--color-primary)]">
-              {reasonOpen ? "접기" : "추천 이유 보기"}
+              {reasonOpen ? t.course.reasonClose : t.course.reasonOpen}
             </span>
           </button>
         )}
@@ -135,7 +142,12 @@ export default function CourseCard({ course, wide: wideProp = false }: { course:
         <ul className="space-y-1 text-sm">
           {visibleStops.map(({ stop, day }) => (
             <li key={stop.placeId}>
-              <StopButton stop={stop} day={multiDay ? day : undefined} onOpen={() => setOpenStop(stop)} />
+              <StopButton
+                stop={stop}
+                day={multiDay ? day : undefined}
+                onOpen={() => setOpenStop(stop)}
+                t={t}
+              />
             </li>
           ))}
         </ul>
@@ -145,7 +157,7 @@ export default function CourseCard({ course, wide: wideProp = false }: { course:
             onClick={() => setExpanded(true)}
             className="mt-2 text-xs font-semibold text-[var(--color-primary)]"
           >
-            +{hiddenCount}곳 더 보기
+            {fill(t.course.moreStops, { count: hiddenCount })}
           </button>
         )}
 
@@ -157,7 +169,7 @@ export default function CourseCard({ course, wide: wideProp = false }: { course:
           onClick={() => cacheCourse(course)}
           className="mt-3 flex min-h-11 items-center justify-center rounded-[var(--radius-button)] border border-[var(--color-primary)] text-sm font-bold text-[var(--color-primary)] hover:bg-[var(--color-primary)]/10"
         >
-          지도로 코스 보기 →
+          {t.course.openDetail}
         </LocaleLink>
       </div>
 
@@ -167,7 +179,17 @@ export default function CourseCard({ course, wide: wideProp = false }: { course:
 }
 
 // 스팟 한 줄 — 누르면 상세 시트가 열린다 (PRD-03 §4).
-function StopButton({ stop, day, onOpen }: { stop: ItineraryStop; day?: number; onOpen: () => void }) {
+function StopButton({
+  stop,
+  day,
+  onOpen,
+  t,
+}: {
+  stop: ItineraryStop;
+  day?: number;
+  onOpen: () => void;
+  t: Dictionary;
+}) {
   const summary = stop.reason ?? stop.reviewSummary;
 
   return (
@@ -175,13 +197,13 @@ function StopButton({ stop, day, onOpen }: { stop: ItineraryStop; day?: number; 
       type="button"
       onClick={onOpen}
       aria-haspopup="dialog"
-      aria-label={`${stop.name} 상세정보 보기`}
+      aria-label={fill(t.place.openDetailOf, { name: stop.name })}
       className="-mx-1 block w-full rounded-lg px-1 py-1 text-left hover:bg-[var(--color-primary)]/5"
     >
       <span className="flex items-center gap-2">
         {day != null && (
           <span className="shrink-0 rounded-full bg-[var(--color-primary)]/10 px-1.5 text-xs font-medium text-[var(--color-primary)]">
-            {day}일차
+            {fill(t.course.dayNth, { day })}
           </span>
         )}
         <span className="shrink-0 text-[var(--color-muted)]">{stop.timeSlot}</span>

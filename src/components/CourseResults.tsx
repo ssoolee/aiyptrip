@@ -41,7 +41,7 @@ export default function CourseResults({
   const singleWide = courses.length === 1;
   // 이어서 만드는 코스는 한국어로만 나온다(프롬프트가 한국어) — 외국어 화면에서는
   // 커밋된 큐레이션만 보여주고 버튼을 내린다.
-  const { lang } = useI18n();
+  const { lang, t } = useI18n();
   const canLoadMore = canGenerateCourses(lang);
 
   const handleLoadMore = () => {
@@ -75,14 +75,14 @@ export default function CourseResults({
         <div className="py-10">
           <EmptyState
             expression="wow"
-            message="조건에 맞는 코스를 찾지 못했어요. 조건을 조금 바꿔서 다시 알려주시겠어요?"
+            message={t.course.empty}
           />
         </div>
       )}
 
       {!canLoadMore ? null : exhausted ? (
         <p className="mt-6 text-center text-sm text-[var(--color-muted)]">
-          이 조건으로 만들 수 있는 코스를 모두 보여드렸어요.
+          {t.course.exhausted}
         </p>
       ) : (
         <button
@@ -91,7 +91,7 @@ export default function CourseResults({
           disabled={isPending}
           className="mx-auto mt-6 block rounded-[var(--radius-button)] border border-[var(--color-primary)] px-6 py-2.5 text-sm font-semibold text-[var(--color-primary)] disabled:opacity-50"
         >
-          {isPending ? "코스를 만드는 중..." : "다른 코스 더 보기"}
+          {isPending ? t.course.loadingMore : t.course.loadMore}
         </button>
       )}
     </div>

@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import LocaleLink from "@/components/LocaleLink";
 import { getPreset } from "@/lib/presets";
+import { serverDictionary } from "@/lib/i18n/server";
 import { generateCourses } from "@/lib/agents/orchestrator";
 import { getSoloCourses } from "@/lib/soloCourses";
 import { PresetType } from "@/types/travel";
@@ -9,10 +10,8 @@ import PageHeader from "@/components/PageHeader";
 import PetPlacesLink from "@/components/PetPlacesLink";
 
 // 일정 탭: 당일치기(기본) / 1박 2일. ?days=2로 전환한다.
-const DURATION_TABS = [
-  { days: 1, label: "당일치기" },
-  { days: 2, label: "1박 2일" },
-];
+// 이름은 사전이 갖는다 (course.dayTab1 / dayTab2).
+const DURATION_TABS = [{ days: 1 }, { days: 2 }];
 
 export default async function CoursePresetPage({
   params,
@@ -24,6 +23,7 @@ export default async function CoursePresetPage({
   const { preset } = await params;
   const presetDef = getPreset(preset);
   if (!presetDef) notFound();
+  const dict = await serverDictionary();
 
   const { days: rawDays } = await searchParams;
   const durationDays = (Array.isArray(rawDays) ? rawDays[0] : rawDays) === "2" ? 2 : 1;
@@ -31,7 +31,8 @@ export default async function CoursePresetPage({
   const presetType = presetDef.type as PresetType;
   // 혼자 여행은 테마별 코스를 미리 만들어 뒀다(src/lib/data/soloCourses.json) —
   // 생성 대기 없이 바로 띄우고, "더 보기"는 파이프라인이 이어서 만든다.
-  const curated = presetType === "solo" ? getSoloCourses(durationDays) : [];
+  const curated =
+    presetType === "solo" ? getSoloCourses(durationDays, dict.notice.mayBeClosed) : [];
   // 외국어에서 이 유형을 열지 않는 판단은 layout.tsx가 한다 (상태 코드 때문).
   const initialCourses =
     curated.length > 0 ? curated : await generateCourses({ presetType, count: 3, durationDays });
@@ -41,9 +42,9 @@ export default async function CoursePresetPage({
       <PageHeader
         className="mb-4 px-4"
         backHref="/"
-        backLabel="다른 유형 보기"
-        title={`${presetDef.emoji} ${presetDef.label}`}
-        description={presetDef.description}
+        backLabel={dict.course.backOther}
+        title={`${presetDef.emoji} ${dict.presets[presetDef.type].label}`}
+        description={dict.presets[presetDef.type].description}
         expression="happy"
       >
         {presetType === "pet" && (
@@ -68,7 +69,7 @@ export default async function CoursePresetPage({
                     : "border-[var(--color-border)] bg-[var(--color-card)] text-[var(--color-muted)]"
                 }`}
               >
-                {tab.label}
+                {tab.days === 1 ? dict.course.dayTab1 : dict.course.dayTab2}
               </LocaleLink>
             );
           })}

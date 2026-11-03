@@ -3,11 +3,13 @@
 import { useEffect, useState } from "react";
 import { loadPlaceReviews } from "@/lib/actions";
 import type { PlaceReviews as PlaceReviewsData } from "@/lib/api/naverBlogSearch";
+import { useI18n } from "@/lib/i18n/I18nProvider";
 
 // PRD-03 §3의 "리뷰" 항목. 네이버는 플레이스 방문자 리뷰·별점을 공개 API로 주지 않아
 // 공식 API로 받을 수 있는 블로그 리뷰를 보여준다 (src/lib/api/naverBlogSearch.ts).
 // 어디서 온 글인지 헷갈리지 않게 제목에 "블로그 리뷰"라고 적는다.
 export default function PlaceReviews({ placeName }: { placeName: string }) {
+  const { t } = useI18n();
   // "loading" → 받는 중, null → 리뷰가 없거나 받지 못함(영역째 접는다).
   // 장소가 바뀌면 호출부가 key로 다시 마운트하므로 여기서 "loading"으로 되돌리지
   // 않는다 — 이펙트 안에서 바로 setState하면 렌더가 한 번 더 돈다.
@@ -28,7 +30,7 @@ export default function PlaceReviews({ placeName }: { placeName: string }) {
 
   if (state === "loading") {
     return (
-      <div className="mt-4" role="status" aria-label="네이버 블로그 리뷰를 찾고 있어요">
+      <div className="mt-4" role="status" aria-label={t.place.reviewsLoading}>
         <div className="skeleton-line h-4 w-32 rounded-full" />
         <div className="mt-3 space-y-3" aria-hidden>
           {[0, 1, 2].map((i) => (

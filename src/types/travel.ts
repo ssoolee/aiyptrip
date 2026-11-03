@@ -104,10 +104,11 @@ export interface LodgingPick extends Place {
   notice?: string;
 }
 
+/** 홈의 유형 카드에 세우는 유형. "custom"은 자연어 검색 경로라 카드가 없다. */
+export type ShownPresetType = Exclude<PresetType, "custom">;
+
 export interface PresetDefinition {
-  type: PresetType;
-  label: string;
+  type: ShownPresetType;
   emoji: string;
-  description: string;
   tags: string[];
 }

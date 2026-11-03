@@ -5,9 +5,12 @@ import PlaceDetailSheet from "@/components/PlaceDetailSheet";
 import { cardGridClass } from "@/lib/cardGrid";
 import { CATEGORY_EMOJI } from "@/lib/categories";
 import { LodgingPick } from "@/types/travel";
+import { fill } from "@/lib/i18n/format";
+import { useI18n } from "@/lib/i18n/I18nProvider";
 
 // MBTI 유형별 숙소·펜션 추천 — 코스 카드와 따로, 코스 목록 아래에 보여준다.
 export default function LodgingPicks({ title, picks }: { title: string; picks: LodgingPick[] }) {
+  const { t } = useI18n();
   const [openPick, setOpenPick] = useState<LodgingPick | null>(null);
 
   if (picks.length === 0) return null;
@@ -55,7 +58,7 @@ export default function LodgingPicks({ title, picks }: { title: string; picks: L
               {pick.reason && <p className="mt-1 text-sm text-[var(--color-muted)]">{pick.reason}</p>}
               {pick.notice && (
                 <p className="mt-2 rounded-[var(--radius-button)] bg-[var(--color-primary)]/5 px-2.5 py-1.5 text-xs text-[var(--color-muted)]">
-                  예약 전 확인: {pick.notice}
+                  {t.course.lodgingNotice}: {pick.notice}
                 </p>
               )}
               <p className="mt-2 text-xs text-[var(--color-muted)]">{pick.address}</p>
@@ -65,17 +68,17 @@ export default function LodgingPicks({ title, picks }: { title: string; picks: L
                     href={`tel:${pick.phone}`}
                     className="flex min-h-11 flex-1 items-center justify-center rounded-[var(--radius-button)] border border-[var(--color-border)]"
                   >
-                    전화하기
+                    {t.place.call}
                   </a>
                 )}
                 <button
                   type="button"
                   onClick={() => setOpenPick(pick)}
                   aria-haspopup="dialog"
-                  aria-label={`${pick.name} 상세정보 보기`}
+                  aria-label={fill(t.place.openDetailOf, { name: pick.name })}
                   className="flex min-h-11 flex-1 items-center justify-center rounded-[var(--radius-button)] border border-[var(--color-primary)] text-[var(--color-primary)]"
                 >
-                  상세정보
+                  {t.place.detail}
                 </button>
               </div>
             </div>

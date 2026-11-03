@@ -15,7 +15,8 @@ import {
   subscribeFavorites,
 } from "@/lib/favorites";
 import { getHoursStatus, parseBusinessHours, seoulNow } from "@/lib/businessHours";
-import { CATEGORY_LABEL } from "@/lib/categories";
+import { fill } from "@/lib/i18n/format";
+import { useI18n } from "@/lib/i18n/I18nProvider";
 import { distanceKm, estimateMinutes, formatDistance, LatLng, nearest } from "@/lib/geo";
 import { formatDuration } from "@/lib/agents/schedule";
 import { useCurrentPosition } from "@/lib/useCurrentPosition";
@@ -53,6 +54,7 @@ export default function CourseDetailScreen({
 }
 
 function CourseDetail({ course }: { course: Course }) {
+  const { t } = useI18n();
   const [view, setView] = useState<"plan" | "map">("plan");
   const [openPlace, setOpenPlace] = useState<DetailPlace | null>(null);
   const { position, error, loading, request } = useCurrentPosition();
@@ -91,7 +93,7 @@ function CourseDetail({ course }: { course: Course }) {
   return (
     <div className="page-width px-4 pb-10 pt-6">
       <LocaleLink href="/" className="text-sm text-[var(--color-muted)]">
-        ← 다른 코스 보기
+        {`← ${t.course.backLabel}`}
       </LocaleLink>
 
       <div className="mt-2 flex items-start gap-3">
@@ -99,14 +101,15 @@ function CourseDetail({ course }: { course: Course }) {
         <FavoriteButton course={course} />
       </div>
       <p className="mt-1 text-sm text-[var(--color-muted)]">
-        {course.days.length}일 코스 · {stops.length}곳
-        {totalKm > 0 && ` · 전체 ${formatDistance(totalKm)}(직선거리)`}
+        {fill(t.course.dayCount, { days: course.days.length })} ·{" "}
+        {fill(t.course.stopCount, { count: stops.length })}
+        {totalKm > 0 && fill(t.course.straightTotal, { distance: formatDistance(totalKm) })}
       </p>
       {/* 시각은 모두 서울에서 출발하는 사람 기준이다 (src/lib/agents/schedule.ts). */}
       {trip && (
         <p className="mt-1 text-sm font-semibold text-[var(--color-accent)]">
-          🚗 {trip.departure.place} {trip.departure.at} 출발
-          {trip.arrival && ` → ${trip.arrival.at} 복귀`}
+          🚗 {fill(t.course.departLine, { place: trip.departure.place, at: trip.departure.at })}
+          {trip.arrival && fill(t.course.arriveSuffix, { at: trip.arrival.at })}
         </p>
       )}
       {/* 왜 이 코스인지 — 200자 안팎 (src/lib/agents/courseReason.ts) */}
@@ -121,7 +124,7 @@ function CourseDetail({ course }: { course: Course }) {
       )}
 
       {/* 모바일에서만 보이는 전환 토글. 데스크톱은 두 단을 함께 보여준다. */}
-      <div className="mt-4 flex gap-2 sm:hidden" role="tablist" aria-label="보기 전환">
+      <div className="mt-4 flex gap-2 sm:hidden" role="tablist" aria-label={t.course.tabSwitch}>
         {(["plan", "map"] as const).map((tab) => (
           <button
             key={tab}
@@ -135,17 +138,19 @@ function CourseDetail({ course }: { course: Course }) {
                 : "border-[var(--color-border)] bg-[var(--color-card)] text-[var(--color-muted)]"
             }`}
           >
-            {tab === "plan" ? "일정" : "지도"}
+            {tab === "plan" ? t.course.tabPlan : t.course.tabMap}
           </button>
         ))}
       </div>
 
       <div className="mt-4 sm:grid sm:grid-cols-2 sm:items-start sm:gap-6">
-        <section className={`${view === "plan" ? "" : "hidden"} sm:block`} aria-label="일정">
+        <section className={`${view === "plan" ? "" : "hidden"} sm:block`} aria-label={t.course.tabPlan}>
           {course.days.map((day) => (
             <div key={day.day} className="mb-5">
               {course.days.length > 1 && (
-                <h2 className="mb-2 text-sm font-bold text-[var(--color-primary)]">{day.day}일차</h2>
+                <h2 className="mb-2 text-sm font-bold text-[var(--color-primary)]">
+                  {fill(t.course.dayNth, { day: day.day })}
+                </h2>
               )}
               {day.departure && <TransferRow transfer={day.departure} kind="depart" />}
               <ol className="space-y-3">
@@ -170,7 +175,7 @@ function CourseDetail({ course }: { course: Course }) {
 
         <section
           className={`${view === "map" ? "" : "hidden"} sm:sticky sm:top-4 sm:block`}
-          aria-label="지도"
+          aria-label={t.course.tabMap}
         >
           <NaverMapView
             stops={mapStops}
@@ -187,21 +192,24 @@ function CourseDetail({ course }: { course: Course }) {
             disabled={loading}
             className="mt-3 flex min-h-11 w-full items-center justify-center rounded-[var(--radius-button)] border border-[var(--color-primary)] text-sm font-semibold text-[var(--color-primary)] disabled:opacity-50"
           >
-            {loading ? "현재 위치를 찾는 중..." : position ? "📍 현재 위치 다시 찾기" : "📍 내 위치 보기"}
+            {loading ? t.map.locating : position ? t.map.relocate : t.map.locate}
           </button>
 
           {error && (
             <p role="status" className="mt-2 notice rounded-xl px-3 py-2 text-xs">
-              {error} 위치 없이도 코스와 동선은 그대로 볼 수 있어요.
+              {error} {t.map.locationFallback}
             </p>
           )}
 
           {closest && (
             <div className="mt-3 surface-card p-4">
-              <p className="text-xs text-[var(--color-muted)]">현재 위치에서 가장 가까운 스팟</p>
+              <p className="text-xs text-[var(--color-muted)]">{t.map.nearestStop}</p>
               <p className="mt-0.5 font-semibold">{closest.item.name}</p>
               <p className="mt-0.5 text-xs text-[var(--color-muted)]">
-                직선거리 {formatDistance(closest.km)} · 차로 약 {estimateMinutes(closest.km, "car")}분 (어림값)
+                {fill(t.map.nearestLineShort, {
+                  distance: formatDistance(closest.km),
+                  car: estimateMinutes(closest.km, "car"),
+                })}
               </p>
               <RouteLink
                 dest={closest.item}
@@ -231,6 +239,7 @@ function StopRow({
   origin: LatLng | null;
   onOpen: () => void;
 }) {
+  const { t } = useI18n();
   // 영업 상태는 "지금" 기준이다. 이 화면은 클라이언트에서만 그려지므로(코스 출처가
   // 세션 저장소·찜 목록) 서버 렌더 결과와 어긋날 일이 없다.
   const status = getHoursStatus(parseBusinessHours(stop.businessHoursRaw), seoulNow());
@@ -248,7 +257,7 @@ function StopRow({
           <p className="font-semibold">
             {stop.name}
             <span className="ml-2 text-xs font-normal text-[var(--color-muted)]">
-              {stop.categoryLabel ?? CATEGORY_LABEL[stop.category]}
+              {stop.categoryLabel ?? t.categories[stop.category]}
             </span>
           </p>
           <div className="mt-1.5">
@@ -263,10 +272,10 @@ function StopRow({
           type="button"
           onClick={onOpen}
           aria-haspopup="dialog"
-          aria-label={`${stop.name} 상세정보 보기`}
+          aria-label={fill(t.place.openDetailOf, { name: stop.name })}
           className="flex min-h-11 flex-1 items-center justify-center rounded-[var(--radius-button)] border border-[var(--color-border)]"
         >
-          상세정보
+          {t.place.detail}
         </button>
         <RouteLink
           dest={stop}
@@ -277,10 +286,12 @@ function StopRow({
 
       {toNextKm != null && (
         <p className="mt-2 text-center text-xs text-[var(--color-muted)]">
-          ↓ 다음 장소까지 {formatDistance(toNextKm)} · 차로 약{" "}
           {/* 일정표의 시각을 만든 값과 같은 이동시간을 쓴다. 옛 코스에는 없어 그때만
               화면에서 직접 어림한다. */}
-          {nextStop?.travelMinutes ?? estimateMinutes(toNextKm, "car")}분 (직선거리 어림값)
+          {fill(t.course.nextStop, {
+            distance: formatDistance(toNextKm),
+            minutes: nextStop?.travelMinutes ?? estimateMinutes(toNextKm, "car"),
+          })}
         </p>
       )}
     </li>
@@ -289,6 +300,8 @@ function StopRow({
 
 // 하루의 처음(서울·숙소 출발)과 끝(서울 복귀)에 붙는 줄.
 function TransferRow({ transfer, kind }: { transfer: ItineraryTransfer; kind: "depart" | "arrive" }) {
+  const { t } = useI18n();
+
   return (
     <p
       className={`flex items-center gap-2 rounded-[var(--radius-button)] border border-dashed border-[var(--color-border)] px-3 py-2 text-xs text-[var(--color-muted)] ${
@@ -298,8 +311,11 @@ function TransferRow({ transfer, kind }: { transfer: ItineraryTransfer; kind: "d
       <span aria-hidden>{kind === "depart" ? "🚗" : "🏠"}</span>
       <span>
         <strong className="font-semibold text-[var(--foreground)]">{transfer.at}</strong>{" "}
-        {transfer.place} {kind === "depart" ? "출발" : "도착"} · 약 {formatDuration(transfer.minutes)}{" "}
-        이동 (어림값)
+        {fill(kind === "depart" ? t.course.transferDepart : t.course.transferArrive, {
+          place: transfer.place,
+          duration: formatDuration(transfer.minutes),
+        })}
+        {t.course.transferMove}
       </span>
     </p>
   );
@@ -307,19 +323,20 @@ function TransferRow({ transfer, kind }: { transfer: ItineraryTransfer; kind: "d
 
 // 파이프라인이 만든 코스는 서버에 저장되지 않는다 — 세션이 바뀌거나 링크를 공유받으면 없다.
 function NotFound() {
+  const { t } = useI18n();
+
   return (
     <div className="mx-auto max-w-2xl px-4 py-16 text-center">
       <MascotSpot expression="wow" size={56} className="mb-4" />
-      <h1 className="mb-2 text-xl font-bold">어라, 이 코스를 찾지 못했어요</h1>
+      <h1 className="mb-2 text-xl font-bold">{t.course.missingTitle}</h1>
       <p className="text-sm leading-relaxed text-[var(--color-muted)]">
-        추천 코스는 요청할 때마다 새로 만들어져서 브라우저를 다시 열면 사라져요. 마음에 드는
-        코스는 찜해 두면 언제든 다시 볼 수 있어요.
+        {t.course.missingBody}
       </p>
       <LocaleLink
         href="/"
         className="mt-5 inline-flex min-h-11 items-center justify-center rounded-[var(--radius-button)] bg-[var(--color-primary)] px-6 text-sm font-semibold text-[var(--color-on-primary)]"
       >
-        코스 추천받기
+        {t.course.missingAction}
       </LocaleLink>
     </div>
   );

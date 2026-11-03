@@ -13,7 +13,8 @@ import {
   subscribeFavorites,
 } from "@/lib/favorites";
 import { useAuth } from "@/lib/auth/AuthProvider";
-import { CATEGORY_EMOJI, CATEGORY_LABEL } from "@/lib/categories";
+import { CATEGORY_EMOJI } from "@/lib/categories";
+import { useI18n } from "@/lib/i18n/I18nProvider";
 import PlaceDetailSheet, { DetailPlace } from "@/components/PlaceDetailSheet";
 import EmptyState from "@/components/EmptyState";
 import PageHeader from "@/components/PageHeader";
@@ -22,6 +23,7 @@ import PageHeader from "@/components/PageHeader";
 type Tab = "courses" | "places";
 
 export default function FavoritesPage() {
+  const { t } = useI18n();
   const favorites = useSyncExternalStore(
     subscribeFavorites,
     getFavoritesSnapshot,
@@ -42,28 +44,28 @@ export default function FavoritesPage() {
 
   return (
     <div className="page-width px-4 pb-6 pt-8">
-      <PageHeader className="mb-4" title="찜 목록" expression="heart" />
+      <PageHeader className="mb-4" title={t.favorites.title} expression="heart" />
 
       {showLoginBanner && (
         <div className="mb-4 flex items-center justify-between gap-3 rounded-[var(--radius-card)] bg-[var(--color-primary)]/10 p-4">
           <p className="text-xs text-[var(--color-primary)]">
-            이 브라우저에만 저장돼 있어요. 로그인하면 다른 기기에서도 볼 수 있어요.
+            {t.favorites.loginBanner}
           </p>
           <LocaleLink
             href="/login"
             className="shrink-0 rounded-[var(--radius-button)] bg-[var(--color-primary)] px-3 py-2 text-xs font-semibold text-[var(--color-on-primary)]"
           >
-            로그인
+            {t.favorites.login}
           </LocaleLink>
         </div>
       )}
 
-      <div role="tablist" aria-label="찜 종류" className="mb-4 flex gap-2">
+      <div role="tablist" aria-label={t.favorites.tabsLabel} className="mb-4 flex gap-2">
         <TabButton active={tab === "courses"} onClick={() => setTab("courses")}>
-          코스 {favorites.length > 0 && favorites.length}
+          {t.favorites.tabCourses} {favorites.length > 0 && favorites.length}
         </TabButton>
         <TabButton active={tab === "places"} onClick={() => setTab("places")}>
-          장소 {places.length > 0 && places.length}
+          {t.favorites.tabPlaces} {places.length > 0 && places.length}
         </TabButton>
       </div>
 
@@ -72,9 +74,9 @@ export default function FavoritesPage() {
           {favorites.length === 0 && (
             <EmptyState
               expression="heart"
-              message="아직 찜한 코스가 없어요."
+              message={t.favorites.emptyCourses}
               href="/"
-              action="코스 추천받으러 가기 →"
+              action={t.favorites.emptyCoursesAction}
             />
           )}
           <ul className="space-y-3">
@@ -92,7 +94,7 @@ export default function FavoritesPage() {
                     onClick={() => removeFavoriteCourse(fav.courseId)}
                     className="shrink-0 text-xs text-[var(--color-muted)] underline"
                   >
-                    찜 취소
+                    {t.favorites.remove}
                   </button>
                 </div>
                 <ul className="space-y-0.5 text-sm text-[var(--color-muted)]">
@@ -110,7 +112,7 @@ export default function FavoritesPage() {
                   href={`/course/detail/${fav.courseId}`}
                   className="mt-3 flex min-h-11 items-center justify-center rounded-[var(--radius-button)] border border-[var(--color-primary)] text-sm font-semibold text-[var(--color-primary)]"
                 >
-                  지도로 코스 보기 →
+                  {t.course.openDetail}
                 </LocaleLink>
               </li>
             ))}
@@ -121,9 +123,9 @@ export default function FavoritesPage() {
           {places.length === 0 && (
             <EmptyState
               expression="smile"
-              message="아직 찜한 장소가 없어요. 코스나 지도에서 장소를 열면 하트를 누를 수 있어요."
+              message={t.favorites.emptyPlaces}
               href="/map"
-              action="지도 보러 가기 →"
+              action={t.favorites.emptyPlacesAction}
             />
           )}
           <ul className="space-y-3">
@@ -138,7 +140,7 @@ export default function FavoritesPage() {
                       {CATEGORY_EMOJI[fav.category]} {fav.name}
                     </h2>
                     <p className="mt-0.5 truncate text-xs text-[var(--color-muted)]">
-                      {fav.placeSnapshot.categoryLabel ?? CATEGORY_LABEL[fav.category]} ·{" "}
+                      {fav.placeSnapshot.categoryLabel ?? t.categories[fav.category]} ·{" "}
                       {fav.placeSnapshot.address}
                     </p>
                   </div>
@@ -147,7 +149,7 @@ export default function FavoritesPage() {
                     onClick={() => removeFavoritePlace(fav.placeId)}
                     className="shrink-0 text-xs text-[var(--color-muted)] underline"
                   >
-                    찜 취소
+                    {t.favorites.remove}
                   </button>
                 </div>
                 <button
@@ -155,7 +157,7 @@ export default function FavoritesPage() {
                   onClick={() => setOpenPlace(fav.placeSnapshot)}
                   className="mt-3 flex min-h-11 w-full items-center justify-center rounded-[var(--radius-button)] border border-[var(--color-primary)] text-sm font-semibold text-[var(--color-primary)]"
                 >
-                  상세보기
+                  {t.place.detail}
                 </button>
               </li>
             ))}

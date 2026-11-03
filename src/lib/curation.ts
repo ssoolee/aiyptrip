@@ -3,6 +3,7 @@ import { scheduleItinerary } from "@/lib/agents/schedule";
 import { staticLegLookup } from "@/lib/routeLegs";
 import { validateItinerary } from "@/lib/agents/validation";
 import { Course, ItineraryStop, Place } from "@/types/travel";
+import { fill } from "@/lib/i18n/format";
 
 // 미리 만들어 둔 코스(MBTI 큐레이션, 혼자 여행 테마 코스)를 화면에 올리기 전에
 // 손보는 공통 처리. 빌드 시점에 얼려 둔 사본이라 그대로 쓰면 두 가지가 어긋난다 —
@@ -34,11 +35,20 @@ export function withFreshFacts<T extends Place>(place: T): T {
  * 그래서 파이프라인 코스처럼 재구성하지 않고, 오늘 방문했을 때 닫혀 있을 장소만
  * 주의 문구로 알린다 (docs/agents/04-validation-agent.md "실패/재시도 처리"와 같은 처리).
  */
-export function withHoursNotice(course: Course): Course {
+/**
+ * 주의 문구의 기본 틀. 화면에서 부를 때는 사전의 notice.mayBeClosed를 넘긴다 —
+ * 여기 기본값은 빌드 스크립트나 테스트처럼 사전이 없는 자리를 위한 것이다.
+ */
+const DEFAULT_HOURS_NOTICE = "{names} — 오늘은 문을 닫을 수 있어요. 가기 전에 확인해 주세요.";
+
+export function withHoursNotice(course: Course, noticeTemplate?: string): Course {
   const { issues } = validateItinerary(course.days);
   if (issues.length === 0) return course;
   const names = [...new Set(issues.map((issue) => issue.placeName))];
-  return { ...course, notice: `${names.join(", ")} — 오늘은 문을 닫을 수 있어요. 가기 전에 확인해 주세요.` };
+  return {
+    ...course,
+    notice: fill(noticeTemplate ?? DEFAULT_HOURS_NOTICE, { names: names.join(", ") }),
+  };
 }
 
 /**
@@ -50,15 +60,18 @@ export function withHoursNotice(course: Course): Course {
  * 한 화면에 수십 번 왕복이 생겨 미리 만들어 둔 코스의 이점이 사라진다.
  * 표에 없는 구간은 직선거리 어림값으로 메워진다.
  */
-export function rehydrateCourse(course: Course): Course {
-  return withHoursNotice({
-    ...course,
-    days: scheduleItinerary(
-      course.days.map((day) => ({
-        ...day,
-        stops: day.stops.map((stop) => withFreshFacts<ItineraryStop>(stop)),
-      })),
-      staticLegLookup,
-    ),
-  });
+export function rehydrateCourse(course: Course, noticeTemplate?: string): Course {
+  return withHoursNotice(
+    {
+      ...course,
+      days: scheduleItinerary(
+        course.days.map((day) => ({
+          ...day,
+          stops: day.stops.map((stop) => withFreshFacts<ItineraryStop>(stop)),
+        })),
+        staticLegLookup,
+      ),
+    },
+    noticeTemplate,
+  );
 }

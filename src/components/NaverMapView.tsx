@@ -2,7 +2,8 @@
 
 import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import Script from "next/script";
-import { CATEGORY_LABEL } from "@/lib/categories";
+import type { Dictionary } from "@/lib/i18n/dictionaries";
+import { useI18n } from "@/lib/i18n/I18nProvider";
 import type { LatLng } from "@/lib/geo";
 import type { RoutePoint } from "@/types/travel";
 import type { DetailPlace } from "@/components/PlaceDetailSheet";
@@ -109,6 +110,7 @@ export default function NaverMapView({
   // 마커 정보창의 "상세보기"에서 호출된다. 지도를 다시 그리지 않도록 호출자가 메모해 넘긴다.
   onSelectPlace?: (place: DetailPlace) => void;
 }) {
+  const { t } = useI18n();
   const mapElRef = useRef<HTMLDivElement>(null);
   const [sdkReady, setSdkReady] = useState(false);
   const keyId = process.env.NEXT_PUBLIC_NCP_MAPS_KEY_ID;
@@ -162,7 +164,7 @@ export default function NaverMapView({
       });
       if (!interactive) return;
       maps.Event.addListener(marker, "click", () => {
-        infoWindow.setContent(previewContent(stop, onSelectPlace));
+        infoWindow.setContent(previewContent(stop, t, onSelectPlace));
         infoWindow.open(map, marker);
       });
     });
@@ -218,7 +220,9 @@ export default function NaverMapView({
       infoWindow.close();
       map.destroy();
     };
-  }, [sdkReady, stops, showRoute, routeLegs, userPosition, onSelectPlace, interactive]);
+    // t가 바뀌면(언어 전환) 말풍선 문구도 새로 그려야 한다. 사전은 레이아웃에서
+    // 내려오는 같은 객체라 같은 언어에서는 지도를 다시 만들지 않는다.
+  }, [sdkReady, stops, showRoute, routeLegs, userPosition, onSelectPlace, interactive, t]);
 
   if (!keyId || authFailed) {
     // 키가 없거나(개발) 인증이 거절됐을 때(운영). 코스 카드의 작은 지도까지 안내로 채우면
@@ -263,7 +267,13 @@ export default function NaverMapView({
  * 마커 미리보기 팝업 — 장소명·카테고리와 "상세보기" 버튼 (PRD-02 §3 Must).
  * 문자열 HTML이 아니라 DOM으로 만들어 버튼에 직접 리스너를 건다 (전역 핸들러·HTML 이스케이프 불필요).
  */
-function previewContent(stop: MapStop, onSelectPlace?: (place: DetailPlace) => void): HTMLElement {
+// 말풍선은 React 바깥에서 DOM으로 만든다(SDK가 HTMLElement를 받는다). 그래서 훅을
+// 쓸 수 없어 사전을 인자로 받는다.
+function previewContent(
+  stop: MapStop,
+  t: Dictionary,
+  onSelectPlace?: (place: DetailPlace) => void,
+): HTMLElement {
   const box = document.createElement("div");
   box.style.cssText = "padding:8px 10px;font-size:12px;max-width:200px;line-height:1.4";
 
@@ -274,7 +284,7 @@ function previewContent(stop: MapStop, onSelectPlace?: (place: DetailPlace) => v
 
   if (stop.place) {
     const category = document.createElement("div");
-    category.textContent = stop.place.categoryLabel ?? CATEGORY_LABEL[stop.place.category];
+    category.textContent = stop.place.categoryLabel ?? t.categories[stop.place.category];
     category.style.cssText = "color:#4b5f59;margin-top:1px";
     box.append(category);
   }
@@ -283,7 +293,7 @@ function previewContent(stop: MapStop, onSelectPlace?: (place: DetailPlace) => v
     const place = stop.place;
     const button = document.createElement("button");
     button.type = "button";
-    button.textContent = "상세보기 →";
+    button.textContent = t.place.mapPreviewDetail;
     button.setAttribute("aria-haspopup", "dialog");
     button.style.cssText =
       "margin-top:6px;color:#145c45;font-weight:700;background:none;border:0;padding:0;cursor:pointer;font-size:12px";
@@ -294,7 +304,7 @@ function previewContent(stop: MapStop, onSelectPlace?: (place: DetailPlace) => v
     link.href = stop.url;
     link.target = "_blank";
     link.rel = "noreferrer";
-    link.textContent = "네이버 지도 →";
+    link.textContent = t.place.mapPreviewNaver;
     link.style.cssText = "display:inline-block;margin-top:6px;color:#145c45;font-weight:700";
     box.append(link);
   }

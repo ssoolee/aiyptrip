@@ -5,6 +5,8 @@ import NaverMapView, { MapStop } from "@/components/NaverMapView";
 import { courseDistance, routeLegsOf } from "@/lib/courseRoute";
 import { formatDistance } from "@/lib/geo";
 import { Course } from "@/types/travel";
+import { fill } from "@/lib/i18n/format";
+import { useI18n } from "@/lib/i18n/I18nProvider";
 
 // 코스 카드에 들어가는 작은 동선 지도 — 스팟을 번호 순서대로 실제 도로 경로로 이어 보여준다.
 // 누르거나 끌 수 없는 그림이라(NaverMapView interactive=false), 목록을 넘기다 손가락이
@@ -14,6 +16,7 @@ import { Course } from "@/types/travel";
 // 들어올 때 비로소 SDK 지도를 만든다.
 
 export default function CourseRouteMap({ course }: { course: Course }) {
+  const { t } = useI18n();
   const boxRef = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
 
@@ -56,8 +59,12 @@ export default function CourseRouteMap({ course }: { course: Course }) {
         <div className="h-32 w-full rounded-[var(--radius-card)] bg-[var(--color-character-ivory)]" />
       )}
       <p className="mt-1 text-center text-[11px] text-[var(--color-subtle)]">
-        {stops.length}곳을 차례로 이은 동선
-        {total.km > 0 && ` · 전체 ${formatDistance(total.km)}(${total.measured ? "주행거리" : "직선거리"})`}
+        {fill(t.course.routeSummary, { count: stops.length })}
+        {total.km > 0 &&
+          fill(t.course.routeTotal, {
+            distance: formatDistance(total.km),
+            kind: total.measured ? t.map.drivingDistance : t.map.straightLine,
+          })}
       </p>
     </div>
   );

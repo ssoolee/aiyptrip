@@ -9,15 +9,17 @@ import {
   toggleFavoriteCourse,
 } from "@/lib/favorites";
 import { Course } from "@/types/travel";
+import { useI18n } from "@/lib/i18n/I18nProvider";
 
 export default function FavoriteButton({ course }: { course: Course }) {
+  const { t } = useI18n();
   useSyncExternalStore(subscribeFavorites, getFavoritesSnapshot, getFavoritesServerSnapshot);
   const favorited = isFavoriteCourse(course.courseId);
 
   return (
     <button
       type="button"
-      aria-label={favorited ? "찜 취소" : "찜하기"}
+      aria-label={favorited ? t.place.favoriteRemove : t.place.favoriteAdd}
       onClick={(e) => {
         e.preventDefault();
         toggleFavoriteCourse(course);

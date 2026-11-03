@@ -3,6 +3,8 @@
 import { useSyncExternalStore } from "react";
 import { LatLng } from "@/lib/geo";
 import { naverAppRouteUrl, naverWebRouteUrl, RouteTarget, tmapAppRouteUrl } from "@/lib/mapLinks";
+import { fill } from "@/lib/i18n/format";
+import { useI18n } from "@/lib/i18n/I18nProvider";
 
 // docs/prd/02-map-realtime-location-prd.md §3 Should — 외부 지도 앱으로 길찾기 연결.
 // 앱 딥링크(nmap://, tmap://)는 모바일에서만 열리므로, 모바일에서만 딥링크를 쓰고
@@ -24,6 +26,7 @@ function useIsMobile(): boolean {
 
 /** 목록 행에 쓰는 한 줄짜리 길찾기 링크. */
 export function RouteLink({ dest, origin, className }: { dest: RouteTarget; origin?: LatLng; className?: string }) {
+  const { t } = useI18n();
   const isMobile = useIsMobile();
   const href = isMobile ? naverAppRouteUrl(dest, "car", origin) : naverWebRouteUrl(dest, "car", origin);
 
@@ -32,7 +35,7 @@ export function RouteLink({ dest, origin, className }: { dest: RouteTarget; orig
       href={href}
       target={isMobile ? undefined : "_blank"}
       rel="noreferrer"
-      aria-label={`${dest.name}까지 길찾기`}
+      aria-label={fill(t.place.routeToName, { name: dest.name })}
       className={className}
     >
       길찾기 →

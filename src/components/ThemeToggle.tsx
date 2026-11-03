@@ -1,6 +1,8 @@
 "use client";
 
 import { useSyncExternalStore } from "react";
+import { fill } from "@/lib/i18n/format";
+import { useI18n } from "@/lib/i18n/I18nProvider";
 
 // 상단바의 '화면 밝기' 버튼. welflows.com과 같은 자리·같은 모양이다.
 //
@@ -18,7 +20,7 @@ export const THEME_INIT_SCRIPT = `try{var t=localStorage.getItem(${JSON.stringif
 type Theme = "system" | "light" | "dark";
 
 const NEXT: Record<Theme, Theme> = { system: "light", light: "dark", dark: "system" };
-const LABEL: Record<Theme, string> = { system: "시스템", light: "밝게", dark: "어둡게" };
+// 세 값의 이름은 사전(theme.system/light/dark)이 갖는다.
 const ICON: Record<Theme, string> = { system: "🌗", light: "☀️", dark: "🌙" };
 
 // 고른 값은 React 바깥(localStorage와 <html>)에 산다. 버튼이 그 값을 비추기만 하도록
@@ -58,16 +60,18 @@ function apply(next: Theme) {
 
 export default function ThemeToggle() {
   const theme = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
+  const { t } = useI18n();
+  const label = (value: Theme) => t.theme[value];
 
   return (
     <button
       type="button"
       onClick={() => apply(NEXT[theme])}
-      aria-label={`화면 밝기: ${LABEL[theme]} — 눌러서 ${LABEL[NEXT[theme]]}로`}
+      aria-label={fill(t.theme.switchTo, { current: label(theme), next: label(NEXT[theme]) })}
       className="flex min-h-9 shrink-0 items-center gap-1.5 rounded-[var(--radius-button)] border border-[var(--color-border)] bg-[var(--color-card)] px-3 text-xs text-[var(--color-muted)] hover:border-[var(--color-subtle)] hover:text-[var(--foreground)]"
     >
       <span aria-hidden>{ICON[theme]}</span>
-      <span className="hidden sm:inline">화면 밝기</span>
+      <span className="hidden sm:inline">{t.theme.label}</span>
     </button>
   );
 }

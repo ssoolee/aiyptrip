@@ -1,12 +1,10 @@
 import { Suspense } from "react";
 import Link from "next/link";
-import { lang } from "next/root-params";
 import LanguageSwitcher from "./LanguageSwitcher";
 import Mascot from "./Mascot";
 import ThemeToggle from "./ThemeToggle";
-import { DEFAULT_LOCALE, isLocale } from "@/lib/i18n/config";
-import { getDictionary } from "@/lib/i18n/dictionaries";
 import { withLang } from "@/lib/i18n/href";
+import { currentLocale, serverDictionary } from "@/lib/i18n/server";
 
 // 모든 화면 위에 붙어 있는 상단바. 자매 사이트 welflows.com(AI행정앱제작소)과
 // 같은 구성이다 — 왼쪽에 평안이 얼굴과 서비스 이름, 오른쪽에 포털 링크와 화면 밝기.
@@ -17,9 +15,7 @@ import { withLang } from "@/lib/i18n/href";
 // 서버 컴포넌트라 사전을 next/root-params로 직접 읽는다 — prop을 타고 내려보내지
 // 않아도 되는 자리다. 클라이언트 컴포넌트에서는 이게 안 되므로 useI18n()을 쓴다.
 export default async function SiteHeader() {
-  const segment = await lang();
-  const locale = segment && isLocale(segment) ? segment : DEFAULT_LOCALE;
-  const { site } = getDictionary(locale);
+  const [locale, { site }] = await Promise.all([currentLocale(), serverDictionary()]);
 
   return (
     <header className="sticky top-0 z-30 border-b border-[var(--color-border)] bg-[var(--background)]">

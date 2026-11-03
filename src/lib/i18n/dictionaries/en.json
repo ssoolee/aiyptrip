@@ -2,7 +2,7 @@
   "site": {
     "name": "Yangpyeong",
     "title": "Yangpyeong Trip Course Planner",
-    "description": "Day trips around Yangpyeong, Korea — AI checks opening hours and travel time, with courses by MBTI type and pet-friendly options.",
+    "description": "Day trips around Yangpyeong, Korea — AI checks opening hours and travel time, with courses by MBTI type and pet-friendly places.",
     "ogTitle": "A loop around Yangpyeong with Pyeong-i",
     "studio": "AI Admin App Studio",
     "studioShort": "Studio"
@@ -21,6 +21,247 @@
   "error": {
     "title": "Something went wrong",
     "body": "Please try again in a moment.",
-    "retry": "Try again"
+    "retry": "Try again",
+    "digest": "Error code",
+    "courseTitle": "We couldn't build the course",
+    "courseBody": "Try again and we'll put together a new one.",
+    "courseBack": "Browse other types →"
+  },
+  "notFound": {
+    "title": "This page took a wrong turn",
+    "body": "We couldn't find that page. Shall we start over with Pyeong-i?",
+    "action": "Go to home"
+  },
+  "home": {
+    "topDescription": "Yangpyeong cafes and restaurants with the most Naver blog posts — shown for the last {days} days and for all time.",
+    "heroBadge": "💧 Yangpyeong trips, planned by AI",
+    "heroTitleTop": "A loop around Yangpyeong",
+    "heroTitleBottom": "with Pyeong-i",
+    "heroBody": "Pick a trip type and Pyeong-i, your little water-drop guide, maps out a course with opening hours and travel times already checked.",
+    "heroPoints": ["Curated trip types", "Pet-friendly map", "Hours checked", "No sign-up needed"],
+    "searchTitle": "Where shall we go?",
+    "searchDescription": "Just describe the trip you want.",
+    "presetTitle": "Pick a trip type",
+    "presetDescription": "Choose one and the course is ready.",
+    "topTitle": "Talked about lately",
+    "stepsTitle": "How Pyeong-i plans a course",
+    "stepsDescription": "Three steps, that's all.",
+    "steps": [
+      { "title": "Tell us the trip you want", "description": "One line, or just pick a type." },
+      { "title": "Pyeong-i checks it", "description": "Opening hours, closing days and the route between stops." },
+      { "title": "Your course is ready", "description": "Map, photos and contacts on one screen." }
+    ]
+  },
+  "search": {
+    "placeholder": "e.g. somewhere indoors with kids on a rainy day",
+    "ariaLabel": "Describe the trip you want",
+    "submit": "Find a course",
+    "examples": ["비 오는 날 아이랑 갈 만한 곳", "연인과 조용한 뷰 카페 당일치기", "강아지랑 1박 2일"],
+    "backLabel": "Start over",
+    "understood": "Here's what we understood"
+  },
+  "pyeongani": {
+    "badge": "🌱 Meet your guide, Pyeong-i",
+    "body": "A water-drop character shaped like a calm ripple. Yangpyeong County already has Yangchun-i for the \"Yang\", so we made Pyeong-i for the \"pyeong\". Side by side, the two of them spell Yangpyeong.",
+    "link": "More about Pyeong-i →"
+  },
+  "footer": {
+    "studioBody": "We build small AI web apps that lighten public-service work and everyday life in local communities.",
+    "characterLink": "About the Pyeong-i character",
+    "madeBy": "🛠️ Built by AI Admin App Studio",
+    "disclaimer": "Pyeong-i is not an official Yangpyeong County mascot — it's an unofficial character made out of fondness for the area."
+  },
+  "presets": {
+    "solo": { "label": "Travelling solo", "description": "Quiet stops for unwinding and thinking" },
+    "pet": { "label": "With your pet", "description": "Only places that welcome pets" },
+    "mbti": { "label": "By MBTI type", "description": "A course that matches your personality" }
+  },
+  "categories": {
+    "restaurant": "Restaurant",
+    "cafe": "Cafe",
+    "attraction": "Sight",
+    "lodging": "Stay"
+  },
+  "mbti": {
+    "listBackLabel": "Other trip types",
+    "listTitle": "🔤 Trips by MBTI type",
+    "listDescription": "Pick your MBTI type and we'll suggest a Yangpyeong course that suits it.",
+    "artNote": "A job character imagined from each personality. It has nothing to do with the course itself.",
+    "typeBackLabel": "Pick another MBTI type",
+    "groups": {
+      "analyst": "Analysts",
+      "diplomat": "Diplomats",
+      "sentinel": "Sentinels",
+      "explorer": "Explorers"
+    },
+    "jobs": {
+      "INTJ": "Architect",
+      "INTP": "Scientist",
+      "ENTJ": "Entrepreneur",
+      "ENTP": "Inventor",
+      "INFJ": "Counsellor",
+      "INFP": "Writer",
+      "ENFJ": "Teacher",
+      "ENFP": "Trip planner",
+      "ISTJ": "Accountant",
+      "ISFJ": "Nurse",
+      "ESTJ": "Site manager",
+      "ESFJ": "Cook",
+      "ISTP": "Mechanic",
+      "ISFP": "Painter",
+      "ESTP": "Firefighter",
+      "ESFP": "Singer"
+    }
+  },
+  "course": {
+    "routeTotal": " · {distance} total ({kind})",
+    "nextStop": "↓ {distance} to the next stop · about {minutes} min by car (straight-line estimate)",
+    "lodgingNotice": "Before you book",
+    "badgeCurated": "Curated",
+    "badgeAi": "AI pick",
+    "reasonOpen": "Why this course",
+    "reasonClose": "Hide",
+    "openDetail": "See the course on a map →",
+    "backLabel": "Other courses",
+    "backOther": "Other trip types",
+    "loadMore": "Show another course",
+    "loadingMore": "Building a course...",
+    "exhausted": "That's every course we can build for these conditions.",
+    "empty": "We couldn't find a course for those conditions. Could you change them a little and try again?",
+    "missingTitle": "We couldn't find this course",
+    "missingBody": "AI courses are built fresh for each request, so they disappear when you reopen the browser. Save the ones you like and you can come back to them any time.",
+    "missingAction": "Get a course",
+    "tabPlan": "Plan",
+    "tabMap": "Map",
+    "tabSwitch": "Switch view",
+    "dayTab1": "Day trip",
+    "dayTab2": "2 days, 1 night",
+    "stopCount": "{count} stops",
+    "straightTotal": " · {distance} total (straight line)",
+    "departLine": "Leave {place} at {at}",
+    "arriveSuffix": " → back at {at}",
+    "transferMove": " on the road (estimate)",
+    "lodgingTitle": "Places to stay for {type}",
+    "mbtiTitle": "A Yangpyeong course for {type}",
+    "dayCount": "{days}-day course",
+    "dayNth": "Day {day}",
+    "moreStops": "Show {count} more stops",
+    "departure": "Leave {place} at {at}",
+    "arrivalSuffix": " · back at {at}",
+    "transferDepart": "Leave {place} · about {duration}",
+    "transferArrive": "Arrive {place} · about {duration}",
+    "routeSummary": "{count} stops in order"
+  },
+  "place": {
+    "detail": "Details",
+    "openDetail": "see details",
+    "close": "Close",
+    "address": "Address",
+    "phone": "Phone",
+    "call": "Call",
+    "copyAddress": "Copy address",
+    "copied": "Copied",
+    "favoriteAdd": "Save",
+    "favoriteRemove": "Remove from saved",
+    "favoritePlaceAdd": "Save this place",
+    "favoritePlaceRemove": "Remove this place from saved",
+    "routeTo": "directions to",
+    "mapPreviewDetail": "Details →",
+    "mapPreviewNaver": "Naver Map →",
+    "reviewsLoading": "Looking for Naver blog reviews",
+    "detailOf": "{name} details",
+    "openDetailOf": "see details for {name}",
+    "routeToName": "directions to {name}",
+    "photoAlt": "{name} photo {index} of {total}"
+  },
+  "hours": {
+    "open": "Open now",
+    "closed": "Closed",
+    "openUntil": "Open · closes {time}",
+    "closedUntil": "Closed · opens {time}",
+    "closedUntilWeekday": "Closed · opens {weekday} {time}",
+    "allDay": "Open 24h",
+    "holidayToday": "Closed today",
+    "askStore": "Call to check",
+    "regularHoliday": "Closed",
+    "tableCaption": "Opening hours by day",
+    "unknownWithPhone": "We couldn't confirm the opening hours. Please call the place using the button below.",
+    "unknownWithMap": "We couldn't confirm the opening hours. Please check Naver Map below.",
+    "weekdays": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+  },
+  "map": {
+    "nearestLineShort": "{distance} as the crow flies · about {car} min by car (estimate)",
+    "title": "🗺️ Map",
+    "subtitleAll": "Main spots around Yangpyeong (showing all — you haven't saved a course yet)",
+    "locating": "Finding your location...",
+    "relocate": "📍 Find my location again",
+    "locate": "📍 Show my location",
+    "locationFallback": "You can still see the courses and routes without it.",
+    "nearestPlace": "Closest to you right now",
+    "nearestStop": "Closest stop to you right now",
+    "straightLine": "As the crow flies",
+    "byCar": "about",
+    "onFoot": "about",
+    "estimate": "(estimate)",
+    "nearestLine": "{distance} as the crow flies · about {car} min by car",
+    "walkSuffix": " · about {walk} min on foot",
+    "totalDistance": "total",
+    "drivingDistance": "driving distance"
+  },
+  "pet": {
+    "backLabel": "Pet-friendly course",
+    "title": "🐾 Places that welcome pets",
+    "description": "{count} places around Yangpyeong where your pet is welcome. Conditions differ by business (size limits, indoor access), so please check before you go.",
+    "sourceNote": "Sources: Food Safety Korea pet-friendly business list (as of 28 Sep 2026), Korea Tourism Organization place descriptions",
+    "linkLabel": "🐾 See every pet-friendly place",
+    "filterAll": "All"
+  },
+  "top": {
+    "recentBandLabel": "Last {days} days",
+    "recentCount": "{count} blog posts in the last {days} days",
+    "allCount": "· {count} all time",
+    "blogCount": "{count} blog posts",
+    "recentBandNote": "the places blogged about most in that window",
+    "allBandLabel": "All time",
+    "allBandNote": "the places with the most blog posts overall",
+    "groupCafe": "Cafes",
+    "groupRestaurant": "Restaurants",
+    "note": "Ranked by the number of Naver blog posts. Visitor reviews and star ratings aren't available through the public API, so blog post counts stand in for them.",
+    "blogPosts": "posts",
+    "orMore": "+",
+    "allPeriod": "all time",
+    "blogReviews": "blog posts"
+  },
+  "favorites": {
+    "title": "Saved",
+    "tabsLabel": "Saved type",
+    "loginBanner": "Saved in this browser only. Sign in to see them on your other devices.",
+    "login": "Sign in",
+    "tabCourses": "Courses",
+    "tabPlaces": "Places",
+    "remove": "Remove",
+    "emptyCourses": "You haven't saved a course yet.",
+    "emptyCoursesAction": "Go find a course →",
+    "emptyPlaces": "You haven't saved a place yet. Open a place from a course or the map and tap the heart.",
+    "emptyPlacesAction": "Open the map →"
+  },
+  "theme": {
+    "system": "System",
+    "light": "Light",
+    "dark": "Dark",
+    "switchTo": "Theme: {current} — tap for {next}",
+    "label": "Theme"
+  },
+  "loading": {
+    "wait": "This will only take a moment.",
+    "detail": "Loading the course",
+    "mbti": "Picking a course for your type",
+    "search": "Pyeong-i is reading your request",
+    "searchBody": "Working out the trip you want and picking places that fit.",
+    "preset": "Pyeong-i is building your course",
+    "presetBody": "Checking opening hours, closing days and the route. This can take about 15 seconds."
+  },
+  "notice": {
+    "mayBeClosed": "{names} may be closed today. Please check before you go."
   }
 }

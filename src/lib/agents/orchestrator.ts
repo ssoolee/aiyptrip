@@ -2,7 +2,7 @@ import { after } from "next/server";
 import { composeItinerary } from "@/lib/agents/itineraryComposer";
 import { ValidationResult, validateItinerary } from "@/lib/agents/validation";
 import { enrichCourse } from "@/lib/agents/enrichment";
-import { getPreset } from "@/lib/presets";
+import { getPreset, PRESET_PROMPT_LABEL } from "@/lib/presets";
 import { tagsForMbti } from "@/lib/mbti";
 import { courseSignature } from "@/lib/courseSignature";
 import { saveCourses } from "@/lib/courseStore";
@@ -38,7 +38,9 @@ export async function generateCourses(params: {
   const durationDays = conditions?.durationDays ?? params.durationDays ?? 2;
   const label =
     conditions?.companionLabel ??
-    (presetType === "mbti" && mbti ? `${mbti.toUpperCase()} 성향` : preset?.label) ??
+    (presetType === "mbti" && mbti
+      ? `${mbti.toUpperCase()} 성향`
+      : preset && PRESET_PROMPT_LABEL[preset.type]) ??
     "양평 여행";
 
   // 한 번에 보여 주는 코스들은 장소를 나눠 갖는다 — 앞 코스가 쓴 곳을 빼고 다음 코스를

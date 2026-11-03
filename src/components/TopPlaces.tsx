@@ -1,4 +1,7 @@
 import Mascot from "@/components/Mascot";
+import type { Dictionary } from "@/lib/i18n/dictionaries";
+import { fill } from "@/lib/i18n/format";
+import { currentLocale, serverDictionary } from "@/lib/i18n/server";
 import { TopPlace } from "@/types/travel";
 
 // 네이버 블로그 글이 많은 양평 카페·맛집 네 곳씩. 두 가지 잣대로 줄을 세운다.
@@ -7,7 +10,7 @@ import { TopPlace } from "@/types/travel";
 // 순위의 근거를 화면에도 그대로 적는다 — 네이버 플레이스의 방문자 리뷰·별점은 공개
 // API로 받을 수 없어 블로그 글 수로 대신한다 (src/lib/api/naverBlogSearch.ts 머리말).
 
-export default function TopPlaces({
+export default async function TopPlaces({
   cafe,
   restaurant,
   recentCafe,
@@ -24,27 +27,30 @@ export default function TopPlaces({
   const hasAllTime = cafe.length > 0 || restaurant.length > 0;
   if (!hasRecent && !hasAllTime) return null;
 
+  const [locale, { top }] = await Promise.all([currentLocale(), serverDictionary()]);
+  // 숫자 자리 구분(1,234)은 언어를 따라간다.
+  const numberLocale = locale === "ko" ? "ko-KR" : "en-US";
+
   return (
     <div className="space-y-6">
       {hasRecent && (
         <div className="space-y-5">
-          <Band label={`최근 ${recentDays}일`} note="그 기간에 블로그 글이 가장 많이 올라온 곳" />
-          <Group title="카페" places={recentCafe} recentDays={recentDays} />
-          <Group title="맛집" places={recentRestaurant} recentDays={recentDays} />
+          <Band label={fill(top.recentBandLabel, { days: recentDays })} note={top.recentBandNote} />
+          <Group title={top.groupCafe} places={recentCafe} recentDays={recentDays} top={top} numberLocale={numberLocale} />
+          <Group title={top.groupRestaurant} places={recentRestaurant} recentDays={recentDays} top={top} numberLocale={numberLocale} />
         </div>
       )}
 
       {hasAllTime && (
         <div className="space-y-5">
-          <Band label="전체 기간" note="블로그 글이 가장 많이 쌓인 곳" />
-          <Group title="카페" places={cafe} />
-          <Group title="맛집" places={restaurant} />
+          <Band label={top.allBandLabel} note={top.allBandNote} />
+          <Group title={top.groupCafe} places={cafe} top={top} numberLocale={numberLocale} />
+          <Group title={top.groupRestaurant} places={restaurant} top={top} numberLocale={numberLocale} />
         </div>
       )}
 
       <p className="text-xs text-[var(--color-subtle)]">
-        네이버 블로그 글 수로 줄 세운 순위예요. 플레이스의 방문자 리뷰·별점은 공개 API로 받을 수
-        없어 블로그 글 수로 대신합니다.
+        {top.note}
       </p>
     </div>
   );
@@ -62,7 +68,19 @@ function Band({ label, note }: { label: string; note: string }) {
   );
 }
 
-function Group({ title, places, recentDays }: { title: string; places: TopPlace[]; recentDays?: number }) {
+function Group({
+  title,
+  places,
+  recentDays,
+  top,
+  numberLocale,
+}: {
+  title: string;
+  places: TopPlace[];
+  recentDays?: number;
+  top: Dictionary["top"];
+  numberLocale: string;
+}) {
   if (places.length === 0) return null;
 
   return (
@@ -72,7 +90,13 @@ function Group({ title, places, recentDays }: { title: string; places: TopPlace[
       <ul className="grid gap-2 lg:grid-cols-2">
         {places.map((place, index) => (
           <li key={place.placeId}>
-            <PlaceRow place={place} rank={index + 1} recentDays={recentDays} />
+            <PlaceRow
+              place={place}
+              rank={index + 1}
+              recentDays={recentDays}
+              top={top}
+              numberLocale={numberLocale}
+            />
           </li>
         ))}
       </ul>
@@ -80,7 +104,19 @@ function Group({ title, places, recentDays }: { title: string; places: TopPlace[
   );
 }
 
-function PlaceRow({ place, rank, recentDays }: { place: TopPlace; rank: number; recentDays?: number }) {
+function PlaceRow({
+  place,
+  rank,
+  recentDays,
+  top,
+  numberLocale,
+}: {
+  place: TopPlace;
+  rank: number;
+  recentDays?: number;
+  top: Dictionary["top"];
+  numberLocale: string;
+}) {
   // "경기도 양평군 서종면 북한강로 1161" → "서종면" — 한 줄에 들어가게 읍·면만 남긴다.
   const area = /양평군\s+(\S+)/.exec(place.address)?.[1] ?? "양평군";
   // 최근 묶음은 그 기간의 글 수가 순위의 근거다. 전체 기간 합계는 괄호로 덧붙인다.
@@ -116,17 +152,20 @@ function PlaceRow({ place, rank, recentDays }: { place: TopPlace; rank: number; 
         <p className="mt-1 text-xs font-semibold text-[var(--color-accent)]">
           {recentCount != null ? (
             <>
-              최근 {recentDays}일 블로그 글 {recentCount.toLocaleString("ko-KR")}건
-              {place.recentBlogCapped && " 이상"}
+              {fill(top.recentCount, {
+                days: recentDays ?? 0,
+                count: recentCount.toLocaleString(numberLocale),
+              })}
+              {place.recentBlogCapped && top.orMore}
               {place.blogReviewCount > 0 && (
                 <span className="font-normal text-[var(--color-muted)]">
                   {" "}
-                  · 전체 {place.blogReviewCount.toLocaleString("ko-KR")}건
+                  {fill(top.allCount, { count: place.blogReviewCount.toLocaleString(numberLocale) })}
                 </span>
               )}
             </>
           ) : (
-            <>블로그 리뷰 {place.blogReviewCount.toLocaleString("ko-KR")}건</>
+            <>{fill(top.blogCount, { count: place.blogReviewCount.toLocaleString(numberLocale) })}</>
           )}
         </p>
         {place.reviewTitle && (

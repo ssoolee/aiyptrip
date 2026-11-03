@@ -3,7 +3,8 @@
 import { useCallback, useMemo, useState } from "react";
 import NaverMapView, { MapStop } from "@/components/NaverMapView";
 import PlaceDetailSheet, { DetailPlace } from "@/components/PlaceDetailSheet";
-import { CATEGORY_LABEL } from "@/lib/categories";
+import { fill } from "@/lib/i18n/format";
+import { useI18n } from "@/lib/i18n/I18nProvider";
 import { Category, Place } from "@/types/travel";
 import PageHeader from "@/components/PageHeader";
 
@@ -11,6 +12,7 @@ import PageHeader from "@/components/PageHeader";
 const FILTERS: (Category | "all")[] = ["all", "restaurant", "cafe", "attraction", "lodging"];
 
 export default function PetPlacesScreen({ places }: { places: Place[] }) {
+  const { t } = useI18n();
   const [filter, setFilter] = useState<Category | "all">("all");
   // 열린 상세 시트의 장소. null이면 닫힌 상태.
   const [openPlace, setOpenPlace] = useState<Place | null>(null);
@@ -29,13 +31,13 @@ export default function PetPlacesScreen({ places }: { places: Place[] }) {
     <div className="page-width px-4 pb-6 pt-6">
       <PageHeader
         backHref="/course/pet"
-        backLabel="반려동물 코스 보기"
-        title="🐾 반려동물 동반 업소"
-        description={`양평에서 반려동물과 함께 갈 수 있는 ${places.length}곳이에요. 동반 조건(크기·실내 입장)은 업소마다 달라 방문 전에 꼭 확인하세요.`}
+        backLabel={t.pet.backLabel}
+        title={t.pet.title}
+        description={fill(t.pet.description, { count: places.length })}
         expression="heart"
       >
         <p className="mt-1 text-xs text-[var(--color-muted)]">
-          출처: 식품안전나라 반려동물 동반 가능 업소 현황(2026. 9. 28. 기준), 한국관광공사 장소 소개글
+          {t.pet.sourceNote}
         </p>
       </PageHeader>
 
@@ -56,7 +58,7 @@ export default function PetPlacesScreen({ places }: { places: Place[] }) {
                   : "border-[var(--color-border)] bg-[var(--color-card)] text-[var(--color-muted)]"
               }`}
             >
-              {f === "all" ? "전체" : CATEGORY_LABEL[f]} {count}
+              {f === "all" ? t.pet.filterAll : t.categories[f]} {count}
             </button>
           );
         })}
@@ -80,7 +82,7 @@ export default function PetPlacesScreen({ places }: { places: Place[] }) {
                 <p className="font-semibold">
                   {place.name}
                   <span className="ml-2 text-xs font-normal text-[var(--color-muted)]">
-                    {CATEGORY_LABEL[place.category]}
+                    {t.categories[place.category]}
                   </span>
                 </p>
                 <p className="mt-0.5 text-xs text-[var(--color-muted)]">{place.address}</p>
@@ -92,17 +94,17 @@ export default function PetPlacesScreen({ places }: { places: Place[] }) {
                   href={`tel:${place.phone}`}
                   className="flex min-h-11 flex-1 items-center justify-center rounded-[var(--radius-button)] border border-[var(--color-border)]"
                 >
-                  전화하기
+                  {t.place.call}
                 </a>
               )}
               <button
                 type="button"
                 onClick={() => setOpenPlace(place)}
                 aria-haspopup="dialog"
-                aria-label={`${place.name} 상세정보 보기`}
+                aria-label={fill(t.place.openDetailOf, { name: place.name })}
                 className="flex min-h-11 flex-1 items-center justify-center rounded-[var(--radius-button)] border border-[var(--color-primary)] text-[var(--color-primary)]"
               >
-                상세정보
+                {t.place.detail}
               </button>
             </div>
           </li>
