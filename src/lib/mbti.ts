@@ -35,6 +35,41 @@ export const MBTI_GROUPS: { label: string; types: string[] }[] = [
 
 export const MBTI_TYPES = MBTI_GROUPS.flatMap((g) => g.types);
 
+/**
+ * 유형마다 하나씩 있는 '직업 평안이' 그림과 그 직업 이름 (public/character/mbti/).
+ * 평안이 캐릭터 시트와 같은 그림체로 그린 16컷 도감 한 장을 유형별로 잘라, 배경과
+ * 글자를 걷어내고 같은 배율·같은 바닥선으로 맞춘 것이다. 글자를 그림에 남기지 않은
+ * 것은 다크모드와 글꼴을 화면 쪽에서 쥐기 위해서다 — 직업 이름은 아래 표로 적는다.
+ *
+ * 그림은 전부 280x210이라 화면에서 width/height를 하나로 쓸 수 있다.
+ */
+export const MBTI_ART_WIDTH = 280;
+export const MBTI_ART_HEIGHT = 210;
+
+export const MBTI_JOBS: Record<string, string> = {
+  INTJ: "건축가",
+  INTP: "과학자",
+  ENTJ: "기업가",
+  ENTP: "발명가",
+  INFJ: "상담가",
+  INFP: "작가",
+  ENFJ: "교사",
+  ENFP: "여행 기획자",
+  ISTJ: "회계사",
+  ISFJ: "간호사",
+  ESTJ: "현장 관리자",
+  ESFJ: "요리사",
+  ISTP: "정비사",
+  ISFP: "화가",
+  ESTP: "소방관",
+  ESFP: "가수",
+};
+
+/** 유형 그림의 경로. 열여섯 유형 모두 파일이 있다. */
+export function mbtiArtSrc(type: string): string {
+  return `/character/mbti/${type}.png`;
+}
+
 export function isMbtiType(value: string): boolean {
   return MBTI_TYPES.includes(value);
 }
