@@ -74,6 +74,9 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     metadataBase: new URL("https://aiyptrip.web.app"),
     title: site.title,
     description: site.description,
+    // Search Console 소유권 확인. 숨길 값이 아니라 HTML에 **드러나야** 하는 표식이라
+    // 환경변수가 아니라 여기 적는다. 지우면 소유권이 풀려 사이트맵 보고가 끊긴다.
+    verification: { google: "HnVygjJtuDbUNobvm8O6enNqM-4uMfCUiYHF1gTVH_w" },
     // 같은 내용의 다른 언어판을 검색엔진에 알려 준다. x-default는 언어를 못 가릴 때
     // 보낼 곳이라 기본 언어를 적는다.
     alternates: {
