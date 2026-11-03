@@ -1,4 +1,7 @@
-import { redirect } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
+import { lang } from "next/root-params";
+import { canGenerateCourses, DEFAULT_LOCALE, isLocale } from "@/lib/i18n/config";
+import { withLang } from "@/lib/i18n/href";
 import { generateCourses } from "@/lib/agents/orchestrator";
 import { interpretRequest, MAX_QUERY_LENGTH } from "@/lib/agents/requestInterpreter";
 import CourseResults from "@/components/CourseResults";
@@ -12,9 +15,15 @@ export default async function CourseSearchPage({
 }: {
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }) {
+  const segment = await lang();
+  const locale = segment && isLocale(segment) ? segment : DEFAULT_LOCALE;
+  // 코스 생성은 프롬프트·글자 수 제한·조사 처리가 한국어에 묶여 있어 외국어로는
+  // 한국어 글이 그대로 나간다. 입구를 내려 둔다 (src/lib/i18n/config.ts).
+  if (!canGenerateCourses(locale)) notFound();
+
   const { q } = await searchParams;
   const query = (Array.isArray(q) ? q[0] : q)?.trim().slice(0, MAX_QUERY_LENGTH);
-  if (!query) redirect("/");
+  if (!query) redirect(withLang(locale, "/"));
 
   const conditions = await interpretRequest(query);
   const initialCourses = await generateCourses({ presetType: "custom", count: 3, conditions });

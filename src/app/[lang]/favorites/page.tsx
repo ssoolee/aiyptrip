@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useSyncExternalStore } from "react";
-import Link from "next/link";
+import LocaleLink from "@/components/LocaleLink";
 import {
   getFavoritePlacesServerSnapshot,
   getFavoritePlacesSnapshot,
@@ -49,12 +49,12 @@ export default function FavoritesPage() {
           <p className="text-xs text-[var(--color-primary)]">
             이 브라우저에만 저장돼 있어요. 로그인하면 다른 기기에서도 볼 수 있어요.
           </p>
-          <Link
+          <LocaleLink
             href="/login"
             className="shrink-0 rounded-[var(--radius-button)] bg-[var(--color-primary)] px-3 py-2 text-xs font-semibold text-[var(--color-on-primary)]"
           >
             로그인
-          </Link>
+          </LocaleLink>
         </div>
       )}
 
@@ -85,7 +85,7 @@ export default function FavoritesPage() {
               >
                 <div className="mb-2 flex items-start justify-between gap-2">
                   <h2 className="font-semibold leading-snug">
-                    <Link href={`/course/detail/${fav.courseId}`}>{fav.title}</Link>
+                    <LocaleLink href={`/course/detail/${fav.courseId}`}>{fav.title}</LocaleLink>
                   </h2>
                   <button
                     type="button"
@@ -106,12 +106,12 @@ export default function FavoritesPage() {
                     ))}
                 </ul>
                 {/* 찜한 코스는 저장돼 있어 링크만으로 다시 열 수 있다 (src/lib/favorites.ts). */}
-                <Link
+                <LocaleLink
                   href={`/course/detail/${fav.courseId}`}
                   className="mt-3 flex min-h-11 items-center justify-center rounded-[var(--radius-button)] border border-[var(--color-primary)] text-sm font-semibold text-[var(--color-primary)]"
                 >
                   지도로 코스 보기 →
-                </Link>
+                </LocaleLink>
               </li>
             ))}
           </ul>

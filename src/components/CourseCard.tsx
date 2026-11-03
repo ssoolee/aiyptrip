@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
+import LocaleLink from "@/components/LocaleLink";
 import CourseRouteMap from "@/components/CourseRouteMap";
 import FavoriteButton from "@/components/FavoriteButton";
 import MascotSpot from "@/components/MascotSpot";
@@ -91,9 +91,9 @@ export default function CourseCard({ course, wide: wideProp = false }: { course:
         )}
         <h3 className="display mb-1 text-[17px] leading-snug">
           {/* 코스는 서버에 저장되지 않으므로, 상세 화면이 읽을 수 있게 담아 두고 이동한다. */}
-          <Link href={`/course/detail/${course.courseId}`} onClick={() => cacheCourse(course)}>
+          <LocaleLink href={`/course/detail/${course.courseId}`} onClick={() => cacheCourse(course)}>
             {course.title}
-          </Link>
+          </LocaleLink>
         </h3>
         <p className="mb-2 text-xs text-[var(--color-muted)]">{course.days.length}일 코스</p>
         {/* 서울에서 출발하는 사람 기준 (src/lib/agents/schedule.ts). 찜해 둔 옛 코스에는
@@ -152,13 +152,13 @@ export default function CourseCard({ course, wide: wideProp = false }: { course:
         {/* 코스 전체 동선을 작은 지도에 선으로 이어 보여준다 */}
         <CourseRouteMap course={course} />
 
-        <Link
+        <LocaleLink
           href={`/course/detail/${course.courseId}`}
           onClick={() => cacheCourse(course)}
           className="mt-3 flex min-h-11 items-center justify-center rounded-[var(--radius-button)] border border-[var(--color-primary)] text-sm font-bold text-[var(--color-primary)] hover:bg-[var(--color-primary)]/10"
         >
           지도로 코스 보기 →
-        </Link>
+        </LocaleLink>
       </div>
 
       {openStop && <PlaceDetailSheet place={openStop} onClose={() => setOpenStop(null)} />}

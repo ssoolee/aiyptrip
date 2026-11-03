@@ -1,13 +1,19 @@
-import Link from "next/link";
+import { lang } from "next/root-params";
+import LocaleLink from "./LocaleLink";
 import { MAX_QUERY_LENGTH } from "@/lib/agents/requestInterpreter";
+import { DEFAULT_LOCALE, isLocale } from "@/lib/i18n/config";
+import { withLang } from "@/lib/i18n/href";
 
 const EXAMPLES = ["비 오는 날 아이랑 갈 만한 곳", "연인과 조용한 뷰 카페 당일치기", "강아지랑 1박 2일"];
 
 // 자연어로 원하는 여행을 적는 입력창. 일반 GET 폼이라 JS 없이도 동작한다.
-export default function TripSearchBox({ defaultValue, showExamples }: { defaultValue?: string; showExamples?: boolean }) {
+export default async function TripSearchBox({ defaultValue, showExamples }: { defaultValue?: string; showExamples?: boolean }) {
+  const segment = await lang();
+  const locale = segment && isLocale(segment) ? segment : DEFAULT_LOCALE;
+
   return (
     <div className="px-4">
-      <form action="/course/search" className="flex gap-2">
+      <form action={withLang(locale, "/course/search")} className="flex gap-2">
         <input
           name="q"
           defaultValue={defaultValue}
@@ -27,13 +33,13 @@ export default function TripSearchBox({ defaultValue, showExamples }: { defaultV
       {showExamples && (
         <div className="mt-2.5 flex flex-wrap gap-2">
           {EXAMPLES.map((example) => (
-            <Link
+            <LocaleLink
               key={example}
               href={`/course/search?q=${encodeURIComponent(example)}`}
               className="rounded-[var(--radius-button)] border border-[var(--color-border)] bg-[var(--color-card)] px-3 py-1.5 text-xs text-[var(--color-muted)] hover:border-[var(--color-primary)] hover:text-[var(--color-primary)]"
             >
               {example}
-            </Link>
+            </LocaleLink>
           ))}
         </div>
       )}

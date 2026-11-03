@@ -1,4 +1,4 @@
-import Link from "next/link";
+import LocaleLink from "./LocaleLink";
 import MascotSpot from "./MascotSpot";
 import { type MascotExpression } from "./Mascot";
 
@@ -25,9 +25,9 @@ export default function EmptyState({
       {title && <p className="mb-1 text-sm font-semibold">{title}</p>}
       <p className="mb-3 text-sm text-[var(--color-muted)]">{message}</p>
       {href && action && (
-        <Link href={href} className="text-sm font-semibold text-[var(--color-primary)]">
+        <LocaleLink href={href} className="text-sm font-semibold text-[var(--color-primary)]">
           {action}
-        </Link>
+        </LocaleLink>
       )}
     </div>
   );

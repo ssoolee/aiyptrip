@@ -6,6 +6,8 @@ import EmptyState from "@/components/EmptyState";
 import { cardGridClass } from "@/lib/cardGrid";
 import { loadMoreCourses } from "@/lib/actions";
 import { courseSignature } from "@/lib/courseSignature";
+import { canGenerateCourses } from "@/lib/i18n/config";
+import { useI18n } from "@/lib/i18n/I18nProvider";
 import { Course, PresetType } from "@/types/travel";
 
 // 첫 화면과 "더 보기" 한 번에 생성하는 코스 수 (페이지·loadMoreCourses의 count와 같음)
@@ -37,6 +39,10 @@ export default function CourseResults({
   const [exhausted, setExhausted] = useState(false);
   const [isPending, startTransition] = useTransition();
   const singleWide = courses.length === 1;
+  // 이어서 만드는 코스는 한국어로만 나온다(프롬프트가 한국어) — 외국어 화면에서는
+  // 커밋된 큐레이션만 보여주고 버튼을 내린다.
+  const { lang } = useI18n();
+  const canLoadMore = canGenerateCourses(lang);
 
   const handleLoadMore = () => {
     startTransition(async () => {
@@ -74,7 +80,7 @@ export default function CourseResults({
         </div>
       )}
 
-      {exhausted ? (
+      {!canLoadMore ? null : exhausted ? (
         <p className="mt-6 text-center text-sm text-[var(--color-muted)]">
           이 조건으로 만들 수 있는 코스를 모두 보여드렸어요.
         </p>

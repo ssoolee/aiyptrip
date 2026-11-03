@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import LocaleLink from "@/components/LocaleLink";
 import MascotSpot from "@/components/MascotSpot";
 
 // 코스를 만드는 길(LLM·외부 API)에서 난 오류만 여기서 받는다. 다시 시도하면
@@ -27,9 +27,9 @@ export default function CourseError({
         >
           다시 시도
         </button>
-        <Link href="/" className="text-sm font-semibold text-[var(--color-primary)]">
+        <LocaleLink href="/" className="text-sm font-semibold text-[var(--color-primary)]">
           다른 유형 보기 →
-        </Link>
+        </LocaleLink>
       </div>
       {error.digest && (
         <p className="mt-4 text-xs text-[var(--color-muted)]">오류 번호: {error.digest}</p>

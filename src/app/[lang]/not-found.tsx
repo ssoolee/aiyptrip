@@ -1,4 +1,4 @@
-import Link from "next/link";
+import LocaleLink from "@/components/LocaleLink";
 import MascotSpot from "@/components/MascotSpot";
 
 // 어느 경로에도 걸리지 않은 주소와, 코드에서 부른 notFound()가 여기로 온다.
@@ -11,12 +11,12 @@ export default function NotFound() {
       <p className="text-sm leading-relaxed text-[var(--color-muted)]">
         찾으시는 페이지가 없어요. 평안이와 처음부터 둘러볼까요?
       </p>
-      <Link
+      <LocaleLink
         href="/"
         className="mt-5 inline-flex min-h-11 items-center justify-center rounded-[var(--radius-button)] bg-[var(--color-primary)] px-6 text-sm font-semibold text-[var(--color-on-primary)]"
       >
         홈으로 가기
-      </Link>
+      </LocaleLink>
     </div>
   );
 }

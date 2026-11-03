@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useMemo, useState, useSyncExternalStore } from "react";
-import Link from "next/link";
+import LocaleLink from "@/components/LocaleLink";
 import FavoriteButton from "@/components/FavoriteButton";
 import NaverMapView, { MapStop } from "@/components/NaverMapView";
 import PlaceDetailSheet, { DetailPlace } from "@/components/PlaceDetailSheet";
@@ -90,9 +90,9 @@ function CourseDetail({ course }: { course: Course }) {
   // 80rem까지 넓어진 지금은 헤더만 넓어져 좌우 선이 어긋났을 것이다.
   return (
     <div className="page-width px-4 pb-10 pt-6">
-      <Link href="/" className="text-sm text-[var(--color-muted)]">
+      <LocaleLink href="/" className="text-sm text-[var(--color-muted)]">
         ← 다른 코스 보기
-      </Link>
+      </LocaleLink>
 
       <div className="mt-2 flex items-start gap-3">
         <h1 className="min-w-0 flex-1 text-xl font-bold leading-snug">{course.title}</h1>
@@ -315,12 +315,12 @@ function NotFound() {
         추천 코스는 요청할 때마다 새로 만들어져서 브라우저를 다시 열면 사라져요. 마음에 드는
         코스는 찜해 두면 언제든 다시 볼 수 있어요.
       </p>
-      <Link
+      <LocaleLink
         href="/"
         className="mt-5 inline-flex min-h-11 items-center justify-center rounded-[var(--radius-button)] bg-[var(--color-primary)] px-6 text-sm font-semibold text-[var(--color-on-primary)]"
       >
         코스 추천받기
-      </Link>
+      </LocaleLink>
     </div>
   );
 }

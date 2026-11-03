@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import LocaleLink from "@/components/LocaleLink";
 import { useSyncExternalStore } from "react";
 import { useAuth } from "@/lib/auth/AuthProvider";
 import Mascot, { type MascotExpression } from "@/components/Mascot";
@@ -56,12 +56,12 @@ export default function ProfileScreen() {
           <br />
           로그인하면 계정으로 옮겨서 다른 기기에서도 볼 수 있어요.
         </p>
-        <Link
+        <LocaleLink
           href="/login"
           className="inline-flex min-h-[48px] items-center justify-center rounded-[var(--radius-button)] bg-[var(--color-primary)] px-6 text-sm font-semibold text-[var(--color-on-primary)]"
         >
           로그인 / 회원가입
-        </Link>
+        </LocaleLink>
       </div>
     );
   }
@@ -87,7 +87,7 @@ export default function ProfileScreen() {
         </div>
       </div>
 
-      <Link
+      <LocaleLink
         href="/favorites"
         className="mb-4 flex items-center justify-between surface-card p-4 text-sm"
       >
@@ -95,7 +95,7 @@ export default function ProfileScreen() {
         <span className="text-[var(--color-muted)]">
           코스 {favorites.length} · 장소 {favoritePlaces.length} →
         </span>
-      </Link>
+      </LocaleLink>
 
       <p className="mb-4 text-xs text-[var(--color-muted)]">
         찜한 코스와 장소는 계정에 저장돼 다른 기기에서도 그대로 보여요.

@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import Link from "next/link";
+import LocaleLink from "@/components/LocaleLink";
 import { getPreset } from "@/lib/presets";
 import { generateCourses } from "@/lib/agents/orchestrator";
 import { getSoloCourses } from "@/lib/soloCourses";
@@ -32,6 +32,7 @@ export default async function CoursePresetPage({
   // 혼자 여행은 테마별 코스를 미리 만들어 뒀다(src/lib/data/soloCourses.json) —
   // 생성 대기 없이 바로 띄우고, "더 보기"는 파이프라인이 이어서 만든다.
   const curated = presetType === "solo" ? getSoloCourses(durationDays) : [];
+  // 외국어에서 이 유형을 열지 않는 판단은 layout.tsx가 한다 (상태 코드 때문).
   const initialCourses =
     curated.length > 0 ? curated : await generateCourses({ presetType, count: 3, durationDays });
 
@@ -55,7 +56,7 @@ export default async function CoursePresetPage({
           {DURATION_TABS.map((tab) => {
             const active = tab.days === durationDays;
             return (
-              <Link
+              <LocaleLink
                 key={tab.days}
                 role="tab"
                 aria-selected={active}
@@ -68,7 +69,7 @@ export default async function CoursePresetPage({
                 }`}
               >
                 {tab.label}
-              </Link>
+              </LocaleLink>
             );
           })}
         </div>

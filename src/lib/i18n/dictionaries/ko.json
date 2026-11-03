@@ -1,0 +1,26 @@
+{
+  "site": {
+    "name": "양평 여행 코스",
+    "title": "양평 여행 코스 추천",
+    "description": "MBTI 성향별·반려동물 동반까지, AI가 영업시간과 동선을 확인해 짜주는 양평 여행 코스",
+    "ogTitle": "평안이와 떠나는 양평 한 바퀴",
+    "studio": "AI행정앱제작소",
+    "studioShort": "제작소"
+  },
+  "nav": {
+    "home": "홈",
+    "map": "지도",
+    "favorites": "찜",
+    "profile": "내정보"
+  },
+  "lang": {
+    "label": "언어",
+    "ko": "한국어",
+    "en": "English"
+  },
+  "error": {
+    "title": "앗, 문제가 생겼어요",
+    "body": "잠시 후 다시 시도해 주세요.",
+    "retry": "다시 시도"
+  }
+}

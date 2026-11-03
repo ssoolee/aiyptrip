@@ -15,6 +15,16 @@
     "public": "hosting",
     "trailingSlash": false,
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "redirects": [
+      { "source": "/", "destination": "/ko", "type": 301 },
+      { "source": "/map", "destination": "/ko/map", "type": 301 },
+      { "source": "/favorites", "destination": "/ko/favorites", "type": 301 },
+      { "source": "/profile", "destination": "/ko/profile", "type": 301 },
+      { "source": "/login", "destination": "/ko/login", "type": 301 },
+      { "source": "/pet-places", "destination": "/ko/pet-places", "type": 301 },
+      { "source": "/course", "destination": "/ko/course", "type": 301 },
+      { "source": "/course/:rest*", "destination": "/ko/course/:rest*", "type": 301 }
+    ],
     "headers": [
       {
         "source": "/_next/static/**",

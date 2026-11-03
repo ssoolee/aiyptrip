@@ -1,4 +1,4 @@
-import Link from "next/link";
+import LocaleLink from "./LocaleLink";
 import Mascot, { type MascotExpression } from "./Mascot";
 
 // 화면마다 손으로 반복하던 머리말(뒤로가기 + 제목 + 설명)을 한 곳에 모은 것.
@@ -29,12 +29,12 @@ export default function PageHeader({
   return (
     <div className={className}>
       {backHref && (
-        <Link
+        <LocaleLink
           href={backHref}
           className="inline-flex items-center gap-1 text-sm text-[var(--color-subtle)] hover:text-[var(--color-primary)]"
         >
           ← {backLabel}
-        </Link>
+        </LocaleLink>
       )}
       <div className="flex items-start gap-3">
         <div className="min-w-0 flex-1">

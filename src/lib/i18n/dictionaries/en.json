@@ -1,0 +1,26 @@
+{
+  "site": {
+    "name": "Yangpyeong",
+    "title": "Yangpyeong Trip Course Planner",
+    "description": "Day trips around Yangpyeong, Korea — AI checks opening hours and travel time, with courses by MBTI type and pet-friendly options.",
+    "ogTitle": "A loop around Yangpyeong with Pyeong-i",
+    "studio": "AI Admin App Studio",
+    "studioShort": "Studio"
+  },
+  "nav": {
+    "home": "Home",
+    "map": "Map",
+    "favorites": "Saved",
+    "profile": "Profile"
+  },
+  "lang": {
+    "label": "Language",
+    "ko": "한국어",
+    "en": "English"
+  },
+  "error": {
+    "title": "Something went wrong",
+    "body": "Please try again in a moment.",
+    "retry": "Try again"
+  }
+}

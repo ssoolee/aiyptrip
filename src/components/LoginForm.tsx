@@ -4,12 +4,15 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/lib/auth/AuthProvider";
 import { authErrorMessage } from "@/lib/auth/errors";
+import { useI18n } from "@/lib/i18n/I18nProvider";
 import MascotSpot from "@/components/MascotSpot";
 
 type Mode = "signin" | "signup";
 
 export default function LoginForm() {
   const router = useRouter();
+  // 언어를 빼고 보내면 /profile이 한국어 화면으로 튄다.
+  const { href } = useI18n();
   const { user, loading, configured, signInWithGoogle, signInWithEmail, signUpWithEmail } = useAuth();
   const [mode, setMode] = useState<Mode>("signin");
   const [email, setEmail] = useState("");
@@ -20,8 +23,8 @@ export default function LoginForm() {
 
   // 이미 로그인된 상태로 들어오면 내정보로 보낸다.
   useEffect(() => {
-    if (!loading && user) router.replace("/profile");
-  }, [loading, user, router]);
+    if (!loading && user) router.replace(href("/profile"));
+  }, [loading, user, router, href]);
 
   if (!configured) {
     return (
@@ -41,7 +44,7 @@ export default function LoginForm() {
     setPending(true);
     try {
       await action();
-      router.replace("/profile");
+      router.replace(href("/profile"));
     } catch (e) {
       setError(authErrorMessage(e));
     } finally {

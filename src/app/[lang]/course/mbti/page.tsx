@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import LocaleLink from "@/components/LocaleLink";
 import { MBTI_ART_HEIGHT, MBTI_ART_WIDTH, MBTI_GROUPS, MBTI_JOBS, mbtiArtSrc } from "@/lib/mbti";
 import PageHeader from "@/components/PageHeader";
 
@@ -31,7 +31,7 @@ export default function MbtiSelectPage() {
             {/* 한 그룹이 네 유형이라 열을 더 늘리면 빈 칸만 생긴다 — sm에서 멈춘다. */}
             <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
               {group.types.map((type) => (
-                <Link
+                <LocaleLink
                   key={type}
                   href={`/course/mbti/${type}`}
                   className="surface-card lift flex flex-col items-center gap-0.5 px-2 pb-3 pt-2 text-center transition hover:border-[var(--color-primary)]"
@@ -47,7 +47,7 @@ export default function MbtiSelectPage() {
                   />
                   <span className="text-base font-bold tracking-wide">{type}</span>
                   <span className="text-xs text-[var(--color-muted)]">{MBTI_JOBS[type]}</span>
-                </Link>
+                </LocaleLink>
               ))}
             </div>
           </section>
