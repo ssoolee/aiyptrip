@@ -45,6 +45,7 @@ npm run dev
 | `npm run build:hours` | 영업시간만 다시 수집 — 스냅샷과 MBTI 큐레이션 (`-- snapshot`·`-- curation`으로 한쪽만) |
 | `npm run build:photos` | 사진만 네이버 이미지 검색으로 다시 수집 — 스냅샷과 MBTI 큐레이션 (`-- snapshot`·`-- curation`·`-- heavy`로 범위 좁히기) |
 | `npm run build:routes` | 코스 구간의 실측 주행경로 `src/lib/data/routeLegs.json` 재생성 (`-- --force`로 소요시간 재측정) |
+| `npm run build:reasons` | 큐레이션 코스의 소개글을 지금 일정에 맞춰 다시 적는다 (LLM 없음, `build:routes` 뒤에) |
 
 `build:*` 스크립트는 외부 API와 LLM을 호출하므로 `.env.local`이 채워져 있어야 한다.
 요청마다 검색·태깅하지 않도록 **오프라인에서 한 번 만들어 커밋하는** 캐시이며,
@@ -518,6 +519,14 @@ LLM 호출이 실패하면 규칙 기반 결과로 폴백한다.
 네트워크를 타지 않는다. 캐시를 다시 만드는 명령은 `npm run build:routes`이고, 코스를 다시
 생성한 뒤 이걸 잊으면 구간 키가 어긋나 조용히 어림값으로 돌아가는데 그건
 `src/lib/routeLegs.test.ts`가 잡는다.
+
+**`build:routes`를 돌렸으면 `npm run build:reasons`도 돌린다.** 코스 소개글("서울에서
+09:00에 나서면 10:20에 세미원 앞입니다 … 20:05에 서울로 돌아옵니다")에는 시각과 소요시간이
+들어 있는데, 그 숫자는 화면에서 다시 계산된다. 이동시간이 바뀌면 얼려 둔 글만 옛 숫자에
+남아 **같은 화면에서 머리말과 소개글이 다른 시각을 말하게 된다** — 실제로 그랬다.
+`build:reasons`는 `courseReason.ts`의 `fallbackReason()`으로 글을 다시 조립할 뿐이라
+LLM을 부르지 않는다. 잊으면 `src/lib/soloCourses.test.ts`가 잡는다.
+한국어 원문이 바뀌므로 그 뒤에 `npm run build:i18n`도 언어마다 한 번씩 돌린다.
 
 어림값으로 메워지는 구간은 그때그때 만드는 코스(`resolveRouteLegs`)에서만 생긴다.
 화면은 **그 구간에만** "(직선거리 어림값)"을 붙이고, 실측 구간에는 꼬리표 없이 주행거리를

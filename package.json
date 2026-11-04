@@ -19,6 +19,7 @@
     "build:i18n": "tsx scripts/build-i18n.ts",
     "build:dict": "tsx scripts/build-dictionary.ts",
     "build:routes": "tsx scripts/build-routes.ts",
+    "build:reasons": "tsx scripts/build-reasons.ts",
     "pack:deploy": "tsx scripts/pack-deploy.ts"
   },
   "dependencies": {

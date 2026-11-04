@@ -91,7 +91,9 @@ const SHAPE_SENTENCES = [
 
 const BALANCE_SENTENCES = [
   (travel: string, stay: string) => `길 위에 있는 시간은 다 합쳐 ${travel}, 어딘가에 머무는 시간은 ${stay}입니다.`,
-  (travel: string, stay: string) => `오가는 데 ${travel}, 한곳에 머무는 데 ${stay}를 씁니다.`,
+  // "10시간를"이 되지 않도록 조사를 받침으로 고른다 — 머무는 시간은 "…시간"으로도
+  // "…분"으로도 끝난다.
+  (travel: string, stay: string) => `오가는 데 ${travel}, 한곳에 머무는 데 ${josa(stay, "을", "를")} 씁니다.`,
   (travel: string, stay: string) => `이동에 ${travel}, 머무는 데 ${stay} — 운전은 생각보다 적습니다.`,
 ];
 

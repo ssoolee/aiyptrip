@@ -60,3 +60,9 @@ export const SOLO_DURATIONS = [1, 2];
 export function soloCourseId(themeKey: string, durationDays: number): string {
   return `solo_${themeKey}_${durationDays}d_curated`;
 }
+
+/** courseId에서 테마를 되찾는다 — soloCourseId의 반대. ID 형식을 이 파일에 묶어 둔다. */
+export function soloThemeOf(courseId: string): SoloTheme | undefined {
+  const key = /^solo_([a-z]+)_\d+d_curated$/.exec(courseId)?.[1];
+  return key ? SOLO_THEMES.find((theme) => theme.key === key) : undefined;
+}
