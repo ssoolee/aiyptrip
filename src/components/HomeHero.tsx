@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { serverDictionary } from "@/lib/i18n/server";
+import HeroQr from "@/components/HeroQr";
+import { currentLocale, serverDictionary } from "@/lib/i18n/server";
 
 // 홈 첫 화면 히어로 — 양평 마스코트 '평안이'로 서비스를 소개한다.
 // 구성(작은 배지 → 큰 제목 → 설명 → 칩 줄 → 캐릭터 그림)은 welflows.com 히어로와 같다.
@@ -17,7 +18,7 @@ import { serverDictionary } from "@/lib/i18n/server";
 
 // 칩 줄(이 서비스가 무엇을 해 주는지)은 언어마다 다르다 — 사전의 home.heroPoints.
 export default async function HomeHero() {
-  const { home } = await serverDictionary();
+  const [locale, { home }] = await Promise.all([currentLocale(), serverDictionary()]);
 
   return (
     <section aria-labelledby="home-hero-title" className="px-4">
@@ -55,16 +56,21 @@ export default async function HomeHero() {
             className="mascot-drop h-auto w-[200px] shrink-0 sm:w-[240px] lg:w-[280px]"
           />
         </div>
-        <ul className="relative mt-5 flex flex-wrap gap-2">
-          {home.heroPoints.map((point) => (
-            <li
-              key={point}
-              className="rounded-[var(--radius-button)] border border-[var(--color-border)] bg-[var(--color-card)] px-3 py-1 text-xs text-[var(--color-muted)]"
-            >
-              {point}
-            </li>
-          ))}
-        </ul>
+        {/* 칩 줄과 QR이 히어로 아래 띠를 나눠 쓴다 — 칩은 왼쪽에서 접히고,
+            QR은 오른쪽 끝에 붙는다(좁은 화면에서는 QR이 아예 안 그려진다). */}
+        <div className="relative mt-5 flex items-center gap-3">
+          <ul className="flex flex-wrap gap-2">
+            {home.heroPoints.map((point) => (
+              <li
+                key={point}
+                className="rounded-[var(--radius-button)] border border-[var(--color-border)] bg-[var(--color-card)] px-3 py-1 text-xs text-[var(--color-muted)]"
+              >
+                {point}
+              </li>
+            ))}
+          </ul>
+          <HeroQr locale={locale} label={home.qrLabel} />
+        </div>
       </div>
     </section>
   );

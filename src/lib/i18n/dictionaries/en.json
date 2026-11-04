@@ -39,6 +39,7 @@
     "heroTitleTop": "A loop around Yangpyeong",
     "heroTitleBottom": "with Pyeongan-i",
     "heroBody": "Pick a trip type and Pyeongan-i, your little water-drop guide, maps out a course with opening hours and travel times already checked.",
+    "qrLabel": "Scan to open on your phone",
     "heroPoints": ["Curated trip types", "Pet-friendly map", "Hours checked", "No sign-up needed"],
     "searchTitle": "Where shall we go?",
     "searchDescription": "Just describe the trip you want.",

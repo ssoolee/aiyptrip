@@ -16,6 +16,7 @@
     "test": "tsx --test \"src/**/*.test.ts\"",
     "build:hours": "tsx scripts/build-hours.ts",
     "build:photos": "tsx scripts/build-photos.ts",
+    "build:qr": "tsx scripts/build-qr.ts",
     "build:i18n": "tsx scripts/build-i18n.ts",
     "build:dict": "tsx scripts/build-dictionary.ts",
     "build:routes": "tsx scripts/build-routes.ts",
@@ -33,10 +34,12 @@
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
+    "@types/qrcode": "^1.5.6",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.3.5",
+    "qrcode": "^1.5.4",
     "tailwindcss": "^4",
     "tsx": "^4.23.15",
     "typescript": "^5"
