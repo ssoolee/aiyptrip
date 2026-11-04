@@ -143,8 +143,9 @@
     }
   },
   "course": {
-    "routeTotal": "· 全程 {distance}({kind})",
+    "routeTotal": " · 全程 {distance}（{kind}）",
     "nextStop": "↓ 到下一地点 {distance} · 开车约需 {minutes} 分钟（直线距离估算）",
+    "nextStopDriving": "↓ 到下一地点 {distance} · 开车约需 {minutes} 分钟",
     "lodgingNotice": "预订前请确认",
     "badgeCurated": "推荐路线",
     "badgeAi": "AI推荐",
@@ -166,7 +167,6 @@
     "dayTab1": "一日游",
     "dayTab2": "两天一夜",
     "stopCount": "{count}处",
-    "straightTotal": "· 全程 {distance}（直线距离）",
     "departLine": "{place} {at} 出发",
     "arriveSuffix": "→ {at} 返回",
     "transferMove": "移动（估算）",

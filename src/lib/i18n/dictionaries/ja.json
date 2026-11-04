@@ -143,8 +143,9 @@
     }
   },
   "course": {
-    "routeTotal": "· 合計 {distance}（{kind}）",
+    "routeTotal": " · 合計 {distance}（{kind}）",
     "nextStop": "↓ 次の場所まで {distance} · 車で約{minutes}分（直線距離の目安）",
+    "nextStopDriving": "↓ 次の場所まで {distance} · 車で約{minutes}分",
     "lodgingNotice": "予約前に確認",
     "badgeCurated": "おすすめコース",
     "badgeAi": "AIおすすめ",
@@ -166,7 +167,6 @@
     "dayTab1": "日帰り",
     "dayTab2": "1泊2日",
     "stopCount": "{count}か所",
-    "straightTotal": "· 合計{distance}（直線距離）",
     "departLine": "{place}を{at}に出発",
     "arriveSuffix": "→ {at}に戻る",
     "transferMove": "移動（目安）",

@@ -7,6 +7,7 @@ import assert from "node:assert/strict";
 import { test } from "node:test";
 import { courseLegPairs } from "@/lib/agents/schedule";
 import { rehydrateCourse } from "@/lib/curation";
+import { courseDistance, legDistance } from "@/lib/courseRoute";
 import { distanceKm } from "@/lib/geo";
 import { legKey, staticLegLookup } from "@/lib/routeLegs";
 import soloCourses from "@/lib/data/soloCourses.json";
@@ -66,5 +67,33 @@ test("주행거리는 직선거리보다 길다", () => {
     if (!leg) continue;
     const straightMeters = distanceKm(pair.from, pair.to) * 1000;
     assert.ok(leg.meters >= straightMeters, `${leg.meters}m < 직선 ${Math.round(straightMeters)}m`);
+  }
+});
+
+test("되살린 큐레이션 코스는 전체 거리를 주행거리로 적는다", () => {
+  // 신고된 증상의 회귀 테스트 — 목록 카드는 "전체 79.5km(주행거리)"인데 상세 화면은
+  // "전체 30.3km(직선거리)"였다. 둘 다 courseDistance를 쓰므로 여기가 참이면 같아진다.
+  // 1박 2일 코스가 숙소 연속 분기(전날이 숙소로 끝나야 이어 센다)까지 덮는다.
+  for (const course of CURATED) {
+    const total = courseDistance(rehydrateCourse(course).days);
+    assert.ok(total.measured, `${course.courseId}의 총거리가 직선거리로 떨어졌다`);
+    assert.ok(total.km > 0, `${course.courseId}의 총거리가 0이다`);
+  }
+});
+
+test("상세 화면이 보여 주는 구간은 모두 실측이다", () => {
+  // 화면은 같은 날 앞 스팟과 뒤 스팟을 짝지어 legDistance를 부른다.
+  for (const course of CURATED) {
+    for (const day of rehydrateCourse(course).days) {
+      day.stops.forEach((stop, i) => {
+        if (i === 0) return;
+        const leg = legDistance(day.stops[i - 1], stop);
+        assert.ok(leg.measured, `${course.courseId} ${stop.name} 구간이 어림값이다`);
+        assert.ok(
+          leg.km >= distanceKm(day.stops[i - 1], stop),
+          `${stop.name} 구간의 주행거리가 직선거리보다 짧다`,
+        );
+      });
+    }
   }
 });

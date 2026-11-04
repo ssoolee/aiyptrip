@@ -1,6 +1,6 @@
 // 코스를 지도·화면에 올릴 때 쓰는 동선 계산. 상세 화면과 카드가 같은 값을 보여야 하므로
 // 두 곳에 같은 코드를 적지 않고 여기로 모았다.
-import { distanceKm } from "@/lib/geo";
+import { distanceKm, type LatLng } from "@/lib/geo";
 import type { ItineraryDay, ItineraryStop, RoutePoint } from "@/types/travel";
 
 /**
@@ -11,6 +11,22 @@ import type { ItineraryDay, ItineraryStop, RoutePoint } from "@/types/travel";
  */
 export function routeLegsOf(stops: ItineraryStop[]): (RoutePoint[] | undefined)[] {
   return stops.slice(1).map((stop) => stop.routeFromPrev);
+}
+
+/**
+ * 한 구간("앞 지점 → 뒤 스팟")의 거리.
+ *
+ * 실측 주행거리는 **뒤쪽 스팟**에 붙어 있다 — ItineraryStop.travelMeters는 "직전 지점에서
+ * 여기까지"다. 있으면 그 주행거리를, 없으면 두 좌표의 직선거리를 돌려준다.
+ * courseDistance와 같은 모양이라 화면은 measured만 보고 문구를 고르면 된다.
+ *
+ * `to`는 **같은 날 앞 스팟 바로 다음에 오는 스팟**이어야 한다. 그날 첫 스팟의
+ * travelMeters는 출발지(서울 또는 전날 숙소)에서 오는 구간이라, 앞 스팟과 짝지으면
+ * 엉뚱한 구간의 값을 적게 된다.
+ */
+export function legDistance(from: LatLng, to: ItineraryStop): { km: number; measured: boolean } {
+  if (to.travelMeters != null) return { km: to.travelMeters / 1000, measured: true };
+  return { km: distanceKm(from, to), measured: false };
 }
 
 /**

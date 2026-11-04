@@ -17,7 +17,8 @@ import {
 import { getHoursStatus, parseBusinessHours, seoulNow } from "@/lib/businessHours";
 import { fill } from "@/lib/i18n/format";
 import { useI18n } from "@/lib/i18n/I18nProvider";
-import { distanceKm, estimateMinutes, formatDistance, LatLng, nearest } from "@/lib/geo";
+import { courseDistance, legDistance } from "@/lib/courseRoute";
+import { estimateMinutes, formatDistance, LatLng, nearest } from "@/lib/geo";
 import { formatDuration } from "@/lib/agents/schedule";
 import { useCurrentPosition } from "@/lib/useCurrentPosition";
 import { Course, ItineraryStop, ItineraryTransfer } from "@/types/travel";
@@ -74,11 +75,13 @@ function CourseDetail({ course }: { course: Course }) {
   // 지도를 다시 그리지 않도록 핸들러를 고정한다 (NaverMapView의 effect 의존성).
   const handleSelectPlace = useCallback((place: DetailPlace) => setOpenPlace(place), []);
 
-  // 스팟 사이 직선거리 합 — 주행거리가 아니라 동선 규모를 가늠하는 값이다.
-  const totalKm = useMemo(
-    () => stops.slice(1).reduce((sum, stop, i) => sum + distanceKm(stops[i], stop), 0),
-    [stops],
-  );
+  // 전 구간이 실측이면 주행거리, 아니면 스팟 사이 직선거리 합 — 카드(CourseRouteMap)와
+  // 같은 값을 보여주려고 같은 함수를 쓴다.
+  //
+  // 한 구간이라도 비면 통째로 직선거리로 떨어진다. 절반은 주행거리, 절반은 직선거리인
+  // 숫자 하나를 내놓는 것보다 정직하다 — 구간별 줄은 각자 맞는 값을 쓰므로, 머리말만
+  // 직선거리인 코스가 나올 수 있다. 그게 맞다.
+  const total = useMemo(() => courseDistance(course.days), [course]);
   const closest = useMemo(() => (position ? nearest(position, stops) : null), [position, stops]);
 
   // 코스 전체의 출발·복귀. 1일차 출발이 서울, 마지막 날 복귀가 서울이다.
@@ -103,7 +106,11 @@ function CourseDetail({ course }: { course: Course }) {
       <p className="mt-1 text-sm text-[var(--color-muted)]">
         {fill(t.course.dayCount, { days: course.days.length })} ·{" "}
         {fill(t.course.stopCount, { count: stops.length })}
-        {totalKm > 0 && fill(t.course.straightTotal, { distance: formatDistance(totalKm) })}
+        {total.km > 0 &&
+          fill(t.course.routeTotal, {
+            distance: formatDistance(total.km),
+            kind: total.measured ? t.map.drivingDistance : t.map.straightLine,
+          })}
       </p>
       {/* 시각은 모두 서울에서 출발하는 사람 기준이다 (src/lib/agents/schedule.ts). */}
       {trip && (
@@ -244,7 +251,7 @@ function StopRow({
   // 세션 저장소·찜 목록) 서버 렌더 결과와 어긋날 일이 없다.
   const status = getHoursStatus(parseBusinessHours(stop.businessHoursRaw), seoulNow());
   const summary = stop.reason ?? stop.reviewSummary;
-  const toNextKm = nextStop ? distanceKm(stop, nextStop) : null;
+  const toNext = nextStop ? legDistance(stop, nextStop) : null;
 
   return (
     <li className="surface-card p-4">
@@ -284,13 +291,15 @@ function StopRow({
         />
       </div>
 
-      {toNextKm != null && (
+      {toNext != null && (
         <p className="mt-2 text-center text-xs text-[var(--color-muted)]">
-          {/* 일정표의 시각을 만든 값과 같은 이동시간을 쓴다. 옛 코스에는 없어 그때만
+          {/* 실측 구간은 주행거리·주행시간을 그대로 적고, 캐시에 없던 구간(그때그때 만든
+              코스, 옛 찜 스냅샷)만 직선거리 어림값이라고 밝힌다.
+              이동시간은 일정표의 시각을 만든 값과 같다 — 옛 코스에는 없어 그때만
               화면에서 직접 어림한다. */}
-          {fill(t.course.nextStop, {
-            distance: formatDistance(toNextKm),
-            minutes: nextStop?.travelMinutes ?? estimateMinutes(toNextKm, "car"),
+          {fill(toNext.measured ? t.course.nextStopDriving : t.course.nextStop, {
+            distance: formatDistance(toNext.km),
+            minutes: nextStop?.travelMinutes ?? estimateMinutes(toNext.km, "car"),
           })}
         </p>
       )}

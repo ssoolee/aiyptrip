@@ -118,6 +118,7 @@
   "course": {
     "routeTotal": " · 전체 {distance}({kind})",
     "nextStop": "↓ 다음 장소까지 {distance} · 차로 약 {minutes}분 (직선거리 어림값)",
+    "nextStopDriving": "↓ 다음 장소까지 {distance} · 차로 약 {minutes}분",
     "lodgingNotice": "예약 전 확인",
     "badgeCurated": "추천 코스",
     "badgeAi": "AI 추천",
@@ -139,7 +140,6 @@
     "dayTab1": "당일치기",
     "dayTab2": "1박 2일",
     "stopCount": "{count}곳",
-    "straightTotal": " · 전체 {distance}(직선거리)",
     "departLine": "{place} {at} 출발",
     "arriveSuffix": " → {at} 복귀",
     "transferMove": " 이동 (어림값)",
