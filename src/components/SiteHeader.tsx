@@ -28,15 +28,18 @@ export default async function SiteHeader() {
           <span className="truncate">{site.name}</span>
         </Link>
         <span className="flex-1" />
+        {/* 좁은 화면에서는 얼굴만 남긴다 — 언어 링크 네 칸이 들어오면서 서비스 이름이
+            한 글자로 잘릴 만큼 자리가 모자라졌다(390px에서 쓸 수 있는 폭이 343px이다).
+            글자가 사라지는 자리라 이름은 aria-label로 남긴다. */}
         <a
           href="https://welflows.com"
           target="_blank"
           rel="noopener"
-          className="flex min-h-9 shrink-0 items-center gap-1.5 rounded-[var(--radius-button)] border border-[var(--color-border)] bg-[var(--color-card)] px-3 text-xs text-[var(--color-muted)] hover:border-[var(--color-subtle)] hover:text-[var(--foreground)]"
+          aria-label={site.studio}
+          className="flex min-h-9 shrink-0 items-center gap-1.5 rounded-[var(--radius-button)] border border-[var(--color-border)] bg-[var(--color-card)] px-2 text-xs text-[var(--color-muted)] hover:border-[var(--color-subtle)] hover:text-[var(--foreground)] sm:px-3"
         >
           <Mascot expression="wink" size={24} />
           <span className="hidden sm:inline">{site.studio}</span>
-          <span className="sm:hidden">{site.studioShort}</span>
         </a>
         {/* 전환 링크가 ?q=·?days= 를 살려 보내려고 useSearchParams를 읽는다 —
             정적으로 그릴 수 있는 화면에서 빌드가 막히지 않게 경계를 둔다. */}
